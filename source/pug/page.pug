@@ -1,0 +1,14 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+    - var pageId = 8
+
+block content
+    main.content
+        .content__wrap
+            //- +breadcrumbs({
+            //-     mix: 'content__breadcrumbs',
+            //-     items: ['Главная','Новости']
+            //- })
+            h1.content__heading Новости

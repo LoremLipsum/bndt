@@ -1,0 +1,21 @@
+include ./include
+
+block vars
+    - var pageTitle = 'Title'
+    - var main = false
+
+doctype html
+html(lang="ru-RU")
+    block head
+        +head()
+
+    body
+        block icon
+        block header
+            //- +header({})
+        block intro
+        block content
+        block footer
+            //- +footer({})
+        block scripts
+            +scripts()

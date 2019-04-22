@@ -1,0 +1,19 @@
+p {
+  margin: 0;
+  margin-bottom: mb(sm);
+  line-height: 2.0;
+}
+
+@include respond-to(medium) {
+  p {
+    margin-bottom: mb(md);
+    line-height: 2.1;
+  }
+}
+
+@include respond-to(large) {
+  p {
+    margin-bottom: mb(lg);
+    line-height: 2.2;
+  }
+}

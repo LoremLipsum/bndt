@@ -1,0 +1,17 @@
+.js-tabs-content {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.js-show-more-item-2 {
+  &:nth-child(n+3) {
+    display: none;
+
+    &.active {
+      display: block !important;
+    }
+  }
+}

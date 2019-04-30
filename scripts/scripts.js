@@ -66,10 +66,127 @@
 
 })();
 
+$(document).ready(function (){
+  var header = $('.js-header-top');
+  var SCROLL_HEIGHT = 200;
+
+  $(window).scroll(function(){
+    if ( $(this).scrollTop() > SCROLL_HEIGHT ){
+      header.addClass('active');
+    } else if($(this).scrollTop() <= SCROLL_HEIGHT && header.hasClass('active')) {
+      header.removeClass('active');
+    }
+  });
+});
+
 objectFitImages();
 svg4everybody();
 picturefill();
 new WOW().init();
+
+'use strict';
+
+(function() {
+
+  var btns = document.querySelectorAll('.js-link-secondary');
+
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      // for (var j = 0; j < btns.length; j++) {
+      //   btns[j].parentNode.classList.remove('active');
+      // }
+      e.currentTarget.parentNode.classList.toggle('active');
+    });
+  }
+
+})();
+
+'use strict';
+
+(function() {
+
+  var btn = document.querySelector('.js-button-nav');
+  var block = document.querySelector('.js-dialog-main-nav');
+  var overlay = document.querySelector('.js-header-overlay');
+  var ESC = 27;
+
+  var toggle = function() {
+    block.classList.toggle('active');
+    btn.classList.toggle('active');
+    overlay.classList.toggle('active');
+  };
+
+  var close = function() {
+    block.classList.remove('active');
+    btn.classList.remove('active');
+    overlay.classList.remove('active');
+  };
+
+  var onBtnClick = function(e) {
+    e.preventDefault();
+    toggle();
+  };
+
+  var onCloseClick = function(e) {
+    e.preventDefault();
+    close();
+  };
+
+  var onEscKeyup = function(e) {
+    if (e.keyCode === ESC) {
+      e.preventDefault();
+      close();
+    }
+  };
+
+  btn.addEventListener('click', onBtnClick);
+  overlay.addEventListener('click', onCloseClick);
+  document.addEventListener('keyup', onEscKeyup);
+
+})();
+
+'use strict';
+
+(function() {
+
+  var block = document.querySelector('.js-search');
+  var btnClose = document.querySelector('.js-search-close');
+  var btn = document.querySelector('.js-search-button');
+  var ESC = 27;
+
+  var toggle = function() {
+    block.classList.toggle('active');
+    btn.classList.toggle('active');
+  };
+
+  var close = function() {
+    block.classList.remove('active');
+    btn.classList.remove('active');
+  }
+
+  var onBtnClick = function(e) {
+    e.preventDefault();
+    toggle();
+  };
+
+  var onBtnCloseClick = function(e) {
+    e.preventDefault();
+    close();
+  };
+
+  var onEscKeyup = function(e) {
+    if (e.keyCode === ESC) {
+      e.preventDefault();
+      close();
+    }
+  };
+
+  btn.addEventListener('click', onBtnClick);
+  btnClose.addEventListener('click', onBtnCloseClick);
+  document.addEventListener('keyup', onEscKeyup);
+
+})();
 
 (function($) {
 	'use strict';

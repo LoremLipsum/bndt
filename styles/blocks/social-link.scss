@@ -1,0 +1,93 @@
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 1px solid;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--bg-black {
+    background-color: color(black);
+    border-color: color(black);
+    color: color(light);
+
+    .social-link__icon {
+      fill: color(light);
+    }
+
+    @include hover {
+      background-color: color(light);
+      border-color: color(light);
+      color: color(black);
+
+      .social-link__icon {
+        fill: color(black);
+      }
+    }
+  }
+
+  &--bg-white {
+    background-color: color(white);
+    border-color: color(white);
+    color: color(black);
+
+    .social-link__icon {
+      fill: color(black);
+    }
+
+    @include hover {
+      background-color: color(black);
+      border-color: color(black);
+      color: color(light);
+
+      .social-link__icon {
+        fill: color(light);
+      }
+    }
+  }
+
+  &--border-black {
+    border-color: color(black);
+    background-color: color(white);
+    color: color(black);
+
+    .social-link__icon {
+      fill: color(black);
+    }
+
+    @include hover {
+      background-color: color(black);
+      color: color(light);
+
+      .social-link__icon {
+        fill: color(light);
+      }
+    }
+  }
+}
+
+.social-link__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+@include respond-to(medium) {
+  .social-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 21px;
+    padding: 10px;
+  }
+
+  .social-link__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

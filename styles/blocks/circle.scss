@@ -1,0 +1,50 @@
+.circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 50%;
+  text-decoration: none;
+
+  &--bg-black {
+    background-color: color(black);
+    border-color: color(black);
+    color: color(light);
+
+    .circle__icon {
+      fill: color(light);
+    }
+  }
+
+  &--bg-white {
+    background-color: color(white);
+    border-color: color(white);
+    color: color(black);
+
+    .circle__icon {
+      fill: color(black);
+    }
+  }
+}
+
+.circle__icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+@include respond-to(medium) {
+  .circle {
+    height: 40px;
+    width: 40px;
+  }
+
+  .circle__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

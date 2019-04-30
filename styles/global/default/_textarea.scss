@@ -4,7 +4,7 @@ textarea {
   font: inherit;
   color: inherit;
   text-transform: inherit;
-  transition: duration(md);
-  resize: none;
+  transition: duration(md) func(primary);
+  resize: vertical;
   overflow-y: auto;
 }

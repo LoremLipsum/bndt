@@ -1,0 +1,57 @@
+.form__group {
+  margin-bottom: 12px;
+
+  &--row {
+    .form__field {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.form__submit {
+  margin-top: 12px;
+
+  .btn {
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@include respond-to(520px) {
+  .form__group {
+    &--row {
+      display: flex;
+
+      .form__field {
+        width: calc(100% - 10px);
+        margin-bottom: 0;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .form__group {
+    margin-bottom: 20px;
+
+    &--row {
+      .form__field {
+        width: calc(100% - 17px);
+        margin-right: 34px;
+      }
+    }
+
+    &--last {
+      margin-bottom: 12px;
+    }
+  }
+}

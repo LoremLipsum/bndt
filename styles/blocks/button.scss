@@ -1,0 +1,92 @@
+.button {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 7px 42px;
+  border: 2px solid;
+  font-family: font(secondary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--bg-primary {
+    border-color: color(primary);
+    background-color: color(primary);
+    color: color(white);
+
+    @include hover {
+      border-color: color(black);
+      background-color: color(black);
+    }
+  }
+
+  &--bg-black {
+    border-color: color(black);
+    background-color: color(black);
+    color: color(white);
+
+    @include hover {
+      border-color: color(primary);
+      background-color: color(primary);
+    }
+  }
+
+  &--border-disabled {
+    border-color: color(light-gray);
+    color: color(light-gray);
+  }
+
+  &--border-primary {
+    border-color: color(primary);
+    color: color(primary);
+
+    @include hover {
+      background-color: color(primary);
+      color: color(white);
+    }
+  }
+
+  &--border-white {
+    border-color: color(white);
+    color: color(white);
+
+    @include hover {
+      background-color: color(white);
+      color: color(black);
+    }
+  }
+
+  &--border-black {
+    border-color: color(black);
+    color: color(black);
+
+    @include hover {
+      background-color: color(black);
+      color: color(white);
+    }
+  }
+
+  &:disabled,
+  &--bg-disabled,
+  &--border-disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &--bg-disabled {
+    border-color: color(light-gray);
+    background-color: color(light-gray);
+    color: color(white);
+  }
+}
+
+@include respond-to(large) {
+  .button {
+    padding: 9px 52px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+}

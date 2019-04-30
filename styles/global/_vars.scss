@@ -1,5 +1,6 @@
 $fonts: (
-  primary: #{"Myriad Pro", "Pragmatica", "Roboto", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+  primary: #{"Century Gothic", "Pragmatica", "Arial", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
+  secondary: #{"Bebas Neue", "Arial Narrow", sans-serif, "Nimbus Sans L", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"},
 );
 
 $breakpoints: (
@@ -8,10 +9,19 @@ $breakpoints: (
   medium: 768px,
   medium-lg: 920px,
   large: 1220px,
+  large-lg: 1570px,
+);
+
+$widths: (
+  small: 320px,
+  small-lg: 520px,
+  medium: 768px,
+  medium-lg: 920px,
+  large: 1220px,
 );
 
 $pads: (
-  small: 30px,
+  small: 20px,
   medium: 30px,
   large: 40px,
 );
@@ -20,14 +30,12 @@ $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 $colors: (
-  primary: #0291c9,
-  secondary: #077bad,
-  light: #f7f7f5,
-  dark-light: #dfdfdc,
+  primary: #f81824,
+  light: #f0f0f0,
   light-gray: #c9c9c6,
   gray: #999,
   dark-gray: #ababab,
-  black: #333,
+  black: #0a0a0a,
   white: #fff,
   error: #d0021b,
   disabled: #c9c9c6,
@@ -49,9 +57,9 @@ $func: (
 );
 
 $mb: (
-  sm: 20px,
-  md: 22px,
-  lg: 24px,
+  sm: 22px,
+  md: 26px,
+  lg: 30px,
 );
 
-$change-color: 5%;
+$change: 8%;

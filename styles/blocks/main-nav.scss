@@ -1,0 +1,67 @@
+.main-nav {
+  @include ul-no;
+}
+
+.main-nav__item {
+  margin-bottom: 0;
+  padding: 0 30px;
+  background-color: color(black);
+  color: color(light);
+  font-family: font(secondary);
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    > .main-nav__link {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(255,255,255)' viewBox='0 0 24 24'%3E%3Cpath d='M0.1 12.3l8.2 8.4c0.1 0.1 0.2 0.1 0.3 0.1s0.2 0 0.3-0.1l2.2-2.3c0.2-0.2 0.2-0.4 0-0.6L7.3 14h16.3c0.2 0 0.4-0.2 0.4-0.4v-3.2c0-0.2-0.2-0.4-0.4-0.4H7.3l3.8-3.8c0.2-0.2 0.2-0.4 0-0.6L8.9 3.3c-0.2-0.2-0.4-0.2-0.6 0l-8.2 8.4C0 11.9 0 12.1 0.1 12.3z'/%3E%3C/svg%3E");
+    }
+    .main-nav__secondary {
+      max-width: 9999px;
+      max-height: 9999px;
+      overflow: visible;
+    }
+  }
+
+  &--with-secondary {
+    > .main-nav__link {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(255,255,255)' viewBox='0 0 24 24'%3E%3Cpath d='M23.9 11.7l-8.2-8.4c-0.2-0.2-0.4-0.2-0.6 0l-2.2 2.3c-0.2 0.2-0.2 0.4 0 0.6l3.8 3.8H0.4C0.2 10 0 10.2 0 10.4v3.2C0 13.8 0.2 14 0.4 14h16.3l-3.8 3.8c-0.2 0.2-0.2 0.4 0 0.6l2.2 2.3c0.1 0.1 0.2 0.1 0.3 0.1 0.1 0 0.2 0 0.3-0.1l8.2-8.4C24 12.1 24 11.9 23.9 11.7z'/%3E%3C/svg%3E%0A");
+      background-position: calc(100% - 20px) center;
+      background-size: 18px 18px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.main-nav__link {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  padding-right: 50px;
+  color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    // background-color: color(light);
+    // color: color(black);
+  }
+}
+
+.main-nav__secondary {
+  max-width: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition-property: max-height;
+  transition-duration: duration(md);
+  transition-timing-function: func(primary);
+}
+
+@include respond-to(medium-lg) {
+  .main-nav {
+  }
+}

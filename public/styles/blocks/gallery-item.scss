@@ -1,0 +1,26 @@
+.gallery-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+
+.gallery-item__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
+}
+
+.gallery-item__descr {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  font-family: font(primary);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  color: color(white);
+  text-transform: uppercase;
+}

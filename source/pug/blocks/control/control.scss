@@ -1,0 +1,27 @@
+.control {
+  display: block;
+  padding: 4px;
+  width: 28px;
+  height: 28px;
+
+  &--prev {
+    .control__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--next {
+  }
+
+  @include hover {
+    .control__icon {
+      opacity: 0.6;
+    }
+  }
+}
+
+.control__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}

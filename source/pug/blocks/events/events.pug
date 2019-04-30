@@ -1,0 +1,24 @@
+mixin events(data)
+    +el({
+        tag: data.tag,
+        class: 'events',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .events__wrap
+            .events__inner
+                h2.events__heading BANDIT принимал участие <br>на следующих выставках <br>и&nbsp;мероприятиях:
+                ul.events__list
+                    each item in ['events01.jpg', 'events02.jpg', 'events03.jpg', 'events04.jpg', 'events05.jpg', 'events06.jpg', 'events07.jpg', 'events08.jpg', 'events09.jpg', 'events10.jpg',]
+                        li.events__item
+                            +el({
+                                tag: 'a',
+                                class: 'events__link',
+                                target: '_blank',
+                            })(rel="nofollow noopener")
+                                +el({
+                                    tag: 'img',
+                                    class: 'events__image',
+                                    image: 'events/' + item
+                                })

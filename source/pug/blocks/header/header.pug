@@ -1,0 +1,114 @@
+mixin header(data)
+    +el({
+        tag: 'header',
+        class: 'header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .header__top.js-header-top
+            .header__wrap
+                .header__top-row
+                    ul.header__list.header__list--top-left
+                        li.header__item.header__item--button-nav
+                            +button-nav({
+                                mix: 'header__button-nav',
+                                js: 'button-nav',
+                            })
+                        li.header__item
+                            +button-w-circle({
+                                icon: 'search',
+                                ariaLabel: 'Окрыть поиск по сайту',
+                                mod: 'bg-black',
+                                js: 'search-button',
+                            })
+                    +logo({
+                        secondary_white: true,
+                        mod: 'small',
+                        mix: 'header__logo-small'
+                    })
+                    ul.header__list.header__list--top-right
+                        li.header__item
+                            +button-w-circle({
+                                icon: 'user',
+                                title: 'Личный кабинет',
+                                mod: 'bg-black',
+                            })
+                        li.header__item
+                            +button-w-circle({
+                                icon: 'star',
+                                title: 'Избранное',
+                                badge: '2',
+                                mod: 'bg-black',
+                            })
+                        li.header__item
+                            +button-w-circle({
+                                icon: 'cart',
+                                title: 'Корзина',
+                                badge: '4',
+                                mod: 'bg-black',
+                            })
+                    .header__dialog-search.js-search
+                        .header__dialog-search-wrap
+                            +button-close({
+                                mix: 'header__close-search',
+                                close: true,
+                                mod: 'bg-black',
+                                js: 'search-close',
+                            })
+                            +search({
+                                mix: 'header__top-search',
+                            })
+        .header__main
+            .header__wrap
+                .header__company-info
+                    +logo({
+                        mix: 'header__logo',
+                        mod: 'primary',
+                    })
+                    +callback({
+                        mix: 'header__callback-top',
+                    })
+                .header__dialog-nav.js-dialog-main-nav
+                    .header__inner-dialog-nav
+                        +main-nav({
+                            items: mainNav,
+                            mix: 'header__main-nav'
+                        })
+                        ul.header__list.header__list--main
+                            li.header__item
+                                +button-w-circle({
+                                    icon: 'user',
+                                    title: 'Войти',
+                                    mod: 'bg-black',
+                                })
+                            li.header__item
+                                +button-w-circle({
+                                    icon: 'star',
+                                    title: 'Избранное',
+                                    badge: '2',
+                                    mod: 'bg-black',
+                                })
+                            li.header__item
+                                +button-w-circle({
+                                    icon: 'cart',
+                                    title: 'Корзина',
+                                    badge: '4',
+                                    mod: 'bg-black',
+                                })
+                        .header__bottom-wrap
+                            +search({
+                                mix: 'header__search',
+                            })
+                            +callback({
+                                mix: 'header__callback',
+                            })
+                            +social({
+                                mix: 'header__social',
+                                items: social,
+                                text: true,
+                            })
+        +overlay({
+            js: 'header-overlay',
+            mix: 'header__overlay',
+        })

@@ -1,0 +1,26 @@
+mixin social(data)
+    +el({
+        class: 'social',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        if data.text
+            span.social__text Присоеденяйся к нам
+        +el({
+            tag: 'ul',
+            class: 'social__list',
+            mix: data.mix,
+            mod: data.mod,
+            js: data.js,
+        })&attributes(attributes)
+            each item in data.items
+                +el({
+                    tag: 'li',
+                    class: 'social__item',
+                    mod: item.mod,
+                })
+                    +social-link({
+                        icon: item.icon,
+                        mod: item.linkMod
+                    })

@@ -1,0 +1,29 @@
+mixin reviews-item(data)
+    +el({
+        class: 'reviews-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .reviews-item__top
+            +el({
+                class: 'reviews-item__image-wrap',
+            })
+                +el({
+                    tag: 'img',
+                    class: 'reviews-item__image',
+                    upload: data.image,
+                })
+            +el({
+                class: 'reviews-item__heading',
+                text: data.heading,
+            })
+            +social-link({
+                mix: 'reviews-item__social-link',
+                icon: data.social,
+                mod: 'border-black',
+            })
+        +el({
+            class: 'reviews-item__text',
+            text: data.text,
+        })

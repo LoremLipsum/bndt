@@ -1,0 +1,161 @@
+.button-w-circle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  border: 1px solid;
+  border-radius: 50%;
+  text-decoration: none;
+
+  &--bg-black {
+    background-color: color(black);
+    border-color: color(black);
+    color: color(light);
+
+    .button-w-circle__icon {
+      fill: color(light);
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(light);
+      border-color: color(light);
+      color: color(black);
+
+      .button-w-circle__icon {
+        fill: color(black);
+      }
+
+      .button-w-circle__close {
+        @include icon-cross-color(color(black));
+      }
+    }
+  }
+
+  &--bg-white {
+    background-color: color(white);
+    border-color: color(white);
+    color: color(black);
+
+    .button-w-circle__icon {
+      fill: color(black);
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(black);
+      border-color: color(black);
+      color: color(light);
+
+      .button-w-circle__icon {
+        fill: color(light);
+      }
+    }
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+    border-color: color(primary);
+    color: color(white);
+
+    .button-w-circle__icon {
+      fill: color(white);
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(black);
+      border-color: color(black);
+      color: color(light);
+
+      .button-w-circle__icon {
+        fill: color(light);
+      }
+    }
+  }
+
+  &--border-black {
+    border-color: color(black);
+    color: color(black);
+
+    .button-w-circle__icon {
+      fill: color(black);
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: color(black);
+      color: color(light);
+
+      .button-w-circle__icon {
+        fill: color(light);
+      }
+    }
+  }
+}
+
+.button-w-circle__icon,
+.button-cart__badge {
+  display: block;
+}
+
+.button-w-circle__icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.button-w-circle__text {
+  margin-left: 15px;
+}
+
+.button-w-circle__badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  border-radius: 9px;
+  background-color: color(primary);
+  color: color(white);
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+}
+
+.button-w-circle__close {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 80%;
+
+  @include icon-cross(2px, color(white), 45deg);
+}
+
+@include respond-to(large) {
+  .button-w-circle {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+  }
+
+  .button-w-circle__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,4 +1,4 @@
-.text-primary {
+.color-primary {
   color: color(primary);
 }
 
@@ -21,10 +21,18 @@
   text-decoration: none;
 }
 
-.without-left-line {
-  padding-right: 0;
+.float-left {
+  float: left;
+}
 
-  &::before {
-    display: none;
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }

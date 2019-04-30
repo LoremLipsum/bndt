@@ -1,0 +1,15 @@
+mixin social-link(data)
+    +el({
+        tag: 'a',
+        class: 'social-link',
+        href: data.href,
+        target: '_blank',
+        title: data.title,
+        mod: data.mod,
+        mix: data.mix,
+    })(rel="nofollow noopener")
+        +el({
+            class: 'social-link__icon',
+            tag: 'svg',
+            icon: data.icon,
+        })(aria-hidden='true')

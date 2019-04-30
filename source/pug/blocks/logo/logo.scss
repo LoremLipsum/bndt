@@ -1,0 +1,62 @@
+.logo {
+  display: block;
+  text-decoration: none;
+
+  &--primary {
+    width: 140px;
+    height: 49px;
+
+    .logo__image {
+      width: 140px;
+      height: 49px;
+    }
+  }
+
+  &--secondary {
+    width: 50px;
+    height: 53px;
+
+    .logo__image {
+      width: 50px;
+      height: 53px;
+    }
+  }
+
+  &--small {
+    width: 36px;
+    height: 36px;
+
+    .logo__image {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.logo__image {
+  display: block;
+}
+
+@include respond-to(large-lg) {
+  .logo {
+    &--primary {
+      width: 250px;
+      height: 98px;
+
+      .logo__image {
+        width: 250px;
+        height: 98px;
+      }
+    }
+
+    &--secondary {
+      width: 58px;
+      height: 62px;
+
+      .logo__image {
+        width: 58px;
+        height: 62px;
+      }
+    }
+  }
+}

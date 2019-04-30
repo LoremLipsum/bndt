@@ -1,0 +1,12 @@
+mixin teaser(data)
+    +el({
+        class: 'teaser',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .teaser__wrap
+            .teaser__inner
+                .teaser__text
+                    p.
+                        Успех строится из мелочей, и одежда BANDIT готова стать твоим надежным попутчиком, обладая запасом качества на который всегда можно положиться.

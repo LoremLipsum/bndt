@@ -1,0 +1,75 @@
+.field-secondary {
+  display: block;
+  width: 100%;
+
+  &--white {
+    .field-secondary__input {
+      color: color(white);
+      border-bottom-color: color(white);
+    }
+  }
+
+  &--black {
+    .field-secondary__input {
+      color: color(black);
+      border-bottom-color: color(black);
+    }
+  }
+}
+
+.field-secondary__label {
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
+  color: color(black);
+}
+
+.field-secondary__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  min-height: 40px;
+  padding: 5px 0;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: transparent;
+  color: color(black);
+  font-family: font(secondary);
+  font-size: 20px;
+  line-height: 30px;
+  caret-color: color(black);
+  outline: none;
+
+  &::placeholder {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  &--error:not(:focus) {
+    border-bottom-color: color(error);
+    color: color(error);
+
+    ~ .field-secondary__label {
+      color: color(error);
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .field-secondary__input {
+    height: 50px;
+    min-height: 50px;
+    padding: 10px 0;
+    font-size: 22px;
+  }
+}
+
+@include respond-to(large) {
+  .field-secondary__input {
+    height: 60px;
+    min-height: 60px;
+    padding: 15px 0;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,32 @@
+.button-close {
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: color(primary);
+
+  @include hover {
+    .button-close__icon {
+      opacity: 0.5;
+    }
+  }
+}
+
+.button-close__icon {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  @include icon-cross(2px, color(white), 45deg);
+}
+
+@include respond-to(medium) {
+  .button-close {
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+  }
+}

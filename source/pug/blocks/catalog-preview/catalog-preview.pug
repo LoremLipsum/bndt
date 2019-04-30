@@ -1,0 +1,45 @@
+mixin catalog-preview(data)
+    +el({
+        class: 'catalog-preview',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        .catalog-preview__wrap
+            .catalog-preview__inner
+                .catalog-preview__top
+                    h2.catalog-preview__heading Уличный стиль, <br>который станет незаменимым <br>в&nbsp;повседневной жизни
+                    +button({
+                        tag: 'a',
+                        mod: 'bg-black',
+                        mix: 'catalog-preview__button-top',
+                        text: 'Узнай всё о&nbsp;тендециях в&nbsp;уличной моде'
+                    })
+                +tabs({
+                    mix: 'catalog-preview__tabs',
+                    items: [
+                        {
+                            text: 'Новинки',
+                        },
+                        {
+                            text: 'Топ продаж',
+                        }
+                    ],
+                })
+                .tab-1.js-product-tabs-content.active
+                    +goods-list({
+                        mix: 'catalog-preview__list',
+                        goods: goodsItems,
+                    })
+                .tab-2.js-product-tabs-content
+                    +goods-list({
+                        mix: 'catalog-preview__list',
+                        goods: goodsItems,
+                    })
+                .catalog-preview__bottom
+                    +button({
+                        tag: 'a',
+                        mix: 'catalog-preview__button-bottom',
+                        mod: 'bg-primary',
+                        text: 'Перейти в каталог'
+                    })

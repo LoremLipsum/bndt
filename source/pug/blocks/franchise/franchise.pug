@@ -1,0 +1,48 @@
+mixin franchise(data)
+    +el({
+        class: 'franchise',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .franchise__wrap
+            .franchise__inner
+                .franchise__heading
+                    | Открой для себя бизнес с&nbsp;брендом BANDIT
+                .franchise__text
+                    | Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.
+                +f({})
+                    .franchise__field-group
+                        +field-secondary({
+                            mod: 'white',
+                            mix: 'franchise__field',
+                            label: 'Ваше имя',
+                            placeholder: 'Ваше имя',
+                            name: 'name',
+                        })
+                        +field-secondary({
+                            mod: 'white',
+                            mix: 'franchise__field',
+                            label: 'Телефон',
+                            placeholder: 'Телефон',
+                            type: 'tel',
+                            name: 'tel',
+                        })
+                        +field-secondary({
+                            mod: 'white',
+                            mix: 'franchise__field',
+                            label: 'E-mail',
+                            placeholder: 'E-mail',
+                            type: 'email',
+                            name: 'email',
+                        })
+                    .franchise__bottom
+                        +checkbox-confirm({
+                            mix: 'franchise__confirm'
+                        })
+                        +button({
+                            mix: 'franchise__submit',
+                            type: 'submit',
+                            mod: 'bg-primary',
+                            text: 'Получить финансовую модель компании',
+                        })

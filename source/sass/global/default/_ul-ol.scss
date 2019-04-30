@@ -1,36 +1,35 @@
 ul,
 ol {
-  margin-top: 0;
-    margin-bottom: mb(lg) - 4px;
-}
-
-ul,
-ol {
-  padding-left: 16px;
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
 
   li {
-    margin-bottom: 4px;
+    margin: 0;
+    margin-bottom: mb(sm);
   }
 }
+
+// ol {
+//   list-style-type: none;
+//   counter-reset: list;
+//
+//   li {
+//     &::before {
+//       counter-increment: list;
+//       content: counter(list) ") ";
+//     }
+//   }
+// }
 
 @include respond-to(medium) {
-  ul,
-  ol {
-    margin-bottom: mb(lg) - 5px;
-  }
-
   li {
-    margin-bottom: 5px;
+    margin-bottom: mb(md);
   }
 }
 
 @include respond-to(large) {
-  ul,
-  ol {
-    margin-bottom: mb(lg) - 6px;
-  }
-
   li {
-    margin-bottom: 6px;
+    margin-bottom: mb(lg);
   }
 }

@@ -1,9 +1,10 @@
 a {
   color: #333;
   text-transform: inherit;
-  transition: duration(md);
+  transition: duration(md) func(primary);
   cursor: pointer;
   text-decoration: underline;
+  outline: none;
 
   @include hover {
     text-decoration: none;

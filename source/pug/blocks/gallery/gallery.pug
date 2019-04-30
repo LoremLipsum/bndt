@@ -1,0 +1,99 @@
+mixin gallery(data)
+    +el({
+        tag: data.tag,
+        class: 'gallery',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .gallery__wrap
+            .gallery__inner
+                h2.gallery__heading Наши люди
+                ul.gallery__list
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'large',
+                    })
+                        +gallery-item({
+                            image: 'gallery01.jpg',
+                            text: 'Sam YudaT (France) <br>X Baby Knuck(Crimea) <br>X Wesley (Holland)',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'medium',
+                    })
+                        +gallery-item({
+                            image: 'gallery02.jpg',
+                            text: 'Рем Дигга',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'small'
+                    })
+                        +gallery-item({
+                            image: 'gallery03.jpg',
+                            text: 'Коля Маню',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'small',
+                    })
+                        +gallery-item({
+                            image: 'gallery04.jpg',
+                            text: 'Sens',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'large',
+                    })
+                        +gallery-item({
+                            image: 'gallery05.jpg',
+                            text: 'Yofu & M.J. Marley',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'medium',
+                    })
+                        +gallery-item({
+                            image: 'gallery06.jpg',
+                            text: 'Брутто Каспийский груз',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'medium',
+                    })
+                        +gallery-item({
+                            image: 'gallery07.jpg',
+                            text: 'Usachev',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'small',
+                    })
+                        +gallery-item({
+                            image: 'gallery08.jpg',
+                            text: 'PVNCH',
+                        })
+                    +el({
+                        tag: 'li',
+                        class: 'gallery__item',
+                        mod: 'large',
+                    })
+                        +gallery-item({
+                            image: 'gallery09.jpg',
+                            text: 'Homie',
+                        })
+                .gallery__bottom
+                    +link({
+                        tag: 'button',
+                        mod: 'primary',
+                        text: 'Загрузить еще'
+                    })

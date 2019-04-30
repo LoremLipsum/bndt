@@ -1,11 +1,14 @@
 button {
   display: inline-block;
-  padding: 0;
+  padding: 4px;
   border: none;
   background-color: transparent;
   font: inherit;
   color: inherit;
   text-transform: inherit;
-  transition: duration(md);
+  transition: duration(md) func(primary);
   cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  outline: none;
 }

@@ -1,0 +1,26 @@
+mixin circle(data)
+    +el({
+        tag: data.tag,
+        class: 'circle',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        before: data.before,
+        after: data.after,
+        position: data.position,
+        title: data.title,
+        target: data.target,
+        href: data.href
+    })&attributes(attributes)
+        if data.icon
+            +el({
+                tag: 'svg',
+                icon: data.icon,
+                class: 'circle__icon',
+            })
+        if  data.badge
+            +el({
+                tag: 'span',
+                class: 'circle__badge',
+                text: data.badge
+            })

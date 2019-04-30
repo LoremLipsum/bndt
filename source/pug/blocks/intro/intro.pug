@@ -1,0 +1,27 @@
+mixin intro(data)
+    +el({
+        tag: 'section',
+        class: 'intro',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .intro__wrap
+            .intro__inner
+                +el({
+                    tag: 'h1',
+                    mix: 'intro__heading',
+                    text: 'Bandit'
+                })
+                +el({
+                    tag: 'p',
+                    mix: 'intro__text',
+                    text: 'Бренд одежды,  призванный подчеркнуть твой стиль, характер и&nbsp;позицию.'
+                })
+                .intro__button-wrap
+                    +button({
+                        tag: 'a',
+                        text: 'Смотреть каталог',
+                        mod: 'bg-primary',
+                        mix: 'intro__button',
+                    })

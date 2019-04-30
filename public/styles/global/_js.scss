@@ -15,3 +15,13 @@
     }
   }
 }
+
+.js-show-more-item-5 {
+  &:nth-child(n+6) {
+    display: none;
+
+    &.active {
+      display: block !important;
+    }
+  }
+}

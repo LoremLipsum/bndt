@@ -1,0 +1,28 @@
+.social__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include ul-no;
+  margin: 0 -10px;
+  padding: 0;
+}
+
+.social__item {
+  margin: 0 10px;
+  margin-bottom: 10px;
+}
+
+.social__text {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(large) {
+
+}

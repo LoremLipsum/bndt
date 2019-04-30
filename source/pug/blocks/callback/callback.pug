@@ -1,0 +1,17 @@
+mixin callback(data)
+    +el({
+        class: 'callback',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +button({
+            mix: 'callback__button',
+            text: 'Заказать звонок'
+        })
+        +el({
+            tag: 'a',
+            href: 'tel:79788881890',
+            class: 'callback__link',
+            text: '+7 (978) 88 81 890',
+        })

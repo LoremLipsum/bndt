@@ -1,0 +1,28 @@
+mixin features(data)
+    +el({
+        tag: 'section',
+        class: 'features',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .features__wrap
+            .features__inner
+                +el({
+                    tag: 'h1',
+                    mix: 'features__heading',
+                    text: 'Ты можешь доверить нам свой стиль'
+                })
+                +el({
+                    tag: 'ul',
+                    class: 'features__list',
+                })
+                    each item in data.items
+                        +el({
+                            tag: 'li',
+                            class: 'features__item',
+                        })
+                            +features-item({
+                                icon: item.icon,
+                                text: item.text
+                            })

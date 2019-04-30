@@ -12,7 +12,985 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <main></main>
+    <header class="header">
+      <div class="header__top js-header-top">
+        <div class="header__wrap">
+          <div class="header__top-row">
+            <ul class="header__list header__list--top-left">
+              <li class="header__item header__item--button-nav">
+                <button class="btn-nav header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
+                  <span class="btn-nav__icon">
+                    <span class="btn-nav__lines">
+                    </span>
+                  </span>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="button-w-circle button-w-circle--bg-black js-search-button" type="button">
+                  <svg class="button-w-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
+            <a class="logo logo--small header__logo-small">
+              <img class="logo__image" src="./assets/images/logo-secondary-white.svg" alt=" ">
+            </a>
+            <ul class="header__list header__list--top-right">
+              <li class="header__item">
+                <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+                  <svg class="button-w-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+                  <svg class="button-w-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                  </svg>
+                  <span class="button-w-circle__badge">2
+                  </span>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+                  <svg class="button-w-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="button-w-circle__badge">4
+                  </span>
+                </button>
+              </li>
+            </ul>
+            <div class="header__dialog-search js-search">
+              <div class="header__dialog-search-wrap">
+                <button class="button-close button-close--bg-black header__close-search js-search-close" aria-label="Закрыть окно" type="button">
+                  <span class="button-close__icon">
+                  </span>
+                </button>
+                <form class="search header__top-search js-search" action="/" method="post" accept-charset="UTF-8">
+                  <label class="search__field"><span class="hidden">Поиск по сайту</span>
+                    <input class="search__input" placeholder="Поиск" type="search">
+                    <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
+                      <svg class="button-w-circle__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                      </svg>
+                      <input class="hidden" type="submit">
+                    </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="header__wrap">
+          <div class="header__company-info">
+            <a class="logo logo--primary header__logo">
+              <img class="logo__image" src="./assets/images/logo-primary.svg" alt=" ">
+            </a>
+            <div class="callback header__callback-top">
+              <button class="button callback__button" type="button">Заказать звонок
+              </button>
+              <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
+              </a>
+            </div>
+          </div>
+          <div class="header__dialog-nav js-dialog-main-nav">
+            <div class="header__inner-dialog-nav">
+              <ul class="main-nav header__main-nav">
+                <li class="main-nav__item main-nav__item--with-secondary" itemprop="name">
+                  <a class="main-nav__link js-link-secondary" href="page-goods.html" itemprop="url">Одежда
+                  </a>
+                  <ul class="main-nav__secondary">
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Куртки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Футболки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Толстовки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Обувь
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-nav__item main-nav__item--with-secondary" itemprop="name">
+                  <a class="main-nav__link js-link-secondary" href="page-accessories.html" itemprop="url">Аксессуары
+                  </a>
+                  <ul class="main-nav__secondary">
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Куртки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Футболки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Толстовки
+                      </a>
+                    </li>
+                    <li class="main-nav__item" itemprop="name">
+                      <a class="main-nav__link" href="#" itemprop="url">Обувь
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="main-nav__item" itemprop="name">
+                  <a class="main-nav__link" href="page-delivery.html" itemprop="url">Оплата и доставка
+                  </a>
+                </li>
+                <li class="main-nav__item" itemprop="name">
+                  <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                  </a>
+                </li>
+              </ul>
+              <ul class="header__list header__list--main">
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Войти" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                    <span class="button-w-circle__badge">2
+                    </span>
+                  </button>
+                </li>
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                    </svg>
+                    <span class="button-w-circle__badge">4
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              <div class="header__bottom-wrap">
+                <form class="search header__search js-search" action="/" method="post" accept-charset="UTF-8">
+                  <label class="search__field"><span class="hidden">Поиск по сайту</span>
+                    <input class="search__input" placeholder="Поиск" type="search">
+                    <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
+                      <svg class="button-w-circle__icon">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                      </svg>
+                      <input class="hidden" type="submit">
+                    </span>
+                  </label>
+                </form>
+                <div class="callback header__callback">
+                  <button class="button callback__button" type="button">Заказать звонок
+                  </button>
+                  <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
+                  </a>
+                </div>
+                <div class="social header__social"><span class="social__text">Присоеденяйся к нам</span>
+                  <ul class="social__list header__social">
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay header__overlay js-header-overlay">
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <section class="intro">
+          <div class="intro__wrap">
+            <div class="intro__inner">
+              <h1 class="intro__heading">Bandit
+              </h1>
+              <p class="intro__text">Бренд одежды,  призванный подчеркнуть твой стиль, характер и&nbsp;позицию.
+              </p>
+              <div class="intro__button-wrap">
+                <a class="button button--bg-primary intro__button" href="#">Смотреть каталог
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="teaser">
+          <div class="teaser__wrap">
+            <div class="teaser__inner">
+              <div class="teaser__text">
+                <p>Успех строится из мелочей, и одежда BANDIT готова стать твоим надежным попутчиком, обладая запасом качества на который всегда можно положиться.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-preview">
+          <div class="catalog-preview__wrap">
+            <div class="catalog-preview__inner">
+              <div class="catalog-preview__top">
+                <h2 class="catalog-preview__heading">Уличный стиль, <br>который станет незаменимым <br>в&nbsp;повседневной жизни</h2>
+                <a class="button button--bg-black catalog-preview__button-top" href="#">Узнай всё о&nbsp;тендециях в&nbsp;уличной моде
+                </a>
+              </div>
+              <ul class="tabs catalog-preview__tabs">
+                <li class="tabs__item active">
+                  <button class="tabs__button js-button-tabs" type="button" data-tab="tab-1">Новинки
+                  </button>
+                </li>
+                <li class="tabs__item">
+                  <button class="tabs__button js-button-tabs" type="button" data-tab="tab-2">Топ продаж
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-1 js-product-tabs-content active">
+                <ul class="goods-list catalog-preview__list">
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods01.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods02.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods03.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Джоггеры Твил Черные
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods04.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods05.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods06.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-2 js-product-tabs-content">
+                <ul class="goods-list catalog-preview__list">
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods01.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods02.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods03.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Джоггеры Твил Черные
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods04.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods05.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="goods-list__item">
+                    <div class="goods-item">
+                      <a class="goods-item__image-wrap" href="#">
+                        <img class="goods-item__image" src="./assets/upload/goods06.jpg" alt=" ">
+                      </a>
+                      <div class="goods-item__content">
+                        <div class="goods-item__header">
+                          <h3 class="goods-item__heading">
+                            <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                            </a>
+                          </h3>
+                          <button class="button-w-circle button-w-circle--bg-primary goods-item__cart" type="button">
+                            <svg class="button-w-circle__icon">
+                              <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="goods-item__price">2300 Р
+                        </div>
+                        <div class="goods-item__link-wrap">
+                          <a class="link link--primary goods-item__link" href="#">Подробнее
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="catalog-preview__bottom">
+                <a class="button button--bg-primary catalog-preview__button-bottom" href="#">Перейти в каталог
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order">
+          <div class="order__wrap">
+            <div class="order__inner">
+              <div class="order__heading"><span>Ты можешь не просто приобрести у нас одежду, </span>но&nbsp;и&nbsp;разместить заказ на индивидуальное производство любых вещей</div>
+              <div class="order__button-wrap">
+                <a class="button button--border-white order__button" href="#">Узнать подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="features">
+          <div class="features__wrap">
+            <div class="features__inner">
+              <h1 class="features__heading">Ты можешь доверить нам свой стиль
+              </h1>
+              <ul class="features__list">
+                <li class="features__item">
+                  <div class="features-item">
+                    <svg class="features-item__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#needle"></use>
+                    </svg>
+                    <div class="features-item__text"><p>Собственное производство  и <br>новейшее оборудование</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features-item">
+                    <svg class="features-item__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#people"></use>
+                    </svg>
+                    <div class="features-item__text"><p>Отдел изучения <br>молодёжной моды</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="features__item">
+                  <div class="features-item">
+                    <svg class="features-item__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#button"></use>
+                    </svg>
+                    <div class="features-item__text"><p>Регулярно посещяем выставки <br>тканей и&nbsp; фурнитуры</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div class="reviews">
+          <div class="reviews__wrap">
+            <div class="reviews__inner">
+              <div class="reviews__top">
+                <h2 class="reviews__heading">Что говорят о Bandit</h2>
+                <div class="reviews__control">
+                  <button class="control control--prev js-reviews-prev" type="button">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="control control--next js-reviews-next" type="button">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <ul class="reviews__list">
+                <li class="reviews__item">
+                  <div class="reviews-item">
+                    <div class="reviews-item__top">
+                      <div class="reviews-item__image-wrap">
+                        <img class="reviews-item__image" src="./assets/upload/reviews01.jpg" alt=" ">
+                      </div>
+                      <div class="reviews-item__heading">Анастасия Кирова
+                      </div>
+                      <a class="social-link social-link--border-black reviews-item__social-link" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="reviews-item__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="reviews__item">
+                  <div class="reviews-item">
+                    <div class="reviews-item__top">
+                      <div class="reviews-item__image-wrap">
+                        <img class="reviews-item__image" src="./assets/upload/reviews02.jpg" alt=" ">
+                      </div>
+                      <div class="reviews-item__heading">Михаил
+                      </div>
+                      <a class="social-link social-link--border-black reviews-item__social-link" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="reviews-item__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="gallery">
+          <div class="gallery__wrap">
+            <div class="gallery__inner">
+              <h2 class="gallery__heading">Наши люди</h2>
+              <ul class="gallery__list">
+                <li class="gallery__item gallery__item--large">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery01.jpg" alt=" ">
+                    <div class="gallery-item__descr">Sam YudaT (France) <br>X Baby Knuck(Crimea) <br>X Wesley (Holland)
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--medium">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery02.jpg" alt=" ">
+                    <div class="gallery-item__descr">Рем Дигга
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--small">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery03.jpg" alt=" ">
+                    <div class="gallery-item__descr">Коля Маню
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--small">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery04.jpg" alt=" ">
+                    <div class="gallery-item__descr">Sens
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--large">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery05.jpg" alt=" ">
+                    <div class="gallery-item__descr">Yofu & M.J. Marley
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--medium">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery06.jpg" alt=" ">
+                    <div class="gallery-item__descr">Брутто Каспийский груз
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--medium">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery07.jpg" alt=" ">
+                    <div class="gallery-item__descr">Usachev
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--small">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery08.jpg" alt=" ">
+                    <div class="gallery-item__descr">PVNCH
+                    </div>
+                  </div>
+                </li>
+                <li class="gallery__item gallery__item--large">
+                  <div class="gallery-item">
+                    <img class="gallery-item__image" src="./assets/images/gallery09.jpg" alt=" ">
+                    <div class="gallery-item__descr">Homie
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="gallery__bottom">
+                <button class="link link--primary" type="button">Загрузить еще
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="events">
+          <div class="events__wrap">
+            <div class="events__inner">
+              <h2 class="events__heading">BANDIT принимал участие <br>на следующих выставках <br>и&nbsp;мероприятиях:</h2>
+              <ul class="events__list">
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events01.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events02.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events03.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events04.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events05.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events06.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events07.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events08.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events09.jpg" alt=" ">
+                  </a>
+                </li>
+                <li class="events__item">
+                  <a class="events__link" target="_blank" href="#" rel="nofollow noopener">
+                    <img class="events__image" src="./assets/images/events/events10.jpg" alt=" ">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="franchise franchise--franshiza">
+          <div class="franchise__wrap">
+            <div class="franchise__inner">
+              <div class="franchise__heading">Открой для себя бизнес с&nbsp;брендом BANDIT</div>
+              <div class="franchise__text">Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.</div>
+              <form action="/" method="post" accept-charset="UTF-8">
+                <div class="franchise__field-group">
+                  <label class="field-secondary field-secondary--white franchise__field">
+                    <span class="hidden">Ваше имя
+                    </span>
+                    <input class="field-secondary__input" tabindex="0" placeholder="Ваше имя" name="name" type="text">
+                  </label>
+                  <label class="field-secondary field-secondary--white franchise__field">
+                    <span class="hidden">Телефон
+                    </span>
+                    <input class="field-secondary__input" tabindex="0" placeholder="Телефон" name="tel" type="tel">
+                  </label>
+                  <label class="field-secondary field-secondary--white franchise__field">
+                    <span class="hidden">E-mail
+                    </span>
+                    <input class="field-secondary__input" tabindex="0" placeholder="E-mail" name="email" type="email">
+                  </label>
+                </div>
+                <div class="franchise__bottom">
+                  <label class="checkbox-confirm franchise__confirm">
+                    <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                    <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                    </span>
+                  </label>
+                  <label class="button button--bg-primary franchise__submit">
+                    <input class="hidden" type="submit">
+                    Получить финансовую модель компании
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__wrap">
+          <div class="footer__top-row">
+            <div class="footer__top-col footer__top-col--left">
+              <a class="logo logo--secondary footer__logo">
+                <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
+              </a>
+            </div>
+            <div class="footer__top-col footer__top-col--center">
+              <div class="social footer__social">
+                <ul class="social__list footer__social">
+                  <li class="social__item">
+                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__top-col footer__top-col--right">
+              <button class="button button--bg-primary footer__subscribe" type="button">Подписаться на новости
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__wrap">
+          <div class="footer__middle-row">
+            <div class="footer__contacts">
+              <a class="footer__phone" href="tel:79788881890">7 (978) 88 81 890
+              </a><br>
+              <a class="footer__email" href="mailto:sales@demostore.ru">sales@demostore.ru
+              </a>
+            </div>
+            <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">О нас
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Франшиза
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Каталог
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Возврат и обмен
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Наши магазины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Статьи
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Оплата и доставка
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Как выбрать размер
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__wrap">
+          <div class="footer__bottom-row">
+            <div class="footer__copyright">&copy;&nbsp;2019. Bandit. Все права защищены.
+            </div>
+            <div class="footer__madein">Сделанo в
+              <a title="Sheer" href="https://sheer82.ru/">
+                <svg>
+                  <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>

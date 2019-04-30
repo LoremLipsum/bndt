@@ -1,0 +1,90 @@
+mixin footer(data)
+    -
+        var nav = [
+            'О нас',
+            'Франшиза',
+            'Каталог',
+            'Возврат и обмен',
+            'Наши магазины',
+            'Статьи',
+            'Оплата и доставка',
+            'Как выбрать размер',
+        ];
+
+    +el({
+        tag: 'footer',
+        class: 'footer',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .footer__top
+            .footer__wrap
+                .footer__top-row
+                    .footer__top-col.footer__top-col--left
+                        +logo({
+                            mix: 'footer__logo',
+                            secondary: true,
+                            mod: 'secondary'
+                        })
+                    .footer__top-col.footer__top-col--center
+                        +social({
+                            mix: 'footer__social',
+                            items: socialFooter,
+                            text: false,
+                        })
+                    .footer__top-col.footer__top-col--right
+                        +button({
+                            mod: 'bg-primary',
+                            mix: 'footer__subscribe',
+                            text: 'Подписаться на новости'
+                        })
+        .footer__middle
+            .footer__wrap
+                .footer__middle-row
+                    .footer__contacts
+                        +el({
+                            tag: 'a',
+                            class: 'footer__phone',
+                            href: 'tel:79788881890 ',
+                            text: '7 (978) 88 81 890'
+                        })
+                        br
+                        +el({
+                            tag: 'a',
+                            class: 'footer__email',
+                            href: 'mailto:sales@demostore.ru',
+                            text: 'sales@demostore.ru'
+                        })
+                    .footer__nav(role='navigation' aria-label='Дополнительное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+                        +el({
+                            tag: 'ul',
+                            class: 'footer__list',
+                        })
+                            each item in nav
+                                +el({
+                                    tag: 'li',
+                                    class: 'footer__item',
+                                })(itemprop='name')
+                                    +el({
+                                        tag: 'a',
+                                        text: item,
+                                    })(itemprop='url')
+        .footer__bottom
+            .footer__wrap
+                .footer__bottom-row
+                    +el({
+                        class: 'footer__copyright',
+                        text: '&copy;&nbsp;2019. Bandit. Все права защищены.'
+                    })
+                    .footer__madein
+                        | Сделанo в
+                        +el({
+                            tag: 'a',
+                            title: 'Sheer',
+                            href: 'https://sheer82.ru/'
+                        })
+                            +el({
+                                tag: 'svg',
+                                icon: 'sheer',
+                            })

@@ -1,0 +1,46 @@
+.teaser {
+  background-color: color(light);
+}
+
+.teaser__wrap {
+  @include wrapper;
+}
+
+.teaser__inner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.teaser__text {
+  text-align: center;
+
+  > *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+@include respond-to(medium) {
+  .teaser__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .teaser__text {
+    padding: 0 120px;
+  }
+}
+
+@include respond-to(large) {
+  .teaser__inner {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .teaser__text {
+    padding: 0 150px;
+  }
+}

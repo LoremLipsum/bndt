@@ -1,0 +1,50 @@
+mixin main-nav(data)
+    -var className = 'main-nav'
+    -var active = ''
+
+    +el({
+        tag: 'ul',
+        class: className,
+        mod: data.mod,
+        mix: data.mix
+    })&attributes(attributes)
+        if data.line
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mod: 'line',
+            })
+        each item, index in data.items
+            //- if pageId && index == pageId - 1
+            //-     -var active = ' active'
+            //- else
+            //-     -var active = ''
+
+            +el({
+                tag: 'li',
+                class: className + '__item',
+                mix: item.mix,
+                mod: item.mod,
+            })(itemprop='name')
+                +el({
+                    tag: 'a',
+                    class: className + '__link',
+                    text:item.text,
+                    href: item.href,
+                    js: item.js,
+                })(itemprop='url')
+                if item.items
+                    +el({
+                        tag: 'ul',
+                        class: className + '__secondary',
+                    })
+                        each itemSecondary in item.items
+                            +el({
+                                tag: 'li',
+                                class: className + '__item',
+                            })(itemprop='name')
+                                +el({
+                                    tag: 'a',
+                                    class: className + '__link',
+                                    text: itemSecondary.text,
+                                })(itemprop='url')

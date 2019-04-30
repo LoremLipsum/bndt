@@ -15,6 +15,14 @@
   @return null;
 }
 
+@function width($key) {
+  @if map-has-key($widths, $key) {
+    @return map-get($widths, $key);
+  }
+  @warn "Unknown `#{$key}` in $widths.";
+  @return null;
+}
+
 @function color($key) {
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);

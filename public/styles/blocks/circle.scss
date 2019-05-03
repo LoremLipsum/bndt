@@ -3,9 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
-  width: 36px;
-  padding: 8px;
+  height: 32px;
+  width: 32px;
+  padding: 4px;
   border: 1px solid;
   border-radius: 50%;
   text-decoration: none;
@@ -37,7 +37,7 @@
   height: 16px;
 }
 
-@include respond-to(medium) {
+@include respond-to(large-lg) {
   .circle {
     height: 40px;
     width: 40px;

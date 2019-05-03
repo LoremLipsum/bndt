@@ -15,10 +15,10 @@ mixin main-nav(data)
                 mod: 'line',
             })
         each item, index in data.items
-            //- if pageId && index == pageId - 1
-            //-     -var active = ' active'
-            //- else
-            //-     -var active = ''
+            if pageId && index == pageId - 1
+                -var active = ' active'
+            else
+                -var active = ''
 
             +el({
                 tag: 'li',
@@ -34,17 +34,7 @@ mixin main-nav(data)
                     js: item.js,
                 })(itemprop='url')
                 if item.items
-                    +el({
-                        tag: 'ul',
-                        class: className + '__secondary',
+                    +main-nav-lvl-2({
+                        items: item.items,
+                        mix: 'main-nav__lvl-2',
                     })
-                        each itemSecondary in item.items
-                            +el({
-                                tag: 'li',
-                                class: className + '__item',
-                            })(itemprop='name')
-                                +el({
-                                    tag: 'a',
-                                    class: className + '__link',
-                                    text: itemSecondary.text,
-                                })(itemprop='url')

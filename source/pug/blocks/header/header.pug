@@ -4,82 +4,116 @@ mixin header(data)
         class: 'header',
         mix: data.mix,
         mod: data.mod,
-        js: data.js,
+        js: 'header',
     })&attributes(attributes)
-        .header__top.js-header-top
-            .header__wrap
-                .header__top-row
-                    ul.header__list.header__list--top-left
-                        li.header__item.header__item--button-nav
-                            +button-nav({
-                                mix: 'header__button-nav',
-                                js: 'button-nav',
-                            })
-                        li.header__item
-                            +button-w-circle({
-                                icon: 'search',
-                                ariaLabel: 'Окрыть поиск по сайту',
-                                mod: 'bg-black',
-                                js: 'search-button',
-                            })
-                    +logo({
-                        secondary_white: true,
-                        mod: 'small',
-                        mix: 'header__logo-small'
+        .header__inner
+            ul.header__list.header__list--mobile
+                li.header__item
+                    +button-nav({
+                        mix: 'header__button-nav',
+                        js: 'button-nav',
                     })
-                    ul.header__list.header__list--top-right
-                        li.header__item
-                            +button-w-circle({
-                                icon: 'user',
-                                title: 'Личный кабинет',
-                                mod: 'bg-black',
-                            })
-                        li.header__item
-                            +button-w-circle({
-                                icon: 'star',
-                                title: 'Избранное',
-                                badge: '2',
-                                mod: 'bg-black',
-                            })
-                        li.header__item
-                            +button-w-circle({
-                                icon: 'cart',
-                                title: 'Корзина',
-                                badge: '4',
-                                mod: 'bg-black',
-                            })
-                    .header__dialog-search.js-search
-                        .header__dialog-search-wrap
-                            +button-close({
-                                mix: 'header__close-search',
-                                close: true,
-                                mod: 'bg-black',
-                                js: 'search-close',
-                            })
-                            +search({
-                                mix: 'header__top-search',
-                            })
-        .header__main
-            .header__wrap
-                .header__company-info
-                    +logo({
-                        mix: 'header__logo',
-                        mod: 'primary',
+                li.header__item.header__item--search
+                    +button-w-circle({
+                        icon: 'search',
+                        ariaLabel: 'Окрыть поиск по сайту',
+                        mod: 'bg-black',
+                        js: 'button-search',
+                    })
+                li.header__item.header__item--callback
+                    +button-w-circle({
+                        icon: 'tel',
+                        ariaLabel: 'Позвонить',
+                        mod: 'bg-black',
+                        js: 'button-callback',
+                    })
+            +el({
+                tag: 'a',
+                class: 'header__logo-wrap',
+                mod: 'small',
+            })
+                +el({
+                    tag: 'img',
+                    class: 'header__logo',
+                    image: 'logo-secondary-white.svg'
+                })
+            //- +el({
+            //-     tag: 'a',
+            //-     class: 'header__logo-wrap',
+            //-     mod: 'medium',
+            //- })
+            //-     +el({
+            //-         tag: 'img',
+            //-         class: 'header__logo',
+            //-         image: 'logo-primary.svg'
+            //-     })
+            ul.header__list.header__list--user-mobile
+                li.header__item
+                    +button-w-circle({
+                        icon: 'user',
+                        title: 'Личный кабинет',
+                        mod: 'bg-black',
+                    })
+                li.header__item
+                    +button-w-circle({
+                        icon: 'star',
+                        title: 'Избранное',
+                        badge: '2',
+                        mod: 'bg-black',
+                    })
+                li.header__item
+                    +button-w-circle({
+                        icon: 'cart',
+                        title: 'Корзина',
+                        badge: '4',
+                        mod: 'bg-black',
+                    })
+            .header__dialog.header__dialog--search.js-dialog.js-dialog-search
+                .header__dialog-inner
+                    +button-close({
+                        mix: 'header__dialog-close',
+                        close: true,
+                        mod: 'bg-black',
+                        js: 'close-search',
+                    })
+                    +search({
+                        mix: 'header__search header__search--mobile',
+                    })
+            .header__dialog.header__dialog--callback.js-dialog.js-dialog-callback
+                .header__dialog-inner
+                    +button-close({
+                        mix: 'header__dialog-close',
+                        close: true,
+                        mod: 'bg-black',
+                        js: 'close-callback',
                     })
                     +callback({
-                        mix: 'header__callback-top',
+                        mix: 'header__callback header__callback--mobile'
                     })
-                .header__dialog-nav.js-dialog-main-nav
-                    .header__inner-dialog-nav
-                        +main-nav({
-                            items: mainNav,
-                            mix: 'header__main-nav'
+            .header__panel.js-panel-main-nav
+                .header__panel-top
+                    +el({
+                        tag: 'a',
+                        class: 'header__logo-wrap',
+                        mod: 'large',
+                    })
+                        +el({
+                            tag: 'img',
+                            class: 'header__logo',
+                            image: 'logo-primary.svg'
                         })
-                        ul.header__list.header__list--main
+                .header__panel-content.baron
+                    .header__panel-content-inner.baron__scroller
+                        .header__main-nav-wrap
+                            +main-nav({
+                                items: mainNav,
+                                mix: 'header__main-nav'
+                            })
+                        ul.header__list.header__list--user-desktop
                             li.header__item
                                 +button-w-circle({
                                     icon: 'user',
-                                    title: 'Войти',
+                                    title: 'Личный кабинет',
                                     mod: 'bg-black',
                                 })
                             li.header__item
@@ -96,18 +130,20 @@ mixin header(data)
                                     badge: '4',
                                     mod: 'bg-black',
                                 })
-                        .header__bottom-wrap
-                            +search({
-                                mix: 'header__search',
-                            })
-                            +callback({
-                                mix: 'header__callback',
-                            })
-                            +social({
-                                mix: 'header__social',
-                                items: social,
-                                text: true,
-                            })
+                        +search({
+                            mix: 'header__search header__search--desktop',
+                        })
+                        +callback({
+                            mix: 'header__callback header__callback--desktop'
+                        })
+                        +social({
+                            mix: 'header__social',
+                            items: social,
+                            text: true,
+                        })
+                    .baron__track
+                        .baron__free
+                            .baron__bar
         +overlay({
             js: 'header-overlay',
             mix: 'header__overlay',

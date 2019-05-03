@@ -12,7 +12,8 @@
 }
 
 @include respond-to(medium-lg) {
-
+  .content {
+  }
 }
 
 @include respond-to(large-lg) {

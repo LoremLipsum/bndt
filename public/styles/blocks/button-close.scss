@@ -5,11 +5,28 @@
   height: 32px;
   padding: 8px;
   border-radius: 50%;
-  background-color: color(primary);
 
-  @include hover {
-    .button-close__icon {
-      opacity: 0.5;
+  &--bg-black {
+    background-color: color(black);
+
+    @include hover {
+      background-color: color(light);
+
+      .button-close__icon {
+        @include icon-cross-color (color(black));
+      }
+    }
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+
+    @include hover {
+      background-color: color(black);
+
+      .button-close__icon {
+        @include icon-cross-color (color(light));
+      }
     }
   }
 }
@@ -23,7 +40,7 @@
   @include icon-cross(2px, color(white), 45deg);
 }
 
-@include respond-to(medium) {
+@include respond-to(large) {
   .button-close {
     width: 46px;
     height: 46px;

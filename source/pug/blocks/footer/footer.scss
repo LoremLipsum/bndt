@@ -10,12 +10,6 @@
       margin-bottom: 0;
     }
   }
-
-  a {
-    display: inline-block;
-    color: inherit;
-    text-decoration: none;
-  }
 }
 
 .footer__wrap {
@@ -43,6 +37,11 @@
 
 .footer__contacts {
   margin-bottom: 20px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .footer__list {

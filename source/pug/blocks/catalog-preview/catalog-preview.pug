@@ -3,7 +3,7 @@ mixin catalog-preview(data)
         class: 'catalog-preview',
         mod: data.mod,
         mix: data.mix,
-        js: data.js
+        js: 'tabs',
     })&attributes(attributes)
         .catalog-preview__wrap
             .catalog-preview__inner
@@ -26,16 +26,16 @@ mixin catalog-preview(data)
                         }
                     ],
                 })
-                .tab-1.js-product-tabs-content.active
+                .tab-1.js-content-tabs.active
                     +goods-list({
                         mix: 'catalog-preview__list',
                         goods: goodsItems,
                     })
-                .tab-2.js-product-tabs-content
-                    +goods-list({
-                        mix: 'catalog-preview__list',
-                        goods: goodsItems,
-                    })
+                .tab-2.js-content-tabs
+                    //- +goods-list({
+                    //-     mix: 'catalog-preview__list',
+                    //-     goods: goodsItems,
+                    //- })
                 .catalog-preview__bottom
                     +button({
                         tag: 'a',

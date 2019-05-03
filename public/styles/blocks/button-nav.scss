@@ -1,22 +1,28 @@
-$btn-nav-width: 32px;
-$btn-nav-height: 32px;
-$btn-nav-distanse: 6px;
-$btn-nav-thickness: 2px;
-$btn-nav-color: color(light);
-$btn-nav-color-active: color(black);
+$button-nav-width: 32px;
+$button-nav-height: 32px;
+$button-nav-distanse: 6px;
+$button-nav-thickness: 2px;
+$button-nav-color: color(light);
+$button-nav-color-active: color(black);
 
-.btn-nav {
-  width: $btn-nav-width;
-  height: $btn-nav-height;
-  padding: 8px;
+.button-nav {
+  width: $button-nav-width;
+  height: $button-nav-height;
+  padding: 4px;
   border-radius: 50%;
-  background-color: color(primary);
+
 
   &.active {
     box-shadow: none;
+    background-color: rgba(color(light), 1);
 
-    .btn-nav__lines {
+    .button-nav__lines {
       background-color: transparent;
+
+      &::before,
+      &::after  {
+        background-color: color(black);
+      }
 
       &::before {
         animation-name: nav-before-open;
@@ -27,25 +33,21 @@ $btn-nav-color-active: color(black);
       }
     }
   }
-
-  @include hover {
-
-  }
 }
 
-.btn-nav__icon {
+.button-nav__icon {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.btn-nav__lines {
+.button-nav__lines {
   position: relative;
   display: block;
-  top: calc(50% - #{$btn-nav-thickness / 2});
-  height: $btn-nav-thickness;
-  border-radius: $btn-nav-thickness / 2;
-  background-color: $btn-nav-color;
+  top: calc(50% - #{$button-nav-thickness / 2});
+  height: $button-nav-thickness;
+  border-radius: $button-nav-thickness / 2;
+  background-color: $button-nav-color;
 
   &::before,
   &::after {
@@ -54,9 +56,9 @@ $btn-nav-color-active: color(black);
     left: 0;
     display: block;
     width: 100%;
-    height: $btn-nav-thickness;
-    // border-radius: $btn-nav-thickness / 2;
-    background-color: $btn-nav-color;
+    height: $button-nav-thickness;
+    // border-radius: $button-nav-thickness / 2;
+    background-color: $button-nav-color;
     transform-origin: center;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
@@ -64,23 +66,23 @@ $btn-nav-color-active: color(black);
   }
 
   &::before {
-    top: - $btn-nav-distanse;
+    top: - $button-nav-distanse;
     animation-name: nav-before-close;
   }
 
   &::after {
-    bottom: - $btn-nav-distanse;
+    bottom: - $button-nav-distanse;
     animation-name: nav-after-close;
   }
 }
 
 @keyframes nav-before-close {
   0% {
-    transform: translateY($btn-nav-distanse) rotate(45deg);
+    transform: translateY($button-nav-distanse) rotate(45deg);
   }
 
   50% {
-    transform: translateY($btn-nav-distanse / 2) rotate(0);
+    transform: translateY($button-nav-distanse / 2) rotate(0);
   }
 
   100% {
@@ -90,11 +92,11 @@ $btn-nav-color-active: color(black);
 
 @keyframes nav-after-close {
   0% {
-    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+    transform: translateY(- $button-nav-distanse) rotate(-45deg);
   }
 
   50% {
-    transform: translateY(- $btn-nav-distanse / 2) rotate(0);
+    transform: translateY(- $button-nav-distanse / 2) rotate(0);
   }
 
   100% {
@@ -108,11 +110,11 @@ $btn-nav-color-active: color(black);
   }
 
   50% {
-    transform: translateY($btn-nav-distanse / 2);
+    transform: translateY($button-nav-distanse / 2);
   }
 
   100% {
-    transform: translateY($btn-nav-distanse) rotate(45deg);
+    transform: translateY($button-nav-distanse) rotate(45deg);
   }
 }
 
@@ -122,10 +124,10 @@ $btn-nav-color-active: color(black);
   }
 
   50% {
-    transform: translateY(- $btn-nav-distanse / 2);
+    transform: translateY(- $button-nav-distanse / 2);
   }
 
   100% {
-    transform: translateY(- $btn-nav-distanse) rotate(-45deg);
+    transform: translateY(- $button-nav-distanse) rotate(-45deg);
   }
 }

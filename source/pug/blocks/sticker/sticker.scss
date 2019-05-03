@@ -1,0 +1,17 @@
+.sticker {
+  padding: 6px 10px;
+  padding-top: 3px;
+  background-color: color(white);
+  color: color(primary);
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+@include respond-to(large) {
+  .sticker {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

@@ -27,9 +27,13 @@ html {
   box-sizing: inherit;
 }
 
-* {
-  outline: none;
-}
+// * {
+//   outline: none;
+// }
+
+// ::-webkit-scrollbar { /* for Mac OS X support */
+//   width: 0;
+// }
 
 @include respond-to(medium) {
   body {
@@ -40,5 +44,11 @@ html {
 @include respond-to(large) {
   body {
     font-size: 18px;
+  }
+}
+
+@include respond-to(large-lg) {
+  body {
+    padding-left: 350px;
   }
 }

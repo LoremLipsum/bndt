@@ -7,7 +7,7 @@
 }
 
 .reviews__inner {
-  padding: 50px 0;
+  padding-top: 60px;
 }
 
 .reviews__top {
@@ -17,11 +17,13 @@
 .reviews__heading {
   margin: 0;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .reviews__control {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   .control {
     &--prev {
@@ -35,51 +37,59 @@
 }
 
 .reviews__item {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 @include respond-to(medium) {
   .reviews__inner {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 20px;
   }
 
   .reviews__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   .reviews__heading {
     margin-bottom: 0;
+    text-align: left;
   }
 
   .reviews__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -30px;
+    margin: 0 -55px;
   }
 
   .reviews__item {
     width: 50%;
     margin-bottom: 50px;
-    padding: 0 30px;
+    padding: 0 55px;
   }
 }
 
 @include respond-to(large) {
   .reviews__inner {
-    padding: 110px 0;
+    padding-top: 220px;
+    padding-bottom: 60px;
+  }
+
+  .reviews__top {
+    margin-bottom: 50px;
   }
 
   .reviews__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -45px;
+    margin: 0 -85px;
   }
 
   .reviews__item {
     width: 50%;
     margin-bottom: 50px;
-    padding: 0 45px;
+    padding: 0 85px;
   }
 }

@@ -12,151 +12,202 @@
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <header class="header">
-      <div class="header__top js-header-top">
-        <div class="header__wrap">
-          <div class="header__top-row">
-            <ul class="header__list header__list--top-left">
-              <li class="header__item header__item--button-nav">
-                <button class="btn-nav header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
-                  <span class="btn-nav__icon">
-                    <span class="btn-nav__lines">
-                    </span>
-                  </span>
-                </button>
-              </li>
-              <li class="header__item">
-                <button class="button-w-circle button-w-circle--bg-black js-search-button" type="button">
+    <header class="header js-header">
+      <div class="header__inner">
+        <ul class="header__list header__list--mobile">
+          <li class="header__item">
+            <button class="button-nav header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
+              <span class="button-nav__icon">
+                <span class="button-nav__lines">
+                </span>
+              </span>
+            </button>
+          </li>
+          <li class="header__item header__item--search">
+            <button class="button-w-circle button-w-circle--bg-black js-button-search" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__item header__item--callback">
+            <button class="button-w-circle button-w-circle--bg-black js-button-callback" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <a class="header__logo-wrap header__logo-wrap--small" href="#">
+          <img class="header__logo" src="./assets/images/logo-secondary-white.svg" alt=" ">
+        </a>
+        <ul class="header__list header__list--user-mobile">
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+              </svg>
+              <span class="button-w-circle__badge">2
+              </span>
+            </button>
+          </li>
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+              </svg>
+              <span class="button-w-circle__badge">4
+              </span>
+            </button>
+          </li>
+        </ul>
+        <div class="header__dialog header__dialog--search js-dialog js-dialog-search">
+          <div class="header__dialog-inner">
+            <button class="button-close button-close--bg-black header__dialog-close js-close-search" aria-label="Закрыть окно" type="button">
+              <span class="button-close__icon">
+              </span>
+            </button>
+            <form class="search header__search header__search--mobile js-search" action="/" method="post" accept-charset="UTF-8">
+              <label class="search__field"><span class="hidden">Поиск по сайту</span>
+                <input class="search__input" placeholder="Поиск" type="search">
+                <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
                   <svg class="button-w-circle__icon">
                     <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
                   </svg>
-                </button>
-              </li>
-            </ul>
-            <a class="logo logo--small header__logo-small" title="Перейти на главную страницу" href="main.html">
-              <img class="logo__image" src="./assets/images/logo-secondary-white.svg" alt=" ">
-            </a>
-            <ul class="header__list header__list--top-right">
-              <li class="header__item">
-                <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
-                  <svg class="button-w-circle__icon">
-                    <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="header__item">
-                <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
-                  <svg class="button-w-circle__icon">
-                    <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
-                  </svg>
-                  <span class="button-w-circle__badge">2
-                  </span>
-                </button>
-              </li>
-              <li class="header__item">
-                <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
-                  <svg class="button-w-circle__icon">
-                    <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
-                  </svg>
-                  <span class="button-w-circle__badge">4
-                  </span>
-                </button>
-              </li>
-            </ul>
-            <div class="header__dialog-search js-search">
-              <div class="header__dialog-search-wrap">
-                <button class="button-close button-close--bg-black header__close-search js-search-close" aria-label="Закрыть окно" type="button">
-                  <span class="button-close__icon">
-                  </span>
-                </button>
-                <form class="search header__top-search js-search" action="/" method="post" accept-charset="UTF-8">
-                  <label class="search__field"><span class="hidden">Поиск по сайту</span>
-                    <input class="search__input" placeholder="Поиск" type="search">
-                    <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
-                      <svg class="button-w-circle__icon">
-                        <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
-                      </svg>
-                      <input class="hidden" type="submit">
-                    </span>
-                  </label>
-                </form>
-              </div>
-            </div>
+                  <input class="hidden" type="submit">
+                </span>
+              </label>
+            </form>
           </div>
         </div>
-      </div>
-      <div class="header__main">
-        <div class="header__wrap">
-          <div class="header__company-info">
-            <a class="logo logo--primary header__logo" title="Перейти на главную страницу" href="main.html">
-              <img class="logo__image" src="./assets/images/logo-primary.svg" alt=" ">
-            </a>
-            <div class="callback header__callback-top">
+        <div class="header__dialog header__dialog--callback js-dialog js-dialog-callback">
+          <div class="header__dialog-inner">
+            <button class="button-close button-close--bg-black header__dialog-close js-close-callback" aria-label="Закрыть окно" type="button">
+              <span class="button-close__icon">
+              </span>
+            </button>
+            <div class="callback header__callback header__callback--mobile">
               <button class="button callback__button" type="button">Заказать звонок
               </button>
               <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
               </a>
             </div>
           </div>
-          <div class="header__dialog-nav js-dialog-main-nav">
-            <div class="header__inner-dialog-nav">
-              <ul class="main-nav header__main-nav">
-                <li class="main-nav__item main-nav__item--with-secondary" itemprop="name">
-                  <a class="main-nav__link js-link-secondary" href="page-goods.html" itemprop="url">Одежда
-                  </a>
-                  <ul class="main-nav__secondary">
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Куртки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Футболки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Толстовки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Обувь
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="main-nav__item main-nav__item--with-secondary" itemprop="name">
-                  <a class="main-nav__link js-link-secondary" href="page-accessories.html" itemprop="url">Аксессуары
-                  </a>
-                  <ul class="main-nav__secondary">
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Куртки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Футболки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Толстовки
-                      </a>
-                    </li>
-                    <li class="main-nav__item" itemprop="name">
-                      <a class="main-nav__link" href="#" itemprop="url">Обувь
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="main-nav__item" itemprop="name">
-                  <a class="main-nav__link" href="page-delivery.html" itemprop="url">Оплата и доставка
-                  </a>
-                </li>
-                <li class="main-nav__item" itemprop="name">
-                  <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
-                  </a>
-                </li>
-              </ul>
-              <ul class="header__list header__list--main">
+        </div>
+        <div class="header__panel js-panel-main-nav">
+          <div class="header__panel-top">
+            <a class="header__logo-wrap header__logo-wrap--large" href="#">
+              <img class="header__logo" src="./assets/images/logo-primary.svg" alt=" ">
+            </a>
+          </div>
+          <div class="header__panel-content baron">
+            <div class="header__panel-content-inner baron__scroller">
+              <div class="header__main-nav-wrap">
+                <ul class="main-nav header__main-nav">
+                  <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
+                    <a class="main-nav__link js-link-secondary" href="page-goods.html" itemprop="url">Одежда
+                    </a>
+                    <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
+                    <a class="main-nav__link js-link-secondary" href="page-accessories.html" itemprop="url">Аксессуары
+                    </a>
+                    <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item" itemprop="name">
+                    <a class="main-nav__link" href="page-delivery.html" itemprop="url">Оплата и доставка
+                    </a>
+                  </li>
+                  <li class="main-nav__item" itemprop="name">
+                    <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="header__list header__list--user-desktop">
                 <li class="header__item">
-                  <button class="button-w-circle button-w-circle--bg-black" title="Войти" type="button">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
                     <svg class="button-w-circle__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
                     </svg>
@@ -181,49 +232,52 @@
                   </button>
                 </li>
               </ul>
-              <div class="header__bottom-wrap">
-                <form class="search header__search js-search" action="/" method="post" accept-charset="UTF-8">
-                  <label class="search__field"><span class="hidden">Поиск по сайту</span>
-                    <input class="search__input" placeholder="Поиск" type="search">
-                    <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
-                      <svg class="button-w-circle__icon">
-                        <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+              <form class="search header__search header__search--desktop js-search" action="/" method="post" accept-charset="UTF-8">
+                <label class="search__field"><span class="hidden">Поиск по сайту</span>
+                  <input class="search__input" placeholder="Поиск" type="search">
+                  <span class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                    </svg>
+                    <input class="hidden" type="submit">
+                  </span>
+                </label>
+              </form>
+              <div class="callback header__callback header__callback--desktop">
+                <button class="button callback__button" type="button">Заказать звонок
+                </button>
+                <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
+                </a>
+              </div>
+              <div class="social header__social"><span class="social__text">Присоеденяйся к нам</span>
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
                       </svg>
-                      <input class="hidden" type="submit">
-                    </span>
-                  </label>
-                </form>
-                <div class="callback header__callback">
-                  <button class="button callback__button" type="button">Заказать звонок
-                  </button>
-                  <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
-                  </a>
-                </div>
-                <div class="social header__social"><span class="social__text">Присоеденяйся к нам</span>
-                  <ul class="social__list header__social">
-                    <li class="social__item">
-                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
-                        <svg class="social-link__icon" aria-hidden="true">
-                          <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="social__item">
-                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
-                        <svg class="social-link__icon" aria-hidden="true">
-                          <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li class="social__item">
-                      <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
-                        <svg class="social-link__icon" aria-hidden="true">
-                          <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="baron__track">
+              <div class="baron__free">
+                <div class="baron__bar"></div>
               </div>
             </div>
           </div>
@@ -251,23 +305,23 @@
             </div>
             <div class="footer__top-col footer__top-col--center">
               <div class="social footer__social">
-                <ul class="social__list footer__social">
+                <ul class="social__list">
                   <li class="social__item">
-                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
                       <svg class="social-link__icon" aria-hidden="true">
                         <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
                       <svg class="social-link__icon" aria-hidden="true">
                         <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social-link" target="_blank" href="#" rel="nofollow noopener">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
                       <svg class="social-link__icon" aria-hidden="true">
                         <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
                       </svg>
@@ -351,9 +405,9 @@
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>
     <script src="./scripts/libs/ofi.js"></script>
-    <script src="./scripts/libs/slick.js"></script>
+    <script src="./scripts/libs/baron.js"></script>
     <script src="./scripts/libs/picturefill.js"></script>
-    <script src="./scripts/libs/wow.js"></script>
+    <script src="./scripts/libs/swiper.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>

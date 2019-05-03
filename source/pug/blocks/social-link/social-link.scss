@@ -52,6 +52,26 @@
     }
   }
 
+  &--bg-light {
+    background-color: color(light);
+    border-color: color(light);
+    color: color(black);
+
+    .social-link__icon {
+      fill: color(black);
+    }
+
+    @include hover {
+      background-color: color(black);
+      border-color: color(black);
+      color: color(light);
+
+      .social-link__icon {
+        fill: color(light);
+      }
+    }
+  }
+
   &--border-black {
     border-color: color(black);
     background-color: color(white);
@@ -74,8 +94,8 @@
 
 .social-link__icon {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 @include respond-to(medium) {
@@ -83,7 +103,6 @@
     height: 40px;
     width: 40px;
     border-radius: 21px;
-    padding: 10px;
   }
 
   .social-link__icon {

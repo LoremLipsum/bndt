@@ -9,12 +9,12 @@
 
 .events__inner {
   padding-top: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .events__heading {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .events__list {
@@ -40,8 +40,12 @@
 
 @include respond-to(medium) {
   .events__inner {
-    padding-top: 110px;
-    padding-bottom: 50px;
+    padding-top: 140px;
+    padding-bottom: 90px;
+  }
+
+  .events__heading {
+    margin-bottom: 55px;
   }
 
   .events__item {
@@ -51,8 +55,12 @@
 
 @include respond-to(large) {
   .events__inner {
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: 170px;
+    padding-bottom: 120px;
+  }
+
+  .events__heading {
+    margin-bottom: 75px;
   }
 
   .events__item {

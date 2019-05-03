@@ -12,7 +12,7 @@
   }
 }
 
-@include respond-to(medium) {
+@include respond-to(520px) {
   .goods-list {
     display: flex;
     flex-wrap: wrap;

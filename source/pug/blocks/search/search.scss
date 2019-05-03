@@ -52,7 +52,7 @@
   }
 }
 
-@include respond-to(large) {
+@include respond-to(large-lg) {
   .search__input {
     height: 60px;
     min-height: 60px;

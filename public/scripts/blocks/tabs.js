@@ -5,8 +5,8 @@
   var tabs = document.querySelector('.js-tabs');
 
   if(tabs) {
-    var btns = tabs.querySelectorAll('.js-tabs-button');
-    var contents = tabs.querySelectorAll('.js-tabs-content');
+    var btns = tabs.querySelectorAll('.js-button-tabs');
+    var contents = tabs.querySelectorAll('.js-content-tabs');
 
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {

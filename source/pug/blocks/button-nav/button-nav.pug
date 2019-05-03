@@ -1,7 +1,7 @@
 mixin button-nav(data)
     +el({
         tag: 'button',
-        class: 'btn-nav',
+        class: 'button-nav',
         mix: data.mix,
         js: data.js,
         mod: data.mod,
@@ -9,9 +9,9 @@ mixin button-nav(data)
     })&attributes(attributes)
         +el({
             tag: 'span',
-            class: 'btn-nav__icon'
+            class: 'button-nav__icon'
         })
             +el({
                 tag: 'span',
-                class: 'btn-nav__lines'
+                class: 'button-nav__lines'
             })

@@ -25,5 +25,10 @@ mixin reviews-item(data)
             })
         +el({
             class: 'reviews-item__text',
-            text: data.text,
+            mix: 'baron'
         })
+            .baron__scroller
+                | !{data.text}
+            .baron__track
+                .baron__free
+                    .baron__bar

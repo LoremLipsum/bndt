@@ -1,6 +1,13 @@
 .field {
   display: block;
   width: 100%;
+
+  &--textarea {
+    .field__input {
+      height: 100px;
+      min-height: 100px;
+    }
+  }
 }
 
 .field__label {
@@ -23,7 +30,7 @@
   caret-color: color(black);
 
   &::placeholder {
-    font-size: 14px;
+    font-size: inherit;
     color: color(gray);
   }
 
@@ -44,6 +51,15 @@
 }
 
 @include respond-to(medium) {
+  .field {
+    &--textarea {
+      .field__input {
+        height: 130px;
+        min-height: 130px;
+      }
+    }
+  }
+
   .field__input {
     height: 50px;
     padding: 15px 20px;
@@ -51,6 +67,15 @@
 }
 
 @include respond-to(large) {
+  .field {
+    &--textarea {
+      .field__input {
+        height: 150px;
+        min-height: 150px;
+      }
+    }
+  }
+
   .field__input {
     height: 56px;
     padding: 18px 20px;

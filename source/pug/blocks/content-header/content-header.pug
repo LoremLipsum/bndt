@@ -1,0 +1,22 @@
+mixin content-header(data)
+    +el({
+        class: 'content-header',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .content-header__wrap
+            .content-header__inner
+                +control({
+                    tag: 'a',
+                    position: 'before',
+                    mod: ['prev', 'with-text'],
+                    mix: 'content-header__control',
+                    text: 'Назад',
+                })
+                if data.heading
+                    +el({
+                        tag: 'h1',
+                        class: 'content-header__heading',
+                        text: data.heading,
+                    })

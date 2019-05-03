@@ -592,15 +592,15 @@
             <div class="reviews__top">
               <h2 class="reviews__heading">Что говорят о Bandit</h2>
               <div class="reviews__control">
-                <button class="control control--prev swiper-prev" type="button">
-                  <svg class="control__icon">
-                    <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-                  </svg>
+                <button class="control control--prev swiper-prev" type="button"><span class="control__icon-wrap">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg></span>
                 </button>
-                <button class="control control--next swiper-next" type="button">
-                  <svg class="control__icon">
-                    <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-                  </svg>
+                <button class="control control--next swiper-next" type="button"><span class="control__icon-wrap">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg></span>
                 </button>
               </div>
             </div>
@@ -797,34 +797,38 @@
           <div class="franchise__inner">
             <div class="franchise__heading">Открой для себя бизнес с&nbsp;брендом BANDIT</div>
             <div class="franchise__text">Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.</div>
-            <form action="/" method="post" accept-charset="UTF-8">
-              <div class="franchise__field-group">
-                <label class="field-secondary field-secondary--white franchise__field">
+            <form class="request franchise__request" action="/" method="post" accept-charset="UTF-8">
+              <div class="request__field-group">
+                <label class="field-secondary request__field">
                   <span class="hidden">Ваше имя
                   </span>
                   <input class="field-secondary__input" tabindex="0" placeholder="Ваше имя" name="name" type="text">
                 </label>
-                <label class="field-secondary field-secondary--white franchise__field">
+                <label class="field-secondary request__field">
                   <span class="hidden">Телефон
                   </span>
                   <input class="field-secondary__input" tabindex="0" placeholder="Телефон" name="tel" type="tel">
                 </label>
-                <label class="field-secondary field-secondary--white franchise__field">
+                <label class="field-secondary request__field">
                   <span class="hidden">E-mail
                   </span>
                   <input class="field-secondary__input" tabindex="0" placeholder="E-mail" name="email" type="email">
                 </label>
               </div>
-              <div class="franchise__bottom">
-                <label class="checkbox-confirm franchise__confirm">
-                  <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
-                  <span class="checkbox-confirm__label">Согласие на обработку персональных данных
-                  </span>
-                </label>
-                <label class="button button--bg-primary franchise__submit">
-                  <input class="hidden" type="submit">
-                  Получить финансовую модель компании
-                </label>
+              <div class="request__bottom">
+                <div class="request__confirm-wrap">
+                  <label class="checkbox-confirm request__confirm">
+                    <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                    <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+                <div class="request__submit-wrap">
+                  <label class="button button--bg-primary request__submit">
+                    <input class="hidden" type="submit">
+                    Получить финансовую модель компании
+                  </label>
+                </div>
               </div>
             </form>
           </div>
@@ -836,8 +840,8 @@
         <div class="footer__wrap">
           <div class="footer__top-row">
             <div class="footer__top-col footer__top-col--left">
-              <a class="logo logo--secondary footer__logo">
-                <img class="logo__image" src="./assets/images/logo-secondary.svg" alt=" ">
+              <a class="footer__logo-wrap" href="#">
+                <img class="footer__logo" src="./assets/images/logo-secondary.svg" alt=" ">
               </a>
             </div>
             <div class="footer__top-col footer__top-col--center">
@@ -868,7 +872,7 @@
               </div>
             </div>
             <div class="footer__top-col footer__top-col--right">
-              <button class="button button--bg-primary footer__subscribe" type="button">Подписаться на новости
+              <button class="button button--bg-black footer__subscribe" type="button">Подписаться на новости
               </button>
             </div>
           </div>

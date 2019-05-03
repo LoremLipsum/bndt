@@ -1,0 +1,43 @@
+mixin request(data)
+    +f({
+        class: 'request',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+        .request__field-group
+            +field-secondary({
+                mod: data.fieldMod,
+                mix: 'request__field',
+                label: 'Ваше имя',
+                placeholder: 'Ваше имя',
+                name: 'name',
+            })
+            +field-secondary({
+                mod: data.fieldMod,
+                mix: 'request__field',
+                label: 'Телефон',
+                placeholder: 'Телефон',
+                type: 'tel',
+                name: 'tel',
+            })
+            +field-secondary({
+                mod: data.fieldMod,
+                mix: 'request__field',
+                label: 'E-mail',
+                placeholder: 'E-mail',
+                type: 'email',
+                name: 'email',
+            })
+        .request__bottom
+            .request__confirm-wrap
+                +checkbox-confirm({
+                    mix: 'request__confirm'
+                })
+            .request__submit-wrap
+                +button({
+                    mix: 'request__submit',
+                    type: 'submit',
+                    mod: 'bg-primary',
+                    text: data.submit,
+                })

@@ -5,7 +5,7 @@ mixin field-secondary(data)
         mod: data.mod,
         mix: data.mix,
         js: data.js,
-    })
+    })&attributes(attributes)
         if data.label
             +el({
                 tag: 'span',

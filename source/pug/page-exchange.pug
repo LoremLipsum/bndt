@@ -1,0 +1,13 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Обмен и возврат товара',
+        })
+        +exchange({
+
+        })

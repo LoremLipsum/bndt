@@ -22,11 +22,15 @@ mixin footer(data)
             .footer__wrap
                 .footer__top-row
                     .footer__top-col.footer__top-col--left
-                        +logo({
-                            mix: 'footer__logo',
-                            secondary: true,
-                            mod: 'secondary'
+                        +el({
+                            tag: 'a',
+                            class: 'footer__logo-wrap',
                         })
+                            +el({
+                                tag: 'img',
+                                class: 'footer__logo',
+                                image: 'logo-secondary.svg'
+                            })
                     .footer__top-col.footer__top-col--center
                         +social({
                             mix: 'footer__social',
@@ -35,7 +39,7 @@ mixin footer(data)
                         })
                     .footer__top-col.footer__top-col--right
                         +button({
-                            mod: 'bg-primary',
+                            mod: 'bg-black',
                             mix: 'footer__subscribe',
                             text: 'Подписаться на новости'
                         })

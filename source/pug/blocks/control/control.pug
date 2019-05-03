@@ -7,10 +7,13 @@ mixin control(data)
         js: data.js,
         title: data.title,
         target: data.target,
-        href: data.href
+        href: data.href,
+        text: data.text,
+        position: data.position,
     })&attributes(attributes)
-        +el({
-            tag: 'svg',
-            icon: 'arrow',
-            class: 'control__icon',
-        })
+        span.control__icon-wrap
+            +el({
+                tag: 'svg',
+                icon: 'arrow',
+                class: 'control__icon',
+            })

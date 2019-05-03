@@ -11,38 +11,7 @@ mixin franchise(data)
                     | Открой для себя бизнес с&nbsp;брендом BANDIT
                 .franchise__text
                     | Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.
-                +f({})
-                    .franchise__field-group
-                        +field-secondary({
-                            mod: 'white',
-                            mix: 'franchise__field',
-                            label: 'Ваше имя',
-                            placeholder: 'Ваше имя',
-                            name: 'name',
-                        })
-                        +field-secondary({
-                            mod: 'white',
-                            mix: 'franchise__field',
-                            label: 'Телефон',
-                            placeholder: 'Телефон',
-                            type: 'tel',
-                            name: 'tel',
-                        })
-                        +field-secondary({
-                            mod: 'white',
-                            mix: 'franchise__field',
-                            label: 'E-mail',
-                            placeholder: 'E-mail',
-                            type: 'email',
-                            name: 'email',
-                        })
-                    .franchise__bottom
-                        +checkbox-confirm({
-                            mix: 'franchise__confirm'
-                        })
-                        +button({
-                            mix: 'franchise__submit',
-                            type: 'submit',
-                            mod: 'bg-primary',
-                            text: 'Получить финансовую модель компании',
-                        })
+                +request({
+                    mix: 'franchise__request',
+                    submit: 'Получить финансовую модель компании'
+                })

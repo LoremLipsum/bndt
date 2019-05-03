@@ -40,7 +40,7 @@
   @include icon-cross(2px, color(white), 45deg);
 }
 
-@include respond-to(large) {
+@include respond-to(medium) {
   .button-close {
     width: 46px;
     height: 46px;

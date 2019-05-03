@@ -94,7 +94,7 @@
               </span>
             </button>
             <div class="callback header__callback header__callback--mobile">
-              <button class="button callback__button" type="button">Заказать звонок
+              <button class="button callback__button js-open-callback" type="button">Заказать звонок
               </button>
               <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
               </a>
@@ -244,7 +244,7 @@
                 </label>
               </form>
               <div class="callback header__callback header__callback--desktop">
-                <button class="button callback__button" type="button">Заказать звонок
+                <button class="button callback__button js-open-callback" type="button">Заказать звонок
                 </button>
                 <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
                 </a>
@@ -556,6 +556,57 @@
         </div>
       </div>
     </footer>
+    <div class="modal js-modal-callback js-modal">
+      <div class="overlay modal__overlay active js-overlay-modal">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-close button-close--bg-primary modal__close js-close-modal" aria-label="Закрыть окно" type="button">
+          <span class="button-close__icon">
+          </span>
+        </button>
+        <div class="modal__dialog-inner">
+          <h3 class="modal__heading">Заказать обратный звонок
+          </h3>
+          <p class="modal__text">Укажите ваш номер телефона, имя и мы свяжемся с вами в ближайшее время.
+          </p>
+          <form class="form" action="/" method="post" accept-charset="UTF-8">
+            <div class="form__inner">
+              <div class="form__group">
+                <label class="field form__field">
+                  <span class="hidden">Имя
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field form__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field field--textarea form__field">
+                  <span class="hidden">Сообщение
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
+                  </textarea>
+                </label>
+              </div>
+              <div class="form__submit-wrap">
+                <label class="button button--bg-primary button--large form__submit">
+                  <input class="hidden" type="submit">
+                  Отправить
+                </label>
+              </div>
+              <div class="form__confirm">
+                <label class="checkbox-confirm checkbox-confirm--small">
+                  <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                  <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/libs/jquery.js"></script>
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>

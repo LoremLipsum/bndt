@@ -16,5 +16,24 @@ html(lang="ru-RU")
         block content
         block footer
             +footer({})
+        block modal
+            +modal({
+                js: 'modal-callback',
+                heading: 'Заказать обратный звонок',
+                text: 'Укажите ваш номер телефона, имя и мы свяжемся с вами в ближайшее время.'
+            })
+                +form({
+                    group: [
+                        {
+                            firstName: true,
+                            tel: true,
+                            message: {
+                                placeholder: 'Сообщение'
+                            },
+                        },
+                    ],
+                    confirm: true,
+                    submit: 'Отправить'
+                })
         block scripts
             +scripts()

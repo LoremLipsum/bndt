@@ -13,9 +13,9 @@ mixin form(data)
                             mix: 'form__field',
                             icon: item.icon,
                             mod:  item.modField,
-                            label: 'Введите имя',
+                            label: 'Имя',
                             name: 'user',
-                            placeholder: 'Введите имя:'
+                            placeholder: 'Имя'
                         })(aria-required='true', aria-invalid='false')
                     if item.lastName
                         +field({
@@ -41,10 +41,10 @@ mixin form(data)
                             mix: 'form__field',
                             icon: item.icon,
                             mod: item.modField,
-                            label: 'Введите телефон',
+                            label: 'Телефон',
                             type: 'tel',
                             name: 'tel',
-                            placeholder: '+7(___)___-__-__',
+                            placeholder: 'Телефон',
                         })(aria-required='true', aria-invalid='false')
                     if item.text
                         +field({
@@ -59,20 +59,13 @@ mixin form(data)
                     if item.message
                         +field({
                             tag: 'textarea',
+                            mod: 'textarea',
                             mix: 'form__field',
                             icon: item.message.icon,
-                            mod: item.message.mod,
                             label: item.message.placeholder,
                             name: 'message',
                             placeholder: item.message.placeholder
                         })(aria-required='true', aria-invalid='false')
-            if data.confirm
-                .form__confirm
-                    +checkbox-confirm({
-                        mod: 'small',
-                        label: 'Согласие на обработку персональных данных',
-                        checked: true,
-                    })(aria-required='true', aria-invalid='false')
             +el({
                 class: 'form__submit-wrap',
                 mod: data.modSubmit
@@ -83,3 +76,10 @@ mixin form(data)
                     type: 'submit',
                     text: data.submit
                 })
+            if data.confirm
+                .form__confirm
+                    +checkbox-confirm({
+                        mod: 'small',
+                        label: 'Согласие на обработку персональных данных',
+                        checked: true,
+                    })(aria-required='true', aria-invalid='false')

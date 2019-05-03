@@ -7,7 +7,8 @@ mixin callback(data)
     })&attributes(attributes)
         +button({
             mix: 'callback__button',
-            text: 'Заказать звонок'
+            text: 'Заказать звонок',
+            js: 'open-callback'
         })
         +el({
             tag: 'a',

@@ -35,11 +35,31 @@
 
 .catalog-preview__bottom {
   margin-top: 30px;
-  text-align: right;
+  text-align: center;
 }
 
+.catalog-preview__button-top {
+  display: block;
+}
+
+.catalog-preview__button-top,
 .catalog-preview__button-bottom {
-  margin-left: auto;
+  width: 100%;
+}
+
+@include respond-to(small-lg) {
+  .catalog-preview__bottom {
+    text-align: right;
+  }
+
+  .catalog-preview__button-top {
+    width: auto;
+  }
+
+  .catalog-preview__button-bottom {
+    width: auto;
+    margin-left: auto;
+  }
 }
 
 @include respond-to(medium) {

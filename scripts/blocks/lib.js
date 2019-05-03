@@ -1,4 +1,4 @@
 objectFitImages();
 svg4everybody();
 picturefill();
-new WOW().init();
+// new WOW().init();

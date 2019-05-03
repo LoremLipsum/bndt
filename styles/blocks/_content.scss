@@ -12,11 +12,12 @@
 }
 
 @include respond-to(medium-lg) {
-
+  .content {
+  }
 }
 
 @include respond-to(large-lg) {
   .content {
-    padding-left: 350px;
+
   }
 }

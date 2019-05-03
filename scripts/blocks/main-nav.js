@@ -3,7 +3,7 @@
 (function() {
 
   var btn = document.querySelector('.js-button-nav');
-  var block = document.querySelector('.js-dialog-main-nav');
+  var block = document.querySelector('.js-panel-main-nav');
   var overlay = document.querySelector('.js-header-overlay');
   var ESC = 27;
 

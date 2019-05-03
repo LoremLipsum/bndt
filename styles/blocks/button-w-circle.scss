@@ -147,7 +147,7 @@
   @include icon-cross(2px, color(white), 45deg);
 }
 
-@include respond-to(large) {
+@include respond-to(large-lg) {
   .button-w-circle {
     height: 40px;
     width: 40px;

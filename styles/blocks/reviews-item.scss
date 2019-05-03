@@ -53,7 +53,7 @@
 
 .reviews-item__text {
   position: relative;
-  max-height: 272px;
+  max-height: 200px;
   padding-top: 40px;
   overflow-y: auto;
 
@@ -68,6 +68,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+  }
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

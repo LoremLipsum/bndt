@@ -2,10 +2,9 @@
   display: block;
   width: 100%;
 
-  &--white {
+  &--border-light {
     .field-secondary__input {
-      color: color(white);
-      border-bottom-color: color(white);
+      border-bottom-color: color(light);
     }
   }
 
@@ -22,7 +21,6 @@
   font-size: 12px;
   line-height: 1;
   text-align: left;
-  color: color(black);
 }
 
 .field-secondary__input {
@@ -34,11 +32,10 @@
   border: none;
   border-bottom: 2px solid;
   background-color: transparent;
-  color: color(black);
   font-family: font(secondary);
   font-size: 20px;
   line-height: 30px;
-  caret-color: color(black);
+  caret-color: currentColor;
   outline: none;
 
   &::placeholder {

@@ -8,10 +8,16 @@ block vars
 block content
     main.content
         +intro({})
-        +teaser({})
+        +quote-primary({
+            mod: 'bg-light',
+            text: 'Успех строится из мелочей, и&nbsp;одежда BANDIT готова стать твоим надежным попутчиком, обладая запасом качества на&nbsp;который всегда можно положиться.'
+        })
         +catalog-preview({
         })
-        +order({
+        +card-more({
+            image: 'order.jpg',
+            text: 'Ты можешь не&nbsp;просто приобрести у&nbsp;нас одежду, но&nbsp;и&nbsp;разместить заказ на&nbsp;индивидуальное производство любых вещей',
+            link: 'Узнать подробнее'
         })
         +features({
             items: features,
@@ -23,6 +29,9 @@ block content
         })
         +events({
         })
-        +franchise({
-            mod: 'franshiza'
+        +card-form({
+            image: 'franchise.jpg',
+            heading: 'Открой для себя бизнес с&nbsp;брендом BANDIT',
+            text: 'Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.',
+            submit: 'Получить финансовую модель компании',
         })

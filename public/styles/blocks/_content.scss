@@ -1,23 +1,31 @@
 .content {
-  // padding-top: 35px;
-  // padding-bottom: 60px;
 
-  &--no-bottom-space {
-    padding-bottom: 0 !important;
-  }
 }
 
 .content__wrap {
   @include wrapper;
 }
 
-@include respond-to(medium-lg) {
+.content__card {
+  margin-bottom: get($y, small, size-180);
+}
+
+@include respond-to(medium) {
   .content {
+
+  }
+
+  .content__card {
+    margin-bottom: get($y, medium, size-180);
   }
 }
 
-@include respond-to(large-lg) {
+@include respond-to(large) {
   .content {
 
+  }
+
+  .content__card {
+    margin-bottom: get($y, large, size-180);
   }
 }

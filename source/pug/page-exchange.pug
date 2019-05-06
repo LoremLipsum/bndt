@@ -4,10 +4,11 @@ block vars
     - var pageTitle = 'Бандит'
 
 block content
-    main.content
-        +content-header({
-            heading: 'Обмен и возврат товара',
-        })
-        +exchange({
+    +content-header({
+        heading: 'Обмен и возврат товара',
+        mod: ['bg-light'],
+        mix: 'content__header'
+    })
+    +exchange({
 
-        })
+    })

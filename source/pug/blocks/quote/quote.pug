@@ -1,0 +1,14 @@
+mixin quote(data)
+    +el({
+        class: 'quote',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .quote__wrap
+            +el({
+                tag: 'blockquote',
+                class: 'quote__block',
+                text: data.text
+            })
+                block

@@ -1,22 +1,23 @@
 mixin content-header(data)
     +el({
+        tag: 'header',
         class: 'content-header',
         mix: data.mix,
         mod: data.mod,
         js: data.js,
+        style: data.image ? 'background-image: url(./assets/images/' + data.image + ');' : data.style,
     })&attributes(attributes)
         .content-header__wrap
-            .content-header__inner
-                +control({
-                    tag: 'a',
-                    position: 'before',
-                    mod: ['prev', 'with-text'],
-                    mix: 'content-header__control',
-                    text: 'Назад',
+            +control({
+                tag: 'a',
+                position: 'before',
+                mod: ['prev', 'with-text'],
+                mix: 'content-header__control',
+                text: 'Назад',
+            })
+            if data.heading
+                +el({
+                    tag: 'h1',
+                    class: 'content-header__heading',
+                    text: data.heading,
                 })
-                if data.heading
-                    +el({
-                        tag: 'h1',
-                        class: 'content-header__heading',
-                        text: data.heading,
-                    })

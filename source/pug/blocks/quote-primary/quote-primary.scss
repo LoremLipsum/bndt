@@ -1,0 +1,43 @@
+.quote-primary {
+  &--bg-light {
+    background-color: color(light);
+  }
+
+  &--bg-primary {
+    background-color: color(primary);
+    color: color(white);
+  }
+}
+
+.quote-primary__wrap {
+  padding: get($y, small, size-100) get($x, small, size-200);
+}
+
+.quote-primary__block {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include respond-to(medium) {
+  .quote-primary__wrap {
+    padding: get($y, medium, size-100) get($x, medium, size-200);
+  }
+}
+
+@include respond-to(large) {
+  .quote-primary__wrap {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding: get($y, large, size-100) get($x, large, size-200);
+  }
+}

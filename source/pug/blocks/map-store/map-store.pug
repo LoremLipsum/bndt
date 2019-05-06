@@ -1,0 +1,42 @@
+mixin map(data)
+    +el({
+        class: 'map-store',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })
+
+        h2.map-store__heading Екатеринбург - ул. Кузнецова д.8
+
+        +el({
+            class: 'map-store__map',
+            id: 'map'
+        })
+
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+            script.
+                ymaps.ready(function () {
+                  var map = new ymaps.Map('map', {
+                    center: [56.888313, 60.610832],
+                    zoom: 18,
+                    scrollZoom: false,
+                    controls: []
+                  }, {
+                    searchControlProvider: 'yandex#search'
+                  }),
+                  Placemark = new ymaps.Placemark([44.579352, 33.520716], {
+                    balloonContent: 'Екатеринбург - ул. Кузнецова д.8'
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [30, 30],
+                    iconImageOffset: [-15, -40],
+                  });
+
+                  map.geoObjects.add(Placemark);
+                  map.behaviors.disable('scrollZoom');
+                  map.controls.add('zoomControl');
+                  var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+                  map.controls.get('zoomControl').options.set('size', 'small');
+                });

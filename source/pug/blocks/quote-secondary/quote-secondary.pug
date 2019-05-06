@@ -1,0 +1,17 @@
+mixin quote-secondary(data)
+    +el({
+        class: 'quote-secondary',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .quote-secondary__wrap
+            +el({
+                tag: 'blockquote',
+                class: 'quote-secondary__block',
+                before: {
+                    tag: 'p',
+                    text: data.text
+                }
+            })
+                block

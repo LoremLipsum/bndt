@@ -1,9 +1,10 @@
 .social-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 32px;
   width: 32px;
+  margin: 5px 0;
   padding: 4px;
   border: 1px solid;
   border-color: transparent;
@@ -98,7 +99,7 @@
   height: 18px;
 }
 
-@include respond-to(medium) {
+@include respond-to(large) {
   .social-link {
     height: 40px;
     width: 40px;

@@ -1,5 +1,6 @@
 .control {
   display: inline-block;
+  color: inherit;
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
@@ -50,4 +51,5 @@
   display: block;
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }

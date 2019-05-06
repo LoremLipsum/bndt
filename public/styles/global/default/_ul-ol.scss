@@ -1,14 +1,14 @@
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style-position: inside;
-
-  li {
-    margin: 0;
-    margin-bottom: mb(sm);
-  }
-}
+// ul,
+// ol {
+//   margin: 0;
+//   padding: 0;
+//   list-style-position: inside;
+//
+//   li {
+//     margin: 0;
+//     margin-bottom: mb(sm);
+//   }
+// }
 
 // ol {
 //   list-style-type: none;
@@ -22,14 +22,14 @@ ol {
 //   }
 // }
 
-@include respond-to(medium) {
-  li {
-    margin-bottom: mb(md);
-  }
-}
-
-@include respond-to(large) {
-  li {
-    margin-bottom: mb(lg);
-  }
-}
+// @include respond-to(medium) {
+//   li {
+//     margin-bottom: mb(md);
+//   }
+// }
+//
+// @include respond-to(large) {
+//   li {
+//     margin-bottom: mb(lg);
+//   }
+// }

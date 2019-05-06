@@ -1,8 +1,9 @@
 .control {
-  display: block;
-  padding: 4px;
-  width: 28px;
-  height: 28px;
+  display: inline-block;
+  color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
 
   &--prev {
     .control__icon {
@@ -13,6 +14,12 @@
   &--next {
   }
 
+  &--with-text {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+  }
+
   @include hover {
     .control__icon {
       opacity: 0.6;
@@ -20,8 +27,29 @@
   }
 }
 
+.control--prev.control--with-text {
+  .control__icon-wrap {
+    margin-right: 20px;
+  }
+}
+
+.control--next.control--with-text {
+  .control__icon-wrap {
+    margin-left: 20px;
+  }
+}
+
+.control__icon-wrap {
+  flex-shrink: none;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+}
+
 .control__icon {
   display: block;
   width: 20px;
   height: 20px;
+  fill: currentColor;
 }

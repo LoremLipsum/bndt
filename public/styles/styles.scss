@@ -16,7 +16,11 @@
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
 @import "./blocks/baron";
+// @import "./blocks/section";
+@import "./blocks/section-centred";
+
 @import "./blocks/content";
+@import "./blocks/font-h2";
 @import "../pug/blocks/logo/logo";
 @import "../pug/blocks/main-nav-lvl-2/main-nav-lvl-2";
 @import "../pug/blocks/main-nav/main-nav";
@@ -42,11 +46,9 @@
 @import "../pug/blocks/radio-button/radio-button";
 @import "../pug/blocks/control/control";
 @import "../pug/blocks/intro/intro";
-@import "../pug/blocks/teaser/teaser";
 @import "../pug/blocks/catalog-preview/catalog-preview";
 @import "../pug/blocks/goods-item/goods-item";
 @import "../pug/blocks/goods-list/goods-list";
-@import "../pug/blocks/order/order";
 @import "../pug/blocks/features/features";
 @import "../pug/blocks/features-item/features-item";
 @import "../pug/blocks/reviews/reviews";
@@ -56,7 +58,15 @@
 @import "../pug/blocks/events/events";
 @import "../pug/blocks/franchise/franchise";
 @import "../pug/blocks/footer/footer";
-
 @import "../pug/blocks/sticker/sticker";
-
 @import "../pug/blocks/modal/modal";
+@import "../pug/blocks/content-header/content-header";
+@import "../pug/blocks/exchange/exchange";
+@import "../pug/blocks/request/request";
+@import "../pug/blocks/quote-primary/quote-primary";
+@import "../pug/blocks/quote-secondary/quote-secondary";
+@import "../pug/blocks/card-content/card-content";
+@import "../pug/blocks/card-more/card-more";
+@import "../pug/blocks/card-form/card-form";
+
+@import "../pug/blocks/table-store/table-store";

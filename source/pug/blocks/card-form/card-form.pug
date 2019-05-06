@@ -1,0 +1,24 @@
+mixin card-form(data)
+    +el({
+        tag: data.tag,
+        class: 'card-form',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        style: 'background-image: url(./assets/images/' + data.image + ');'
+    })&attributes(attributes)
+        .card-form__wrap
+            +el({
+                tag: 'h2',
+                text: data.heading,
+                class: 'card-form__heading',
+            })
+            +el({
+                tag: 'p',
+                text: data.text,
+                class: 'card-form__text',
+            })
+            +request({
+                mix: 'card-form__form',
+                submit: data.submit,
+            })

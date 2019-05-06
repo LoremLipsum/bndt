@@ -1,0 +1,22 @@
+mixin card-more(data)
+    +el({
+        tag: data.tag,
+        class: 'card-more',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        style: 'background-image: url(./assets/images/' + data.image + ');'
+    })&attributes(attributes)
+        .card-more__wrap
+            +el({
+                tag: 'p',
+                text: data.text,
+                class: 'card-more__text',
+            })
+            .card-more__button-wrap
+                +button({
+                    tag: 'a',
+                    mix: 'card-more__button',
+                    mod: 'border-white',
+                    text: data.link,
+                })

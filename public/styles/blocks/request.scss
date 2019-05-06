@@ -1,0 +1,96 @@
+.request__field-group {
+  margin-bottom: 30px;
+}
+
+.request__field {
+  margin-bottom: 20px;
+}
+
+.request__bottom {
+  text-align: center;
+}
+
+.request__confirm-wrap {
+  text-align: center;
+}
+
+.request__confirm {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .request {
+    padding: 0 60px;
+  }
+
+  .request__field-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+
+  .request__field {
+    width: calc(33.33% - 40px);
+    margin-right: 60px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .request__text {
+    margin-bottom: 60px;
+  }
+
+  .request__confirm {
+    margin-bottom: 30px
+  }
+}
+
+@include respond-to(medium-lg) {
+  .request {
+    padding: 0 80px;
+  }
+
+  .request__field {
+    width: calc(33.33% - 60px);
+    margin-right: 90px;
+  }
+
+  .request__text {
+    margin-bottom: 80px;
+  }
+
+  .request__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .request__confirm {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .request {
+    padding: 0 100px;
+  }
+
+  .request__field-group {
+    margin-bottom: 75px;
+  }
+
+  .request__field {
+    width: calc(33.33% - 87px);
+    margin-right: 130px;
+  }
+
+  // .request__submit {
+  //   min-width: 416px;
+  // }
+}

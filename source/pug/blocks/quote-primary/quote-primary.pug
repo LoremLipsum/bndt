@@ -1,0 +1,17 @@
+mixin quote-primary(data)
+    +el({
+        class: 'quote-primary',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .quote-primary__wrap
+            +el({
+                tag: 'blockquote',
+                class: 'quote-primary__block',
+                before: {
+                    tag: 'p',
+                    text: data.text
+                }
+            })
+                block

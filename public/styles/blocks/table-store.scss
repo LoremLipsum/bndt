@@ -1,0 +1,26 @@
+.table-store {
+
+}
+
+.table-store__th {
+  width: 50%;
+}
+
+.table-store__td {
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.table-store__th {
+  padding-left: 0;
+  text-align: left;
+}
+
+@include respond-to(medium) {
+
+}
+
+@include respond-to(large) {
+
+}

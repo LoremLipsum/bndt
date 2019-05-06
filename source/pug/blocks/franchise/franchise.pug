@@ -8,10 +8,10 @@ mixin franchise(data)
         .franchise__wrap
             .franchise__inner
                 .franchise__heading
-                    | Открой для себя бизнес с&nbsp;брендом BANDIT
+                    |
                 .franchise__text
-                    | Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.
+                    |
                 +request({
-                    mix: 'franchise__request',
-                    submit: 'Получить финансовую модель компании'
+                    mix: 'franchise__form',
+                    submit: data.submit
                 })

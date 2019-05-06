@@ -1,6 +1,6 @@
 p {
   margin: 0;
-  margin-bottom: mb(sm);
+  // margin-bottom: mb(sm);
   hyphens: auto;
   hyphenate-limit-chars: 6 3 3;
   hyphenate-limit-lines: 2;
@@ -8,14 +8,14 @@ p {
   hyphenate-limit-zone: 8%;
 }
 
-@include respond-to(medium) {
-  p {
-    margin-bottom: mb(md);
-  }
-}
-
-@include respond-to(large) {
-  p {
-    margin-bottom: mb(lg);
-  }
-}
+// @include respond-to(medium) {
+//   p {
+//     margin-bottom: mb(md);
+//   }
+// }
+//
+// @include respond-to(large) {
+//   p {
+//     margin-bottom: mb(lg);
+//   }
+// }

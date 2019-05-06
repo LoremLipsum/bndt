@@ -1,0 +1,18 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Наши магазины',
+            mod: ['bg-light'],
+            mix: 'content__header',
+        })
+        .content__our-stores
+            .content__wrap
+                +table-store({
+                    table: tableStore,
+                    mix: 'content__table-store'
+                })

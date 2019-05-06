@@ -1,0 +1,25 @@
+mixin table-store(data)
+    +el({
+        tag: 'table',
+        class: 'table-store',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        each row in data.table
+            tr.table-store__tr
+                th.table-store__th
+                    | !{row.heading}
+                td.table-store__td.table-store__td--social
+                    +social-link({
+                        icon: 'vk',
+                        mod: 'border-black',
+                    })
+                td.table-store__td.table-store__td--time
+                    | !{row.time}
+                td.table-store__td.table-store__td--button
+                    +button({
+                        tag: 'a',
+                        text: 'Показать на карте',
+                        mod: 'bg-black',
+                    })

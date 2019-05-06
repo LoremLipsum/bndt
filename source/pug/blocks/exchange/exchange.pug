@@ -6,23 +6,22 @@ mixin exchange(data)
         js: data.js,
     })&attributes(attributes)
         .exchange__wrap
-            .exchange__inner
-                .exchange__row
-                    .exchange__col.exchange__col--left
-                        .exchange__text
-                            p Если Вам не подошел размер или Вы хотите вернуть товар обратно.
-                            p В течении 14 дней после получения посылки, на законодательном уровне, Вы имеете право обменять / вернуть товар.
-                    .exchange__col.exchange__col--right
-                        +el({
-                            tag: 'img',
-                            image: 'exchange.jpg',
-                            class: 'exchange__image',
-                            width: '434',
-                        })
-                .exchange__contact
-                    .exchange__contact-text
-                        p Если уж такая ситуация возникает, то Вы должны обязательно связаться с нами:
-                    +request({
-                        submit: 'Отправить заявку',
-                        fieldMod: 'border-light'
+            .exchange__row
+                .exchange__col.exchange__col--left
+                    .exchange__text
+                        p Если Вам не подошел размер или Вы хотите вернуть товар обратно.
+                        p В течении 14 дней после получения посылки, на законодательном уровне, Вы имеете право обменять / вернуть товар.
+                .exchange__col.exchange__col--right
+                    +el({
+                        tag: 'img',
+                        image: 'exchange.jpg',
+                        class: 'exchange__image',
+                        width: '434',
                     })
+            .exchange__contact
+                .exchange__contact-text
+                    p Если уж такая ситуация возникает, то Вы должны обязательно связаться с нами:
+                +request({
+                    submit: 'Отправить заявку',
+                    fieldMod: 'border-light'
+                })

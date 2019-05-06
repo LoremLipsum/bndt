@@ -1,0 +1,57 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'О нас',
+            mod: ['with-bg', 'about-us'],
+            mix: 'content__header',
+            image: 'header-about-us.jpg',
+        })
+        article.content__about-us
+            .section-centred.section-centred--head
+                .section-centred__wrap
+                    h2.section-centred__heading Что первое тебе приходит в голову когда ты слышишь слово&nbsp;"BANDIT"?
+                    p.
+                        Наверное, оружие, беспредел, и&nbsp;все такое? Так вот друг&nbsp;&mdash; это неправильный ответ.
+                        Ты&nbsp;спросишь почему? Потому что каждый знает, что BANDIT&nbsp;&mdash; это один из&nbsp;лучших брендов одежды,
+                        призванный подчеркнуть твой стиль, характер и&nbsp;позицию.
+                        Именно с&nbsp;этими целями, мыслями и&nbsp;идеями&nbsp;мы, работая с&nbsp;2012&nbsp;года, решили создать&nbsp;то,
+                        что будет в&nbsp;тренде не&nbsp;один десяток лет, то, что будет отвечать позиции &laquo;цена-качество&raquo;, и&nbsp;то,что
+                        фундаментально изменит четкость стиля наших клиентов.
+            +quote-secondary({
+                mod: 'bg-primary',
+                text: 'Мы определенно знаем, что ты будешь в&nbsp;восторге, став&nbsp;частью нашей&nbsp;семьи.'
+            })
+            .section-centred.section-centred--content
+                .section-centred__wrap
+                    .section-centred__row
+                        p.
+                            BANDIT Brand был основан в&nbsp;2012&nbsp;году. Наша основная идея&nbsp;&mdash; одевать улицы, создавать грамотные и&nbsp;мощные релизы.
+                            Не&nbsp;важно&nbsp;&mdash; ты&nbsp;фанатеешь на&nbsp;матче, или рисуешь граффити; катаешь на&nbsp;роликах, или БМХ; танцуешь крамп,
+                            или занимаешься паркуром&nbsp;&mdash; наш бренд объединяет всех в&nbsp;мощную семью с&nbsp;именем BANDIT!
+                    .section-centred__row
+                        +el({
+                            tag: 'img',
+                            image: 'about-us01.jpg',
+                            width: '434'
+                        })
+            +features({
+                items: features,
+            })
+            .section-centred.section-centred--content
+                .section-centred__wrap
+                    p.
+                        Весь процесс производства нашей продукции, начиная от&nbsp;создания макета, и&nbsp;заканчивая размещением элементов на&nbsp;одежде,
+                        делается вручную, самостоятельно, что позволяет нам устанавливать цены на&nbsp;уровень ниже западных аналогов.
+                        Успех строится из&nbsp;мелочей, и&nbsp;одежда BANDIT готова стать твоим надежным попутчиком, обладая запасом качества на&nbsp;который всегда можно положиться.
+            +card-content({
+                mix: 'content__card',
+                image: 'about-us02.jpg',
+                text: 'Бренд на данный момент развивается быстрыми темпами, доказательством чему служит всё большее увеличение популярности среди молодежи.'
+            })
+            +events({
+            })

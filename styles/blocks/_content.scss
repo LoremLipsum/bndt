@@ -6,26 +6,63 @@
   @include wrapper;
 }
 
+.content__content {
+  &--pads {
+    padding-top: get($y, small, size-100);
+    padding-bottom: get($y, small, size-200);
+  }
+
+  &--pads-bottom {
+    padding-bottom: get($y, small, size-200);
+  }
+}
+
 .content__card {
   margin-bottom: get($y, small, size-180);
 }
 
-@include respond-to(medium) {
-  .content {
+.content__our-stores {
+  margin-bottom: get($y, small, size-200);
+}
 
+@include respond-to(medium) {
+  .content__content {
+    &--pads {
+      padding-top: get($y, small, size-100);
+      padding-bottom: get($y, small, size-200);
+    }
+
+    &--pads-bottom {
+      padding-bottom: get($y, medium, size-200);
+    }
   }
 
   .content__card {
     margin-bottom: get($y, medium, size-180);
   }
+
+  .content__our-stores {
+    margin-bottom: get($y, medium, size-200);
+  }
 }
 
 @include respond-to(large) {
-  .content {
+  .content__content {
+    &--pads {
+      padding-top: get($y, small, size-100);
+      padding-bottom: get($y, small, size-200);
+    }
 
+    &--pads-bottom {
+      padding-bottom: get($y, large, size-200);
+    }
   }
 
   .content__card {
     margin-bottom: get($y, large, size-180);
+  }
+
+  .content__our-stores {
+    margin-bottom: get($y, large, size-200);
   }
 }

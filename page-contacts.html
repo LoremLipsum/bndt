@@ -286,16 +286,180 @@
       <div class="overlay header__overlay js-header-overlay">
       </div>
     </header>
-    <main class="content content--regular">
-      <div class="content__wrap">
-        <ul>
-          <li><a href="page-main.html">Главная</a></li>
-          <li><a href="page-exchange.html">Обмен и возврат товара</a></li>
-          <li><a href="page-about-us.html">О нас</a></li>
-          <li><a href="page-our-stores.html">Наши магазины</a></li>
-          <li><a href="page-contacts.html">Контакты</a></li>
-          <li><a href="components.html">Компоненты</a></li>
-        </ul>
+    <main class="content">
+      <header class="content-header content-header--bg-light content__header">
+        <div class="content-header__wrap">
+          <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
+              <svg class="control__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+              </svg></span>Назад
+          </a>
+          <h1 class="content-header__heading">Контакты
+          </h1>
+        </div>
+      </header>
+      <div class="content__content content__content--pads-top">
+        <div class="contacts content__contacts">
+          <div class="contacts__wrap">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts__name">Время работы</div>
+                <div class="contacts__value">с 10:00-18:00</div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__name">Телефон</div>
+                <a class="contacts__value" href="tel:+79788881890">+7 (978) 88 81 890
+                </a>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__name">Почта</div>
+                <a class="contacts__value" href="mailto:sales@demostore.ru">sales@demostore.ru
+                </a>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts__name">Социальные сети</div>
+                <div class="social footer__social">
+                  <ul class="social__list">
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-white" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-white" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a class="social-link social-link--bg-white" target="_blank" href="#" rel="nofollow noopener">
+                        <svg class="social-link__icon" aria-hidden="true">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <div class="contacts__heading-row">
+              <div class="contacts__heading-col contacts__heading-col--left">
+                <h2 class="contacts__heading">Карта магазинов</h2>
+              </div>
+              <div class="contacts__heading-col contacts__heading-col--right">
+                <a class="link link--primary" href="#">Наши магазины
+                </a>
+              </div>
+            </div>
+            <div class="map" id="map_contacts">
+              <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+              <script>
+                ymaps.ready(function () {
+                  var map = new ymaps.Map('map_contacts', {
+                    center: [45.389194, 33.993751],
+                    zoom: 8,
+                    scrollZoom: false,
+                    controls: []
+                  }, {
+                    searchControlProvider: 'yandex#search'
+                  }),
+                  Placemark1 = new ymaps.Placemark([45.033088, 35.380264], {
+                    balloonContent: 'Феодосия - ул Русская 10',
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [24, 32],
+                    iconImageOffset: [-12, -16],
+                  });
+                  Placemark2 = new ymaps.Placemark([45.354085, 36.473298], {
+                    balloonContent: 'Керчь - пл. Ленина, ТРЦ Мегацентр, 1 этаж, магазин 140',
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [24, 32],
+                    iconImageOffset: [-12, -16],
+                  });
+                  Placemark3 = new ymaps.Placemark([44.606991, 33.522396], {
+                    balloonContent: 'Севастополь - ул. Большая морская 17',
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [24, 32],
+                    iconImageOffset: [-12, -16],
+                  });
+                  Placemark4 = new ymaps.Placemark([44.945424, 34.092835], {
+                    balloonContent: 'Симферополь - пер.Пионерский 40',
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [24, 32],
+                    iconImageOffset: [-12, -16],
+                  });
+                  Placemark5 = new ymaps.Placemark([44.508768, 34.169290], {
+                    balloonContent: 'Ялта - ул. Московская 43',
+                  }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/images/icon.png',
+                    iconImageSize: [24, 32],
+                    iconImageOffset: [-12, -16],
+                  });
+                  map.geoObjects.add(Placemark1);
+                  map.geoObjects.add(Placemark2);
+                  map.geoObjects.add(Placemark3);
+                  map.geoObjects.add(Placemark4);
+                  map.geoObjects.add(Placemark5);
+                  map.behaviors.disable('scrollZoom');
+                  map.controls.add('zoomControl');
+                  var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+                  map.controls.get('zoomControl').options.set('size', 'small');
+                })
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="feedback__wrap">
+          <h2 class="feedback__heading">Форма обратной связи
+          </h2>
+          <form class="request feedback__form" action="/" method="post" accept-charset="UTF-8">
+            <div class="request__field-group">
+              <label class="field-secondary request__field">
+                <span class="hidden">Ваше имя
+                </span>
+                <input class="field-secondary__input" tabindex="0" placeholder="Ваше имя" name="name" type="text">
+              </label>
+              <label class="field-secondary request__field">
+                <span class="hidden">Телефон
+                </span>
+                <input class="field-secondary__input" tabindex="0" placeholder="Телефон" name="tel" type="tel">
+              </label>
+              <label class="field-secondary request__field">
+                <span class="hidden">E-mail
+                </span>
+                <input class="field-secondary__input" tabindex="0" placeholder="E-mail" name="email" type="email">
+              </label>
+            </div>
+            <div class="request__bottom">
+              <div class="request__confirm-wrap">
+                <label class="checkbox-confirm request__confirm">
+                  <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                  <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+              <div class="request__submit-wrap">
+                <label class="button button--bg-primary request__submit">
+                  <input class="hidden" type="submit">
+                  Отправить
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer">

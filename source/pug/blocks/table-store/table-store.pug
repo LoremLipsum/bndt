@@ -6,7 +6,7 @@ mixin table-store(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
-        each row in data.table
+        each row, index in data.table
             tr.table-store__tr
                 th.table-store__th
                     | !{row.heading}
@@ -22,4 +22,5 @@ mixin table-store(data)
                         tag: 'a',
                         text: 'Показать на карте',
                         mod: 'bg-black',
-                    })
+                        js: 'button-tabs',
+                    })(data-tab='tab-' + (index + 1))

@@ -10,9 +10,54 @@ block content
             mod: ['bg-light'],
             mix: 'content__header',
         })
-        .content__our-stores
-            .content__wrap
-                +table-store({
-                    table: tableStore,
-                    mix: 'content__table-store'
-                })
+        .content__content
+            .our-stores.js-tabs.content__our-stores
+                .our-stores__wrap
+                    section.our-stores__table
+                        +table-store({
+                            table: tableStore,
+                        })
+                    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                    each row, index in tableStore
+                            +el({
+                                tag: 'section',
+                                class: 'tab-' + (index + 1),
+                                mix: index == 0 ? 'active' : '',
+                                js: 'content-tabs',
+                            })
+                                h2.our-stores__heading !{row.heading}
+                                +el({
+                                    class: 'our-stores__map',
+                                    id: 'map_store' + (index + 1),
+                                })
+                                    script.
+                                        ymaps.ready(function () {
+                                          var map = new ymaps.Map(#{'\'map_store' + (index + 1) + '\''}, {
+                                            center: #{row.coords},
+                                            zoom: 16,
+                                            scrollZoom: false,
+                                            controls: []
+                                          }, {
+                                            searchControlProvider: 'yandex#search'
+                                          }),
+                                          Placemark = new ymaps.Placemark(#{row.coords}, {
+                                            balloonContent: #{'\'' + row.heading + '\''}
+                                          }, {
+                                            iconLayout: 'default#image',
+                                            iconImageHref: 'assets/images/icon.png',
+                                            iconImageSize: [48, 64],
+                                            iconImageOffset: [-24, -32],
+                                          });
+
+                                          map.geoObjects.add(Placemark);
+                                          map.behaviors.disable('scrollZoom');
+                                          map.controls.add('zoomControl');
+                                          var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+                                          map.controls.get('zoomControl').options.set('size', 'small');
+                                        })
+            +card-form({
+                image: 'franchise.jpg',
+                heading: 'Открой для себя бизнес с&nbsp;брендом BANDIT',
+                text: 'Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.',
+                submit: 'Получить финансовую модель компании',
+            })

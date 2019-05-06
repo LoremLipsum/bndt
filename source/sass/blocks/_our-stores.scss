@@ -1,0 +1,41 @@
+.our-stores__wrap {
+  @include wrapper;
+}
+
+.our-stores__table {
+  margin-bottom: get($y, small, size-200);
+}
+
+.our-stores__heading {
+  margin-top: 0;
+  text-align: center;
+}
+
+.our-stores__map {
+  height: 250px;
+  background-color: color(light);
+}
+
+@include respond-to(medium) {
+  .our-stores__table {
+    margin-bottom: get($y, medium, size-200);
+  }
+
+  .our-stores__heading {
+    text-align: left;
+  }
+
+  .our-stores__map {
+    height: 440px;
+  }
+}
+
+@include respond-to(large) {
+  .our-stores__table {
+    margin-bottom: get($y, large, size-200);
+  }
+
+  .our-stores__map {
+    height: 540px;
+  }
+}

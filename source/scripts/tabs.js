@@ -19,10 +19,10 @@
         };
 
         for (var j = 0; j < btns.length; j++) {
-          btns[j].parentNode.classList.remove('active');
+          btns[j].classList.remove('active');
         };
 
-        tab.parentNode.classList.add('active');
+        tab.classList.add('active');
         document.querySelector("." + atr).classList.add('active');
       });
     }

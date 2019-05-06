@@ -17,7 +17,9 @@
     background-color: color(primary);
     color: color(white);
 
-    @include hover {
+    &:hover,
+    &:focus,
+    &.active {
       border-color: color(black);
       background-color: color(black);
     }
@@ -28,7 +30,9 @@
     background-color: color(black);
     color: color(white);
 
-    @include hover {
+    &:hover,
+    &:focus,
+    &.active {
       border-color: color(primary);
       background-color: color(primary);
     }
@@ -43,7 +47,9 @@
     border-color: color(primary);
     color: color(primary);
 
-    @include hover {
+    &:hover,
+    &:focus,
+    &.active {
       background-color: color(primary);
       color: color(white);
     }
@@ -53,7 +59,9 @@
     border-color: color(white);
     color: color(white);
 
-    @include hover {
+    &:hover,
+    &:focus,
+    &.active {
       background-color: color(white);
       color: color(black);
     }
@@ -63,7 +71,9 @@
     border-color: color(black);
     color: color(black);
 
-    @include hover {
+    &:hover,
+    &:focus,
+    &.active {
       background-color: color(black);
       color: color(white);
     }

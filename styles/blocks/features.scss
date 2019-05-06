@@ -4,35 +4,36 @@
 
 .features__wrap {
   @include wrapper;
-}
-
-.features__inner {
-  padding-top: 60px;
-  padding-bottom: 10px;
-}
-
-.features__heading {
-  margin: 0;
-  margin-bottom: 40px;
-  text-align: center;
+  padding-top: get($y, small, size-160);
+  padding-bottom: get($y, small, size-140);
 }
 
 .features__list {
   @include ul-no;
 }
 
+.features__heading {
+  margin: 0;
+  margin-bottom: get($y, small, size-120);
+  text-align: center;
+}
+
 .features__item {
-  margin-bottom: 30px;
+  margin-bottom: get($y, small, size-40);
+
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
 }
 
 @include respond-to(medium) {
-  .features__inner {
-    padding-top: 80px;
-    padding-bottom: 20px;
+  .features__wrap {
+    padding-top: get($y, medium, size-160);
+    padding-bottom: get($y, medium, size-140);
   }
 
   .features__heading {
-    margin-bottom: 60px;
+    margin-bottom: get($y, medium, size-120);
   }
 
   .features__list {
@@ -40,23 +41,32 @@
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
-    margin-bottom: 30px;
   }
 
   .features__item {
     width: 33.33%;
+    margin-bottom: get($y, medium, size-40);
     padding-left: 15px;
     padding-right: 15px;
+
+    &:nth-last-child(2),
+    &:nth-last-child(3) {
+      margin-bottom: 0;
+    }
   }
 }
 
 @include respond-to(large) {
-  .features__inner {
-    padding-top: 150px;
-    padding-bottom: 100px;
+  .features__wrap {
+    padding-top: get($y, large, size-160);
+    padding-bottom: get($y, large, size-140);
   }
 
   .features__heading {
-    margin-bottom: 115px;
+    margin-bottom: get($y, large, size-120);
+  }
+
+  .features__item {
+    margin-bottom: get($y, large, size-40);
   }
 }

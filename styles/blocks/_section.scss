@@ -1,0 +1,135 @@
+.section {
+  &--bg-primary {
+    background-color: color(primary);
+    color: color(white);
+  }
+
+  &--bg-light {
+    background-color: color(light);
+  }
+
+  &--centred {
+    text-align: center;
+  }
+
+  @for $i from 1 through 6 {
+    &--size-#{$i} {
+      padding-top: get($section, small, size-#{$i}, pt);
+      padding-bottom: get($section, small, size-#{$i}, pb);
+    }
+  }
+
+  &--features {
+    background-color: color(light);
+
+    .section__wrap {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+
+    .section__heading {
+      text-align: center;
+    }
+  }
+}
+
+.section__wrap {
+  @include wrapper;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section__heading {
+  margin: 0;
+  margin-bottom: 20px;
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.section__row {
+  margin-bottom: 30px;
+}
+
+@include respond-to(medium) {
+  .section {
+    &--centred {
+      .section__wrap {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      .section__heading {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    }
+
+    @for $i from 1 through 6 {
+      &--size-#{$i} {
+        padding-top: get($section, medium, size-#{$i}, pt);
+        padding-bottom: get($section, medium, size-#{$i}, pb);
+      }
+    }
+
+    &--features {
+      .section__wrap {
+        padding-top: 100px;
+        padding-bottom: 70px;
+      }
+    }
+  }
+
+  .section__heading {
+    margin-bottom: 50px;
+  }
+
+  .section__row {
+    margin-bottom: 60px;
+  }
+}
+
+@include respond-to(large) {
+  .section {
+    &--centred {
+      .section__wrap {
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+
+      .section__heading {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    }
+
+    @for $i from 1 through 6 {
+      &--size-#{$i} {
+        padding-top: get($section, large, size-#{$i}, pt);
+        padding-bottom: get($section, large, size-#{$i}, pb);
+      }
+    }
+
+    &--features {
+      .section__wrap {
+        padding-top: 140px;
+        padding-bottom: 100px;
+      }
+    }
+  }
+
+  .section__heading {
+    margin-bottom: 80px;
+  }
+
+  .section__row {
+    margin-bottom: 90px;
+  }
+}

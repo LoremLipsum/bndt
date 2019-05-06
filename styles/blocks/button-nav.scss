@@ -14,15 +14,15 @@ $button-nav-color-active: color(black);
 
   &.active {
     box-shadow: none;
-    background-color: rgba(color(light), 1);
+    background-color: color(primary);
 
     .button-nav__lines {
       background-color: transparent;
 
-      &::before,
-      &::after  {
-        background-color: color(black);
-      }
+      // &::before,
+      // &::after  {
+      //   background-color: color(black);
+      // }
 
       &::before {
         animation-name: nav-before-open;

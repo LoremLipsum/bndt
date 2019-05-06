@@ -1,0 +1,71 @@
+.card-more {
+  position: relative;
+  background-color: color(black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: color(white);
+
+  @include mask(rgba(color(black), 0.5));
+}
+
+.card-more__wrap {
+  position: relative;
+  z-index: 1;
+  @include wrapper;
+  padding-top: get($y, small, size-270);
+  padding-bottom: get($y, small, size-170);
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-more__text {
+  margin: 0;
+  margin-bottom: get($y, small, size-70);
+  color: color(white);
+  font-family: font(secondary);
+  font-size: get($heading-styles, small, h2, fs);
+  font-style: normal;
+  font-weight: get($heading-styles, small, h2, fw);
+  line-height: get($heading-styles, small, h2, lh);
+  text-align: center;
+}
+
+.card-more__button-wrap {
+  text-align: center;
+}
+
+.card-more__button {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@include respond-to(medium) {
+  .card-more__wrap {
+    padding-top: get($y, medium, size-270);
+    padding-bottom: get($y, medium, size-170);
+  }
+
+  .card-more__text {
+    margin-bottom: get($y, medium, size-70);
+    font-size: get($heading-styles, medium, h2, fs);
+  }
+}
+
+@include respond-to(large) {
+  .card-more__wrap {
+    padding-top: get($y, large, size-270);
+    padding-bottom: get($y, large, size-170);
+  }
+
+  .card-more__text {
+    margin-bottom: get($y, large, size-70);
+    font-size: get($heading-styles, large, h2, fs);
+  }
+}

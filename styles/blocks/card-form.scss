@@ -1,0 +1,84 @@
+.card-form {
+  position: relative;
+  background-color: color(black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: color(white);
+
+  @include mask(rgba(color(black), 0.5));
+}
+
+.card-form__wrap {
+  position: relative;
+  z-index: 1;
+  @include wrapper;
+  padding-top: get($y, small, size-250);
+  padding-bottom: get($y, small, size-150);
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-form__heading {
+  margin: 0;
+  margin-bottom: get($y, small, size-40);
+  color: color(white);
+  text-align: center;
+}
+
+.card-form__text {
+  margin: 0;
+  margin-bottom: get($y, small, size-100);
+  color: color(white);
+  text-align: center;
+}
+
+.card-form__form {
+  color: color(white);
+}
+
+@include respond-to(medium) {
+  .card-form__wrap {
+    padding-top: get($y, medium, size-250);
+    padding-bottom: get($y, medium, size-150);
+  }
+
+  .card-form__heading,
+  .card-form__text {
+    padding: 0 get($x, medium, size-100);
+  }
+
+  .card-form__heading {
+    margin-bottom: get($y, medium, size-40);
+  }
+
+  .card-form__text {
+    margin-bottom: get($y, medium, size-100);
+  }
+}
+
+@include respond-to(large) {
+  .card-form__wrap {
+    padding-top: get($y, large, size-250);
+    padding-bottom: get($y, large, size-150);
+  }
+
+  .card-form__heading,
+  .card-form__text {
+    padding: 0 get($x, large, size-100);
+  }
+
+  .card-form__heading {
+    margin-bottom: get($y, large, size-40);
+  }
+
+  .card-form__text {
+    margin-bottom: get($y, large, size-100);
+  }
+}

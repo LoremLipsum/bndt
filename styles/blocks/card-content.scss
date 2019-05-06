@@ -1,0 +1,58 @@
+.card-content__wrap {
+  @include wrapper;
+}
+
+.card-content__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 315px;
+  padding-top: get($y, small, size-160);
+  padding-bottom: get($y, small, size-130);
+  padding-right: get($x, small, size-200);
+  padding-left: get($x, small, size-200);
+  background-color: color(black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  color: color(white);
+
+  @include mask(rgba(color(black), 0.5));
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-content__text {
+  position: relative;
+  z-index: 1;
+  color: color(white);
+  text-align: center;
+}
+
+@include respond-to(medium) {
+  .card-content__card {
+    min-height: 415px;
+    padding-top: get($y, medium, size-160);
+    padding-bottom: get($y, medium, size-130);
+    padding-right: get($x, medium, size-200);
+    padding-left: get($x, medium, size-200);
+  }
+}
+
+@include respond-to(large) {
+  .card-content__card {
+    min-height: 515px;
+    padding-top: get($y, large, size-160);
+    padding-bottom: get($y, large, size-130);
+    padding-right: get($x, large, size-200);
+    padding-left: get($x, large, size-200);
+  }
+}

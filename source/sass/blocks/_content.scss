@@ -12,6 +12,10 @@
     padding-bottom: get($y, small, size-200);
   }
 
+  &--pads-top {
+    padding-top: get($y, small, size-100);
+  }
+
   &--pads-bottom {
     padding-bottom: get($y, small, size-200);
   }
@@ -25,11 +29,19 @@
   margin-bottom: get($y, small, size-200);
 }
 
+.content__contacts {
+  margin-bottom: get($y, small, size-150);
+}
+
 @include respond-to(medium) {
   .content__content {
     &--pads {
-      padding-top: get($y, small, size-100);
-      padding-bottom: get($y, small, size-200);
+      padding-top: get($y, medium, size-100);
+      padding-bottom: get($y, medium, size-200);
+    }
+
+    &--pads-top {
+      padding-top: get($y, medium, size-100);
     }
 
     &--pads-bottom {
@@ -44,13 +56,21 @@
   .content__our-stores {
     margin-bottom: get($y, medium, size-200);
   }
+
+  .content__contacts {
+    margin-bottom: get($y, medium, size-150);
+  }
 }
 
 @include respond-to(large) {
   .content__content {
     &--pads {
-      padding-top: get($y, small, size-100);
-      padding-bottom: get($y, small, size-200);
+      padding-top: get($y, large, size-100);
+      padding-bottom: get($y, large, size-200);
+    }
+
+    &--pads-top {
+      padding-top: get($y, large, size-100);
     }
 
     &--pads-bottom {
@@ -64,5 +84,9 @@
 
   .content__our-stores {
     margin-bottom: get($y, large, size-200);
+  }
+
+  .content__contacts {
+    margin-bottom: get($y, large, size-150);
   }
 }

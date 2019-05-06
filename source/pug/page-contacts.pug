@@ -1,0 +1,125 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Контакты',
+            mod: ['bg-light'],
+            mix: 'content__header',
+        })
+        .content__content.content__content--pads-top
+            .contacts.content__contacts
+                .contacts__wrap
+                    ul.contacts__list
+                        li.contacts__item
+                            div.contacts__name Время работы
+                            div.contacts__value с 10:00-18:00
+                        li.contacts__item
+                            div.contacts__name Телефон
+                            +el({
+                                tag: 'a',
+                                class: 'contacts__value',
+                                href: 'tel:+79788881890',
+                                text: '+7 (978) 88 81 890',
+                            })
+                        li.contacts__item
+                            div.contacts__name Почта
+                            +el({
+                                tag: 'a',
+                                class: 'contacts__value',
+                                href: 'mailto:sales@demostore.ru',
+                                text: 'sales@demostore.ru',
+                            })
+                        li.contacts__item
+                            div.contacts__name Социальные сети
+                            +social({
+                                mix: 'footer__social',
+                                items: social,
+                                text: false,
+                                linkMod: 'bg-white',
+                            })
+                    .contacts__heading-row
+                        .contacts__heading-col.contacts__heading-col--left
+                            h2.contacts__heading Карта магазинов
+                        .contacts__heading-col.contacts__heading-col--right
+                            +link({
+                                text: 'Наши магазины',
+                                mod: 'primary',
+                            })
+                    +el({
+                        class: 'map',
+                        id: 'map_contacts',
+                    })
+                        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                        script.
+                            ymaps.ready(function () {
+                              var map = new ymaps.Map('map_contacts', {
+                                center: [45.389194, 33.993751],
+                                zoom: 8,
+                                scrollZoom: false,
+                                controls: []
+                              }, {
+                                searchControlProvider: 'yandex#search'
+                              }),
+
+                              Placemark1 = new ymaps.Placemark([45.033088, 35.380264], {
+                                balloonContent: 'Феодосия - ул Русская 10',
+                              }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/images/icon.png',
+                                iconImageSize: [24, 32],
+                                iconImageOffset: [-12, -16],
+                              });
+
+                              Placemark2 = new ymaps.Placemark([45.354085, 36.473298], {
+                                balloonContent: 'Керчь - пл. Ленина, ТРЦ Мегацентр, 1 этаж, магазин 140',
+                              }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/images/icon.png',
+                                iconImageSize: [24, 32],
+                                iconImageOffset: [-12, -16],
+                              });
+
+                              Placemark3 = new ymaps.Placemark([44.606991, 33.522396], {
+                                balloonContent: 'Севастополь - ул. Большая морская 17',
+                              }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/images/icon.png',
+                                iconImageSize: [24, 32],
+                                iconImageOffset: [-12, -16],
+                              });
+
+                              Placemark4 = new ymaps.Placemark([44.945424, 34.092835], {
+                                balloonContent: 'Симферополь - пер.Пионерский 40',
+                              }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/images/icon.png',
+                                iconImageSize: [24, 32],
+                                iconImageOffset: [-12, -16],
+                              });
+
+                              Placemark5 = new ymaps.Placemark([44.508768, 34.169290], {
+                                balloonContent: 'Ялта - ул. Московская 43',
+                              }, {
+                                iconLayout: 'default#image',
+                                iconImageHref: 'assets/images/icon.png',
+                                iconImageSize: [24, 32],
+                                iconImageOffset: [-12, -16],
+                              });
+
+                              map.geoObjects.add(Placemark1);
+                              map.geoObjects.add(Placemark2);
+                              map.geoObjects.add(Placemark3);
+                              map.geoObjects.add(Placemark4);
+                              map.geoObjects.add(Placemark5);
+                              map.behaviors.disable('scrollZoom');
+                              map.controls.add('zoomControl');
+                              var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+                              map.controls.get('zoomControl').options.set('size', 'small');
+                            })
+        +feedback({
+
+        })

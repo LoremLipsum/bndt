@@ -1,0 +1,18 @@
+mixin feedback(data)
+    +el({
+        tag: data.tag,
+        class: 'feedback',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .feedback__wrap
+            +el({
+                tag: 'h2',
+                text: 'Форма обратной связи',
+                class: 'feedback__heading',
+            })
+            +request({
+                mix: 'feedback__form',
+                submit: 'Отправить',
+            })

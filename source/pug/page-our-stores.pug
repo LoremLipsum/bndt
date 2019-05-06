@@ -13,7 +13,7 @@ block content
         .content__content
             .our-stores.js-tabs.content__our-stores
                 .our-stores__wrap
-                    section.our-stores__table
+                    .our-stores__table
                         +table-store({
                             table: tableStore,
                         })
@@ -27,7 +27,8 @@ block content
                             })
                                 h2.our-stores__heading !{row.heading}
                                 +el({
-                                    class: 'our-stores__map',
+                                    mix: 'our-stores__map',
+                                    class: 'map',
                                     id: 'map_store' + (index + 1),
                                 })
                                     script.

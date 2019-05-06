@@ -35,8 +35,9 @@ mixin footer(data)
                     .footer__top-col.footer__top-col--center
                         +social({
                             mix: 'footer__social',
-                            items: socialFooter,
+                            items: social,
                             text: false,
+                            linkMod: 'bg-light',
                         })
                     .footer__top-col.footer__top-col--right
                         +button({

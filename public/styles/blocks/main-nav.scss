@@ -71,9 +71,3 @@
   transition-duration: duration(md);
   transition-timing-function: func(primary);
 }
-
-@include respond-to(medium-lg) {
-  .main-nav__item {
-    margin-bottom: 5px;
-  }
-}

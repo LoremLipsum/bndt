@@ -15,14 +15,6 @@
   @include wrapper;
   padding-top: get($y, small, size-270);
   padding-bottom: get($y, small, size-170);
-
-  > *:first-child {
-    margin-top: 0;
-  }
-
-  > *:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .card-more__text {

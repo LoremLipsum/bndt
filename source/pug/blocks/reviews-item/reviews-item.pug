@@ -24,11 +24,11 @@ mixin reviews-item(data)
                 mod: 'border-black',
             })
         +el({
-            class: 'reviews-item__text',
-            mix: 'baron'
+            class: 'reviews-item__text-wrap',
+
         })
-            .baron__scroller
-                | !{data.text}
-            .baron__track
-                .baron__free
-                    .baron__bar
+            .js-swiper-scroll.swiper-container
+                .swiper-wrapper
+                    .reviews-item__text.swiper-slide
+                        | !{data.text}
+                .swiper-scrollbar

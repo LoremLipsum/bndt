@@ -1,12 +1,12 @@
 .button {
   display: inline-block;
   flex-shrink: 0;
-  padding: 7px 42px;
+  padding: 6px 42px;
   border: 2px solid;
   font-family: font(secondary);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -95,8 +95,6 @@
 
 @include respond-to(large) {
   .button {
-    padding: 9px 52px;
-    font-size: 22px;
-    line-height: 24px;
+    padding: 8px 52px;
   }
 }

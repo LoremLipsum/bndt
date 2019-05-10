@@ -1,6 +1,10 @@
 .tabs {
+  text-align: center;
+}
+
+.tabs__list {
   position: relative;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
   @include ul-no;
@@ -28,14 +32,13 @@
     .tabs__button {
       &::after {
         opacity: 1;
-        background-color: color(black);
       }
     }
   }
 }
 
 .tabs__button {
-  position: relative;
+  // position: relative;
   display: block;
   padding: 10px 20px;
   font-family: font(secondary);
@@ -44,24 +47,29 @@
   color: color(black);
   outline: none;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: block;
-    height: 3px;
-    opacity: 0;
-    background-color: color(gray);
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   z-index: 1;
+  //   display: block;
+  //   height: 3px;
+  //   opacity: 0;
+  //   background-color: color(black);
+  // }
+}
 
-  @include hover {
-    &::after {
-      opacity: 1;
-    }
-  }
+.tabs__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  height: 3px;
+  background-color: color(black);
+  transition: duration(md) func(primary);
 }
 
 @include respond-to(medium) {

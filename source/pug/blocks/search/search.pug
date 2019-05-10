@@ -5,20 +5,18 @@ mixin search(data)
         mod: data.mod,
         js: 'search',
     })&attributes(attributes)
-        label.search__field
-            span.hidden Поиск по сайту
-            +el({
-                tag: 'input',
-                type: 'search',
-                requaired: true,
-                mix: 'search__input',
-                placeholder: 'Поиск',
-            })
-            +button-w-circle({
-                tag: 'span',
-                mix: 'search__submit',
-                mod: 'bg-black',
-                type: 'submit',
-                icon: 'search',
-                js: 'search-submit'
-            })
+        span.hidden Поиск по сайту
+        +el({
+            tag: 'input',
+            type: 'search',
+            requaired: true,
+            mix: 'search__input',
+            placeholder: 'Поиск',
+        })
+        +button-w-circle({
+            mix: 'search__submit',
+            mod: 'bg-black',
+            type: 'submit',
+            icon: 'search',
+            js: 'search-submit'
+        })

@@ -5,11 +5,8 @@
 
 .events__wrap {
   @include wrapper;
-}
-
-.events__inner {
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: get($y, small, size-170);
+  padding-bottom: get($y, small, size-120);
 }
 
 .events__heading {
@@ -39,9 +36,9 @@
 }
 
 @include respond-to(medium) {
-  .events__inner {
-    padding-top: 140px;
-    padding-bottom: 90px;
+  .events__wrap {
+    padding-top: get($y, medium, size-170);
+    padding-bottom: get($y, medium, size-120);
   }
 
   .events__heading {
@@ -54,9 +51,9 @@
 }
 
 @include respond-to(large) {
-  .events__inner {
-    padding-top: 170px;
-    padding-bottom: 120px;
+  .events__wrap {
+    padding-top: get($y, large, size-170);
+    padding-bottom: get($y, large, size-120);
   }
 
   .events__heading {

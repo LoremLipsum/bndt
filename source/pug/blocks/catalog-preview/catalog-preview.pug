@@ -1,45 +1,45 @@
 mixin catalog-preview(data)
     +el({
+        tag: 'section',
         class: 'catalog-preview',
         mod: data.mod,
         mix: data.mix,
         js: 'tabs',
     })&attributes(attributes)
         .catalog-preview__wrap
-            .catalog-preview__inner
-                .catalog-preview__top
-                    h2.catalog-preview__heading Уличный стиль, <br>который станет незаменимым <br>в&nbsp;повседневной жизни
-                    +button({
-                        tag: 'a',
-                        mod: 'bg-black',
-                        mix: 'catalog-preview__button-top',
-                        text: 'Узнай всё о&nbsp;тендециях в&nbsp;уличной моде'
-                    })
-                +tabs({
-                    mix: 'catalog-preview__tabs',
-                    items: [
-                        {
-                            text: 'Новинки',
-                        },
-                        {
-                            text: 'Топ продаж',
-                        }
-                    ],
+            .catalog-preview__top
+                h2.catalog-preview__heading Уличный стиль, <br>который станет незаменимым <br>в&nbsp;повседневной жизни
+                +button({
+                    tag: 'a',
+                    mod: 'bg-black',
+                    mix: 'catalog-preview__button-top',
+                    text: 'Узнай всё о&nbsp;тендециях в&nbsp;уличной моде'
                 })
-                .tab-1.js-content-tabs.active
-                    +goods-list({
-                        mix: 'catalog-preview__list',
-                        goods: goodsItems,
-                    })
-                .tab-2.js-content-tabs
-                    //- +goods-list({
-                    //-     mix: 'catalog-preview__list',
-                    //-     goods: goodsItems,
-                    //- })
-                .catalog-preview__bottom
-                    +button({
-                        tag: 'a',
-                        mix: 'catalog-preview__button-bottom',
-                        mod: 'bg-primary',
-                        text: 'Перейти в каталог'
-                    })
+            +tabs({
+                mix: 'catalog-preview__tabs',
+                items: [
+                    {
+                        text: 'Новинки',
+                    },
+                    {
+                        text: 'Топ продаж',
+                    }
+                ],
+            })
+            .tab-1.js-content-tabs.active
+                +goods-list({
+                    mix: 'catalog-preview__list',
+                    goods: goodsItems,
+                })
+            .tab-2.js-content-tabs
+                +goods-list({
+                    mix: 'catalog-preview__list',
+                    goods: goodsItems2,
+                })
+            .catalog-preview__bottom
+                +button({
+                    tag: 'a',
+                    mix: 'catalog-preview__button-bottom',
+                    mod: 'bg-primary',
+                    text: 'Перейти в каталог'
+                })

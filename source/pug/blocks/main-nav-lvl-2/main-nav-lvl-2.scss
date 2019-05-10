@@ -16,7 +16,6 @@
   &:last-child {
     margin-bottom: 0;
   }
-
 }
 
 .main-nav-lvl-2__link {
@@ -29,9 +28,4 @@
   @include hover {
     color: rgba(color(light), 0.7);
   }
-}
-
-
-@include respond-to(medium-lg) {
-
 }

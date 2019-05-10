@@ -70,27 +70,25 @@ mixin header(data)
                         mod: 'bg-black',
                     })
             .header__dialog.header__dialog--search.js-dialog.js-dialog-search
-                .header__dialog-inner
-                    +button-close({
-                        mix: 'header__dialog-close',
-                        close: true,
-                        mod: 'bg-black',
-                        js: 'close-search',
-                    })
-                    +search({
-                        mix: 'header__search header__search--mobile',
-                    })
+                +button-close({
+                    mix: 'header__dialog-close',
+                    close: true,
+                    mod: 'bg-black',
+                    js: 'close-search',
+                })
+                +search({
+                    mix: 'header__search header__search--mobile',
+                })
             .header__dialog.header__dialog--callback.js-dialog.js-dialog-callback
-                .header__dialog-inner
-                    +button-close({
-                        mix: 'header__dialog-close',
-                        close: true,
-                        mod: 'bg-black',
-                        js: 'close-callback',
-                    })
-                    +callback({
-                        mix: 'header__callback header__callback--mobile'
-                    })
+                +button-close({
+                    mix: 'header__dialog-close',
+                    close: true,
+                    mod: 'bg-black',
+                    js: 'close-callback',
+                })
+                +callback({
+                    mix: 'header__callback header__callback--mobile'
+                })
             .header__panel.js-panel-main-nav
                 .header__panel-top
                     +el({
@@ -106,7 +104,7 @@ mixin header(data)
                         })
                 .header__panel-content.baron
                     .header__panel-content-inner.baron__scroller
-                        .header__main-nav-wrap
+                        nav.header__main-nav-wrap(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                             +main-nav({
                                 items: mainNav,
                                 mix: 'header__main-nav'

@@ -1,14 +1,7 @@
-.catalog-preview {
-
-}
-
 .catalog-preview__wrap {
   @include wrapper;
-}
-
-.catalog-preview__inner {
-  padding-top: 50px;
-  padding-bottom: 30px;
+  padding-top: get($y, small, size-230);
+  padding-bottom: get($y, small, size-160);
 }
 
 .catalog-preview__heading {
@@ -30,7 +23,7 @@
 }
 
 .catalog-preview__tabs {
-  margin-bottom: 30px;
+  margin-bottom: get($y, small, size-100);
 }
 
 .catalog-preview__bottom {
@@ -63,9 +56,9 @@
 }
 
 @include respond-to(medium) {
-  .catalog-preview__inner {
-    padding-top: 80px;
-    padding-bottom: 60px;
+  .catalog-preview__wrap {
+    padding-top: get($y, medium, size-230);
+    padding-bottom: get($y, medium, size-160);
   }
 
   .catalog-preview__heading {
@@ -88,7 +81,7 @@
   }
 
   .catalog-preview__tabs {
-    margin-bottom: 50px;
+    margin-bottom: get($y, medium, size-100);
   }
 
   .catalog-preview__bottom {
@@ -97,9 +90,9 @@
 }
 
 @include respond-to(large) {
-  .catalog-preview__inner {
-    padding-top: 230px;
-    padding-bottom: 160px;
+  .catalog-preview__wrap {
+    padding-top: get($y, large, size-230);
+    padding-bottom: get($y, large, size-160);
   }
 
   .catalog-preview__heading {
@@ -107,7 +100,7 @@
   }
 
   .catalog-preview__tabs {
-    margin-bottom: 100px;
+    margin-bottom: get($y, large, size-100);
   }
 
   .catalog-preview__bottom {

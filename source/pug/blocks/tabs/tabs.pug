@@ -1,20 +1,28 @@
 mixin tabs(data)
     +el({
-        tag: 'ul',
         class: 'tabs',
         mod: data.mod,
         mix: data.mix,
         js: data.js
     })&attributes(attributes)
-        each item, index in data.items
+        +el({
+            tag: 'ul',
+            class: 'tabs__list',
+        })
             +el({
                 tag: 'li',
-                class: 'tabs__item',
-                mix: index == 0 ? 'active' : '',
+                class: 'tabs__line',
+                js: 'line',
             })
+            each item, index in data.items
                 +el({
-                    tag: 'button',
-                    class: 'tabs__button',
-                    text: item.text,
-                    js: 'button-tabs',
-                })(data-tab='tab-' + (index + 1))
+                    tag: 'li',
+                    class: 'tabs__item',
+                })
+                    +el({
+                        tag: 'button',
+                        class: 'tabs__button',
+                        text: item.text,
+                        js: 'button-tabs',
+                        mix: index == 0 ? 'active' : '',
+                    })(data-tab='tab-' + (index + 1))

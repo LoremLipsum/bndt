@@ -1,10 +1,7 @@
 .gallery__wrap {
   @include wrapper;
-}
-
-.gallery__inner {
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding-top: get($y, small, size-120);
+  padding-bottom: get($y, small, size-240);
 }
 
 .gallery__heading {
@@ -15,23 +12,44 @@
 
 .gallery__list {
   @include ul-no;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 .gallery__item {
+  margin-bottom: 20px;
+  float: left;
+
   &:nth-child(n + 5) {
     display: none;
   }
 
-  &--large {
+  &:nth-child(9n + 1),
+  &:nth-child(9n + 5),
+  &:nth-child(9n + 9) {
     height: 110vw;
   }
 
-  &--medium {
+  &:nth-child(9n + 3),
+  &:nth-child(9n + 4),
+  &:nth-child(9n + 8) {
     height: 80vw;
   }
 
-  &--small {
+  &:nth-child(9n + 2),
+  &:nth-child(9n + 6),
+  &:nth-child(9n + 7) {
     height: 60vw;
+  }
+
+  &.active {
+    &:nth-child(n + 5) {
+      display: block;
+    }
   }
 }
 
@@ -46,61 +64,83 @@
 
 @include respond-to(420px) {
   .gallery__list {
-    column-count: 2;
-    column-gap: 20px;
+    position: relative;
+    margin: 0 -10px;
   }
 
   .gallery__item {
+    width: 50%;
+    padding: 0 10px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+      left: calc(50% + 20px);
+    }
+
     &:nth-child(n + 5) {
       display: block;
     }
 
-    &:nth-child(n + 7) {
+    &:nth-child(n + 9) {
       display: none;
     }
 
-    &--large {
+    &:nth-child(9n + 1),
+    &:nth-child(9n + 3),
+    &:nth-child(9n + 6) {
       height: 55vw;
     }
 
-    &--medium {
+    &:nth-child(9n + 4),
+    &:nth-child(9n + 6),
+    &:nth-child(9n + 9) {
       height: 45vw;
     }
 
-    &--small {
+    &:nth-child(9n + 2),
+    &:nth-child(9n + 5),
+    &:nth-child(9n + 8) {
       height: 30vw;
     }
   }
 }
 
 @include respond-to(medium) {
-  .gallery__inner {
-    padding-top: 40px;
-    padding-bottom: 140px;
+  .gallery__wrap {
+    padding-top: get($y, medium, size-120);
+    padding-bottom: get($y, medium, size-240);
   }
 
   .gallery__heading {
     margin-bottom: 70px;
   }
 
-  .gallery__list {
-    column-count: 3;
-  }
-
   .gallery__item {
-    &:nth-child(n + 7) {
+    width: 33.33%;
+
+    &:nth-child(n + 8) {
       display: block;
     }
 
-    &--large {
+    &:nth-child(n + 10) {
+      display: none;
+    }
+
+    &:nth-child(9n + 1),
+    &:nth-child(9n + 4),
+    &:nth-child(9n + 7) {
       height: 35vw;
     }
 
-    &--medium {
+    &:nth-child(9n + 3),
+    &:nth-child(9n + 6),
+    &:nth-child(9n + 8) {
       height: 25vw;
     }
 
-    &--small {
+    &:nth-child(9n + 2),
+    &:nth-child(9n + 5),
+    &:nth-child(9n + 9) {
       height: 17vw;
     }
   }
@@ -111,9 +151,9 @@
 }
 
 @include respond-to(large) {
-  .gallery__inner {
-    padding-top: 120px;
-    padding-bottom: 240px;
+  .gallery__wrap {
+    padding-top: get($y, large, size-120);
+    padding-bottom: get($y, large, size-240);
   }
 
   .gallery__heading {
@@ -125,17 +165,24 @@
   }
 
   .gallery__item {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    height: 50px;
 
-    &--large {
+    &:nth-child(9n + 1),
+    &:nth-child(9n + 4),
+    &:nth-child(9n + 7) {
       height: 500px;
     }
 
-    &--medium {
+    &:nth-child(9n + 3),
+    &:nth-child(9n + 6),
+    &:nth-child(9n + 8) {
       height: 370px;
     }
 
-    &--small {
+    &:nth-child(9n + 2),
+    &:nth-child(9n + 5),
+    &:nth-child(9n + 9) {
       height: 250px;
     }
   }

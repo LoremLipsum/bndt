@@ -6,7 +6,7 @@
   var callback = document.querySelector('.js-modal-callback');
   var ESC = 27;
 
-  var closeModal = function() {
+  var close = function() {
     for (var i = 0; i < modals.length; i += 1) {
       modals[i].classList.remove('active');
     }
@@ -28,7 +28,6 @@
     });
   }
 
-  // включает модальное окно "Записаться на прием"
   for (var i = 0; i < btnsCallback.length; i += 1) {
     btnsCallback[i].addEventListener('click', function(e) {
       e.preventDefault();

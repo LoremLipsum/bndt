@@ -1,12 +1,11 @@
 .exchange {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding-top: get($y, small, size-120);
+  padding-bottom: get($y, small, size-200);
 }
 
 .exchange__wrap {
   @include wrapper;
 }
-
 
 .exchange__row {
   margin-bottom: 50px;
@@ -26,10 +25,19 @@
   }
 }
 
-.exchange__image {
-  display: block;
+.exchange__picture-wrap {
   width: 250px;
+  height: 250px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.exchange__image,
+.exchange__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
 }
 
 .exchange__contact-text {
@@ -48,9 +56,9 @@
 }
 
 @include respond-to(medium) {
-  .exchang {
-    padding-top: 80px;
-    padding-bottom: 140px;
+  .exchange {
+    padding-top: get($y, medium, size-120);
+    padding-bottom: get($y, medium, size-200);
   }
 
   .exchange__row {
@@ -69,10 +77,11 @@
     }
   }
 
-  .exchange__image {
+  .exchange__picture-wrap {
     flex-shrink: 0;
     margin: 0;
     width: 300px;
+    height: 300px;
   }
 
   .exchange__contact-text {
@@ -82,8 +91,8 @@
 
 @include respond-to(large) {
   .exchange {
-    padding-top: 120px;
-    padding-bottom: 200px;
+    padding-top: get($y, large, size-120);
+    padding-bottom: get($y, large, size-200);
   }
 
   .exchange__row {
@@ -97,8 +106,9 @@
     }
   }
 
-  .exchange__image {
+  .exchange__picture-wrap {
     width: 434px;
+    height: 430px;
   }
 
   .exchange__contact-text {

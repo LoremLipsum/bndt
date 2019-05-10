@@ -55,9 +55,10 @@ $y: (
   small: (
     size-40:  20px,
     size-70:  20px,
-    size-80:  20px,
+    size-80:  30px,
     size-90:  30px,
     size-100: 40px,
+    size-110: 40px,
     size-120: 40px,
     size-130: 40px,
     size-140: 40px,
@@ -67,6 +68,8 @@ $y: (
     size-180: 60px,
     size-190: 60px,
     size-200: 60px,
+    size-230: 80px,
+    size-240: 80px,
     size-250: 100px,
     size-270: 110px,
   ),
@@ -76,6 +79,7 @@ $y: (
     size-80:  50px,
     size-90:  60px,
     size-100: 80px,
+    size-110: 80px,
     size-120: 80px,
     size-130: 100px,
     size-140: 100px,
@@ -85,6 +89,8 @@ $y: (
     size-180: 120px,
     size-190: 130px,
     size-200: 140px,
+    size-230: 150px,
+    size-240: 150px,
     size-250: 190px,
     size-270: 210px,
   ),
@@ -94,6 +100,7 @@ $y: (
     size-80:  80px,
     size-90:  90px,
     size-100: 100px,
+    size-110: 110px,
     size-120: 120px,
     size-130: 130px,
     size-140: 140px,
@@ -103,6 +110,8 @@ $y: (
     size-180: 180px,
     size-190: 190px,
     size-200: 200px,
+    size-230: 230px,
+    size-240: 240px,
     size-250: 250px,
     size-270: 270px,
   ),
@@ -120,5 +129,17 @@ $x: (
   large: (
     size-100: 100px,
     size-200: 200px,
+  ),
+);
+
+$fs: (
+  small: (
+    size-28: 22px,
+  ),
+  medium: (
+    size-28: 26px,
+  ),
+  large: (
+    size-28: 28px,
   ),
 );

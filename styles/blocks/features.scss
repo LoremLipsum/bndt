@@ -5,7 +5,7 @@
 .features__wrap {
   @include wrapper;
   padding-top: get($y, small, size-160);
-  padding-bottom: get($y, small, size-140);
+  padding-bottom: get($y, small, size-100);
 }
 
 .features__list {
@@ -21,15 +21,12 @@
 .features__item {
   margin-bottom: get($y, small, size-40);
 
-  &:nth-last-child(1) {
-    margin-bottom: 0;
-  }
 }
 
 @include respond-to(medium) {
   .features__wrap {
     padding-top: get($y, medium, size-160);
-    padding-bottom: get($y, medium, size-140);
+    padding-bottom: get($y, medium, size-100);
   }
 
   .features__heading {
@@ -48,18 +45,13 @@
     margin-bottom: get($y, medium, size-40);
     padding-left: 15px;
     padding-right: 15px;
-
-    &:nth-last-child(2),
-    &:nth-last-child(3) {
-      margin-bottom: 0;
-    }
   }
 }
 
 @include respond-to(large) {
   .features__wrap {
     padding-top: get($y, large, size-160);
-    padding-bottom: get($y, large, size-140);
+    padding-bottom: get($y, large, size-100);
   }
 
   .features__heading {

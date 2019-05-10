@@ -46,6 +46,25 @@
   margin-bottom: get($y, medium, size-90);
 }
 
+.section-centred__picture-wrap {
+
+}
+
+.section-centred__picture-wrap {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section-centred__image,
+.section-centred__picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover);
+}
+
 @include respond-to(medium) {
   .section-centred {
     &--head {
@@ -76,6 +95,11 @@
 
   .section-centred__row {
     margin-bottom: get($y, medium, size-90);
+  }
+
+  .section-centred__picture-wrap {
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -112,5 +136,10 @@
 
   .section-centred__row {
     margin-bottom: get($y, large, size-90);
+  }
+
+  .section-centred__picture-wrap {
+    width: 434px;
+    height: 430px;
   }
 }

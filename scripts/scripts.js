@@ -1,32 +1,11 @@
 'use strict';
 
 (function() {
-  var btn = document.querySelector('.js-aside-nav-button');
-
-  if(btn) {
-    btn.addEventListener('click', function(e) {
-      e.currentTarget.parentNode.classList.toggle('active');
-    });
-  }
-
-})();
-
-'use strict';
-
-(function() {
   baron({
     root: '.baron',
     scroller: '.baron__scroller',
     bar: '.baron__bar',
   });
-
-
-  // baron({
-  //   root: '.baron-reviews-item',
-  //   scroller: '.baron__scroller',
-  //   bar: '.baron__bar',
-  // });
-
 })();
 
 'use strict';
@@ -113,21 +92,57 @@
 
 })();
 
-$(document).ready(function (){
-  var header = $('.js-header');
+'use strict';
+
+(function() {
+  var gallery = document.querySelector('.js-gallery');
+  var btn = gallery.querySelector('.js-button-gallery');
+  var items4 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+5)');
+  var items6 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+7)');
+  var items9 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+10)');
+  var text;
+
+  if (gallery) {
+    btn.addEventListener('click', function(e) {
+      if(parseInt(window.innerWidth, 10) < 420) {
+        for (var i = 0; i < items4.length; i += 1) {
+          items4[i].classList.toggle('active');
+        }
+      } else if (parseInt(window.innerWidth, 10) < 768) {
+        for (var i = 0; i < items6.length; i += 1) {
+          items6[i].classList.toggle('active');
+        }
+      } else if (parseInt(window.innerWidth, 10) > 768) {
+        for (var i = 0; i < items9.length; i += 1) {
+          items9[i].classList.toggle('active');
+        }
+      }
+
+      text = e.currentTarget.innerText === 'Скрыть' ? 'Загрузить еще' : 'Скрыть';
+      e.currentTarget.innerText = text;
+    })
+  }
+
+})();
+
+'use strict';
+
+(function() {
+  var header = document.querySelector('.js-header');
   var SCROLL_HEIGHT = 60;
   var WIDTH = 1570;
 
-  if (+$(window).width() < WIDTH) {
-    $(window).scroll(function(){
-      if ( $(this).scrollTop() > SCROLL_HEIGHT ){
-        header.addClass('active');
-      } else if($(this).scrollTop() <= SCROLL_HEIGHT && header.hasClass('active')) {
-        header.removeClass('active');
+  if (parseInt(window.innerWidth, 10) < WIDTH) {
+    window.addEventListener('scroll', function(e) {
+      if (parseInt(window.pageYOffset, 10) > SCROLL_HEIGHT ){
+        header.classList.add('active');
+      } else if(parseInt(window.pageYOffset, 10) <= SCROLL_HEIGHT && header.hasClass('active')) {
+        header.classList.remove('active');
       }
     });
   }
-});
+
+})();
 
 objectFitImages();
 svg4everybody();
@@ -143,9 +158,6 @@ picturefill();
   for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function(e) {
       e.preventDefault();
-      // for (var j = 0; j < btns.length; j++) {
-      //   btns[j].parentNode.classList.remove('active');
-      // }
       e.currentTarget.parentNode.classList.toggle('active');
     });
   }
@@ -196,6 +208,20 @@ picturefill();
 
 })();
 
+'use strict';
+
+(function() {
+  var grid = document.querySelector('.js-gallery-list');
+  var sizer = document.querySelector('.gallery__item');
+
+  var msnry = new Masonry( grid, {
+    // options...
+    itemSelector: '.gallery__item',
+    columnWidth: sizer,
+    percentPosition: true
+  });
+})();
+
 (function() {
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');
@@ -204,7 +230,7 @@ picturefill();
   var callback = document.querySelector('.js-modal-callback');
   var ESC = 27;
 
-  var closeModal = function() {
+  var close = function() {
     for (var i = 0; i < modals.length; i += 1) {
       modals[i].classList.remove('active');
     }
@@ -226,7 +252,6 @@ picturefill();
     });
   }
 
-  // включает модальное окно "Записаться на прием"
   for (var i = 0; i < btnsCallback.length; i += 1) {
     btnsCallback[i].addEventListener('click', function(e) {
       e.preventDefault();
@@ -244,35 +269,45 @@ picturefill();
   document.addEventListener('keyup', onEscKeyup);
 })()
 
-// (function($) {
-// 	'use strict';
-// 	$(function() {
-//
-//     var btns = $('.js-show-more-button');
-//     var items = '.js-show-more-item-2:nth-child(n+3)';
-//
-//     if (btns) {
-//       btns.on('click', function(e){
-//         e.preventDefault();
-//         $(this).parents('.js-show-more').find(items).toggleClass('active');
-//       });
-//     }
-//
-// 	});
-// })(jQuery);
-
 'use strict';
 
 (function() {
 
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
+  var swiperReviews = new Swiper('.js-swiper-reviews', {
+    slidesPerView: 2,
+    spaceBetween: 160,
+    loop: true,
     navigation: {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1220: {
+        slidesPerView: 2,
+        spaceBetween: 110,
+      },
+      768: {
+        slidesPerView: 1,
+        // spaceBetween: 40,
+      },
+    }
   });
 
+  var swiperScroll = new Swiper('.js-swiper-scroll', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      snapOnRelease: true,
+      grabCursor: true,
+    },
+    mousewheel: true,
+  });
 })();
 
 'use strict';
@@ -284,12 +319,20 @@ picturefill();
   if(tabs) {
     var btns = tabs.querySelectorAll('.js-button-tabs');
     var contents = tabs.querySelectorAll('.js-content-tabs');
+    var line = tabs.querySelector('.js-line');
+
+    var getLineSize = function(left, width) {
+      line.style.left = left + 'px';
+      line.style.width = width + 'px';
+    };
 
     for (var i = 0; i < btns.length; i++) {
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
         var tab = e.currentTarget;
         var atr = tab.getAttribute('data-tab');
+        var left = tab.offsetLeft;
+        var width = tab.clientWidth;
 
         for (var j = 0; j < contents.length; j++) {
           contents[j].classList.remove('active');
@@ -301,8 +344,25 @@ picturefill();
 
         tab.classList.add('active');
         document.querySelector("." + atr).classList.add('active');
+
+        getLineSize(left, width);
       });
+
+      btns[i].addEventListener('mouseover', (e) => {
+        e.preventDefault();
+        var tab = e.currentTarget;
+        var left = tab.offsetLeft;
+        var width = tab.clientWidth;
+
+        getLineSize(left, width);
+      });
+
+      if(btns[i].classList.contains('active')) {
+        var left = btns[i].offsetLeft;
+        var width = btns[i].clientWidth;
+
+        getLineSize(left, width);
+      }
     }
   }
-
 })();

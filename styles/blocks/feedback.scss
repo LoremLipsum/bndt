@@ -1,0 +1,41 @@
+.feedback {
+  background-color: color(black);
+  color: color(white);
+}
+
+.feedback__wrap {
+  @include wrapper;
+  padding-top: get($y, small, size-110);
+  padding-bottom: get($y, small, size-130);
+}
+
+.feedback__heading {
+  color: color(white);
+  text-align: center;
+}
+
+.feedback__form {
+  color: color(white);
+}
+
+@include respond-to(medium) {
+  .feedback__wrap {
+    padding-top: get($y, medium, size-110);
+    padding-bottom: get($y, medium, size-130);
+  }
+
+  .feedback__heading {
+    padding: 0 get($x, medium, size-100);
+  }
+}
+
+@include respond-to(large) {
+  .feedback__wrap {
+    padding-top: get($y, large, size-110);
+    padding-bottom: get($y, large, size-130);
+  }
+
+  .feedback__heading {
+    padding: 0 get($x, large, size-100);
+  }
+}

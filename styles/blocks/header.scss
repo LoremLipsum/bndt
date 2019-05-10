@@ -83,27 +83,21 @@
 .header__dialog {
   position: relative;
   z-index: 1;
+  display: none;
   width: 100%;
-  max-height: 0;
+  padding-top: 40px;
+  padding-bottom: 10px;
   background: color(black);
   transition: duration(md) func(primary);
   overflow: hidden;
 
   &.active {
-    max-height: none;
-    overflow: visible;
+    display: block;
   }
 
   &--callback {
-    .header__dialog-inner {
-      padding-right: 10px;
-    }
+    padding-right: 10px;
   }
-}
-
-.header__dialog-inner {
-  padding-top: 40px;
-  padding-bottom: 10px;
 }
 
 .header__dialog-close {
@@ -288,6 +282,7 @@
 
   .header__dialog {
     max-height: none;
+    padding: 0;
 
     &--search {
       width: 180px;
@@ -299,15 +294,8 @@
       order: 2;
       width: 300px;
       margin-right: auto;
-
-      .header__dialog-inner {
-        padding-right: 0;
-      }
+      padding-right: 0;
     }
-  }
-
-  .header__dialog-inner {
-    padding: 0;
   }
 
   .header__dialog-close {

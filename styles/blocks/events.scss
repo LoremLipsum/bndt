@@ -29,6 +29,11 @@
 .events__link {
   display: block;
   text-decoration: none;
+  transition: duration(md) func(primary);
+
+  @include hover {
+    opacity: 0.6;
+  }
 }
 
 .events__image {

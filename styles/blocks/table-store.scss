@@ -2,50 +2,61 @@
   margin-bottom: 0;
 }
 
+.table-store__tr {
+  padding: 20px 0;
+  border-bottom: 2px solid color(light);
+}
 
 .table-store__th,
 .table-store__td {
   display: block;
   width: 100%;
-  padding: 5px 0;
   text-align: center;
   border-bottom: none;
 }
 
 .table-store__th {
-  padding-top: 40px;
+  font-family: font(secondary);
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 .table-store__td {
-  &:last-child {
-    padding-bottom: 40px;
-    border-bottom: 2px solid color(light);
+  &--button {
+    margin-top: 10px;
   }
 }
 
-@include respond-to(medium-lg) {
+@include respond-to(medium) {
+  .table-store {
+    display: table;
+  }
+
+  .table-store__tr {
+    display: table-row;
+    padding: 0;
+    border-bottom: none;
+  }
+
   .table-store__th,
   .table-store__td {
     display: table-cell;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 40px 10px;
     border-bottom: 2px solid color(light);
+    vertical-align: middle;
   }
 
   .table-store__th {
     width: calc(100% - 540px);
-    padding-top: 50px;
     padding-left: 0;
     text-align: left;
+    font-size: 26px;
   }
 
   .table-store__td {
     text-align: right;
 
     &:last-child {
-      padding-bottom: 40px;
       padding-right: 0;
     }
 
@@ -59,6 +70,7 @@
 
     &--button {
       width: 250px;
+      margin-top: 0;
     }
   }
 }
@@ -66,24 +78,18 @@
 @include respond-to(large) {
   .table-store__th,
   .table-store__td {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 
   .table-store__th {
     width: calc(100% - 670px);
-    padding-top: 60px;
+    font-size: 28px;
   }
 
   .table-store__td {
-    &:last-child {
-      padding-bottom: 50px;
-    }
-
     &--social {
       width: 160px;
-
-
     }
 
     &--time {

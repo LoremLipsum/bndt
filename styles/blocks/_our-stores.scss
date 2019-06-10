@@ -1,8 +1,5 @@
-.our-stores__wrap {
-  @include wrapper;
-}
-
 .our-stores__table {
+  width: 100%;
   margin-bottom: get($y, small, size-200);
 }
 
@@ -12,6 +9,11 @@
 }
 
 @include respond-to(medium) {
+  .our-stores__wrap {
+    padding-left: pads(medium);
+    padding-right: pads(medium);
+  }
+
   .our-stores__table {
     margin-bottom: get($y, medium, size-200);
   }
@@ -22,6 +24,14 @@
 }
 
 @include respond-to(large) {
+  .our-stores__wrap {
+    width: width(large);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: pads(large);
+    padding-right: pads(large);
+  }
+
   .our-stores__table {
     margin-bottom: get($y, large, size-200);
   }

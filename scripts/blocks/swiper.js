@@ -10,10 +10,6 @@
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
     },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
     breakpoints: {
       1220: {
         slidesPerView: 2,

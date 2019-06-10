@@ -92,38 +92,38 @@
 
 })();
 
-'use strict';
-
-(function() {
-  var gallery = document.querySelector('.js-gallery');
-  var btn = gallery.querySelector('.js-button-gallery');
-  var items4 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+5)');
-  var items6 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+7)');
-  var items9 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+10)');
-  var text;
-
-  if (gallery) {
-    btn.addEventListener('click', function(e) {
-      if(parseInt(window.innerWidth, 10) < 420) {
-        for (var i = 0; i < items4.length; i += 1) {
-          items4[i].classList.toggle('active');
-        }
-      } else if (parseInt(window.innerWidth, 10) < 768) {
-        for (var i = 0; i < items6.length; i += 1) {
-          items6[i].classList.toggle('active');
-        }
-      } else if (parseInt(window.innerWidth, 10) > 768) {
-        for (var i = 0; i < items9.length; i += 1) {
-          items9[i].classList.toggle('active');
-        }
-      }
-
-      text = e.currentTarget.innerText === 'Скрыть' ? 'Загрузить еще' : 'Скрыть';
-      e.currentTarget.innerText = text;
-    })
-  }
-
-})();
+// 'use strict';
+//
+// (function() {
+//   var gallery = document.querySelector('.js-gallery');
+//   var btn = gallery.querySelector('.js-button-gallery');
+//   var items4 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+5)');
+//   var items6 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+7)');
+//   var items9 = gallery.querySelectorAll('.js-item-gallery:nth-child(n+10)');
+//   var text;
+//
+//   if (gallery) {
+//     btn.addEventListener('click', function(e) {
+//       if(parseInt(window.innerWidth, 10) < 420) {
+//         for (var i = 0; i < items4.length; i += 1) {
+//           items4[i].classList.toggle('active');
+//         }
+//       } else if (parseInt(window.innerWidth, 10) < 768) {
+//         for (var i = 0; i < items6.length; i += 1) {
+//           items6[i].classList.toggle('active');
+//         }
+//       } else if (parseInt(window.innerWidth, 10) > 768) {
+//         for (var i = 0; i < items9.length; i += 1) {
+//           items9[i].classList.toggle('active');
+//         }
+//       }
+//
+//       text = e.currentTarget.innerText === 'Скрыть' ? 'Загрузить еще' : 'Скрыть';
+//       e.currentTarget.innerText = text;
+//     })
+//   }
+//
+// })();
 
 'use strict';
 
@@ -208,19 +208,21 @@ picturefill();
 
 })();
 
+// 'use strict';
+//
+// (function() {
+//   var grid = document.querySelector('.js-gallery-list');
+//   var sizer = document.querySelector('.gallery__item');
+//
+//   var msnry = new Masonry( grid, {
+//     // options...
+//     itemSelector: '.gallery__item',
+//     columnWidth: sizer,
+//     percentPosition: true
+//   });
+// })();
+
 'use strict';
-
-(function() {
-  var grid = document.querySelector('.js-gallery-list');
-  var sizer = document.querySelector('.gallery__item');
-
-  var msnry = new Masonry( grid, {
-    // options...
-    itemSelector: '.gallery__item',
-    columnWidth: sizer,
-    percentPosition: true
-  });
-})();
 
 (function() {
   var btnsClose = document.querySelectorAll('.js-close-modal');
@@ -269,6 +271,145 @@ picturefill();
   document.addEventListener('keyup', onEscKeyup);
 })()
 
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var btns = $('.js-table-store-button');
+
+    if(btns.length) {
+      var btn;
+      var rows = $('.js-table-store-row');
+      var row;
+      var heading;
+      var atr;
+      var coords;
+      var mapItem = $('#our-stores-map');
+      var content = $('.js-our-stores-section');
+      var contentHeading = content.find('.js-our-stores-heading');
+      var active = $('.js-table-store-row.active');
+
+      var initMap = function(coords) {
+        ymaps.ready(function () {
+          var map = new ymaps.Map('our-stores-map', {
+            center: coords,
+            zoom: 18,
+            scrollZoom: false,
+            controls: []
+          }, {
+            searchControlProvider: 'yandex#search'
+          }),
+
+          Placemark = new ymaps.Placemark(coords, {
+            balloonContent: ''
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'assets/images/icon.png',
+            iconImageSize: [40, 54],
+            iconImageOffset: [-20, -68],
+          });
+
+          map.geoObjects.add(Placemark);
+          map.behaviors.disable('scrollZoom');
+          map.controls.add('zoomControl');
+          var roadcontrolState = map.controls.get('zoomControl').state.get('size');
+          map.controls.get('zoomControl').options.set('size', 'small');
+        })
+      }
+
+      // если есть активный класс
+      if(active.length) {
+        heading = $(active).find('.js-table-store-heading').text();
+        atr = $(active).attr('data-map-coords');
+        coords = atr.split(',');
+        contentHeading.text(heading);
+        initMap(coords);
+      } else { // по умолчанию первая строчка таблицы
+        row = $('.js-table-store-row')[0];
+        heading = $(row).find('.js-table-store-heading').text();
+        atr = $(row).attr('data-map-coords');
+        coords = atr.split(',');
+        contentHeading.text(heading);
+        initMap(coords);
+      }
+
+      btns.bind('click', function(e) {
+        e.preventDefault();
+        btn = $(this);
+        row = btn.parents('.js-table-store-row');
+        heading = row.find('.js-table-store-heading').text();
+        atr = row.attr('data-map-coords');
+        coords = atr.split(',');
+        contentHeading.text(heading);
+        mapItem.html('');
+        row = btn.parents('.js-table-store-row');
+        initMap(coords);
+
+        $('html, body').animate({
+          scrollTop: content.offset().top
+        }, 500);
+      })
+    }
+  });
+});
+
+'use strict';
+
+(function() {
+  var btnsAll = document.querySelectorAll('.js-more-button');
+  var btnsMob = document.querySelectorAll('.js-more-button-mob');
+  var content;
+  var atr;
+  var hiddenItems;
+  var btn;
+  var text;
+  var TABLET = 768;
+
+  var show = function(btns) {
+    for (var i = 0; i < btns.length; i += 1) {
+      content = btns[i].parentNode.querySelector('.js-more-content');
+      atr = parseInt(content.getAttribute('data-more'), 10);
+      hiddenItems = content.querySelectorAll('.js-more-content > *:nth-child(n + ' + (atr + 1) + ')');
+      for (var j = 0; j < hiddenItems.length; j += 1) {
+        hiddenItems[j].classList.add('js-hidden');
+      }
+
+      btns[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        btn = e.currentTarget;
+        content = btn.parentNode.querySelector('.js-more-content');
+        atr = parseInt(content.getAttribute('data-more'), 10);
+        hiddenItems = content.querySelectorAll('.js-more-content > *:nth-child(n + ' + (atr + 1) + ')');
+        console.log(hiddenItems);
+        for (var j = 0; j < hiddenItems.length; j += 1) {
+          hiddenItems[j].classList.toggle('js-hidden');
+        }
+        text = btn.textContent === 'Скрыть' ? 'Смотреть больше' : 'Скрыть';
+        btn.textContent = text;
+      })
+    }
+  };
+
+  if (btnsAll.length) {
+    show(btnsAll);
+  }
+
+  if(btnsMob.length) {
+    var showMob = function() {
+      if(parseInt(window.innerWidth, 10) < 768) {
+        show(btnsMob);
+      }
+    };
+
+    showMob();
+
+    window.addEventListener('resize', function() {
+      showMob();
+    });
+  }
+
+})();
+
 'use strict';
 
 (function() {
@@ -280,10 +421,6 @@ picturefill();
     navigation: {
       nextEl: '.swiper-next',
       prevEl: '.swiper-prev',
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
     },
     breakpoints: {
       1220: {

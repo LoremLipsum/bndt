@@ -13,49 +13,23 @@ block content
         .content__content
             .our-stores.js-tabs.content__our-stores
                 .our-stores__wrap
-                    .our-stores__table
-                        +table-store({
-                            table: tableStore,
-                        })
+                    +table-store({
+                        table: tableStore,
+                        mix: 'our-stores__table'
+                    })
                     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
-                    each row, index in tableStore
-                            +el({
-                                tag: 'section',
-                                class: 'tab-' + (index + 1),
-                                mix: index == 0 ? 'active' : '',
-                                js: 'content-tabs',
-                            })
-                                h2.our-stores__heading !{row.heading}
-                                +el({
-                                    mix: 'our-stores__map',
-                                    class: 'map',
-                                    id: 'map_store' + (index + 1),
-                                })
-                                    script.
-                                        ymaps.ready(function () {
-                                          var map = new ymaps.Map(#{'\'map_store' + (index + 1) + '\''}, {
-                                            center: #{row.coords},
-                                            zoom: 16,
-                                            scrollZoom: false,
-                                            controls: []
-                                          }, {
-                                            searchControlProvider: 'yandex#search'
-                                          }),
-                                          Placemark = new ymaps.Placemark(#{row.coords}, {
-                                            balloonContent: #{'\'' + row.heading + '\''}
-                                          }, {
-                                            iconLayout: 'default#image',
-                                            iconImageHref: 'assets/images/icon.png',
-                                            iconImageSize: [48, 64],
-                                            iconImageOffset: [-24, -32],
-                                          });
+                    +el({
+                        tag: 'section',
+                        class: 'our-stores__map-section',
+                        js: 'our-stores-section'
+                    })
+                        h2.our-stores__heading.js-our-stores-heading
+                        +el({
+                            mix: 'our-stores__map',
+                            class: 'map',
+                            id: 'our-stores-map'
+                        })
 
-                                          map.geoObjects.add(Placemark);
-                                          map.behaviors.disable('scrollZoom');
-                                          map.controls.add('zoomControl');
-                                          var roadcontrolState = map.controls.get('zoomControl').state.get('size');
-                                          map.controls.get('zoomControl').options.set('size', 'small');
-                                        })
             +card-form({
                 image: 'franchise.jpg',
                 heading: 'Открой для себя бизнес с&nbsp;брендом BANDIT',

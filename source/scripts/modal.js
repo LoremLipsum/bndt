@@ -1,3 +1,5 @@
+'use strict';
+
 (function() {
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');

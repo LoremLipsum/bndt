@@ -1,11 +1,20 @@
 .our-stores__table {
   width: 100%;
-  margin-bottom: get($y, small, size-200);
 }
 
 .our-stores__heading {
   margin-top: 0;
   text-align: center;
+}
+
+.our-stores__map-section {
+  padding-top: 100px;
+}
+
+.our-stores__button-more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 @include respond-to(medium) {
@@ -15,12 +24,21 @@
   }
 
   .our-stores__table {
-    margin-bottom: get($y, medium, size-200);
+    margin-bottom: 20px;
+  }
+
+  .our-stores__map-section {
+    padding-top: 120px;
   }
 
   .our-stores__heading {
     text-align: left;
   }
+
+  .our-stores__button-more {
+    display: none;
+  }
+
 }
 
 @include respond-to(large) {
@@ -32,7 +50,11 @@
     padding-right: pads(large);
   }
 
+  .our-stores__map-section {
+    padding-top: 100px;
+  }
+
   .our-stores__table {
-    margin-bottom: get($y, large, size-200);
+    margin-bottom: 100px;
   }
 }

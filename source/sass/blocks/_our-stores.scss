@@ -11,6 +11,12 @@
   padding-top: 100px;
 }
 
+.our-stores__button-more {
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
 @include respond-to(medium) {
   .our-stores__wrap {
     padding-left: pads(medium);
@@ -28,6 +34,11 @@
   .our-stores__heading {
     text-align: left;
   }
+
+  .our-stores__button-more {
+    display: none;
+  }
+
 }
 
 @include respond-to(large) {

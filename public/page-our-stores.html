@@ -302,7 +302,9 @@
       <div class="content__content">
         <div class="our-stores js-tabs content__our-stores">
           <div class="our-stores__wrap">
-            <div class="table-store our-stores__table">
+            <!--  data-more количество показанных строк на мобильной версии-->
+            <div class="table-store our-stores__table js-more-content" data-more="3">
+              <!-- Координаты для карты указывается в data-map-coords-->
               <div class="table-store__tr js-table-store-row" data-map-coords="44.498347, 34.170925">
                 <div class="table-store__th js-table-store-heading">Ялта - ул. Московская 3</div>
                 <div class="table-store__td table-store__td--social">
@@ -454,6 +456,8 @@
                 </div>
               </div>
             </div>
+            <button class="button our-stores__button-more js-more-button-mob" type="button">Смотреть больше
+            </button>
             <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
             <section class="our-stores__map-section js-our-stores-section">
               <h2 class="our-stores__heading js-our-stores-heading"></h2>

@@ -5,6 +5,7 @@ mixin table-store(data)
         mod: data.mod,
         js: data.js,
     })&attributes(attributes)
+        // Координаты для карты указывается в data-map-coords
         each row, index in data.table
             +el({
                 class: 'table-store__tr',

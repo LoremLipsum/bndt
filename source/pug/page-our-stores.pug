@@ -13,9 +13,16 @@ block content
         .content__content
             .our-stores.js-tabs.content__our-stores
                 .our-stores__wrap
+                    //  data-more количество показанных строк на мобильной версии
                     +table-store({
                         table: tableStore,
-                        mix: 'our-stores__table'
+                        mix: 'our-stores__table',
+                        js: 'more-content',
+                    })(data-more='3')
+                    +button({
+                        mix: 'our-stores__button-more',
+                        text: 'Смотреть больше',
+                        js: 'more-button-mob',
                     })
                     script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
                     +el({

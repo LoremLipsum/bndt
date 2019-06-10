@@ -3,7 +3,7 @@
 }
 
 .table-store__tr {
-  padding: 20px 0;
+  padding: 30px 20px;
   border-bottom: 2px solid color(light);
 }
 
@@ -16,6 +16,7 @@
 }
 
 .table-store__th {
+  margin-bottom: 6px;
   font-family: font(secondary);
   font-size: 24px;
   line-height: 1.2;
@@ -23,7 +24,7 @@
 
 .table-store__td {
   &--button {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 }
 
@@ -41,7 +42,7 @@
   .table-store__th,
   .table-store__td {
     display: table-cell;
-    padding: 40px 10px;
+    padding: 30px 10px;
     border-bottom: 2px solid color(light);
     vertical-align: middle;
   }

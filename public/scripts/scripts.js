@@ -363,7 +363,7 @@ jQuery(document).ready(function($){
   var hiddenItems;
   var btn;
   var text;
-  var TABLET = 768;
+  var TABLET = 767;
 
   var show = function(btns) {
     for (var i = 0; i < btns.length; i += 1) {
@@ -380,7 +380,6 @@ jQuery(document).ready(function($){
         content = btn.parentNode.querySelector('.js-more-content');
         atr = parseInt(content.getAttribute('data-more'), 10);
         hiddenItems = content.querySelectorAll('.js-more-content > *:nth-child(n + ' + (atr + 1) + ')');
-        console.log(hiddenItems);
         for (var j = 0; j < hiddenItems.length; j += 1) {
           hiddenItems[j].classList.toggle('js-hidden');
         }
@@ -396,7 +395,7 @@ jQuery(document).ready(function($){
 
   if(btnsMob.length) {
     var showMob = function() {
-      if(parseInt(window.innerWidth, 10) < 768) {
+      if(parseInt(window.innerWidth, 10) < TABLET) {
         show(btnsMob);
       }
     };

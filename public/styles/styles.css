@@ -1500,22 +1500,9 @@ textarea
     display: block;
 }
 
-.js-show-more-item-2:nth-child(n+3)
+.js-hidden
 {
     display: none;
-}
-.js-show-more-item-2:nth-child(n+3).active
-{
-    display: block !important;
-}
-
-.js-show-more-item-5:nth-child(n+6)
-{
-    display: none;
-}
-.js-show-more-item-5:nth-child(n+6).active
-{
-    display: block !important;
 }
 
 .article > *:first-child
@@ -1894,6 +1881,14 @@ body > *
     padding-top: 100px;
 }
 
+.our-stores__button-more
+{
+    display: block;
+
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
 @media (min-width: 768px)
 {
     .our-stores__wrap
@@ -1912,6 +1907,10 @@ body > *
     .our-stores__heading
     {
         text-align: left;
+    }
+    .our-stores__button-more
+    {
+        display: none;
     }
 }
 
@@ -7814,7 +7813,7 @@ body > *
 
 .table-store__tr
 {
-    padding: 20px 0;
+    padding: 30px 20px;
 
     border-bottom: 2px solid #f0f0f0;
 }
@@ -7835,12 +7834,14 @@ body > *
 {
     font-family: Bebas Neue, Arial Narrow, sans-serif, Nimbus Sans L, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: 24px;
-    line-height: 1.2;
+    line-height: 1.2; 
+
+    margin-bottom: 6px;
 }
 
 .table-store__td--button
 {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 @media (min-width: 768px)
@@ -7862,7 +7863,7 @@ body > *
     {
         display: table-cell;
 
-        padding: 40px 10px;
+        padding: 30px 10px;
 
         vertical-align: middle; 
 
@@ -8363,6 +8364,14 @@ body > *
     padding-top: 100px;
 }
 
+.our-stores__button-more
+{
+    display: block;
+
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
 @media (min-width: 768px)
 {
     .our-stores__wrap
@@ -8381,6 +8390,10 @@ body > *
     .our-stores__heading
     {
         text-align: left;
+    }
+    .our-stores__button-more
+    {
+        display: none;
     }
 }
 

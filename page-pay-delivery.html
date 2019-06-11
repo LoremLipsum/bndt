@@ -78,8 +78,8 @@
           </li>
         </ul>
         <div class="header__dialog header__dialog--search js-dialog js-dialog-search">
-          <button class="button-close button-close--bg-black header__dialog-close js-close-search" aria-label="Закрыть окно" type="button">
-            <span class="button-close__icon">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-search" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
             </span>
           </button>
           <form class="search header__search header__search--mobile js-search" action="/" method="post" accept-charset="UTF-8"><span class="hidden">Поиск по сайту</span>
@@ -93,8 +93,8 @@
           </form>
         </div>
         <div class="header__dialog header__dialog--callback js-dialog js-dialog-callback">
-          <button class="button-close button-close--bg-black header__dialog-close js-close-callback" aria-label="Закрыть окно" type="button">
-            <span class="button-close__icon">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-callback" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
             </span>
           </button>
           <div class="callback header__callback header__callback--mobile">
@@ -295,159 +295,92 @@
                 <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
               </svg></span>Назад
           </a>
-          <h1 class="content-header__heading">Статьи
+          <h1 class="content-header__heading">Оплата и доставка
           </h1>
         </div>
       </header>
-      <div class="content__posts">
-        <div class="posts">
-          <div class="posts__wrap">
-            <ul class="posts__list">
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image01.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+      <div class="content__delivery">
+        <section class="delivery delivery--rus content__delivery-section">
+          <div class="delivery__wrap">
+            <h2 class="delivery__heading">Доставка по всей России
+            </h2>
+            <section class="process delivery__process">
+              <h3 class="process__heading">Почта России
+              </h3>
+              <ol class="process__list">
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-shirt.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Заказ
+                    </span>
                   </div>
-                </article>
-              </li>
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image02.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+                </li>
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-money.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Оплата 100%
+                    </span>
                   </div>
-                </article>
-              </li>
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image03.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+                </li>
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-box.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Получение на почте
+                    </span>
                   </div>
-                </article>
-              </li>
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image01.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+                </li>
+              </ol>
+            </section>
+            <section class="process delivery__process">
+              <h3 class="process__heading">Доставка Сдек
+              </h3>
+              <ol class="process__list">
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-shirt.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Заказ
+                    </span>
                   </div>
-                </article>
-              </li>
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image04.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+                </li>
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-rouble.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Предоплата <b>400 Р</b>
+                    </span>
                   </div>
-                </article>
-              </li>
-              <li class="posts__item">
-                <article class="posts-item">
-                  <a class="posts-item__image-wrap" href="#">
-                    <img class="posts-item__image" src="./assets/upload/image05.jpg" alt=" ">
-                  </a>
-                  <div class="posts-item__content">
-                    <div class="date posts-item__date">21.04.2019
+                </li>
+                <li class="process__item">
+                  <div class="process-item">
+                    <div class="process-item__circle">
+                      <img class="process-item__icon" src="./assets/images/icon-money.svg" alt=" ">
                     </div>
-                    <h4 class="posts-item__heading">
-                      <a class="posts-item__heading-link" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                      </a>
-                    </h4>
-                    <div class="posts-item__link-wrap">
-                      <a class="link link--primary posts-item__link" href="#">Читать
-                      </a>
-                    </div>
+                    <span class="process-item__text">Доплата при получение товара
+                    </span>
                   </div>
-                </article>
-              </li>
-            </ul>
+                </li>
+              </ol>
+            </section>
           </div>
-        </div>
-        <div class="pagination content__pagination">
-          <div class="pagination__wrap">
-            <button class="control control--prev control--circle pagination__control disabled" title="Назад" tabindex="0" type="button"><span class="control__icon-wrap">
-                <svg class="control__icon">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-                </svg></span>
-            </button>
-            <ul class="pagination__list">
-              <li class="pagination__item active">
-                <a class="pagination__link" href="#">1
-                </a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">2
-                </a>
-              </li>
-              <li class="pagination__item">
-                <a class="pagination__link" href="#">3
-                </a>
-              </li>
-            </ul>
-            <button class="control control--next control--circle pagination__control" title="Вперед" tabindex="0" type="button"><span class="control__icon-wrap">
-                <svg class="control__icon">
-                  <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-                </svg></span>
-            </button>
+        </section>
+        <section class="delivery delivery--world content__delivery-section">
+          <div class="delivery__wrap">
+            <h2 class="delivery__heading">Доставка в другие страны
+            </h2>
+            <div class="delivery__text">
+              <p>Доставка в другие страны - доставка осуществляется после полной оплаты товара на наши реквизиты. Мы сможем отправить любой удобной Вам курьерской компанией!</p>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
     <footer class="footer">
@@ -561,8 +494,8 @@
       <div class="overlay modal__overlay active js-overlay-modal">
       </div>
       <div class="modal__dialog">
-        <button class="button-close button-close--bg-primary modal__close js-close-modal" aria-label="Закрыть окно" type="button">
-          <span class="button-close__icon">
+        <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
+          <span class="button-remove__icon">
           </span>
         </button>
         <div class="modal__dialog-inner">

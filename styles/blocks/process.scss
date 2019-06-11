@@ -1,0 +1,35 @@
+.process {
+
+}
+
+.process__list {
+  padding: 0;
+  @include ol-no;
+  margin-bottom: -20px;
+}
+
+.process__item {
+  margin-bottom: 20px;
+}
+
+@include respond-to(small-lg) {
+  .process {
+
+  }
+
+  .process__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .process__item {
+    width: 50%;
+  }
+}
+
+@include respond-to(medium) {
+  .process__item {
+    width: 33.33%;
+  }
+}

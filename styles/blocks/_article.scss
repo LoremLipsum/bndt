@@ -1,21 +1,37 @@
 .article {
-	> *:first-child {
-		margin-top: 0;
-	}
+  .date {
+    color: color(black);
+  }
 
-	> *:last-child {
-		margin-bottom: 0;
-	}
+  img {
+    display: block;
+    width: 100%;
+    max-width: 630px;
+    max-height: 460px;
+    margin: get($y, small, size-100) auto;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @include respond-to(medium) {
   .article {
-
+    img {
+      margin: get($y, medium, size-100) auto;
+    }
   }
 }
 
 @include respond-to(large) {
   .article {
-
+    img {
+      margin: get($y, large, size-100) auto;
+    }
   }
 }

@@ -1,0 +1,62 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Оплата и доставка',
+            mod: ['bg-light'],
+            mix: 'content__header',
+        })
+        .content__delivery
+            +delivery({
+                mix: 'content__delivery-section',
+                heading: 'Доставка по всей России',
+                mod: 'rus',
+            })
+                +process({
+                    heading: 'Почта России',
+                    mix: 'delivery__process',
+                    items: [
+                        {
+                            image: 'icon-shirt.svg',
+                            text: 'Заказ'
+                        },
+                        {
+                            image: 'icon-money.svg',
+                            text: 'Оплата 100%'
+                        },
+                        {
+                            image: 'icon-box.svg',
+                            text: 'Получение на почте'
+                        },
+                    ]
+                })
+                +process({
+                    heading: 'Доставка Сдек',
+                    mix: 'delivery__process',
+                    items: [
+                        {
+                            image: 'icon-shirt.svg',
+                            text: 'Заказ'
+                        },
+                        {
+                            image: 'icon-rouble.svg',
+                            text: 'Предоплата <b>400 Р</b>'
+                        },
+                        {
+                            image: 'icon-money.svg',
+                            text: 'Доплата при получение товара'
+                        },
+                    ]
+                })
+            +delivery({
+                mix: 'content__delivery-section',
+                heading: 'Доставка в другие страны',
+                mod: 'world'
+            })
+                .delivery__text
+                    p.
+                        Доставка в другие страны - доставка осуществляется после полной оплаты товара на наши реквизиты. Мы сможем отправить любой удобной Вам курьерской компанией!

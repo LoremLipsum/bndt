@@ -28,7 +28,7 @@
   text-decoration: none;
   overflow: hidden;
 
-  @include mask(rgba(color(white), 0.2)) {
+  @include mask(rgba(color(black), 0.2)) {
     opacity: 0;
     transition: duration(md) func(primary);
   }

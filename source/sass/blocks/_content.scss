@@ -51,6 +51,15 @@
   padding-bottom: get($y, small, size-200);
 }
 
+.content__delivery {
+  padding-top: 40px;
+  padding-bottom: get($y, small, size-170);
+}
+
+.content__delivery-section {
+  margin-bottom: get($y, small, size-300);
+}
+
 @include respond-to(medium) {
   .content__content {
     &--pads {
@@ -94,6 +103,17 @@
 
   .content__wishlist {
     padding-bottom: get($y, medium, size-200);
+  }
+
+  .content__delivery {
+    padding-top: 50px;
+    padding-bottom: get($y, medium, size-170);
+
+    @include first-last;
+  }
+
+  .content__delivery-section {
+    margin-bottom: get($y, medium, size-300);
   }
 }
 
@@ -140,5 +160,14 @@
 
   .content__wishlist {
     padding-bottom: get($y, large, size-200);
+  }
+
+  .content__delivery {
+    padding-top: 60px;
+    padding-bottom: get($y, large, size-170);
+  }
+
+  .content__delivery-section {
+    margin-bottom: get($y, large, size-300);
   }
 }

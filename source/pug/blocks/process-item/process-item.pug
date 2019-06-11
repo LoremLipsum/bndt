@@ -1,0 +1,20 @@
+mixin process-item(data)
+    +el({
+        class: 'process-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            class: 'process-item__circle',
+        })
+            +el({
+                tag: 'img',
+                image: data.image,
+                class: 'process-item__icon',
+            })
+        +el({
+            tag: 'span',
+            class: 'process-item__text',
+            text: data.text
+        })

@@ -17,27 +17,35 @@
     flex-wrap: wrap;
     align-items: stretch;
     width: auto;
-    margin-right: -50px;
-    margin-bottom: -30px;
+    margin-right: -40px;
   }
 
   .posts__item {
     width: 50%;
-    margin: 0;
-    margin-bottom: 30px;
-    margin-right: 50px;
+    padding-right: 40px;
   }
 }
 
-@include respond-to(large) {
+@include respond-to(medium-lg) {
   .posts__list {
-    margin-right: -80px;
-    margin-bottom: -100px;
+    margin-bottom: -30px;
   }
 
   .posts__item {
     width: 33.33%;
-    margin-right: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+
+@include respond-to(large) {
+  .posts__list {
+    margin-right: -80px;
+    margin-bottom: -60px;
+  }
+
+  .posts__item {
+    margin-bottom: 60px;
+    padding-right: 80px;
   }
 }

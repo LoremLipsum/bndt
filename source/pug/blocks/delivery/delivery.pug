@@ -1,0 +1,17 @@
+mixin delivery(data)
+    +el({
+        tag: 'section',
+        class: 'delivery',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+        .delivery__wrap
+            +el({
+                tag: 'h2',
+                class: 'delivery__heading',
+                mod: data.headingMod,
+                text: data.heading,
+            })
+            block

@@ -1,0 +1,41 @@
+.process-item {
+
+}
+
+.process-item__circle {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: 2px solid color(primary);
+  border-radius: 50%;
+}
+
+.process-item__text {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+@include respond-to(medium) {
+  .process-item__circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .process-item__text {
+    font-size: 18px;
+  }
+}
+
+@include respond-to(medium) {
+  .process-item__circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .process-item__text {
+    font-size: 18px;
+  }
+}

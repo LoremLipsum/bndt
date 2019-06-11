@@ -37,6 +37,15 @@
   height: 16px;
 }
 
+.circle__text {
+  display: inline-block;
+  font-family: font(secondary);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translateY(2px);
+}
+
 @include respond-to(large-lg) {
   .circle {
     height: 40px;
@@ -46,5 +55,9 @@
   .circle__icon {
     width: 20px;
     height: 20px;
+  }
+
+  .circle__text {
+    font-size: 30px;
   }
 }

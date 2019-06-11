@@ -287,21 +287,75 @@
       <div class="overlay header__overlay js-header-overlay">
       </div>
     </header>
-    <main class="content content--regular">
-      <div class="content__wrap">
-        <ul>
-          <li><a href="page-main.html">Главная</a></li>
-          <li><a href="page-exchange.html">Обмен и возврат товара</a></li>
-          <li><a href="page-about-us.html">О нас</a></li>
-          <li><a href="page-our-stores.html">Наши магазины</a></li>
-          <li><a href="page-contacts.html">Контакты</a></li>
-          <li><a href="page-posts.html">Статьи</a></li>
-          <li><a href="page-posts-item.html">Статья</a></li>
-          <li><a href="page-wishlist.html">Избранное</a></li>
-          <li><a href="page-pay-delivery.html">Оплата и доставка</a></li>
-          <li><a href="page-franchise.html">Франшиза</a></li>
-          <li><a href="components.html">Компоненты</a></li>
-        </ul>
+    <main class="content">
+      <header class="content-header content-header--bg-black content__header">
+        <div class="content-header__wrap">
+          <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
+              <svg class="control__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+              </svg></span>Назад
+          </a>
+          <h1 class="content-header__heading">Франшиза
+          </h1>
+        </div>
+      </header>
+      <div class="content__franchise">
+        <div class="franchise content__franchise-section">
+          <div class="franchise__wrap">
+            <h2 class="franchise__heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+            <div class="franchise__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <section class="card-form" style="background-image: url(./assets/images/franchise.jpg);">
+          <div class="card-form__wrap">
+            <h2 class="card-form__heading">Открой для себя бизнес с&nbsp;брендом BANDIT
+            </h2>
+            <p class="card-form__text">Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.
+            </p>
+            <form class="request card-form__form" action="/" method="post" accept-charset="UTF-8">
+              <div class="request__field-group">
+                <label class="field-secondary request__field">
+                  <span class="hidden">Ваше имя
+                  </span>
+                  <input class="field-secondary__input" tabindex="0" placeholder="Ваше имя" name="name" type="text">
+                </label>
+                <label class="field-secondary request__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <input class="field-secondary__input" tabindex="0" placeholder="Телефон" name="tel" type="tel">
+                </label>
+                <label class="field-secondary request__field">
+                  <span class="hidden">E-mail
+                  </span>
+                  <input class="field-secondary__input" tabindex="0" placeholder="E-mail" name="email" type="email">
+                </label>
+              </div>
+              <div class="request__bottom">
+                <div class="request__confirm-wrap">
+                  <label class="checkbox-confirm request__confirm">
+                    <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                    <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+                <div class="request__submit-wrap">
+                  <label class="button button--bg-primary request__submit">
+                    <input class="hidden" type="submit">
+                    Получить финансовую модель компании
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="footer">

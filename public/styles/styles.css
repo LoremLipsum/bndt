@@ -1864,6 +1864,16 @@ body > *
     margin-bottom: 60px;
 }
 
+.content__franchise
+{
+    padding-top: 40px;
+}
+
+.content__franchise-section
+{
+    margin-bottom: 40px;
+}
+
 @media (min-width: 768px)
 {
     .content__content--pads
@@ -1925,6 +1935,14 @@ body > *
     {
         margin-bottom: 160px;
     }
+    .content__franchise
+    {
+        padding-top: 80px;
+    }
+    .content__franchise-section
+    {
+        margin-bottom: 100px;
+    }
 }
 
 @media (min-width: 1220px)
@@ -1979,6 +1997,14 @@ body > *
     .content__delivery-section
     {
         margin-bottom: 300px;
+    }
+    .content__franchise
+    {
+        padding-top: 110px;
+    }
+    .content__franchise-section
+    {
+        margin-bottom: 130px;
     }
 }
 
@@ -6617,32 +6643,6 @@ body > *
     }
 }
 
-.franchise
-{
-    position: relative;
-
-    min-height: 400px;
-
-    color: #fff; 
-    background-color: #0a0a0a;
-    background-image: url('../assets/images/bg-franchise-sm.jpg');
-    background-repeat: no-repeat;
-    background-position: calc(50% - 100px) center;
-    background-size: cover;
-}
-.franchise::after
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    content: '';
-
-    background-color: rgba(10, 10, 10, .5);
-}
-
 .franchise__wrap
 {
     padding-right: 20px; 
@@ -6667,103 +6667,68 @@ body > *
         padding-left: 40px;
     }
 }
-
-.franchise__inner
+.franchise__wrap > *:first-child
 {
-    position: relative;
-    z-index: 1;
-
-    padding-top: 230px;
-    padding-bottom: 40px;
+    margin-top: 0 !important;
+}
+.franchise__wrap > *:last-child
+{
+    margin-bottom: 0 !important;
 }
 
 .franchise__heading
 {
     font-family: Bebas Neue, Arial Narrow, sans-serif, Nimbus Sans L, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-    font-size: 35px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 1.3;
 
+    margin: 0;
     margin-bottom: 20px;
 
     text-align: center;
-
-    color: #fff;
 }
 
 .franchise__text
 {
-    margin-bottom: 30px;
-
     text-align: center;
 }
-.franchise__text p:last-child
+.franchise__text > *:first-child
 {
-    margin-bottom: 0;
+    margin-top: 0 !important;
 }
-
-@media (min-width: 420px)
+.franchise__text > *:last-child
 {
-    .franchise
-    {
-        background-image: url('../assets/images/bg-franchise-md.jpg');
-        background-position: center;
-    }
+    margin-bottom: 0 !important;
 }
 
 @media (min-width: 768px)
 {
-    .franchise
-    {
-        background-image: url('../assets/images/bg-franchise-lg.jpg');
-    }
-    .franchise__inner
-    {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
     .franchise__heading
     {
         font-size: 40px; 
 
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
     .franchise__text
     {
-        margin-bottom: 60px;
-    }
-}
-
-@media (min-width: 920px)
-{
-    .franchise__inner
-    {
-        padding-top: 230px;
-        padding-bottom: 120px;
-    }
-    .franchise__heading
-    {
-        margin-bottom: 35px;
+        padding-right: 100px; 
+        padding-left: 100px;
     }
 }
 
 @media (min-width: 1220px)
 {
-    .franchise__inner
-    {
-        min-height: 670px;
-        padding-top: 250px;
-        padding-bottom: 150px;
-    }
     .franchise__heading
     {
-        font-size: 45px; 
+        font-size: 44px; 
 
-        margin-bottom: 35px;
+        margin-bottom: 60px;
     }
     .franchise__text
     {
-        margin-bottom: 100px;
+        padding-right: 200px; 
+        padding-left: 200px;
     }
 }
 
@@ -7244,6 +7209,12 @@ body > *
 .content-header--bg-light
 {
     background-color: #f0f0f0;
+}
+
+.content-header--bg-black
+{
+    color: #fff; 
+    background-color: #0a0a0a;
 }
 
 .content-header--bg-transparent .date
@@ -8839,6 +8810,16 @@ body > *
     margin-bottom: 60px;
 }
 
+.content__franchise
+{
+    padding-top: 40px;
+}
+
+.content__franchise-section
+{
+    margin-bottom: 40px;
+}
+
 @media (min-width: 768px)
 {
     .content__content--pads
@@ -8900,6 +8881,14 @@ body > *
     {
         margin-bottom: 160px;
     }
+    .content__franchise
+    {
+        padding-top: 80px;
+    }
+    .content__franchise-section
+    {
+        margin-bottom: 100px;
+    }
 }
 
 @media (min-width: 1220px)
@@ -8954,6 +8943,14 @@ body > *
     .content__delivery-section
     {
         margin-bottom: 300px;
+    }
+    .content__franchise
+    {
+        padding-top: 110px;
+    }
+    .content__franchise-section
+    {
+        margin-bottom: 130px;
     }
 }
 

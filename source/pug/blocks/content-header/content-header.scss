@@ -3,6 +3,11 @@
     background-color: color(light);
   }
 
+  &--bg-black {
+    background-color: color(black);
+    color: color(white);
+  }
+
   &--bg-transparent {
     .date {
       color: color(black);

@@ -60,6 +60,14 @@
   margin-bottom: get($y, small, size-300);
 }
 
+.content__franchise {
+  padding-top: get($y, small, size-110);
+}
+
+.content__franchise-section {
+  margin-bottom: get($y, small, size-130);
+}
+
 @include respond-to(medium) {
   .content__content {
     &--pads {
@@ -115,6 +123,14 @@
   .content__delivery-section {
     margin-bottom: get($y, medium, size-300);
   }
+
+  .content__franchise {
+    padding-top: get($y, medium, size-110);
+  }
+
+  .content__franchise-section {
+    margin-bottom: get($y, medium, size-130);
+  }
 }
 
 @include respond-to(large) {
@@ -169,5 +185,13 @@
 
   .content__delivery-section {
     margin-bottom: get($y, large, size-300);
+  }
+
+  .content__franchise {
+    padding-top: get($y, large, size-110);
+  }
+
+  .content__franchise-section {
+    margin-bottom: get($y, large, size-130);
   }
 }

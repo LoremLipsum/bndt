@@ -1,0 +1,22 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Франшиза',
+            mod: ['bg-black'],
+            mix: 'content__header',
+        })
+        .content__franchise
+            +franchise({
+                mix: 'content__franchise-section',
+            })
+            +card-form({
+                image: 'franchise.jpg',
+                heading: 'Открой для себя бизнес с&nbsp;брендом BANDIT',
+                text: 'Наша франшиза&nbsp;&mdash; это нечто большее, чем просто бизнес.',
+                submit: 'Получить финансовую модель компании',
+            })

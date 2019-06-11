@@ -10,6 +10,7 @@ mixin goods-list(data)
             +el({
                 tag: 'li',
                 class: 'goods-list__item',
+                mix: item.mix
             })
                 +goods-item({
                     heading: item.heading,

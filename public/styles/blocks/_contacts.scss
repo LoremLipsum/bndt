@@ -73,6 +73,10 @@
       text-align: right;
     }
   }
+
+  .contacts__heading {
+    text-align: left;
+  }
 }
 
 @include respond-to(large) {

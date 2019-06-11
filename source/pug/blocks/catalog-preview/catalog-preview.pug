@@ -27,15 +27,41 @@ mixin catalog-preview(data)
                 ],
             })
             .tab-1.js-content-tabs.active
-                +goods-list({
-                    mix: 'catalog-preview__list',
-                    goods: goodsItems,
-                })
+                .js-new-slider.swiper-container
+                    .catalog-preview__control
+                        +control({
+                            tag: 'button',
+                            mod: 'prev',
+                            js: 'new-prev'
+                        })
+                        +control({
+                            tag: 'button',
+                            mod: 'next',
+                            js: 'new-next'
+                        })
+                    +goods-list({
+                        mix: 'catalog-preview__list swiper-wrapper',
+                        goods: goodsItems,
+                    })
+                    .bullet.js-new-bullet.swiper-pagination
             .tab-2.js-content-tabs
-                +goods-list({
-                    mix: 'catalog-preview__list',
-                    goods: goodsItems2,
-                })
+                .js-top-slider.swiper-container
+                    .catalog-preview__control
+                        +control({
+                            tag: 'button',
+                            mod: 'prev',
+                            js: 'top-prev'
+                        })
+                        +control({
+                            tag: 'button',
+                            mod: 'next',
+                            js: 'top-next'
+                        })
+                    +goods-list({
+                        mix: 'catalog-preview__list swiper-wrapper',
+                        goods: goodsItems2,
+                    })
+                    .bullet.js-top-bullet.swiper-pagination
             .catalog-preview__bottom
                 +button({
                     tag: 'a',

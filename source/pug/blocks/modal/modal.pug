@@ -10,9 +10,9 @@ mixin modal(data)
             js: 'overlay-modal'
         })
         .modal__dialog
-            +button-close({
+            +button-remove({
                 mod: 'bg-primary',
-                mix: 'modal__close',
+                mix: 'modal__remove',
                 js: 'close-modal'
             })
             .modal__dialog-inner

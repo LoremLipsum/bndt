@@ -1,0 +1,20 @@
+mixin button-remove(data)
+    +el({
+        tag: 'button',
+        class: 'button-remove',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        ariaLabel: data.ariaLabel ? data.ariaLabel : 'Закрыть',
+        position: data.position,
+    })&attributes(attributes)
+        +el({
+            tag: 'span',
+            class: 'button-remove__icon',
+        })
+        if data.text
+            +el({
+                tag: 'span',
+                class: 'button-remove__text',
+                text: data.text,
+            })

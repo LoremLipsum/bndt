@@ -78,8 +78,8 @@
           </li>
         </ul>
         <div class="header__dialog header__dialog--search js-dialog js-dialog-search">
-          <button class="button-close button-close--bg-black header__dialog-close js-close-search" aria-label="Закрыть окно" type="button">
-            <span class="button-close__icon">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-search" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
             </span>
           </button>
           <form class="search header__search header__search--mobile js-search" action="/" method="post" accept-charset="UTF-8"><span class="hidden">Поиск по сайту</span>
@@ -93,8 +93,8 @@
           </form>
         </div>
         <div class="header__dialog header__dialog--callback js-dialog js-dialog-callback">
-          <button class="button-close button-close--bg-black header__dialog-close js-close-callback" aria-label="Закрыть окно" type="button">
-            <span class="button-close__icon">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-callback" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
             </span>
           </button>
           <div class="callback header__callback header__callback--mobile">
@@ -304,7 +304,7 @@
           <div class="our-stores__wrap">
             <!--  data-more количество показанных строк на мобильной версии-->
             <div class="table-store our-stores__table js-more-content" data-more="3">
-              <!-- Координаты для карты указывается в data-map-coords-->
+              <!-- data-map-coords координаты для карты-->
               <div class="table-store__tr js-table-store-row" data-map-coords="44.498347, 34.170925">
                 <div class="table-store__th js-table-store-heading">Ялта - ул. Московская 3</div>
                 <div class="table-store__td table-store__td--social">
@@ -458,9 +458,9 @@
             </div>
             <button class="button our-stores__button-more js-more-button-mob" type="button">Смотреть больше
             </button>
-            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
             <section class="our-stores__map-section js-our-stores-section">
               <h2 class="our-stores__heading js-our-stores-heading"></h2>
+              <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
               <div class="map our-stores__map" id="our-stores-map">
               </div>
             </section>
@@ -621,8 +621,8 @@
       <div class="overlay modal__overlay active js-overlay-modal">
       </div>
       <div class="modal__dialog">
-        <button class="button-close button-close--bg-primary modal__close js-close-modal" aria-label="Закрыть окно" type="button">
-          <span class="button-close__icon">
+        <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
+          <span class="button-remove__icon">
           </span>
         </button>
         <div class="modal__dialog-inner">

@@ -152,6 +152,12 @@
     height: 40px;
     width: 40px;
     padding: 10px;
+
+    &--cart {
+      .button-w-circle__icon {
+        transform: translateY(-2px);
+      }
+    }
   }
 
   .button-w-circle__icon {

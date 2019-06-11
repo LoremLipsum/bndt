@@ -70,9 +70,8 @@ mixin header(data)
                         mod: 'bg-black',
                     })
             .header__dialog.header__dialog--search.js-dialog.js-dialog-search
-                +button-close({
-                    mix: 'header__dialog-close',
-                    close: true,
+                +button-remove({
+                    mix: 'header__dialog-remove',
                     mod: 'bg-black',
                     js: 'close-search',
                 })
@@ -80,9 +79,8 @@ mixin header(data)
                     mix: 'header__search header__search--mobile',
                 })
             .header__dialog.header__dialog--callback.js-dialog.js-dialog-callback
-                +button-close({
-                    mix: 'header__dialog-close',
-                    close: true,
+                +button-remove({
+                    mix: 'header__dialog-remove',
                     mod: 'bg-black',
                     js: 'close-callback',
                 })

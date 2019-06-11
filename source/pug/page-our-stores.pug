@@ -24,16 +24,16 @@ block content
                         text: 'Смотреть больше',
                         js: 'more-button-mob',
                     })
-                    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
                     +el({
                         tag: 'section',
                         class: 'our-stores__map-section',
                         js: 'our-stores-section'
                     })
                         h2.our-stores__heading.js-our-stores-heading
-                        +el({
+                        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+                        +map({
                             mix: 'our-stores__map',
-                            class: 'map',
                             id: 'our-stores-map'
                         })
 

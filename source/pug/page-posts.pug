@@ -1,0 +1,19 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Статьи',
+            mod: ['bg-light'],
+            mix: 'content__header',
+        })
+        .content__posts
+            +posts({
+                items: posts,
+            })
+            +pagination({
+                mix: 'content__pagination',
+            })

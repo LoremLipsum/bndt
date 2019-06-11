@@ -1,0 +1,9 @@
+mixin map(data)
+    +el({
+        class: 'map',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        id: data.id,
+    })&attributes(attributes)
+        block

@@ -1,14 +1,16 @@
-'use strict';
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
 
-(function() {
+    var btns = $('.js-link-secondary');
+    var btn;
 
-  var btns = document.querySelectorAll('.js-link-secondary');
-
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function(e) {
+    btns.on('click', function(e) {
       e.preventDefault();
-      e.currentTarget.parentNode.classList.toggle('active');
+      btn = $(this);
+      btns.not(btn).parent().removeClass('active');
+      btn.parent().toggleClass('active');
     });
-  }
 
-})();
+  });
+});

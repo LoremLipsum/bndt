@@ -16,12 +16,13 @@
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
 @import "./blocks/baron";
+@import "./blocks/bullet";
+
 // @import "./blocks/section";
 @import "./blocks/section-centred";
 
 @import "./blocks/content";
 @import "./blocks/font-h2";
-@import "./blocks/map";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
 @import "../pug/blocks/logo/logo";
@@ -30,7 +31,7 @@
 @import "../pug/blocks/overlay/overlay";
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-w-circle/button-w-circle";
-@import "../pug/blocks/button-close/button-close";
+@import "../pug/blocks/button-remove/button-remove";
 @import "../pug/blocks/header/header";
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/search/search";
@@ -40,6 +41,8 @@
 @import "../pug/blocks/tabs/tabs";
 @import "../pug/blocks/button-nav/button-nav";
 @import "../pug/blocks/link/link";
+@import "../pug/blocks/date/date";
+@import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/circle/circle";
 @import "../pug/blocks/social-link/social-link";
 @import "../pug/blocks/field-primary/field-primary";
@@ -73,12 +76,15 @@
 @import "../pug/blocks/card-form/card-form";
 @import "../pug/blocks/table-store/table-store";
 @import "../pug/blocks/map-store/map-store";
-
 @import "../pug/blocks/feedback/feedback";
-@import "./blocks/section-centred";
+@import "../pug/blocks/map/map";
+@import "../pug/blocks/posts-item/posts-item";
+@import "../pug/blocks/posts/posts";
 
+@import "./blocks/section-centred";
 @import "./blocks/content";
 @import "./blocks/font-h2";
-@import "./blocks/map";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
+
+@import "../pug/blocks/wishlist/wishlist";

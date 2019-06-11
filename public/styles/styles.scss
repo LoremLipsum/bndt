@@ -16,12 +16,13 @@
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
 @import "./blocks/baron";
+@import "./blocks/bullet";
+
 // @import "./blocks/section";
 @import "./blocks/section-centred";
 
 @import "./blocks/content";
 @import "./blocks/font-h2";
-@import "./blocks/map";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
 @import "../pug/blocks/logo/logo";
@@ -79,6 +80,11 @@
 
 @import "./blocks/content";
 @import "./blocks/font-h2";
-@import "./blocks/map";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
+
+@import "../pug/blocks/map/map";
+
+@import "../pug/blocks/posts/posts";
+@import "../pug/blocks/posts-item/posts-item";
+@import "../pug/blocks/date/date";

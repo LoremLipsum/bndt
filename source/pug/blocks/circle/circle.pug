@@ -10,8 +10,14 @@ mixin circle(data)
         position: data.position,
         title: data.title,
         target: data.target,
-        href: data.href
+        href: data.href,
     })&attributes(attributes)
+        if data.text
+            +el({
+                tag: 'span',
+                text: data.text,
+                class: 'circle__text',
+            })
         if data.icon
             +el({
                 tag: 'svg',

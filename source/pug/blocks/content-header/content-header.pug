@@ -16,8 +16,27 @@ mixin content-header(data)
                 text: 'Назад',
             })
             if data.heading
-                +el({
-                    tag: 'h1',
-                    class: 'content-header__heading',
-                    text: data.heading,
+                if data.badge
+                    .content-header__heading-wrap
+                        +el({
+                            tag: 'h1',
+                            class: 'content-header__heading',
+                            text: data.heading,
+                        })
+                        +circle({
+                            text: data.badge,
+                            mix: 'content-header__badge',
+                            mod: data.badgemod,
+                        })
+                else
+                    +el({
+                        tag: 'h1',
+                        class: 'content-header__heading',
+                        text: data.heading,
+                    })
+
+            if data.date
+                +date({
+                    text: data.date,
+                    mix: 'content-header__date'
                 })

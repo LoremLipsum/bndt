@@ -1,0 +1,27 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Избранное',
+            mod: ['bg-light'],
+            mix: 'content__header',
+            badge: '2',
+            badgemod: 'bg-white'
+        })
+        .content__wishlist
+            +wishlist({
+                items: [
+                    {
+                        heading: 'Bandit Анорак «Tag»',
+                        image: 'goods01.jpg',
+                    },
+                    {
+                        heading: 'Bandit Анорак «Tag»',
+                        image: 'goods02.jpg',
+                    },
+                ]
+            })

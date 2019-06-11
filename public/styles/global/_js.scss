@@ -1,8 +1,9 @@
 .js-content-tabs {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
 
   &.active {
-    display: block;
+    max-height: 9999px;
   }
 }
 

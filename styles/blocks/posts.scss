@@ -1,0 +1,43 @@
+.posts__wrap {
+  @include wrapper;
+}
+
+.posts__list {
+  @include ul-no;
+  margin-bottom: -20px;
+}
+
+.posts__item {
+  margin-bottom: 20px;
+}
+
+@include respond-to(small-lg) {
+  .posts__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: auto;
+    margin-right: -50px;
+    margin-bottom: -30px;
+  }
+
+  .posts__item {
+    width: 50%;
+    margin: 0;
+    margin-bottom: 30px;
+    margin-right: 50px;
+  }
+}
+
+@include respond-to(large) {
+  .posts__list {
+    margin-right: -80px;
+    margin-bottom: -100px;
+  }
+
+  .posts__item {
+    width: 33.33%;
+    margin-right: 80px;
+    margin-bottom: 100px;
+  }
+}

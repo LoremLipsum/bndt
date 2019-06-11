@@ -11,6 +11,7 @@
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+  transition: duration(md) func(primary);
 
   &--bg-primary {
     border-color: color(primary);

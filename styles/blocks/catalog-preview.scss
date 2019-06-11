@@ -40,7 +40,26 @@
   width: 100%;
 }
 
+.catalog-preview__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .control {
+    &--prev {
+      margin-right: 50px;
+    }
+  }
+}
+
 @include respond-to(small-lg) {
+  .catalog-preview__wrap {
+    .bullet {
+      display: none;
+    }
+  }
+
   .catalog-preview__bottom {
     text-align: right;
   }
@@ -52,6 +71,10 @@
   .catalog-preview__button-bottom {
     width: auto;
     margin-left: auto;
+  }
+
+  .catalog-preview__control {
+    display: none;
   }
 }
 

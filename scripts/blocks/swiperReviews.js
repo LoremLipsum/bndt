@@ -2,7 +2,7 @@
 
 (function() {
 
-  var swiperReviews = new Swiper('.js-swiper-reviews', {
+  var swiper = new Swiper('.js-swiper-reviews', {
     slidesPerView: 2,
     spaceBetween: 160,
     loop: true,
@@ -19,6 +19,14 @@
         slidesPerView: 1,
         // spaceBetween: 40,
       },
+      520: {
+        slidesPerView: 1,
+        pagination: {
+          el: '.js-bullet',
+          clickable: true,
+          bulletClass: 'bullet__item',
+        },
+      }
     }
   });
 

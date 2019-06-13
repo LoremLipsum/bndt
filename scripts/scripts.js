@@ -1,3 +1,26 @@
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var anchors = $('.js-anchor');
+    var el;
+    var attr;
+
+    if(anchors.length) {
+      anchors.click(function (){
+        el = $(this);
+        attr = el.attr('href');
+        console.log(attr);
+
+        $('html, body').animate({
+          scrollTop: $(attr).offset().top
+        }, 500);
+      });
+    }
+
+  });
+});
+
 'use strict';
 
 (function() {
@@ -6,6 +29,40 @@
     scroller: '.baron__scroller',
     bar: '.baron__bar',
   });
+})();
+
+'use strict';
+
+(function() {
+  var counters = document.querySelectorAll('.js-counter');
+
+  if(counters.length) {
+    var downClass = 'js-counter-down';
+    var upClass = 'js-counter-up';
+    var inputClass = '.js-counter-input';
+    var input;
+    var count;
+    var el;
+
+    for (var i = 0; i < counters.length; i += 1) {
+      counters[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        input = e.currentTarget.querySelector(inputClass);
+        el = e.target;
+        count = parseInt(input.getAttribute('data-count'), 10);
+
+        if (el.classList.contains(downClass)) {
+          count = count == 1 ? count : (count - 1);
+        } else if (el.classList.contains(upClass)){
+          count += 1;
+        }
+
+        input.value = count;
+        input.setAttribute('data-count', count);
+      });
+    }
+
+  }
 })();
 
 'use strict';
@@ -237,7 +294,7 @@ jQuery(document).ready(function($){
       var rows = $('.js-table-store-row');
       var row;
       var heading;
-      var atr;
+      var attr;
       var coords;
       var mapItem = $('#our-stores-map');
       var content = $('.js-our-stores-section');
@@ -275,15 +332,15 @@ jQuery(document).ready(function($){
       // если есть активный класс
       if(active.length) {
         heading = $(active).find('.js-table-store-heading').text();
-        atr = $(active).attr('data-map-coords');
-        coords = atr.split(',');
+        attr = $(active).attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         initMap(coords);
       } else { // по умолчанию первая строчка таблицы
         row = $('.js-table-store-row')[0];
         heading = $(row).find('.js-table-store-heading').text();
-        atr = $(row).attr('data-map-coords');
-        coords = atr.split(',');
+        attr = $(row).attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         initMap(coords);
       }
@@ -293,8 +350,8 @@ jQuery(document).ready(function($){
         btn = $(this);
         row = btn.parents('.js-table-store-row');
         heading = row.find('.js-table-store-heading').text();
-        atr = row.attr('data-map-coords');
-        coords = atr.split(',');
+        attr = row.attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         mapItem.html('');
         row = btn.parents('.js-table-store-row');

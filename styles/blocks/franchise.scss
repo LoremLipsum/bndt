@@ -1,99 +1,43 @@
-.franchise {
-  position: relative;
-  min-height: 400px;
-  background-color: color(black);
-  background-image: url('../assets/images/bg-franchise-sm.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: calc(50% - 100px) center;
-  color: color(white);
-
-  @include mask(rgba(color(black), 0.5));
-}
-
 .franchise__wrap {
   @include wrapper;
-}
-
-.franchise__inner {
-  position: relative;
-  z-index: 1;
-  padding-top: 230px;
-  padding-bottom: 40px;
+  @include first-last;
 }
 
 .franchise__heading {
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: get($y, small, size-60);
   font-family: font(secondary);
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
-  color: color(white);
 }
 
 .franchise__text {
-  margin-bottom: 30px;
+  @include first-last;
   text-align: center;
-
-  p {
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-@include respond-to(420px) {
-  .franchise {
-    background-image: url('../assets/images/bg-franchise-md.jpg');
-    background-position: center;
-  }
 }
 
 @include respond-to(medium) {
-  .franchise {
-    background-image: url('../assets/images/bg-franchise-lg.jpg');
-  }
-
-  .franchise__inner {
-    padding-top: 200px;
-    padding-bottom: 100px;
-  }
-
   .franchise__heading {
-    margin-bottom: 25px;
+    margin-bottom: get($y, medium, size-60);
     font-size: 40px;
   }
 
   .franchise__text {
-    margin-bottom: 60px;
-  }
-}
-
-@include respond-to(medium-lg) {
-  .franchise__inner {
-    padding-top: 230px;
-    padding-bottom: 120px;
-  }
-
-  .franchise__heading {
-    margin-bottom: 35px;
+    padding-left: get($x, medium, size-200);
+    padding-right: get($x, medium, size-200);
   }
 }
 
 @include respond-to(large) {
-  .franchise__inner {
-    min-height: 670px;
-    padding-top: 250px;
-    padding-bottom: 150px;
-  }
-
   .franchise__heading {
-    margin-bottom: 35px;
-    font-size: 45px;
+    margin-bottom: get($y, large, size-60);
+    font-size: 44px;
   }
 
   .franchise__text {
-    margin-bottom: 100px;
+    padding-left: get($x, large, size-200);
+    padding-right: get($x, large, size-200);
   }
 }

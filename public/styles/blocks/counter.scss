@@ -1,164 +1,75 @@
-// $counter-sign-width: 10px;
-// $counter-sign-height: 2px;
-//
-// .counter {
-//   width: 110px;
-//   height: 30px;
-//   border: 1px solid color(border);
-//   border-radius: radius(sm);
-//   background: color(white);
-//   overflow: hidden;
-//
-//   &--vertical {
-//     width: 80px;
-//     height: 51px;
-//
-//     .counter__label {
-//       position: absolute;
-//       top: 0;
-//       display: block;
-//       height: 100%;
-//       padding: 5px;
-//
-//       &--minus,
-//       &--plus {
-//         left: 50px;
-//         right: auto;
-//         height: 25px;
-//       }
-//
-//       &--plus {
-//         border-bottom: 1px solid color(border);
-//       }
-//
-//       &--minus {
-//         top: 25px;
-//       }
-//
-//       &--input {
-//         left: 0;
-//         transform: none;
-//         border-left: none;
-//       }
-//     }
-//   }
-// }
-//
-// .counter__inner {
-//   position: relative;
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-// }
-//
-// .counter__label {
-//   position: absolute;
-//   top: 0;
-//   display: block;
-//   height: 100%;
-//   padding: 5px;
-//
-//   &--minus,
-//   &--plus {
-//     width: 30px;
-//     cursor: pointer;
-//
-//     @include hover {
-//       background-color: color(light-primary);
-//     }
-//   }
-//
-//   &--plus {
-//     right: 0;
-//
-//     &::before,
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       margin-top:  - $counter-sign-height / 2;
-//       margin-left: - $counter-sign-width / 2;
-//       display: block;
-//       width: $counter-sign-width;
-//       height: $counter-sign-height;
-//       background-color: color(dark-primary);
-//     }
-//
-//     &::after {
-//       transform-origin: 50% 50%;
-//       transform: rotate(90deg);
-//     }
-//   }
-//
-//   &--minus {
-//     left: 0;
-//
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       margin-top:  - $counter-sign-height / 2;
-//       margin-left: - $counter-sign-width / 2;
-//       display: block;
-//       width: $counter-sign-width;
-//       height: $counter-sign-height;
-//       background-color: color(dark-primary);
-//     }
-//   }
-//
-//   &--input {
-//     left: 50%;
-//     transform: translate(-50%);
-//     width: 50px;
-//     font-size: 16px;
-//     text-align: center;
-//     border-right: 1px solid color(border);
-//     border-left: 1px solid color(border);
-//   }
-// }
-//
-// .counter__input {
-//   width: 100%;
-//   height: 100%;
-//   border: none;
-//   text-align: center;
-// }
-//
-// @include respond-to(medium-lg) {
-//   .counter {
-//     width: 140px;
-//     height: 40px;
-//
-//     &--vertical {
-//       width: 116px;
-//       height: 50px;
-//
-//       .counter__label {
-//
-//         &--minus,
-//         &--plus {
-//           left: 60px;
-//           height: 25px;
-//           width: 56px;
-//         }
-//
-//         &--minus {
-//           top: 25px;
-//         }
-//       }
-//     }
-//   }
-//
-//   .counter__label {
-//     &--minus,
-//     &--plus {
-//       width: 40px;
-//     }
-//
-//     &--input {
-//       width: 60px;
-//     }
-//   }
-// }
+$counter-sign-width: 12px;
+$counter-sign-height: 2px;
+
+.counter {
+  display: flex;
+  width: 94px;
+  height: 30px;
+}
+
+.counter__button {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+
+  @include hover {
+    background-color: color(light);
+  }
+
+  &--plus {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top:  - $counter-sign-height / 2;
+      margin-left: - $counter-sign-width / 2;
+      display: block;
+      width: $counter-sign-width;
+      height: $counter-sign-height;
+      background-color: color(black);
+    }
+
+    &::after {
+      transform-origin: 50% 50%;
+      transform: rotate(90deg);
+    }
+  }
+
+  &--minus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top:  - $counter-sign-height / 2;
+      margin-left: - $counter-sign-width / 2;
+      display: block;
+      width: $counter-sign-width;
+      height: $counter-sign-height;
+      background-color: color(black);
+    }
+  }
+}
+
+.counter__label {
+  display: block;
+  height: 100%;
+  width: 34px;
+  padding: 5px 2px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.counter__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+}

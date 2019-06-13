@@ -1,5 +1,5 @@
 .content {
-
+  margin-top: 60px;
 }
 
 .content__wrap {
@@ -72,7 +72,17 @@
   padding-bottom: get($y, small, size-250);
 }
 
+@include respond-to(small-lg) {
+  .content {
+    margin-top: 64px;
+  }
+}
+
 @include respond-to(medium) {
+  .content {
+    margin-top: 60px;
+  }
+
   .content__content {
     &--pads {
       padding-top: get($y, medium, size-100);
@@ -141,6 +151,12 @@
   }
 }
 
+@include respond-to(medium-lg) {
+  .content {
+    margin-top: 70px;
+  }
+}
+
 @include respond-to(large) {
   .content__content {
     &--pads {
@@ -205,5 +221,11 @@
 
   .content__sizes {
     padding-bottom: get($y, large, size-250);
+  }
+}
+
+@include respond-to(medium-lg) {
+  .content {
+    margin-top: 0;
   }
 }

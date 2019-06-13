@@ -5,3 +5,69 @@
 .cart__wrap {
   @include wrapper;
 }
+
+.cart__table {
+  margin-bottom: 20px;
+}
+
+.cart__total {
+  font-family: font(secondary);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.cart__total-price {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.cart__submit-wrap {
+  text-align: center;
+}
+
+.cart__submit {
+  width: 100%;
+  max-width: 320px;
+}
+
+@include respond-to(medium) {
+  .cart__table {
+    margin-bottom: 60px;
+  }
+
+  .cart__total {
+    margin-bottom: 50px;
+    font-size: 22px;
+    text-align: right;
+  }
+
+  .cart__total-price {
+    font-size: 36px;
+  }
+
+  .cart__submit-wrap {
+    text-align: right;
+  }
+
+  .cart__submit {
+    width: auto;
+    max-width: none;
+  }
+}
+
+@include respond-to(large) {
+  .cart__table {
+    margin-bottom: 75px;
+  }
+
+  .cart__total {
+    margin-bottom: 60px;
+    font-size: 24px;
+  }
+
+  .cart__total-price {
+    font-size: 40px;
+  }
+}

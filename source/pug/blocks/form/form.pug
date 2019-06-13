@@ -34,7 +34,7 @@ mixin form(data)
                             label: 'Введите e-mail:',
                             type: 'email',
                             name: 'email',
-                            placeholder: 'Введите e-mail:'
+                            placeholder: 'E-mail:'
                         })(aria-required='true', aria-invalid='false')
                     if item.tel
                         +field({
@@ -56,6 +56,16 @@ mixin form(data)
                             name: item.text.name,
                             placeholder: item.text.placeholder,
                         })(aria-required='true', aria-invalid='false')
+                    if item.password
+                        +field({
+                            mix: 'form__field',
+                            icon: item.icon,
+                            mod: item.modField,
+                            label: 'Пароль',
+                            type: 'password',
+                            name: 'password',
+                            placeholder: 'Пароль',
+                        })(aria-required='true', aria-invalid='false')
                     if item.message
                         +field({
                             tag: 'textarea',
@@ -66,20 +76,40 @@ mixin form(data)
                             name: 'message',
                             placeholder: item.message.placeholder
                         })(aria-required='true', aria-invalid='false')
-            +el({
-                class: 'form__submit-wrap',
-                mod: data.modSubmit
-            })
-                +button({
-                    mix: 'form__submit',
-                    mod: ['bg-primary', 'large'],
-                    type: 'submit',
-                    text: data.submit
-                })
             if data.confirm
-                .form__confirm
+                .form__confirm-wrap
                     +checkbox-confirm({
                         mod: 'small',
                         label: 'Согласие на обработку персональных данных',
                         checked: true,
                     })(aria-required='true', aria-invalid='false')
+            if data.forget
+                .form__bottom
+                    +el({
+                        class: 'form__submit-wrap',
+                    })
+                        +button({
+                            mix: 'form__submit',
+                            mod: ['bg-primary', 'large'],
+                            type: 'submit',
+                            text: data.submit
+                        })
+                    +el({
+                        tag: 'p',
+                        class: 'form__forgot-password',
+                    })
+                        +el({
+                            tag: 'a',
+                            text: 'Забыли пароль?',
+                        })
+            else
+                +el({
+                    class: 'form__submit-wrap',
+                    mod: data.modSubmit
+                })
+                    +button({
+                        mix: 'form__submit',
+                        mod: ['bg-primary', 'large'],
+                        type: 'submit',
+                        text: data.submit
+                    })

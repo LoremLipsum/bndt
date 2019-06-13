@@ -6,7 +6,10 @@ mixin social(data)
         js: data.js,
     })&attributes(attributes)
         if data.text
-            span.social__text Присоеденяйся к нам
+            +el({
+                class: 'social__text',
+                text: data.text,
+            })
         +el({
             tag: 'ul',
             class: 'social__list',

@@ -1,18 +1,37 @@
-'use strict';
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+    var header = $('.js-header');
+    var lastScrollTop = 0;
+    var width = $(window).outerWidth();
 
-(function() {
-  var header = document.querySelector('.js-header');
-  var SCROLL_HEIGHT = 60;
-  var WIDTH = 1570;
+    var scrollHeader = function(height) {
+      $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop || st < height) {
+          header.removeClass('active');
+        } else  {
+          header.addClass('active');
+        }
+        lastScrollTop = st;
+      });
+    }
 
-  if (parseInt(window.innerWidth, 10) < WIDTH) {
-    window.addEventListener('scroll', function(e) {
-      if (parseInt(window.pageYOffset, 10) > SCROLL_HEIGHT ){
-        header.classList.add('active');
-      } else if(parseInt(window.pageYOffset, 10) <= SCROLL_HEIGHT && header.hasClass('active')) {
-        header.classList.remove('active');
+    var initScrollHeader = function() {
+      if (width < 520) {
+        scrollHeader(60);
+      } else if (width > 519 && width < 920) {
+        scrollHeader(64);
+      } else if (width > 920 && width < 1570) {
+        scrollHeader(70);
       }
-    });
-  }
+    }
 
-})();
+    initScrollHeader();
+
+    $(window ).resize(function() {
+      initScrollHeader();
+    });
+
+  });
+});

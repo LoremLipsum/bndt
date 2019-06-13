@@ -54,6 +54,7 @@ mixin header(data)
                         icon: 'user',
                         title: 'Личный кабинет',
                         mod: 'bg-black',
+                        js: 'login-button',
                     })
                 li.header__item
                     +button-w-circle({
@@ -113,6 +114,7 @@ mixin header(data)
                                     icon: 'user',
                                     title: 'Личный кабинет',
                                     mod: 'bg-black',
+                                    js: 'login-button',
                                 })
                             li.header__item
                                 +button-w-circle({
@@ -137,7 +139,7 @@ mixin header(data)
                         +social({
                             mix: 'header__social',
                             items: social,
-                            text: true,
+                            text: 'Присоеденяйся к нам',
                             linkMod: 'bg-black',
                         })
                     .baron__track

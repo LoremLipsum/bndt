@@ -18,7 +18,7 @@ html(lang="ru-RU")
             +footer({})
         block modal
             +modal({
-                js: 'modal-callback',
+                js: 'callback-modal',
                 heading: 'Заказать обратный звонок',
                 text: 'Укажите ваш номер телефона, имя и мы свяжемся с вами в ближайшее время.'
             })
@@ -34,6 +34,51 @@ html(lang="ru-RU")
                     ],
                     confirm: true,
                     submit: 'Отправить'
+                })
+            +modal({
+                js: 'login-modal',
+                mix: 'js-tabs',
+            })
+                +tabs({
+                    mix: 'modal__tabs',
+                    items: [
+                        {
+                            text: 'Новый пользователь',
+                        },
+                        {
+                            text: 'Я уже зарегестрирован',
+                        }
+                    ],
+                })
+                .tab-1.js-tabs-content.active
+                    +form({
+                        group: [
+                            {
+                                firstName: true,
+                                email: true,
+                                tel: true,
+                                password: true,
+                            },
+                        ],
+                        confirm: true,
+                        submit: 'Регистрация',
+                    })
+                .tab-2.js-tabs-content
+                    +form({
+                        group: [
+                            {
+                                email: true,
+                                password: true,
+                            },
+                        ],
+                        forget: true,
+                        submit: 'Войти',
+                    })
+                +social({
+                    mix: 'modal__social',
+                    items: social,
+                    text: 'Войти с помощью',
+                    linkMod: 'large',
                 })
         block scripts
             +scripts()

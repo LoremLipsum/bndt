@@ -4,8 +4,10 @@
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');
   var overlays = document.querySelectorAll('.js-overlay-modal');
-  var btnsCallback = document.querySelectorAll('.js-open-callback');
-  var callback = document.querySelector('.js-modal-callback');
+  var callbackBtns = document.querySelectorAll('.js-callback-button');
+  var callbackModal = document.querySelector('.js-callback-modal');
+  var loginBtns = document.querySelectorAll('.js-login-button');
+  var loginModal = document.querySelector('.js-login-modal');
   var ESC = 27;
 
   var close = function() {
@@ -30,10 +32,17 @@
     });
   }
 
-  for (var i = 0; i < btnsCallback.length; i += 1) {
-    btnsCallback[i].addEventListener('click', function(e) {
+  for (var i = 0; i < callbackBtns.length; i += 1) {
+    callbackBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
-      callback.classList.add('active');
+      callbackModal.classList.add('active');
+    });
+  }
+
+  for (var i = 0; i < loginBtns.length; i += 1) {
+    loginBtns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.add('active');
     });
   }
 

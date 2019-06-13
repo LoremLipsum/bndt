@@ -149,24 +149,43 @@ jQuery(document).ready(function($){
 
 })();
 
-'use strict';
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+    var header = $('.js-header');
+    var lastScrollTop = 0;
+    var width = $(window).outerWidth();
 
-(function() {
-  var header = document.querySelector('.js-header');
-  var SCROLL_HEIGHT = 60;
-  var WIDTH = 1570;
+    var scrollHeader = function(height) {
+      $(window).scroll(function(e){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop || st < height) {
+          header.removeClass('active');
+        } else  {
+          header.addClass('active');
+        }
+        lastScrollTop = st;
+      });
+    }
 
-  if (parseInt(window.innerWidth, 10) < WIDTH) {
-    window.addEventListener('scroll', function(e) {
-      if (parseInt(window.pageYOffset, 10) > SCROLL_HEIGHT ){
-        header.classList.add('active');
-      } else if(parseInt(window.pageYOffset, 10) <= SCROLL_HEIGHT && header.hasClass('active')) {
-        header.classList.remove('active');
+    var initScrollHeader = function() {
+      if (width < 520) {
+        scrollHeader(60);
+      } else if (width > 519 && width < 920) {
+        scrollHeader(64);
+      } else if (width > 920 && width < 1570) {
+        scrollHeader(70);
       }
-    });
-  }
+    }
 
-})();
+    initScrollHeader();
+
+    $(window ).resize(function() {
+      initScrollHeader();
+    });
+
+  });
+});
 
 objectFitImages();
 svg4everybody();
@@ -240,8 +259,10 @@ jQuery(document).ready(function($){
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');
   var overlays = document.querySelectorAll('.js-overlay-modal');
-  var btnsCallback = document.querySelectorAll('.js-open-callback');
-  var callback = document.querySelector('.js-modal-callback');
+  var callbackBtns = document.querySelectorAll('.js-callback-button');
+  var callbackModal = document.querySelector('.js-callback-modal');
+  var loginBtns = document.querySelectorAll('.js-login-button');
+  var loginModal = document.querySelector('.js-login-modal');
   var ESC = 27;
 
   var close = function() {
@@ -266,10 +287,17 @@ jQuery(document).ready(function($){
     });
   }
 
-  for (var i = 0; i < btnsCallback.length; i += 1) {
-    btnsCallback[i].addEventListener('click', function(e) {
+  for (var i = 0; i < callbackBtns.length; i += 1) {
+    callbackBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
-      callback.classList.add('active');
+      callbackModal.classList.add('active');
+    });
+  }
+
+  for (var i = 0; i < loginBtns.length; i += 1) {
+    loginBtns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      loginModal.classList.add('active');
     });
   }
 
@@ -572,55 +600,87 @@ jQuery(document).ready(function($){
 
 (function() {
 
-  var tabs = document.querySelector('.js-tabs');
+  var tabsSmall= document.querySelectorAll('.js-tabs-small');
+  var tabs = document.querySelectorAll('.js-tabs');
+  var line;
+  var btn;
+  var atr;
+  var btnsTabsSmall;
+  var contentTabsSmall;
+  var btnsTabs;
+  var contentsTabs;
+  var left;
+  var width;
 
-  if(tabs) {
-    var btns = tabs.querySelectorAll('.js-button-tabs');
-    var contents = tabs.querySelectorAll('.js-content-tabs');
-    var line = tabs.querySelector('.js-line');
-
-    var getLineSize = function(left, width) {
-      line.style.left = left + 'px';
-      line.style.width = width + 'px';
-    };
-
+  var switchTabs = function (item, btns, contents, classContents, line) {
     for (var i = 0; i < btns.length; i++) {
+      if(line) {
+        btns[i].addEventListener('mouseover', function(e) {
+          e.preventDefault();
+          btn = e.currentTarget;
+          left = btn.offsetLeft;
+          width = btn.clientWidth;
+          line.style.left = left + 'px';
+          line.style.width = width + 'px';
+        });
+
+        if(btns[i].parentNode.classList.contains('active')) {
+          left = btns[i].offsetLeft;
+          width = btns[i].clientWidth;
+          line.style.left = left + 'px';
+          line.style.width = width + 'px';
+        }
+      }
+
       btns[i].addEventListener('click', function (e) {
         e.preventDefault();
-        var tab = e.currentTarget;
-        var atr = tab.getAttribute('data-tab');
-        var left = tab.offsetLeft;
-        var width = tab.clientWidth;
+        btn = e.currentTarget;
+        atr = btn.getAttribute('data-tab');
 
         for (var j = 0; j < contents.length; j++) {
           contents[j].classList.remove('active');
         };
 
         for (var j = 0; j < btns.length; j++) {
-          btns[j].classList.remove('active');
+          btns[j].parentNode.classList.remove('active');
         };
 
-        tab.classList.add('active');
-        document.querySelector("." + atr).classList.add('active');
-
-        getLineSize(left, width);
+        btn.parentNode.classList.add('active');
+        item.querySelector('.' + classContents + '.' + atr).classList.add('active');
       });
+    }
+  };
 
-      btns[i].addEventListener('mouseover', (e) => {
-        e.preventDefault();
-        var tab = e.currentTarget;
-        var left = tab.offsetLeft;
-        var width = tab.clientWidth;
-
-        getLineSize(left, width);
-      });
-
-      if(btns[i].classList.contains('active')) {
-        var left = btns[i].offsetLeft;
-        var width = btns[i].clientWidth;
-
-        getLineSize(left, width);
+  var initTabs = function () {
+    if(tabs) {
+      for (var i = 0; i < tabs.length; i += 1) {
+        btnsTabs = tabs[i].querySelectorAll('.js-tabs-button');
+        contentsTabs = tabs[i].querySelectorAll('.js-tabs-content');
+        lineTabs = tabs[i].querySelector('.js-line');
+        switchTabs(tabs[i], btnsTabs, contentsTabs, 'js-tabs-content', lineTabs);
       }
     }
   }
+
+  initTabs();
+
+  // табы на мобильной версии
+  var initTabsSmall = function() {
+    if(parseInt(window.innerWidth, 10) < 920) {
+      if(tabsSmall) {
+        for (var i = 0; i < tabsSmall.length; i += 1) {
+          btnsTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-button');
+          contentTabsSmall = tabsSmall[i].querySelectorAll('.js-tabs-small-content');
+          switchTabs(tabsSmall[i], btnsTabsSmall, contentTabsSmall, 'js-tabs-small-content');
+        }
+      }
+    }
+  };
+
+  initTabsSmall();
+
+  window.addEventListener('resize', function() {
+    initTabsSmall();
+  });
+
 })();

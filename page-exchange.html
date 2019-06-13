@@ -52,7 +52,7 @@
         </a>
         <ul class="header__list header__list--user-mobile">
           <li class="header__item">
-            <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+            <button class="button-w-circle button-w-circle--bg-black js-login-button" title="Личный кабинет" type="button">
               <svg class="button-w-circle__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
               </svg>
@@ -98,7 +98,7 @@
             </span>
           </button>
           <div class="callback header__callback header__callback--mobile">
-            <button class="button callback__button js-open-callback" type="button">Заказать звонок
+            <button class="button callback__button js-callback-button" type="button">Заказать звонок
             </button>
             <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
             </a>
@@ -210,7 +210,7 @@
               </nav>
               <ul class="header__list header__list--user-desktop">
                 <li class="header__item">
-                  <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+                  <button class="button-w-circle button-w-circle--bg-black js-login-button" title="Личный кабинет" type="button">
                     <svg class="button-w-circle__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
                     </svg>
@@ -245,12 +245,14 @@
                 </label>
               </form>
               <div class="callback header__callback header__callback--desktop">
-                <button class="button callback__button js-open-callback" type="button">Заказать звонок
+                <button class="button callback__button js-callback-button" type="button">Заказать звонок
                 </button>
                 <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
                 </a>
               </div>
-              <div class="social header__social"><span class="social__text">Присоеденяйся к нам</span>
+              <div class="social header__social">
+                <div class="social__text">Присоеденяйся к нам
+                </div>
                 <ul class="social__list">
                   <li class="social__item">
                     <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
@@ -467,7 +469,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal js-modal-callback js-modal">
+    <div class="modal js-callback-modal js-modal">
       <div class="overlay modal__overlay active js-overlay-modal">
       </div>
       <div class="modal__dialog">
@@ -500,21 +502,145 @@
                   </textarea>
                 </label>
               </div>
-              <div class="form__submit-wrap">
-                <label class="button button--bg-primary button--large form__submit">
-                  <input class="hidden" type="submit">
-                  Отправить
-                </label>
-              </div>
-              <div class="form__confirm">
+              <div class="form__confirm-wrap">
                 <label class="checkbox-confirm checkbox-confirm--small">
                   <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
                   <span class="checkbox-confirm__label">Согласие на обработку персональных данных
                   </span>
                 </label>
               </div>
+              <div class="form__submit-wrap">
+                <label class="button button--bg-primary button--large form__submit">
+                  <input class="hidden" type="submit">
+                  Отправить
+                </label>
+              </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-tabs js-login-modal js-modal">
+      <div class="overlay modal__overlay active js-overlay-modal">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
+          <span class="button-remove__icon">
+          </span>
+        </button>
+        <div class="modal__dialog-inner">
+          <div class="tabs modal__tabs">
+            <ul class="tabs__list">
+              <li class="tabs__line js-line">
+              </li>
+              <li class="tabs__item active">
+                <button class="tabs__button js-tabs-button" type="button" data-tab="tab-1">Новый пользователь
+                </button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__button js-tabs-button" type="button" data-tab="tab-2">Я уже зарегестрирован
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-1 js-tabs-content active">
+            <form class="form" action="/" method="post" accept-charset="UTF-8">
+              <div class="form__inner">
+                <div class="form__group">
+                  <label class="field form__field">
+                    <span class="hidden">Имя
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                  </label>
+                  <label class="field form__field">
+                    <span class="hidden">Введите e-mail:
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
+                  </label>
+                  <label class="field form__field">
+                    <span class="hidden">Телефон
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                  </label>
+                  <label class="field form__field">
+                    <span class="hidden">Пароль
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
+                  </label>
+                </div>
+                <div class="form__confirm-wrap">
+                  <label class="checkbox-confirm checkbox-confirm--small">
+                    <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                    <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                    </span>
+                  </label>
+                </div>
+                <div class="form__submit-wrap">
+                  <label class="button button--bg-primary button--large form__submit">
+                    <input class="hidden" type="submit">
+                    Регистрация
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="tab-2 js-tabs-content">
+            <form class="form" action="/" method="post" accept-charset="UTF-8">
+              <div class="form__inner">
+                <div class="form__group">
+                  <label class="field form__field">
+                    <span class="hidden">Введите e-mail:
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
+                  </label>
+                  <label class="field form__field">
+                    <span class="hidden">Пароль
+                    </span>
+                    <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
+                  </label>
+                </div>
+                <div class="form__bottom">
+                  <div class="form__submit-wrap">
+                    <label class="button button--bg-primary button--large form__submit">
+                      <input class="hidden" type="submit">
+                      Войти
+                    </label>
+                  </div>
+                  <p class="form__forgot-password">
+                    <a href="#">Забыли пароль?
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="social modal__social">
+            <div class="social__text">Войти с помощью
+            </div>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social-link social-link--large" target="_blank" href="#" rel="nofollow noopener">
+                  <svg class="social-link__icon" aria-hidden="true">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social-link social-link--large" target="_blank" href="#" rel="nofollow noopener">
+                  <svg class="social-link__icon" aria-hidden="true">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social-link social-link--large" target="_blank" href="#" rel="nofollow noopener">
+                  <svg class="social-link__icon" aria-hidden="true">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -5,14 +5,11 @@
 }
 
 .table-goods__cell {
+  margin-bottom: 5px;
   text-align: center;
 
-  &--image {
-    margin-bottom: 20px;
-  }
-
-  &--button {
-    margin-top: 10px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &--info {
@@ -40,7 +37,6 @@
   font-size: 18px;
 }
 
-
 .table-goods__text {
   font-family: font(primary);
   font-size: 14px;
@@ -52,14 +48,9 @@
 }
 
 .table-goods__title {
-  margin-bottom: 10px;
   font-family: font(primary);
   font-size: 14px;
   color: #a6a6a6;
-}
-
-.table-goods__button-remove {
-  display: inline-flex;
 }
 
 .table-goods__value {
@@ -72,7 +63,13 @@
   max-width: 260px;
 }
 
+.table-goods__counter {
+  margin: 0 auto;
+}
 
+.table-goods__button-remove {
+  margin: 0 auto;
+}
 
 @include respond-to(medium) {
   .table-goods {
@@ -88,9 +85,9 @@
 
   .table-goods__cell {
     display: table-cell;
-    height: 100%;
+    margin-bottom: 0;
     padding: 30px 20px;
-    vertical-align: top;
+    vertical-align: middle;
 
     &:first-child {
       padding-left: 0;
@@ -130,9 +127,14 @@
     display: block;
   }
 
+  .table-goods__title {
+    margin-bottom: 10px;
+  }
+
   .table-goods__button-remove {
+    margin: 0;
     margin-top: auto;
-    margin-left: -10px;
+    transform: translate(-10px, 13px);
   }
 }
 

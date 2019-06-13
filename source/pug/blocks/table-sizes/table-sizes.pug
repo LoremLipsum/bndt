@@ -1,0 +1,47 @@
+mixin table-sizes(data)
+    - var sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL']
+    -
+        var cellSiizes = [
+            {size: 'A', val: ['59', '65', '66.5', '72', '73', '75']},
+            {size: 'B', val: ['45', '53', '54.5', '58', '59', '60.5']},
+            {size: 'B', val: ['23', '48', '49', '55', '56', '58']}
+        ]
+
+    +el({
+        tag: 'table',
+        class: 'table-sizes',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'tr',
+            class: 'table-sizes__tr',
+        })
+            +el({
+                tag: 'th',
+                class: 'table-sizes__th',
+            })
+            each th in sizes
+                +el({
+                    tag: 'th',
+                    class: 'table-sizes__th',
+                    text: th,
+                })
+            each item in cellSiizes
+                +el({
+                    tag: 'tr',
+                    class: 'table-sizes__tr',
+                })
+                    +el({
+                        tag: 'th',
+                        class: 'table-sizes__th',
+                        mod: 'primary',
+                        text: item.size,
+                    })
+                    each td in item.val
+                        +el({
+                            tag: 'td',
+                            class: 'table-sizes__td',
+                            text: td,
+                        })

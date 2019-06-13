@@ -1,0 +1,55 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Как выбрать размер',
+            mod: ['with-bg'],
+            mix: 'content__header',
+            image: 'header-sizes.jpg',
+            text: '<p>Замеры являются приблизительными (среднестатистическими), и&nbsp;могут отличатся от необходимого Вам в зависимости от индивидуальных анатомических особенностей.</p>'
+        })
+        .content__sizes
+            +top-links({
+                mod: ['bg-light'],
+                heading: 'Что вас интересует?',
+                items: anchors,
+            })
+            +sizes({
+                heading: 'Анорак',
+                image: 'sizes01.jpg',
+                id: 'anchor-1',
+            })
+            +sizes({
+                heading: 'Куртки',
+                image: 'sizes02.jpg',
+                id: 'anchor-2',
+            })
+            +sizes({
+                heading: 'Кофты',
+                image: 'sizes03.jpg',
+                id: 'anchor-3',
+            })
+            +sizes({
+                heading: 'Ветровки',
+                image: 'sizes01.jpg',
+                id: 'anchor-4',
+            })
+            +sizes({
+                heading: 'Штаны',
+                image: 'sizes02.jpg',
+                id: 'anchor-5',
+            })
+            +sizes({
+                heading: 'Футболки',
+                image: 'sizes03.jpg',
+                id: 'anchor-6',
+            })
+            +sizes({
+                heading: 'Шорты',
+                image: 'sizes01.jpg',
+                id: 'anchor-7',
+            })

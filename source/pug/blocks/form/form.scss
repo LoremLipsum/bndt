@@ -1,15 +1,5 @@
 .form__group {
   margin-bottom: 30px;
-
-  // &--row {
-  //   .form__field {
-  //     margin-bottom: 12px;
-  //
-  //     &:last-child {
-  //       margin-bottom: 0;
-  //     }
-  //   }
-  // }
 }
 
 .form__field {
@@ -33,17 +23,7 @@
   text-align: center;
 }
 
-@include respond-to(medium) {
-  .form__group {
-    margin-bottom: 35px;
-  }
-
-  .form__submit-wrap {
-    margin-bottom: 25px;
-  }
-}
-
-@include respond-to(medium) {
+@include respond-to(large) {
   .form__group {
     margin-bottom: 40px;
   }

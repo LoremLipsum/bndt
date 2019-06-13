@@ -27,15 +27,15 @@
   padding: 0 20px;
 }
 
-.modal__close {
+.modal__remove {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 10px;
 }
 
 .modal__heading {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: color(black);
   font-family: font(secondary);
   font-size: 30px;
@@ -46,7 +46,7 @@
 
 .modal__text {
   margin: 0;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 @include respond-to(medium) {
@@ -63,7 +63,7 @@
 
   .modal__dialog {
     flex-shrink: 0;
-    width: 590px;
+    width: 520px;
     height: auto;
     max-height: calc(100vh - 160px);
     padding-top: 50px;
@@ -74,20 +74,19 @@
     padding: 0 65px;
   }
 
-  .modal__close {
-    position: absolute;
+  .modal__remove {
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
   }
 
   .modal__heading {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 40px;
   }
 
   .modal__text {
-    padding-bottom: 45px;
+    padding-bottom: 25px;
   }
 }
 
@@ -98,6 +97,7 @@
   }
 
   .modal__dialog {
+    width: 590px;
     padding-top: 60px;
     padding-bottom: 60px;
   }

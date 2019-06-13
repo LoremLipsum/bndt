@@ -1,0 +1,75 @@
+$counter-sign-width: 12px;
+$counter-sign-height: 2px;
+
+.counter {
+  display: flex;
+  width: 94px;
+  height: 30px;
+}
+
+.counter__button {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+
+  @include hover {
+    background-color: color(light);
+  }
+
+  &--plus {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top:  - $counter-sign-height / 2;
+      margin-left: - $counter-sign-width / 2;
+      display: block;
+      width: $counter-sign-width;
+      height: $counter-sign-height;
+      background-color: color(black);
+    }
+
+    &::after {
+      transform-origin: 50% 50%;
+      transform: rotate(90deg);
+    }
+  }
+
+  &--minus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top:  - $counter-sign-height / 2;
+      margin-left: - $counter-sign-width / 2;
+      display: block;
+      width: $counter-sign-width;
+      height: $counter-sign-height;
+      background-color: color(black);
+    }
+  }
+}
+
+.counter__label {
+  display: block;
+  height: 100%;
+  width: 34px;
+  padding: 5px 2px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.counter__input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+}

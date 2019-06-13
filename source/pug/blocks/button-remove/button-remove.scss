@@ -21,22 +21,6 @@
     }
   }
 
-  &--bg-primary {
-    background-color: color(primary);
-
-    .button-remove__icon {
-      @include icon-cross-color (color(white));
-    }
-
-    @include hover {
-      background-color: color(black);
-
-      .button-remove__icon {
-        @include icon-cross-color (color(light));
-      }
-    }
-  }
-
   &--w-text {
     display: flex;
     align-items: center;
@@ -72,6 +56,22 @@
 @include respond-to(medium) {
   .button-remove {
     padding: 10px;
+
+    &--bg-primary {
+      background-color: color(primary);
+
+      .button-remove__icon {
+        @include icon-cross-color (color(white));
+      }
+
+      @include hover {
+        background-color: color(black);
+
+        .button-remove__icon {
+          @include icon-cross-color (color(light));
+        }
+      }
+    }
   }
 
   .button-remove__icon {

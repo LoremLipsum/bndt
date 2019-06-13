@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Бандит</title>
+    <meta name="description" content="Bandit. Бренд одежды, призванный подчеркнуть твой стиль, характер и позицию.">
+    <meta name="keywords" content="Bandit, одежда, граффити, уличный стиль, молодёжная мода">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+    <header class="header js-header">
+      <div class="header__inner">
+        <ul class="header__list header__list--mobile">
+          <li class="header__item">
+            <button class="button-nav header__button-nav js-button-nav" aria-label="Открыть меню" type="button">
+              <span class="button-nav__icon">
+                <span class="button-nav__lines">
+                </span>
+              </span>
+            </button>
+          </li>
+          <li class="header__item header__item--search">
+            <button class="button-w-circle button-w-circle--bg-black js-button-search" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__item header__item--callback">
+            <button class="button-w-circle button-w-circle--bg-black js-button-callback" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#tel"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+        <a class="header__logo-wrap header__logo-wrap--small" href="page-main.html">
+          <img class="header__logo" src="./assets/images/logo-secondary-white.svg" alt=" ">
+        </a>
+        <ul class="header__list header__list--user-mobile">
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+              </svg>
+              <span class="button-w-circle__badge">2
+              </span>
+            </button>
+          </li>
+          <li class="header__item">
+            <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+              </svg>
+              <span class="button-w-circle__badge">4
+              </span>
+            </button>
+          </li>
+        </ul>
+        <div class="header__dialog header__dialog--search js-dialog js-dialog-search">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-search" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
+            </span>
+          </button>
+          <form class="search header__search header__search--mobile js-search" action="/" method="post" accept-charset="UTF-8"><span class="hidden">Поиск по сайту</span>
+            <input class="search__input" placeholder="Поиск" type="search">
+            <label class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
+              <svg class="button-w-circle__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+              </svg>
+              <input class="hidden" type="submit">
+            </label>
+          </form>
+        </div>
+        <div class="header__dialog header__dialog--callback js-dialog js-dialog-callback">
+          <button class="button-remove button-remove--bg-black header__dialog-remove js-close-callback" aria-label="Закрыть" type="button">
+            <span class="button-remove__icon">
+            </span>
+          </button>
+          <div class="callback header__callback header__callback--mobile">
+            <button class="button callback__button js-open-callback" type="button">Заказать звонок
+            </button>
+            <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
+            </a>
+          </div>
+        </div>
+        <div class="header__panel js-panel-main-nav">
+          <div class="header__panel-top">
+            <a class="header__logo-wrap header__logo-wrap--large" href="page-main.html">
+              <img class="header__logo" src="./assets/images/logo-primary.svg" alt=" ">
+            </a>
+          </div>
+          <div class="header__panel-content baron">
+            <div class="header__panel-content-inner baron__scroller">
+              <nav class="header__main-nav-wrap" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                <ul class="main-nav header__main-nav">
+                  <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
+                    <a class="main-nav__link js-link-secondary" href="page-goods.html" itemprop="url">Одежда
+                    </a>
+                    <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
+                    <a class="main-nav__link js-link-secondary" href="page-accessories.html" itemprop="url">Аксессуары
+                    </a>
+                    <ul class="main-nav-lvl-2 main-nav__lvl-2">
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Толстовки
+                        </a>
+                      </li>
+                      <li class="main-nav-lvl-2__item" itemprop="name">
+                        <a class="main-nav-lvl-2__link" href="#" itemprop="url">Обувь
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-nav__item" itemprop="name">
+                    <a class="main-nav__link" href="page-delivery.html" itemprop="url">Оплата и доставка
+                    </a>
+                  </li>
+                  <li class="main-nav__item" itemprop="name">
+                    <a class="main-nav__link" href="page-contacts.html" itemprop="url">Контакты
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="header__list header__list--user-desktop">
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Личный кабинет" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#user"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                    <span class="button-w-circle__badge">2
+                    </span>
+                  </button>
+                </li>
+                <li class="header__item">
+                  <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+                    <svg class="button-w-circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                    </svg>
+                    <span class="button-w-circle__badge">4
+                    </span>
+                  </button>
+                </li>
+              </ul>
+              <form class="search header__search header__search--desktop js-search" action="/" method="post" accept-charset="UTF-8"><span class="hidden">Поиск по сайту</span>
+                <input class="search__input" placeholder="Поиск" type="search">
+                <label class="button-w-circle button-w-circle--bg-black search__submit js-search-submit" aria-label="Искать">
+                  <svg class="button-w-circle__icon">
+                    <use xlink:href="./assets/images/sprites/sprite.svg#search"></use>
+                  </svg>
+                  <input class="hidden" type="submit">
+                </label>
+              </form>
+              <div class="callback header__callback header__callback--desktop">
+                <button class="button callback__button js-open-callback" type="button">Заказать звонок
+                </button>
+                <a class="callback__link" href="tel:79788881890">+7 (978) 88 81 890
+                </a>
+              </div>
+              <div class="social header__social"><span class="social__text">Присоеденяйся к нам</span>
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-black" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="baron__track">
+              <div class="baron__free">
+                <div class="baron__bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay header__overlay js-header-overlay">
+      </div>
+    </header>
+    <main class="content">
+      <header class="content-header content-header--bg-light content__header">
+        <div class="content-header__wrap">
+          <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
+              <svg class="control__icon">
+                <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+              </svg></span>Назад
+          </a>
+          <div class="content-header__heading-wrap">
+            <h1 class="content-header__heading">Корзина
+            </h1>
+            <div class="circle circle--bg-white content-header__badge">
+              <span class="circle__text">4
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="content__wishlist">
+        <div class="cart">
+          <div class="cart__wrap">
+            <div class="table-goods cart__table">
+              <div class="table-goods__row">
+                <div class="table-goods__cell table-goods__cell--image">
+                  <a class="table-goods__image-wrap" href="#">
+                    <img class="table-goods__image" src="./assets/upload/goods01.jpg" alt=" ">
+                  </a>
+                </div>
+                <div class="table-goods__cell table-goods__cell--info">
+                  <div class="table-goods__cell-inner">
+                    <h3 class="table-goods__heading">Bandit Анорак «Tag»
+                    </h3>
+                    <div class="table-goods__text table-goods__text--articul">артикул: 28540040
+                    </div>
+                    <button class="button-remove button-remove--w-text table-goods__button-remove" aria-label="Закрыть" type="button">
+                      <span class="button-remove__icon">
+                      </span>
+                      <span class="button-remove__text">удалить
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--size">
+                  <div class="table-goods__title">Размер
+                  </div>
+                  <div class="table-goods__value">XS
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--counter">
+                  <div class="table-goods__title">Количество
+                  </div>
+                  <div class="counter table-goods__counter js-counter">
+                    <button class="counter__button counter__button--minus js-counter-down" type="button">
+                    </button>
+                    <label class="counter__label">
+                      <input class="counter__input js-counter-input" value="1" min="0" max="100" type="text" step="1" data-count="1">
+                    </label>
+                    <button class="counter__button counter__button--plus js-counter-up" type="button">
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--price">
+                  <div class="table-goods__title">Цена
+                  </div>
+                  <div class="table-goods__value">2300 Р
+                  </div>
+                </div>
+              </div>
+              <div class="table-goods__row">
+                <div class="table-goods__cell table-goods__cell--image">
+                  <a class="table-goods__image-wrap" href="#">
+                    <img class="table-goods__image" src="./assets/upload/goods02.jpg" alt=" ">
+                  </a>
+                </div>
+                <div class="table-goods__cell table-goods__cell--info">
+                  <div class="table-goods__cell-inner">
+                    <h3 class="table-goods__heading">Bandit Анорак «Tag»
+                    </h3>
+                    <div class="table-goods__text table-goods__text--articul">артикул: 28540040
+                    </div>
+                    <button class="button-remove button-remove--w-text table-goods__button-remove" aria-label="Закрыть" type="button">
+                      <span class="button-remove__icon">
+                      </span>
+                      <span class="button-remove__text">удалить
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--size">
+                  <div class="table-goods__title">Размер
+                  </div>
+                  <div class="table-goods__value">XS
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--counter">
+                  <div class="table-goods__title">Количество
+                  </div>
+                  <div class="counter table-goods__counter js-counter">
+                    <button class="counter__button counter__button--minus js-counter-down" type="button">
+                    </button>
+                    <label class="counter__label">
+                      <input class="counter__input js-counter-input" value="1" min="0" max="100" type="text" step="1" data-count="1">
+                    </label>
+                    <button class="counter__button counter__button--plus js-counter-up" type="button">
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--price">
+                  <div class="table-goods__title">Цена
+                  </div>
+                  <div class="table-goods__value">2300 Р
+                  </div>
+                </div>
+              </div>
+              <div class="table-goods__row">
+                <div class="table-goods__cell table-goods__cell--image">
+                  <a class="table-goods__image-wrap" href="#">
+                    <img class="table-goods__image" src="./assets/upload/goods03.jpg" alt=" ">
+                  </a>
+                </div>
+                <div class="table-goods__cell table-goods__cell--info">
+                  <div class="table-goods__cell-inner">
+                    <h3 class="table-goods__heading">Bandit Анорак «Tag»
+                    </h3>
+                    <div class="table-goods__text table-goods__text--articul">артикул: 28540040
+                    </div>
+                    <button class="button-remove button-remove--w-text table-goods__button-remove" aria-label="Закрыть" type="button">
+                      <span class="button-remove__icon">
+                      </span>
+                      <span class="button-remove__text">удалить
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--size">
+                  <div class="table-goods__title">Размер
+                  </div>
+                  <div class="table-goods__value">XS
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--counter">
+                  <div class="table-goods__title">Количество
+                  </div>
+                  <div class="counter table-goods__counter js-counter">
+                    <button class="counter__button counter__button--minus js-counter-down" type="button">
+                    </button>
+                    <label class="counter__label">
+                      <input class="counter__input js-counter-input" value="1" min="0" max="100" type="text" step="1" data-count="1">
+                    </label>
+                    <button class="counter__button counter__button--plus js-counter-up" type="button">
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--price">
+                  <div class="table-goods__title">Цена
+                  </div>
+                  <div class="table-goods__value">2300 Р
+                  </div>
+                </div>
+              </div>
+              <div class="table-goods__row">
+                <div class="table-goods__cell table-goods__cell--image">
+                  <a class="table-goods__image-wrap" href="#">
+                    <img class="table-goods__image" src="./assets/upload/goods04.jpg" alt=" ">
+                  </a>
+                </div>
+                <div class="table-goods__cell table-goods__cell--info">
+                  <div class="table-goods__cell-inner">
+                    <h3 class="table-goods__heading">Bandit Анорак «Tag»
+                    </h3>
+                    <div class="table-goods__text table-goods__text--articul">артикул: 28540040
+                    </div>
+                    <button class="button-remove button-remove--w-text table-goods__button-remove" aria-label="Закрыть" type="button">
+                      <span class="button-remove__icon">
+                      </span>
+                      <span class="button-remove__text">удалить
+                      </span>
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--size">
+                  <div class="table-goods__title">Размер
+                  </div>
+                  <div class="table-goods__value">XS
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--counter">
+                  <div class="table-goods__title">Количество
+                  </div>
+                  <div class="counter table-goods__counter js-counter">
+                    <button class="counter__button counter__button--minus js-counter-down" type="button">
+                    </button>
+                    <label class="counter__label">
+                      <input class="counter__input js-counter-input" value="1" min="0" max="100" type="text" step="1" data-count="1">
+                    </label>
+                    <button class="counter__button counter__button--plus js-counter-up" type="button">
+                    </button>
+                  </div>
+                </div>
+                <div class="table-goods__cell table-goods__cell--price">
+                  <div class="table-goods__title">Цена
+                  </div>
+                  <div class="table-goods__value">2300 Р
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cart__total">Итого:<span class="cart__total-price">2300 Р</span></div>
+            <form action="/" method="post" accept-charset="UTF-8">
+              <div class="cart__submit-wrap">
+                <button class="button button--bg-primary cart__submit" type="button">Оформить заказ
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__wrap">
+          <div class="footer__top-row">
+            <div class="footer__top-col footer__top-col--left">
+              <a class="footer__logo-wrap" href="page-main.html">
+                <img class="footer__logo" src="./assets/images/logo-secondary.svg" alt=" ">
+              </a>
+            </div>
+            <div class="footer__top-col footer__top-col--center">
+              <div class="social footer__social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social-link social-link--bg-light" target="_blank" href="#" rel="nofollow noopener">
+                      <svg class="social-link__icon" aria-hidden="true">
+                        <use xlink:href="./assets/images/sprites/sprite.svg#inst"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__top-col footer__top-col--right">
+              <button class="button button--bg-black footer__subscribe" type="button">Подписаться на новости
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__middle">
+        <div class="footer__wrap">
+          <div class="footer__middle-row">
+            <div class="footer__contacts">
+              <a class="footer__phone" href="tel:79788881890">7 (978) 88 81 890
+              </a><br>
+              <a class="footer__email" href="mailto:sales@demostore.ru">sales@demostore.ru
+              </a>
+            </div>
+            <div class="footer__nav" role="navigation" aria-label="Дополнительное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+              <ul class="footer__list">
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">О нас
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Франшиза
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Каталог
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Возврат и обмен
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Наши магазины
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Статьи
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Оплата и доставка
+                  </a>
+                </li>
+                <li class="footer__item" itemprop="name">
+                  <a href="#" itemprop="url">Как выбрать размер
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__wrap">
+          <div class="footer__bottom-row">
+            <div class="footer__copyright">&copy;&nbsp;2019. Bandit. Все права защищены.
+            </div>
+            <div class="footer__madein">Сделанo в
+              <a title="Sheer" href="https://sheer82.ru/">
+                <svg>
+                  <use xlink:href="./assets/images/sprites/sprite.svg#sheer"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal js-modal-callback js-modal">
+      <div class="overlay modal__overlay active js-overlay-modal">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
+          <span class="button-remove__icon">
+          </span>
+        </button>
+        <div class="modal__dialog-inner">
+          <h3 class="modal__heading">Заказать обратный звонок
+          </h3>
+          <p class="modal__text">Укажите ваш номер телефона, имя и мы свяжемся с вами в ближайшее время.
+          </p>
+          <form class="form" action="/" method="post" accept-charset="UTF-8">
+            <div class="form__inner">
+              <div class="form__group">
+                <label class="field form__field">
+                  <span class="hidden">Имя
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field form__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field field--textarea form__field">
+                  <span class="hidden">Сообщение
+                  </span>
+                  <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
+                  </textarea>
+                </label>
+              </div>
+              <div class="form__submit-wrap">
+                <label class="button button--bg-primary button--large form__submit">
+                  <input class="hidden" type="submit">
+                  Отправить
+                </label>
+              </div>
+              <div class="form__confirm">
+                <label class="checkbox-confirm checkbox-confirm--small">
+                  <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                  <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./scripts/libs/jquery.js"></script>
+    <script src="./scripts/libs/imask.js"></script>
+    <script src="./scripts/libs/svg4everybody.js"></script>
+    <script src="./scripts/libs/ofi.js"></script>
+    <script src="./scripts/libs/baron.js"></script>
+    <script src="./scripts/libs/picturefill.js"></script>
+    <script src="./scripts/libs/swiper.js"></script>
+    <script src="./scripts/libs/masonry.pkgd.js"></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>

@@ -9,7 +9,7 @@ jQuery(document).ready(function($){
       var rows = $('.js-table-store-row');
       var row;
       var heading;
-      var atr;
+      var attr;
       var coords;
       var mapItem = $('#our-stores-map');
       var content = $('.js-our-stores-section');
@@ -47,15 +47,15 @@ jQuery(document).ready(function($){
       // если есть активный класс
       if(active.length) {
         heading = $(active).find('.js-table-store-heading').text();
-        atr = $(active).attr('data-map-coords');
-        coords = atr.split(',');
+        attr = $(active).attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         initMap(coords);
       } else { // по умолчанию первая строчка таблицы
         row = $('.js-table-store-row')[0];
         heading = $(row).find('.js-table-store-heading').text();
-        atr = $(row).attr('data-map-coords');
-        coords = atr.split(',');
+        attr = $(row).attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         initMap(coords);
       }
@@ -65,8 +65,8 @@ jQuery(document).ready(function($){
         btn = $(this);
         row = btn.parents('.js-table-store-row');
         heading = row.find('.js-table-store-heading').text();
-        atr = row.attr('data-map-coords');
-        coords = atr.split(',');
+        attr = row.attr('data-map-coords');
+        coords = attr.split(',');
         contentHeading.text(heading);
         mapItem.html('');
         row = btn.parents('.js-table-store-row');

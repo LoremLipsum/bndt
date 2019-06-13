@@ -1,0 +1,14 @@
+extends ./templates/template
+
+block vars
+    - var pageTitle = 'Бандит'
+
+block content
+    main.content
+        +content-header({
+            heading: 'Как выбрать размер',
+            mod: ['with-bg'],
+            mix: 'content__header',
+            image: 'header-sizes.jpg',
+        })
+        .content__sizes

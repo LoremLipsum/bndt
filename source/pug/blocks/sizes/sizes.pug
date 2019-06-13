@@ -1,0 +1,38 @@
+mixin sizes(data)
+    +el({
+        tag: 'section',
+        class: 'sizes',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        id: data.id,
+    })&attributes(attributes)
+        .sizes__wrap
+            +el({
+                tag: 'h3',
+                class: 'sizes__heading',
+                text: data.heading,
+            })
+            .sizes__image-wrap
+                +el({
+                    tag: 'img',
+                    class: 'sizes__image',
+                    image: data.image
+                })
+            +el({
+                class: 'sizes__table-wrap'
+            })
+                +table-sizes({
+                    mix: 'sizes__table',
+                })
+                .sizes__descr все размеры указанны в СМ
+            ul.sizes__list
+                li.sizes__item
+                    span.sizes__item-name A
+                    | Измеряется от плеча до низа
+                li.sizes__item
+                    span.sizes__item-name B
+                    | Измеряется от подмышки до подмышки
+                li.sizes__item
+                    span.sizes__item-name С
+                    | Измеряется от подмышки до конца рукова

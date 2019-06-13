@@ -68,6 +68,10 @@
   margin-bottom: get($y, small, size-130);
 }
 
+.content__sizes {
+  padding-bottom: get($y, small, size-250);
+}
+
 @include respond-to(medium) {
   .content__content {
     &--pads {
@@ -131,6 +135,10 @@
   .content__franchise-section {
     margin-bottom: get($y, medium, size-130);
   }
+
+  .content__sizes {
+    padding-bottom: get($y, medium, size-250);
+  }
 }
 
 @include respond-to(large) {
@@ -193,5 +201,9 @@
 
   .content__franchise-section {
     margin-bottom: get($y, large, size-130);
+  }
+
+  .content__sizes {
+    padding-bottom: get($y, large, size-250);
   }
 }

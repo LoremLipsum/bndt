@@ -1,0 +1,66 @@
+mixin table-goods(data)
+    +el({
+        class: 'table-goods',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)
+        //- each item in data.items
+        //-     .table-goods__row
+        //-         +el({
+        //-             class: 'table-goods__cell',
+        //-             mod: 'image',
+        //-         })
+        //-             +el({
+        //-                 tag: 'a',
+        //-                 class: 'table-goods__image-wrap',
+        //-             })
+        //-                 +el({
+        //-                     tag: 'img',
+        //-                     class: 'table-goods__image',
+        //-                     upload: item.image,
+        //-                 })
+        //-         +el({
+        //-             class: 'table-goods__cell',
+        //-             mod: 'info',
+        //-         })
+        //-             +el({
+        //-                 tag: 'h3',
+        //-                 class: 'table-goods__heading',
+        //-                 text: item.heading
+        //-             })
+        //-             +el({
+        //-                 class: 'table-goods__text',
+        //-                 mod: 'articul',
+        //-                 text: 'артикул: 28540040'
+        //-             })
+        //-             +button-remove({
+        //-                 text: 'удалить',
+        //-                 mix: 'table-goods__button-remove',
+        //-                 mod: 'w-text',
+        //-                 position: 'before',
+        //-             })
+        //-         +el({
+        //-             class: 'table-goods__cell',
+        //-             mod: 'price',
+        //-         })
+        //-             +el({
+        //-                 class: 'table-goods__text',
+        //-                 mod: 'price',
+        //-                 text: 'Цена'
+        //-             })
+        //-             +el({
+        //-                 class: 'table-goods__price',
+        //-                 text: '2300 Р'
+        //-             })
+        //-         +el({
+        //-             class: 'table-goods__cell',
+        //-             mod: 'button',
+        //-         })
+        //-             +button({
+        //-
+        //-                 text: 'Добавить в корзину',
+        //-                 mod: 'bg-primary',
+        //-                 mix: 'table-goods__button',
+        //-             })

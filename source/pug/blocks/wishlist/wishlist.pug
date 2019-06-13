@@ -7,61 +7,68 @@ mixin wishlist(data)
         js: data.js,
     })&attributes(attributes)
         .wishlist__wrap
-            .wishlist__table
+            +el({
+                class: 'table-goods',
+                mix: 'wishlist__table'
+            })
                 each item in data.items
-                    .wishlist__row
+                    .table-goods__row
                         +el({
-                            class: 'wishlist__cell',
+                            class: 'table-goods__cell',
                             mod: 'image',
                         })
                             +el({
                                 tag: 'a',
-                                class: 'wishlist__image-wrap',
+                                class: 'table-goods__image-wrap',
                             })
                                 +el({
                                     tag: 'img',
-                                    class: 'wishlist__image',
+                                    class: 'table-goods__image',
                                     upload: item.image,
                                 })
                         +el({
-                            class: 'wishlist__cell',
+                            class: 'table-goods__cell',
                             mod: 'info',
                         })
-                            +el({
-                                tag: 'h3',
-                                class: 'wishlist__heading',
-                                text: item.heading
-                            })
-                            +el({
-                                class: 'wishlist__text',
-                                mod: 'articul',
-                                text: 'артикул: 28540040'
-                            })
-                            +button-remove({
-                                text: 'удалить',
-                                mix: 'wishlist__button-remove',
-                                mod: 'w-text',
-                                position: 'before',
-                            })
+                            .table-goods__cell-inner
+                                +el({
+                                    tag: 'h3',
+                                    class: 'table-goods__heading',
+                                    text: item.heading
+                                })
+                                +el({
+                                    class: 'table-goods__text',
+                                    mod: 'articul',
+                                    text: 'артикул: 28540040'
+                                })
+                                +button-remove({
+                                    text: 'удалить',
+                                    mix: 'table-goods__button-remove',
+                                    mod: 'w-text',
+                                    position: 'before',
+                                })
                         +el({
-                            class: 'wishlist__cell',
+                            class: 'table-goods__cell',
                             mod: 'price',
                         })
                             +el({
-                                class: 'wishlist__text',
-                                mod: 'price',
+                                class: 'table-goods__title',
                                 text: 'Цена'
                             })
                             +el({
-                                class: 'wishlist__price',
+                                class: 'table-goods__value',
                                 text: '2300 Р'
                             })
                         +el({
-                            class: 'wishlist__cell',
+                            class: 'table-goods__cell',
                             mod: 'button',
                         })
-                            +button({
-                                text: 'Добавить в корзину',
-                                mod: 'bg-primary',
-                                mix: 'wishlist__button',
+                            +f({
+
                             })
+                                +button({
+                                    type: 'submit',
+                                    text: 'Добавить в корзину',
+                                    mod: 'bg-primary',
+                                    mix: 'table-goods__button',
+                                })

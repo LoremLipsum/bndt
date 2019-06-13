@@ -1,0 +1,150 @@
+.table-goods__row {
+  width: 100%;
+  padding: 30px 20px;
+  border-bottom: 2px solid color(light);
+}
+
+.table-goods__cell {
+  margin-bottom: 5px;
+  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--info {
+    margin-bottom: 20px;
+  }
+}
+
+.table-goods__image-wrap {
+  display: inline-block;
+  width: 135px;
+  height: 135px;
+}
+
+.table-goods__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @include ofi(cover, center);
+}
+
+.table-goods__heading {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: font(primary);
+  font-size: 18px;
+}
+
+.table-goods__text {
+  font-family: font(primary);
+  font-size: 14px;
+  color: #a6a6a6;
+
+  &--articul {
+    margin-bottom: 5px;
+  }
+}
+
+.table-goods__title {
+  font-family: font(primary);
+  font-size: 14px;
+  color: #a6a6a6;
+}
+
+.table-goods__value {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.table-goods__button {
+  width: 100%;
+  max-width: 260px;
+}
+
+.table-goods__counter {
+  margin: 0 auto;
+}
+
+.table-goods__button-remove {
+  margin: 0 auto;
+}
+
+@include respond-to(medium) {
+  .table-goods {
+    display: table;
+    width: 100%;
+  }
+
+  .table-goods__row {
+    display: table-row;
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .table-goods__cell {
+    display: table-cell;
+    margin-bottom: 0;
+    padding: 30px 20px;
+    vertical-align: middle;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &--image,
+    &--button,
+    &--info {
+      margin-bottom: 0;
+    }
+
+    &--image {
+      width: 155px;
+      text-align: left;
+    }
+
+    &--info {
+      text-align: left;
+    }
+
+    &--button {
+      text-align: right;
+    }
+  }
+
+  .table-goods__cell-inner {
+    display: flex;
+    flex-direction: column;
+    min-height: 135px;
+  }
+
+  .table-goods__image-wrap {
+    display: block;
+  }
+
+  .table-goods__title {
+    margin-bottom: 10px;
+  }
+
+  .table-goods__button-remove {
+    margin: 0;
+    margin-top: auto;
+    transform: translate(-10px, 13px);
+  }
+}
+
+@include respond-to(large) {
+  .table-goods__cell {
+    padding: 60px 40px;
+    border-bottom: 2px solid color(light);
+
+    &--image {
+      width: 175px;
+    }
+  }
+}

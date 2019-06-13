@@ -1,0 +1,20 @@
+mixin top-links(data)
+    +el({
+        class: 'top-links',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .top-links__wrap
+            +el({
+                class: 'top-links__heading',
+                text: data.heading,
+            })
+            each item, index in data.items
+                +el({
+                    tag: 'a',
+                    class: 'top-links__link',
+                    text: item.text,
+                    href: '#anchor-' + (index + 1),
+                    js: 'anchor',
+                })

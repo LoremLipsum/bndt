@@ -3,6 +3,11 @@
     background-color: color(light);
   }
 
+  &--bg-black {
+    background-color: color(black);
+    color: color(white);
+  }
+
   &--bg-transparent {
     .date {
       color: color(black);
@@ -35,7 +40,6 @@
 
 .content-header__heading {
   margin: 0;
-  margin-bottom: 0;
 }
 
 .content-header__date {
@@ -52,6 +56,17 @@
   width: 40px;
   height: 40px;
   margin-left: 20px;
+}
+
+.content-header__column {
+  &--main {
+    margin-bottom: 8px;
+  }
+
+  &--text {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
 
 @include respond-to(medium) {
@@ -93,5 +108,24 @@
   .content-header__badge {
     width: 48px;
     height: 48px;
+  }
+
+  .content-header__row {
+    display: flex;
+  }
+
+  .content-header__column {
+    &--main {
+      width: calc(50% - 60px);
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+
+    &--text {
+      width: calc(50% + 30px);
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 1.78
+    }
   }
 }

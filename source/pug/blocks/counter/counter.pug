@@ -1,0 +1,29 @@
+mixin counter(data)
+    +el({
+        class: 'counter',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'counter',
+    })&attributes(attributes)
+        +el({
+            tag: 'button',
+            class: 'counter__button',
+            mod: 'minus',
+            js: 'counter-down'
+        })
+        +el({
+            tag: 'label',
+            class: 'counter__label',
+        })
+            +el({
+                tag: 'input',
+                class: 'counter__input',
+                js: 'counter-input',
+                value: '1',
+            })(step='1', min='0', max='100' data-count='1')
+        +el({
+            tag: 'button',
+            class: 'counter__button',
+            mod: 'plus',
+            js: 'counter-up'
+        })

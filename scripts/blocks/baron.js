@@ -1,9 +1,6 @@
-'use strict';
-
-(function() {
-  baron({
-    root: '.baron',
-    scroller: '.baron__scroller',
-    bar: '.baron__bar',
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+    $(".nano").nanoScroller({ scroll: 'top' });
   });
-})();
+});

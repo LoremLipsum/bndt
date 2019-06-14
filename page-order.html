@@ -110,8 +110,8 @@
               <img class="header__logo" src="./assets/images/logo-primary.svg" alt=" ">
             </a>
           </div>
-          <div class="header__panel-content baron">
-            <div class="header__panel-content-inner baron__scroller">
+          <div class="header__panel-content nano">
+            <div class="header__panel-content-inner nano-content">
               <nav class="header__main-nav-wrap" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <ul class="main-nav header__main-nav">
                   <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
@@ -278,11 +278,6 @@
                 </ul>
               </div>
             </div>
-            <div class="baron__track">
-              <div class="baron__free">
-                <div class="baron__bar"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -290,18 +285,174 @@
       </div>
     </header>
     <main class="content">
-      <header class="content-header content-header--with-bg content__header" style="background-image: url(./assets/images/header-sizes.jpg);">
+      <header class="content-header content-header--bg-transparent content__header">
         <div class="content-header__wrap">
           <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
               <svg class="control__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
               </svg></span>Назад
           </a>
-          <h1 class="content-header__heading">Как выбрать размер
+          <h1 class="content-header__heading">Оформление заказа
           </h1>
         </div>
       </header>
-      <div class="content__sizes"></div>
+      <div class="content__order">
+        <div class="order">
+          <div class="order__wrap">
+            <form action="/" method="post" accept-charset="UTF-8">
+              <div class="order__top">
+                <fieldset class="order__fieldset order__fieldset--info">
+                  <legend class="order__heading">Заполните форму:</legend>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Имя
+                    </span>
+                    <input class="field__input" tabindex="0" name="firstName" type="text">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Фамилия
+                    </span>
+                    <input class="field__input" tabindex="0" name="lastName" type="text">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Отчество
+                    </span>
+                    <input class="field__input" tabindex="0" name="secondName" type="text">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Email
+                    </span>
+                    <input class="field__input" tabindex="0" name="email" type="email">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">телефон
+                    </span>
+                    <input class="field__input" tabindex="0" name="tel" type="tel">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Город
+                    </span>
+                    <input class="field__input" tabindex="0" name="city" type="text">
+                  </label>
+                  <label class="field field--border-light field--size-sm order__field">
+                    <span class="field__label">Адрес
+                    </span>
+                    <input class="field__input" tabindex="0" name="address" type="text">
+                  </label>
+                </fieldset>
+                <div class="invoice order__invoice">
+                  <h3 class="invoice__heading">Ваш заказ:
+                  </h3>
+                  <ul class="invoice__list">
+                    <li class="invoice-item invoice__item">
+                      <h4 class="invoice-item__heading">Bandit Анорак «Tag»
+                      </h4>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">артикул: 28540040
+                        </span>
+                      </div>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">кол:
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--quantity">1
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--result">2300 Р
+                        </span>
+                      </div>
+                    </li>
+                    <li class="invoice-item invoice__item">
+                      <h4 class="invoice-item__heading">Bandit Анорак «Tag»
+                      </h4>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">артикул: 28540040
+                        </span>
+                      </div>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">кол:
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--quantity">1
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--result">2300 Р
+                        </span>
+                      </div>
+                    </li>
+                    <li class="invoice-item invoice__item">
+                      <h4 class="invoice-item__heading">Bandit Анорак «Tag»
+                      </h4>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">артикул: 28540040
+                        </span>
+                      </div>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">кол:
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--quantity">1
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--result">2300 Р
+                        </span>
+                      </div>
+                    </li>
+                    <li class="invoice-item invoice__item">
+                      <h4 class="invoice-item__heading">Bandit Анорак «Tag»
+                      </h4>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">артикул: 28540040
+                        </span>
+                      </div>
+                      <div class="invoice-item__row">
+                        <span class="invoice-item__text">кол:
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--quantity">1
+                        </span>
+                        <span class="invoice-item__value invoice-item__value--result">2300 Р
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="invoice__total">Итого:
+                    <span class="invoice__total-price">2300 Р
+                    </span>
+                  </div>
+                  <a class="link link--primary invoice__redact" href="#">Редактировать
+                  </a>
+                </div>
+              </div>
+              <fieldset class="order__fieldset order__fieldset--type-delivery">
+                <legend class="order__heading">Тип доставки:</legend>
+                <div class="order__checkbox-group">
+                  <label class="checkbox checkbox--image checkbox--border-light order__checkbox">
+                    <input class="hidden checkbox__input" name="delivery" value="post_of_russia" checked type="radio" aria-required="true" aria-invalid="false">
+                    <span class="checkbox__label">
+                      <img class="checkbox__image" src="./assets/images/pochta.jpg" title="Почта России" alt=" ">
+                    </span>
+                  </label>
+                  <label class="checkbox checkbox--image checkbox--border-light order__checkbox">
+                    <input class="hidden checkbox__input" name="delivery" value="cdek" type="radio" aria-required="true" aria-invalid="false">
+                    <span class="checkbox__label">
+                      <img class="checkbox__image" src="./assets/images/cdek.jpg" title="CDEK" alt=" ">
+                    </span>
+                  </label>
+                  <label class="checkbox checkbox--border-light order__checkbox">
+                    <input class="hidden checkbox__input" name="delivery" value="pickup" type="radio" aria-required="true" aria-invalid="false">
+                    <span class="checkbox__label">самовывоз со склада / магазина
+                    </span>
+                  </label>
+                  <label class="checkbox checkbox--border-light order__checkbox">
+                    <input class="hidden checkbox__input" name="delivery" value="courier" type="radio" aria-required="true" aria-invalid="false">
+                    <span class="checkbox__label">курьер по городу
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="order__bottom">
+                <label class="button button--bg-primary order__submit">
+                  <input class="hidden" type="submit">
+                  Оформить заказ
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__top">
@@ -411,7 +562,7 @@
       </div>
     </footer>
     <div class="modal js-callback-modal js-modal">
-      <div class="overlay modal__overlay active js-overlay-modal">
+      <div class="overlay modal__overlay js-overlay-modal">
       </div>
       <div class="modal__dialog">
         <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
@@ -426,12 +577,12 @@
           <form class="form" action="/" method="post" accept-charset="UTF-8">
             <div class="form__inner">
               <div class="form__group">
-                <label class="field form__field">
+                <label class="field field--size-lg field--bg-light form__field">
                   <span class="hidden">Имя
                   </span>
                   <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
                 </label>
-                <label class="field form__field">
+                <label class="field field--size-lg field--bg-light form__field">
                   <span class="hidden">Телефон
                   </span>
                   <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
@@ -462,7 +613,7 @@
       </div>
     </div>
     <div class="modal js-tabs js-login-modal js-modal">
-      <div class="overlay modal__overlay active js-overlay-modal">
+      <div class="overlay modal__overlay js-overlay-modal">
       </div>
       <div class="modal__dialog">
         <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
@@ -488,22 +639,22 @@
             <form class="form" action="/" method="post" accept-charset="UTF-8">
               <div class="form__inner">
                 <div class="form__group">
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Имя
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Введите e-mail:
                     </span>
                     <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Телефон
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Пароль
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
@@ -529,12 +680,12 @@
             <form class="form" action="/" method="post" accept-charset="UTF-8">
               <div class="form__inner">
                 <div class="form__group">
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Введите e-mail:
                     </span>
                     <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Пароль
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
@@ -589,7 +740,7 @@
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>
     <script src="./scripts/libs/ofi.js"></script>
-    <script src="./scripts/libs/baron.js"></script>
+    <script src="./scripts/libs/jquery.nanoscroller.js"></script>
     <script src="./scripts/libs/picturefill.js"></script>
     <script src="./scripts/libs/swiper.js"></script>
     <script src="./scripts/libs/masonry.pkgd.js"></script>

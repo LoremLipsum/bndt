@@ -1,3 +1,30 @@
+$field: (
+  small: (
+    small: (
+      height: 44px,
+      font-size: 16px,
+      pads-x: 26px,
+    ),
+  ),
+  large: (
+    small: (
+      height: 52px,
+      font-size: 16px,
+      pads-x: 26px,
+    ),
+    medium: (
+      height: 56px,
+      font-size: 17px,
+      pads-x: 28px,
+    ),
+    large: (
+      height: 60px,
+      font-size: 18px,
+      pads-x: 30px,
+    ),
+  ),
+);
+
 .field {
   display: block;
   width: 100%;
@@ -8,36 +35,73 @@
       min-height: 60px;
     }
   }
+
+  &--border-light {
+    .field__input {
+      border: 2px solid color(light);
+      background-color: transparent;
+
+      &:hover,
+      &:focus,
+      &.active {
+        border: 2px solid color(black);
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--bg-light {
+    background-color: color(light);
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: darken(color(light), 5%);
+    }
+  }
+
+  &--size-sm {
+    .field__input{
+      min-height: get($field, small, small, height);
+      min-height: get($field, small, small, height);
+      padding: (get($field, small, small, height) - (get($field, small, small, font-size) + 4px))/2 get($field, small, small, pads-x);
+      font-size: get($field, small, small, font-size);
+      line-height: get($field, small, small, font-size) + 4px;
+    }
+  }
+
+  &--size-lg {
+    .field__input {
+      height: get($field,  large, small, height);
+      min-height: get($field, large, small, height);
+      padding: (get($field, large, small, height) - (get($field, large, small, font-size) + 4px))/2 get($field, large, small, pads-x);
+      font-size: get($field, large, small, font-size);
+      line-height: get($field, large, small, font-size) + 4px;
+    }
+  }
 }
 
 .field__label {
-  font-size: 12px;
+  display: block;
+  margin-bottom: 10px;
+  font-family: font(secondary);
+  font-size: 20px;
   line-height: 1;
   text-align: left;
-  color: color(gray);
+  color: color(black);
 }
 
 .field__input {
   display: block;
   width: 100%;
-  height: 40px;
-  padding: 10px;
   border: none;
-  background-color: color(light);
+  background-color: transparent;
   color: color(black);
-  font-size: 16px;
-  line-height: 20px;
   caret-color: color(black);
 
   &::placeholder {
     font-size: inherit;
-    color: color(gray);
-  }
-
-  &:hover,
-  &:focus,
-  &.active {
-    background-color: darken(color(light), 5%);
+    color: color(black);
   }
 
   &--error:not(:focus) {
@@ -58,11 +122,16 @@
         min-height: 100px;
       }
     }
-  }
 
-  .field__input {
-    height: 50px;
-    padding: 15px 20px;
+    &--size-lg {
+      .field__input {
+        height: get($field,  large, medium, height);
+        min-height: get($field, large, medium, height);
+        padding: (get($field, large, medium, height) - (get($field, large, medium, font-size) + 4px))/2 get($field, large, medium, pads-x);
+        font-size: get($field, large, medium, font-size);
+        line-height: get($field, large, medium, font-size) + 4px;
+      }
+    }
   }
 }
 
@@ -74,10 +143,15 @@
         min-height: 150px;
       }
     }
-  }
 
-  .field__input {
-    height: 56px;
-    padding: 18px 20px;
+    &--size-lg {
+      .field__input {
+        height: get($field,  large, large, height);
+        min-height: get($field, large, large, height);
+        padding: (get($field, large, large, height) - (get($field, large, large, font-size) + 4px))/2 get($field, large, large, pads-x);
+        font-size: get($field, large, large, font-size);
+        line-height: get($field, large, large, font-size) + 4px;
+      }
+    }
   }
 }

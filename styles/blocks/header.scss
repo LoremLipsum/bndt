@@ -1,13 +1,14 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
   background-color: color(black);
   color: color(light);
 
   &.active {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
   }
 }
 
@@ -153,9 +154,6 @@
 }
 
 .header__search {
-  &--mobile {
-  }
-
   &--desktop {
     display: none;
   }
@@ -214,18 +212,6 @@
   }
 
   .header__logo-wrap {
-    // &--small {
-    //   display: none;
-    //   order: 9999;
-    // }
-    //
-    // &--medium {
-    //   position: static;
-    //   display: block;
-    //   order: 2;
-    //   margin: 0 20px;
-    // }
-
     &--small {
       order: 2;
       margin: 0 20px;
@@ -274,13 +260,10 @@
     &--small {
       order: 3;
     }
-
-    // &--medium {
-    //   order: 3;
-    // }
   }
 
   .header__dialog {
+    display: block;
     max-height: none;
     padding: 0;
 

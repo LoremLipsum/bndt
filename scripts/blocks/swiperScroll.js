@@ -9,6 +9,7 @@
       draggable: true,
       snapOnRelease: true,
       grabCursor: true,
+      freeMode: true,
     },
     mousewheel: true,
   });

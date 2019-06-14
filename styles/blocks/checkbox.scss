@@ -1,6 +1,40 @@
 .checkbox {
   display: inline-block;
   cursor: pointer;
+
+  &--image {
+    .checkbox__label {
+      &::before {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &::after {
+        top: 50%;
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  &--border-light {
+    .checkbox__label {
+      &::before {
+        border: 2px solid color(light);
+      }
+
+      &::after {
+
+      }
+    }
+
+    @include hover {
+      .checkbox__label {
+        &::before {
+          border-color: color(black);
+        }
+      }
+    }
+  }
 }
 
 .checkbox__input {
@@ -46,6 +80,12 @@
     border-bottom: 2px solid currentColor;
     transform: rotate(-45deg);
   }
+}
+
+.checkbox__image {
+  display: block;
+  max-width: 90px;
+  max-height: 45px;
 }
 
 .checkbox__input:checked ~ .checkbox__label {

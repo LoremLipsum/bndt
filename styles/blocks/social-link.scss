@@ -92,6 +92,21 @@
       }
     }
   }
+
+  &--large {
+    height: 44px;
+    width: 44px;
+    padding: 6px;
+
+    .social-link__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include hover {
+      opacity: 0.5;
+    }
+  }
 }
 
 .social-link__icon {
@@ -104,6 +119,20 @@
   .social-link {
     height: 40px;
     width: 40px;
+
+    &--large {
+      height: 48px;
+      width: 48px;
+
+      .social-link__icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      @include hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   .social-link__icon {

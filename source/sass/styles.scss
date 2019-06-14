@@ -1,10 +1,8 @@
 @import "../assets/fonts/bebasneue/bebasneue";
 @import "../assets/fonts/centurygothic/centurygothic";
-
 @import "./libs/normalize";
 @import "./libs/swiper";
-// @import "./libs/animate";
-@import "./libs/baron";
+@import "./libs/nanoscroller";
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -15,12 +13,9 @@
 @import "./global/js";
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
-@import "./blocks/baron";
+@import "./blocks/nano";
 @import "./blocks/bullet";
-
-// @import "./blocks/section";
 @import "./blocks/section-centred";
-
 @import "./blocks/content";
 @import "./blocks/font-h2";
 @import "./blocks/our-stores";
@@ -44,7 +39,6 @@
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/circle/circle";
 @import "../pug/blocks/social-link/social-link";
-@import "../pug/blocks/field-primary/field-primary";
 @import "../pug/blocks/field-secondary/field-secondary";
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/checkbox/checkbox";
@@ -80,15 +74,12 @@
 @import "../pug/blocks/map/map";
 @import "../pug/blocks/posts-item/posts-item";
 @import "../pug/blocks/posts/posts";
-
 @import "./blocks/section-centred";
 @import "./blocks/content";
 @import "./blocks/font-h2";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
-
 @import "../pug/blocks/wishlist/wishlist";
-
 @import "../pug/blocks/delivery/delivery";
 @import "../pug/blocks/process/process";
 @import "../pug/blocks/process-item/process-item";
@@ -98,3 +89,11 @@
 @import "../pug/blocks/table-goods/table-goods";
 @import "../pug/blocks/cart/cart";
 @import "../pug/blocks/counter/counter";
+@import "../pug/blocks/order/order";
+@import "../pug/blocks/invoice/invoice";
+@import "../pug/blocks/invoice-item/invoice-item";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/goods-view/goods-view";
+@import "../pug/blocks/goods-gallery/goods-gallery";
+@import "../pug/blocks/goods-info/goods-info";
+@import "../pug/blocks/goods-tabs/goods-tabs";

@@ -1,0 +1,41 @@
+mixin invoice-item(data)
+    +el({
+        tag: data.tag,
+        class: 'invoice-item',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h4',
+            class: 'invoice-item__heading',
+            text: 'Bandit Анорак «Tag»',
+        })
+        +el({
+            class: 'invoice-item__row',
+        })
+            +el({
+                tag: 'span',
+                class: 'invoice-item__text',
+                text: 'артикул: 28540040'
+            })
+        +el({
+            class: 'invoice-item__row',
+        })
+            +el({
+                tag: 'span',
+                class: 'invoice-item__text',
+                text: 'кол:'
+            })
+            +el({
+                tag: 'span',
+                class: 'invoice-item__value',
+                mod: 'quantity',
+                text: '1'
+            })
+            +el({
+                tag: 'span',
+                class: 'invoice-item__value',
+                mod: 'result',
+                text: '2300 Р'
+            })

@@ -10,6 +10,15 @@
   &.active {
     position: fixed;
   }
+
+  .nano > .nano-pane {
+    background: rgba(#fff, 0.1);
+    opacity: 1;
+  }
+
+  .nano > .nano-pane > .nano-slider {
+    background: rgba(#fff, 0.2);
+  }
 }
 
 .header__inner {
@@ -146,6 +155,7 @@
   flex-direction: column;
   flex-grow: 1;
   padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .header__main-nav-wrap {

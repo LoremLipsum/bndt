@@ -1,0 +1,59 @@
+mixin goods-gallery(data)
+    +el({
+        class: 'goods-gallery',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        .goods-gallery__control
+            +control({
+                mod: ['prev', 'size-lg', 'bg-white'],
+                js: 'goods-gallery-prev',
+            })
+            +control({
+                mod: ['next', 'size-lg', 'bg-white'],
+                js: 'goods-gallery-next',
+            })
+        +el({
+            class: 'goods-gallery__main',
+            js: 'goods-gallery-main',
+            mix: 'swiper-container',
+        })
+            .swiper-wrapper
+                each item in data.items.main
+                    +el({
+                        class: 'goods-gallery__item',
+                        mod: 'main',
+                        mix: 'swiper-slide',
+                    })
+                        +el({
+                            class: 'goods-gallery__image-wrap',
+                            mod: 'main',
+                        })
+                            +el({
+                                tag: 'img',
+                                upload: item.image,
+                                mix: 'goods-gallery__image',
+                            })
+        +el({
+            class: 'goods-gallery__nav',
+            js: 'goods-gallery-nav',
+            mix: 'swiper-container',
+        })
+            .swiper-wrapper
+                each item in data.items.nav
+                    +el({
+                        class: 'goods-gallery__item',
+                        mod: 'nav',
+                        mix: 'swiper-slide',
+                    })
+                        +el({
+                            tag: 'button',
+                            class: 'goods-gallery__image-wrap',
+                            mod: 'nav',
+                        })
+                            +el({
+                                tag: 'img',
+                                upload: item.image,
+                                mix: 'goods-gallery__image',
+                            })

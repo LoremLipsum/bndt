@@ -1,0 +1,35 @@
+mixin goods-view(data)
+    +el({
+        class: 'goods-view',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        .goods-view__wrap
+            +goods-gallery({
+                items: {
+                    main: [
+                        {
+                            image: 'goods01.jpg',
+                        },
+                        {
+                            image: 'goods02.jpg',
+                        },
+                        {
+                            image: 'goods03.jpg',
+                        },
+                    ],
+                    nav: [
+                        {
+                            image: 'goods01.jpg',
+                        },
+                        {
+                            image: 'goods02.jpg',
+                        },
+                        {
+                            image: 'goods03.jpg',
+                        },
+                    ]
+                }
+
+            })

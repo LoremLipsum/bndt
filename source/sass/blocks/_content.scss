@@ -43,6 +43,7 @@
 }
 
 .content__posts-item {
+  padding-top: 20px;
   padding-bottom: get($y, small, size-170);
 }
 
@@ -70,6 +71,15 @@
 
 .content__sizes {
   padding-bottom: get($y, small, size-250);
+}
+
+.content__order {
+  padding-bottom: get($y, small, size-90);
+}
+
+.content__breadcrumbs {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 @include respond-to(small-lg) {
@@ -149,6 +159,15 @@
   .content__sizes {
     padding-bottom: get($y, medium, size-250);
   }
+
+  .content__order {
+    padding-bottom: get($y, medium, size-90);
+  }
+
+  .content__breadcrumbs {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
 
 @include respond-to(medium-lg) {
@@ -222,9 +241,18 @@
   .content__sizes {
     padding-bottom: get($y, large, size-250);
   }
+
+  .content__order {
+    padding-bottom: get($y, large, size-90);
+  }
+
+  .content__breadcrumbs {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
 }
 
-@include respond-to(medium-lg) {
+@include respond-to(large-lg) {
   .content {
     margin-top: 0;
   }

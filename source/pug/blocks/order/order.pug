@@ -1,0 +1,113 @@
+mixin order(data)
+    +el({
+        class: 'order',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        .order__wrap
+            +f({
+
+            })
+                .order__top
+                    fieldset.order__fieldset.order__fieldset--info
+                        legend.order__heading Заполните форму:
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            label: 'Имя',
+                            name: 'firstName',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            label: 'Фамилия',
+                            name: 'lastName',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            label: 'Отчество',
+                            name: 'secondName',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            type: 'email',
+                            label: 'Email',
+                            name: 'email',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            type: 'tel',
+                            label: 'телефон',
+                            name: 'tel',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            label: 'Город',
+                            name: 'city',
+                        })
+                        +field({
+                            mod: ['border-light', 'size-sm'],
+                            isLabel: true,
+                            mix: 'order__field',
+                            label: 'Адрес',
+                            name: 'address',
+                        })
+                    +invoice({
+                        mix: 'order__invoice',
+                    })
+                fieldset.order__fieldset.order__fieldset--type-delivery
+                    legend.order__heading Тип доставки:
+                    .order__checkbox-group
+                        +checkbox({
+                            mod: ['image', 'border-light'],
+                            mix: 'order__checkbox',
+                            type: 'radio',
+                            name: 'delivery',
+                            value: 'post_of_russia',
+                            image: 'pochta.jpg',
+                            title: 'Почта России',
+                            checked: true,
+                        })
+                        +checkbox({
+                            mod: ['image', 'border-light'],
+                            mix: 'order__checkbox',
+                            type: 'radio',
+                            name: 'delivery',
+                            value: 'cdek',
+                            image: 'cdek.jpg',
+                            title: 'CDEK',
+                        })
+                        +checkbox({
+                            mod: ['border-light'],
+                            mix: 'order__checkbox',
+                            type: 'radio',
+                            name: 'delivery',
+                            value: 'pickup',
+                            text: 'самовывоз со склада / магазина'
+                        })
+                        +checkbox({
+                            mod: ['border-light'],
+                            mix: 'order__checkbox',
+                            type: 'radio',
+                            name: 'delivery',
+                            value: 'courier',
+                            text: 'курьер по городу'
+                        })
+                .order__bottom
+                    +button({
+                        mix: 'order__submit',
+                        type: 'submit',
+                        mod: 'bg-primary',
+                        text: 'Оформить заказ',
+                    })

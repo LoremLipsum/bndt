@@ -3,8 +3,9 @@
 
 @import "./libs/normalize";
 @import "./libs/swiper";
-// @import "./libs/animate";
-@import "./libs/baron";
+// @import "./libs/baron";
+@import "./libs/nanoscroller.css";
+
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -32,7 +33,6 @@
 @import "../pug/blocks/button/button";
 @import "../pug/blocks/button-w-circle/button-w-circle";
 @import "../pug/blocks/button-remove/button-remove";
-@import "../pug/blocks/header/header";
 @import "../pug/blocks/social/social";
 @import "../pug/blocks/search/search";
 @import "../pug/blocks/callback/callback";
@@ -45,12 +45,12 @@
 @import "../pug/blocks/pagination/pagination";
 @import "../pug/blocks/circle/circle";
 @import "../pug/blocks/social-link/social-link";
-@import "../pug/blocks/field-primary/field-primary";
 @import "../pug/blocks/field-secondary/field-secondary";
 @import "../pug/blocks/checkbox-confirm/checkbox-confirm";
 @import "../pug/blocks/checkbox/checkbox";
 @import "../pug/blocks/radio-button/radio-button";
 @import "../pug/blocks/control/control";
+@import "../pug/blocks/header/header";
 @import "../pug/blocks/intro/intro";
 @import "../pug/blocks/catalog-preview/catalog-preview";
 @import "../pug/blocks/goods-item/goods-item";
@@ -80,15 +80,12 @@
 @import "../pug/blocks/map/map";
 @import "../pug/blocks/posts-item/posts-item";
 @import "../pug/blocks/posts/posts";
-
 @import "./blocks/section-centred";
 @import "./blocks/content";
 @import "./blocks/font-h2";
 @import "./blocks/our-stores";
 @import "./blocks/contacts";
-
 @import "../pug/blocks/wishlist/wishlist";
-
 @import "../pug/blocks/delivery/delivery";
 @import "../pug/blocks/process/process";
 @import "../pug/blocks/process-item/process-item";
@@ -98,3 +95,11 @@
 @import "../pug/blocks/table-goods/table-goods";
 @import "../pug/blocks/cart/cart";
 @import "../pug/blocks/counter/counter";
+@import "../pug/blocks/order/order";
+@import "../pug/blocks/invoice/invoice";
+@import "../pug/blocks/invoice-item/invoice-item";
+@import "../pug/blocks/breadcrumbs/breadcrumbs";
+@import "../pug/blocks/goods-view/goods-view";
+@import "../pug/blocks/goods-gallery/goods-gallery";
+@import "../pug/blocks/goods-info/goods-info";
+@import "../pug/blocks/goods-tabs/goods-tabs";

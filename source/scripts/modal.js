@@ -4,6 +4,7 @@
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');
   var overlays = document.querySelectorAll('.js-overlay-modal');
+  var overlayClass = '.js-overlay-modal';
   var callbackBtns = document.querySelectorAll('.js-callback-button');
   var callbackModal = document.querySelector('.js-callback-modal');
   var loginBtns = document.querySelectorAll('.js-login-button');
@@ -21,6 +22,7 @@
     btnsClose[i].addEventListener('click', function(e) {
       e.preventDefault();
       e.currentTarget.parentNode.parentNode.classList.remove('active');
+      e.currentTarget.parentNode.parentNode.querySelector(overlayClass).classList.remove('active');
     });
   }
 
@@ -29,6 +31,7 @@
     overlays[i].addEventListener('click', function(e) {
       e.preventDefault();
       e.currentTarget.parentNode.classList.remove('active');
+      overlays[i].remove('active');
     });
   }
 
@@ -36,6 +39,7 @@
     callbackBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
       callbackModal.classList.add('active');
+      callbackModal.querySelector(overlayClass).classList.add('active')
     });
   }
 
@@ -43,6 +47,7 @@
     loginBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
       loginModal.classList.add('active');
+      loginModal.querySelector(overlayClass).classList.add('active')
     });
   }
 

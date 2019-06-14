@@ -21,15 +21,12 @@ jQuery(document).ready(function($){
   });
 });
 
-'use strict';
-
-(function() {
-  baron({
-    root: '.baron',
-    scroller: '.baron__scroller',
-    bar: '.baron__bar',
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+    $(".nano").nanoScroller({ scroll: 'top' });
   });
-})();
+});
 
 'use strict';
 
@@ -259,6 +256,7 @@ jQuery(document).ready(function($){
   var btnsClose = document.querySelectorAll('.js-close-modal');
   var modals = document.querySelectorAll('.js-modal');
   var overlays = document.querySelectorAll('.js-overlay-modal');
+  var overlayClass = '.js-overlay-modal';
   var callbackBtns = document.querySelectorAll('.js-callback-button');
   var callbackModal = document.querySelector('.js-callback-modal');
   var loginBtns = document.querySelectorAll('.js-login-button');
@@ -276,6 +274,7 @@ jQuery(document).ready(function($){
     btnsClose[i].addEventListener('click', function(e) {
       e.preventDefault();
       e.currentTarget.parentNode.parentNode.classList.remove('active');
+      e.currentTarget.parentNode.parentNode.querySelector(overlayClass).classList.remove('active');
     });
   }
 
@@ -284,6 +283,7 @@ jQuery(document).ready(function($){
     overlays[i].addEventListener('click', function(e) {
       e.preventDefault();
       e.currentTarget.parentNode.classList.remove('active');
+      overlays[i].remove('active');
     });
   }
 
@@ -291,6 +291,7 @@ jQuery(document).ready(function($){
     callbackBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
       callbackModal.classList.add('active');
+      callbackModal.querySelector(overlayClass).classList.add('active')
     });
   }
 
@@ -298,6 +299,7 @@ jQuery(document).ready(function($){
     loginBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
       loginModal.classList.add('active');
+      loginModal.querySelector(overlayClass).classList.add('active')
     });
   }
 
@@ -449,6 +451,54 @@ jQuery(document).ready(function($){
 
 })();
 
+'use strict';
+
+(function() {
+
+  var item = document.querySelector('.js-goods-gallery-main');
+
+  if (item) {
+    var navSlider = new Swiper('.js-goods-gallery-nav', {
+      grabCursor: true,
+      slidesPerView: 'auto',
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      spaceBetween: 30,
+      direction: 'vertical',
+      autoHeight: true,
+      navigation: {
+        nextEl: '.js-goods-gallery-next',
+        prevEl: '.js-goods-gallery-prev',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+      breakpoints: {
+        767: {
+          direction: 'horizontal',
+          autoHeight: false,
+          spaceBetween: 15,
+        },
+      }
+    });
+
+    var mainSlider = new Swiper('.js-goods-gallery-main', {
+      grabCursor: true,
+      slidesPerView: 1,
+      autoHeight: true,
+      thumbs: {
+        swiper: navSlider,
+      },
+      navigation: {
+        prevEl: '.js-goods-gallery-prev',
+        nextEl: '.js-goods-gallery-next',
+        clickable: true,
+        disabledClass: 'disabled',
+      },
+    });
+  }
+
+})();
+
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
@@ -548,6 +598,7 @@ jQuery(document).ready(function($){
       draggable: true,
       snapOnRelease: true,
       grabCursor: true,
+      freeMode: true,
     },
     mousewheel: true,
   });

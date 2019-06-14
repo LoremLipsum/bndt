@@ -38,16 +38,6 @@ mixin header(data)
                     class: 'header__logo',
                     image: 'logo-secondary-white.svg'
                 })
-            //- +el({
-            //-     tag: 'a',
-            //-     class: 'header__logo-wrap',
-            //-     mod: 'medium',
-            //- })
-            //-     +el({
-            //-         tag: 'img',
-            //-         class: 'header__logo',
-            //-         image: 'logo-primary.svg'
-            //-     })
             ul.header__list.header__list--user-mobile
                 li.header__item
                     +button-w-circle({
@@ -101,8 +91,8 @@ mixin header(data)
                             class: 'header__logo',
                             image: 'logo-primary.svg'
                         })
-                .header__panel-content.baron
-                    .header__panel-content-inner.baron__scroller
+                .header__panel-content.nano
+                    .header__panel-content-inner.nano-content
                         nav.header__main-nav-wrap(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
                             +main-nav({
                                 items: mainNav,
@@ -142,9 +132,6 @@ mixin header(data)
                             text: 'Присоеденяйся к нам',
                             linkMod: 'bg-black',
                         })
-                    .baron__track
-                        .baron__free
-                            .baron__bar
         +overlay({
             js: 'header-overlay',
             mix: 'header__overlay',

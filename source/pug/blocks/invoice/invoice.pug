@@ -1,0 +1,46 @@
+mixin invoice(data)
+    +el({
+        class: 'invoice',
+        mix: data.mix,
+        mod: data.mod,
+        js: data.js,
+    })&attributes(attributes)
+        +el({
+            tag: 'h3',
+            class: 'invoice__heading',
+            text: 'Ваш заказ:',
+        })
+        +el({
+            tag: 'ul',
+            class: 'invoice__list',
+        })
+            +invoice-item({
+                tag: 'li',
+                mix: 'invoice__item'
+            })
+            +invoice-item({
+                tag: 'li',
+                mix: 'invoice__item'
+            })
+            +invoice-item({
+                tag: 'li',
+                mix: 'invoice__item'
+            })
+            +invoice-item({
+                tag: 'li',
+                mix: 'invoice__item'
+            })
+        +el({
+            class: 'invoice__total',
+        })
+            | Итого:
+            +el({
+                tag: 'span',
+                class: 'invoice__total-price',
+                text: '2300 Р'
+            })
+        +link({
+            mix: 'invoice__redact',
+            mod: 'primary',
+            text: 'Редактировать',
+        })

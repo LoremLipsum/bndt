@@ -5,10 +5,12 @@ block vars
 
 block content
     main.content
-        +content-header({
-            heading: 'Как выбрать размер',
-            mod: ['with-bg'],
-            mix: 'content__header',
-            image: 'header-sizes.jpg',
-        })
-        .content__sizes
+        .content__wrap
+            +breadcrumbs({
+                items: ['Каталог', 'Bandit Анорак «Tag»'],
+                mix: 'content__breadcrumbs',
+            })
+        .content__goods
+            +goods-view({
+                mix: 'content__goods-view',
+            })

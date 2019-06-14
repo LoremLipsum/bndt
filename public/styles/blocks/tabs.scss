@@ -4,25 +4,21 @@
 
 .tabs__list {
   position: relative;
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   @include ul-no;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: -9999px;
-    right: -9999px;
-    height: 2px;
-    background-color: #f5f5f5;
-  }
 }
 
 .tabs__item {
   margin: 0;
-  margin-right: 5px;
+  margin-bottom: 5px;
+  font-family: font(secondary);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: color(black);
+  text-align: center;
 
   &:last-child {
     margin-right: 0;
@@ -30,66 +26,74 @@
 
   &.active {
     .tabs__button {
-      &::after {
-        opacity: 1;
-      }
+      background-color: color(primary);
+      color: color(white);
     }
   }
 }
 
 .tabs__button {
-  // position: relative;
-  display: block;
-  padding: 10px 20px;
-  font-family: font(secondary);
-  font-size: 20px;
-  font-weight: 700;
-  color: color(black);
+  display: inline-block;
+  width: 100%;
+  padding: 6px 10px;
+  color: inherit;
   outline: none;
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   z-index: 1;
-  //   display: block;
-  //   height: 3px;
-  //   opacity: 0;
-  //   background-color: color(black);
-  // }
-}
-
-.tabs__line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  height: 3px;
-  background-color: color(black);
-  transition: duration(md) func(primary);
+  text-decoration: none;
 }
 
 @include respond-to(medium) {
+  .tabs__list {
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 2px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -9999px;
+      right: -9999px;
+      height: 2px;
+      background-color: #f5f5f5;
+    }
+  }
+
   .tabs__item {
-    margin-right: 20px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-weight: 700;
+
+    &.active {
+      .tabs__button {
+        background-color: transparent;
+        color: color(black);
+      }
+    }
   }
 
   .tabs__button {
     padding: 20px 30px;
-    font-size: 22px;
+    border: none;
+  }
+
+  .tabs__line {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: 1;
+    display: block;
+    height: 3px;
+    background-color: color(black);
+    transition: duration(md) func(primary);
   }
 }
 
 @include respond-to(large) {
   .tabs__item {
-    margin-right: 30px;
+    margin-right: 20px;
   }
 
   .tabs__button {
     padding: 30px 40px;
-    font-size: 24px;
   }
 }

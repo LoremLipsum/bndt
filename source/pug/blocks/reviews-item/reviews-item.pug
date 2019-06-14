@@ -25,10 +25,6 @@ mixin reviews-item(data)
             })
         +el({
             class: 'reviews-item__text-wrap',
-
-        })
-            .js-swiper-scroll.swiper-container
-                .swiper-wrapper
-                    .reviews-item__text.swiper-slide
-                        | !{data.text}
-                .swiper-scrollbar
+        }).nano
+            .reviews-item__text.nano-content
+                | !{data.text}

@@ -110,8 +110,8 @@
               <img class="header__logo" src="./assets/images/logo-primary.svg" alt=" ">
             </a>
           </div>
-          <div class="header__panel-content baron">
-            <div class="header__panel-content-inner baron__scroller">
+          <div class="header__panel-content nano">
+            <div class="header__panel-content-inner nano-content">
               <nav class="header__main-nav-wrap" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <ul class="main-nav header__main-nav">
                   <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
@@ -278,11 +278,6 @@
                 </ul>
               </div>
             </div>
-            <div class="baron__track">
-              <div class="baron__free">
-                <div class="baron__bar"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -290,18 +285,84 @@
       </div>
     </header>
     <main class="content">
-      <header class="content-header content-header--with-bg content__header" style="background-image: url(./assets/images/header-sizes.jpg);">
-        <div class="content-header__wrap">
-          <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
-              <svg class="control__icon">
-                <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-              </svg></span>Назад
-          </a>
-          <h1 class="content-header__heading">Как выбрать размер
-          </h1>
+      <div class="content__wrap">
+        <nav class="breadcrumbs content__breadcrumbs">
+          <ol class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Каталог
+                </span>
+                <meta itemprop="position" content="1">
+              </a>
+            </li>
+            <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="#" itemprop="item">
+                <span itemprop="name">Bandit Анорак «Tag»
+                </span>
+                <meta itemprop="position" content="2">
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="content__goods">
+        <div class="goods-view content__goods-view">
+          <div class="goods-view__wrap">
+            <div class="goods-gallery">
+              <div class="goods-gallery__control">
+                <div class="control control--prev control--size-lg control--bg-white js-goods-gallery-prev"><span class="control__icon-wrap">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg></span>
+                </div>
+                <div class="control control--next control--size-lg control--bg-white js-goods-gallery-next"><span class="control__icon-wrap">
+                    <svg class="control__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                    </svg></span>
+                </div>
+              </div>
+              <div class="goods-gallery__main swiper-container js-goods-gallery-main">
+                <div class="swiper-wrapper">
+                  <div class="goods-gallery__item goods-gallery__item--main swiper-slide">
+                    <div class="goods-gallery__image-wrap goods-gallery__image-wrap--main">
+                      <img class="goods-gallery__image" src="./assets/upload/goods01.jpg" alt=" ">
+                    </div>
+                  </div>
+                  <div class="goods-gallery__item goods-gallery__item--main swiper-slide">
+                    <div class="goods-gallery__image-wrap goods-gallery__image-wrap--main">
+                      <img class="goods-gallery__image" src="./assets/upload/goods02.jpg" alt=" ">
+                    </div>
+                  </div>
+                  <div class="goods-gallery__item goods-gallery__item--main swiper-slide">
+                    <div class="goods-gallery__image-wrap goods-gallery__image-wrap--main">
+                      <img class="goods-gallery__image" src="./assets/upload/goods03.jpg" alt=" ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-gallery__nav swiper-container js-goods-gallery-nav">
+                <div class="swiper-wrapper">
+                  <div class="goods-gallery__item goods-gallery__item--nav swiper-slide">
+                    <button class="goods-gallery__image-wrap goods-gallery__image-wrap--nav" type="button">
+                      <img class="goods-gallery__image" src="./assets/upload/goods01.jpg" alt=" ">
+                    </button>
+                  </div>
+                  <div class="goods-gallery__item goods-gallery__item--nav swiper-slide">
+                    <button class="goods-gallery__image-wrap goods-gallery__image-wrap--nav" type="button">
+                      <img class="goods-gallery__image" src="./assets/upload/goods02.jpg" alt=" ">
+                    </button>
+                  </div>
+                  <div class="goods-gallery__item goods-gallery__item--nav swiper-slide">
+                    <button class="goods-gallery__image-wrap goods-gallery__image-wrap--nav" type="button">
+                      <img class="goods-gallery__image" src="./assets/upload/goods03.jpg" alt=" ">
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </header>
-      <div class="content__sizes"></div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__top">
@@ -411,7 +472,7 @@
       </div>
     </footer>
     <div class="modal js-callback-modal js-modal">
-      <div class="overlay modal__overlay active js-overlay-modal">
+      <div class="overlay modal__overlay js-overlay-modal">
       </div>
       <div class="modal__dialog">
         <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
@@ -426,12 +487,12 @@
           <form class="form" action="/" method="post" accept-charset="UTF-8">
             <div class="form__inner">
               <div class="form__group">
-                <label class="field form__field">
+                <label class="field field--size-lg field--bg-light form__field">
                   <span class="hidden">Имя
                   </span>
                   <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
                 </label>
-                <label class="field form__field">
+                <label class="field field--size-lg field--bg-light form__field">
                   <span class="hidden">Телефон
                   </span>
                   <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
@@ -462,7 +523,7 @@
       </div>
     </div>
     <div class="modal js-tabs js-login-modal js-modal">
-      <div class="overlay modal__overlay active js-overlay-modal">
+      <div class="overlay modal__overlay js-overlay-modal">
       </div>
       <div class="modal__dialog">
         <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
@@ -488,22 +549,22 @@
             <form class="form" action="/" method="post" accept-charset="UTF-8">
               <div class="form__inner">
                 <div class="form__group">
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Имя
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Введите e-mail:
                     </span>
                     <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Телефон
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Пароль
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
@@ -529,12 +590,12 @@
             <form class="form" action="/" method="post" accept-charset="UTF-8">
               <div class="form__inner">
                 <div class="form__group">
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Введите e-mail:
                     </span>
                     <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
                   </label>
-                  <label class="field form__field">
+                  <label class="field field--size-lg field--bg-light form__field">
                     <span class="hidden">Пароль
                     </span>
                     <input class="field__input" tabindex="0" placeholder="Пароль" name="password" type="password" aria-required="true" aria-invalid="false">
@@ -589,7 +650,7 @@
     <script src="./scripts/libs/imask.js"></script>
     <script src="./scripts/libs/svg4everybody.js"></script>
     <script src="./scripts/libs/ofi.js"></script>
-    <script src="./scripts/libs/baron.js"></script>
+    <script src="./scripts/libs/jquery.nanoscroller.js"></script>
     <script src="./scripts/libs/picturefill.js"></script>
     <script src="./scripts/libs/swiper.js"></script>
     <script src="./scripts/libs/masonry.pkgd.js"></script>

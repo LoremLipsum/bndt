@@ -10,17 +10,52 @@
   }
 }
 
+.form__submit-wrap {
+  text-align: center;
+}
+
 .form__submit {
   margin: 0 auto;
 }
 
-.form__submit-wrap {
-  margin-bottom: 20px;
+.form__confirm-wrap {
+  margin-bottom: 30px;
   text-align: center;
 }
 
-.form__confirm {
+.form__forgot-password {
+  margin: 0;
+  margin-top: 20px;
   text-align: center;
+}
+
+@include respond-to(medium) {
+  .form__group {
+    margin-bottom: 30px;
+  }
+
+  .form__field {
+    margin-bottom: 20px;
+  }
+
+  .form__confirm-wrap {
+    margin-bottom: 40px;
+  }
+
+  .form__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .form__submit-wrap {
+      text-align: left;
+    }
+  }
+
+  .form__forget-wrap {
+    margin-top: 0;
+    text-align: right;
+  }
 }
 
 @include respond-to(large) {
@@ -32,7 +67,7 @@
     margin-bottom: 20px;
   }
 
-  .form__submit-wrap {
-    margin-bottom: 30px;
+  .form__confirm-wrap {
+    margin-bottom: 60px;
   }
 }

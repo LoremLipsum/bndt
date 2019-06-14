@@ -9,7 +9,7 @@ mixin checkbox(data)
         +el({
             tag: 'input',
             class: 'hidden checkbox__input',
-            type: 'checkbox',
+            type: data.type ? data.type : 'checkbox',
             checked: data.checked,
             name: data.name,
             required: data.required,
@@ -18,5 +18,14 @@ mixin checkbox(data)
         +el({
             tag: 'span',
             class: 'checkbox__label',
-            text: data.text
+            text: data.text,
+            ariaLabel: data.ariaLabel
         })
+            if data.image
+                +el({
+                    tag: 'img',
+                    class: 'checkbox__image',
+                    image: data.image,
+                    title: data.title,
+                    alt: data.alt,
+                })

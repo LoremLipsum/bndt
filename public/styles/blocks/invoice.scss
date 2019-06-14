@@ -1,0 +1,83 @@
+.invoice {
+  padding: 20px;
+  background-color: color(light);
+}
+
+.invoice__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: font(secondary);
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.invoice__list {
+  @include ul-no;
+  margin-bottom: 20px;
+}
+
+.invoice__total {
+  margin-bottom: 20px;
+  font-family: font(secondary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.invoice__total-price {
+  margin-left: 10px;
+  font-size: 32px;
+}
+
+.invoice__redact {
+  text-transform: uppercase;
+}
+
+@include respond-to(medium) {
+  .invoice {
+    padding: 40px;
+    padding-bottom: 35px;
+  }
+
+  .invoice__heading {
+    font-size: 26px;
+  }
+
+  .invoice__list {
+    margin-bottom: 30px;
+  }
+
+  .invoice__total {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .invoice__total-price {
+    margin-left: 15px;
+    font-size: 36px;
+  }
+}
+
+@include respond-to(large) {
+  .invoice {
+    padding: 50px;
+    padding-bottom: 35px;
+  }
+
+  .invoice__heading {
+    font-size: 28px;
+  }
+
+  .invoice__list {
+    margin-bottom: 40px;
+  }
+
+  .invoice__total {
+    font-size: 24px;
+  }
+
+  .invoice__total-price {
+    margin-left: 20px;
+    font-size: 40px;
+  }
+}

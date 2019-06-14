@@ -1,11 +1,8 @@
 @import "../assets/fonts/bebasneue/bebasneue";
 @import "../assets/fonts/centurygothic/centurygothic";
-
 @import "./libs/normalize";
 @import "./libs/swiper";
-// @import "./libs/baron";
-@import "./libs/nanoscroller.css";
-
+@import "./libs/nanoscroller";
 @import "./global/vars";
 @import "./global/functions";
 @import "./global/mixins/mixins";
@@ -16,12 +13,9 @@
 @import "./global/js";
 @import "./blocks/article";
 @import "./blocks/sticky-footer";
-@import "./blocks/baron";
+@import "./blocks/nano";
 @import "./blocks/bullet";
-
-// @import "./blocks/section";
 @import "./blocks/section-centred";
-
 @import "./blocks/content";
 @import "./blocks/font-h2";
 @import "./blocks/our-stores";

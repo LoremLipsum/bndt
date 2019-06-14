@@ -21,13 +21,6 @@ jQuery(document).ready(function($){
   });
 });
 
-jQuery(document).ready(function($){
-  'use strict';
-	$(function() {
-    $(".nano").nanoScroller({ scroll: 'top' });
-  });
-});
-
 'use strict';
 
 (function() {
@@ -192,15 +185,18 @@ picturefill();
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
-
     var btns = $('.js-link-secondary');
     var btn;
 
-    btns.on('click', function(e) {
+    btns.bind('click', function(e) {
       e.preventDefault();
       btn = $(this);
       btns.not(btn).parent().removeClass('active');
       btn.parent().toggleClass('active');
+
+      setTimeout( function(){
+          $('.nano').nanoScroller({});
+      }, 300);
     });
 
   });
@@ -249,6 +245,51 @@ jQuery(document).ready(function($){
   document.addEventListener('keyup', onEscKeyup);
 
 })();
+
+
+// jQuery(document).ready(function($){
+//   'use strict';
+// 	$(function() {
+//
+//     var btn = $('.js-button-nav');
+//     var block = $('.js-panel-main-nav');
+//     var overlay = $('.js-header-overlay');
+//     var ESC = 27;
+//
+//     var toggle = function() {
+//       block.toggleClass('active');
+//       btn.toggleClass('active');
+//       overlay.toggleClass('active');
+//     };
+//
+//     var close = function() {
+//       block.removeClass('active');
+//       btn.removeClass('active');
+//       overlay.removeClass('active');
+//     };
+//
+//     var onEscKeyup = function(e) {
+//       if (e.keyCode === ESC) {
+//         e.preventDefault();
+//         close();
+//       }
+//     };
+//
+//     btn.on('click', function(e) {
+//       e.preventDefault();
+//       toggle();
+//       $(".js-nano-panel").nanoScroller({});
+//     });
+//     overlay.on('click', function(e) {
+//       e.preventDefault();
+//       close();
+//     });
+//     // document.on('keyup', onEscKeyup);
+//
+//
+//
+//   });
+// });
 
 'use strict';
 
@@ -312,6 +353,15 @@ jQuery(document).ready(function($){
 
   document.addEventListener('keyup', onEscKeyup);
 })()
+
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    $(".js-nano").nanoScroller({ });
+
+  });
+});
 
 jQuery(document).ready(function($){
   'use strict';

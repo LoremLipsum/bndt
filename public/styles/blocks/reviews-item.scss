@@ -1,5 +1,13 @@
 .reviews-item {
   width: 100%;
+
+  .nano > .nano-pane {
+    background: rgba(#000, 0.1);
+  }
+
+  .nano > .nano-pane > .nano-slider {
+    background: rgba(#000, 0.2);
+  }
 }
 
 .reviews-item__top {
@@ -49,25 +57,12 @@
   &::-webkit-scrollbar {
     width: 0;
   }
-
-  .swiper-container {
-    height: 100%;
-    width: 100%;
-
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-  }
-
-  .swiper-wrapper {
-    height: auto;
-  }
 }
 
 .reviews-item__text {
   position: relative;
   padding-top: 40px;
-  padding-right: 10px;
+  padding-right: 20px;
 
   &::after {
     content: '';

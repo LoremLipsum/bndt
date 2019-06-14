@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
+  background-color: color(black);
   color: color(white);
 
   @include mask(rgba(color(black), 0.5));

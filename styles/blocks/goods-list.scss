@@ -1,8 +1,10 @@
 .goods-list {
   @include ul-no;
+  margin-bottom: -30px;
 }
 
 .goods-list__item {
+  margin-bottom: 30px;
   list-style: none;
   text-indent: 0;
 
@@ -17,21 +19,26 @@
     flex-wrap: wrap;
     align-items: stretch;
     width: auto;
+    margin-bottom: -40px;
     margin-right: -30px;
-    margin-bottom: -30px;
     box-sizing: border-box;
   }
 
   .goods-list__item {
     width: 50%;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-right: 30px;
   }
 }
 
 @include respond-to(large) {
+  .goods-list {
+    margin-bottom: -60px;
+  }
+
   .goods-list__item {
     width: 33.33%;
+    margin-bottom: 60px;
   }
 }

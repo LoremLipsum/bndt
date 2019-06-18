@@ -25,6 +25,11 @@
   font-size: 22px;
   line-height: 1.3;
   font-weight: 700;
+  text-align: center;
+
+  &:first-child {
+    text-align: center;
+  }
 
   &--primary {
     background-color: color(primary);
@@ -38,7 +43,6 @@
   line-height: 1.3;
   font-weight: 700;
 }
-
 
 @include respond-to(medium) {
   .table-sizes__th,

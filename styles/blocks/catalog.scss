@@ -1,0 +1,38 @@
+.catalog__wrap {
+  @include wrapper;
+}
+
+.catalog__top {
+  margin-bottom: 20px;
+}
+
+.catalog__heading {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+@include respond-to(medium) {
+  .catalog__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+  }
+
+  .catalog__heading {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+@include respond-to(large) {
+  .catalog__top {
+    margin-bottom: 80px;
+  }
+
+  .catalog__heading {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}

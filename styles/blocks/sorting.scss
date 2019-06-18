@@ -1,0 +1,50 @@
+.sorting {
+}
+
+.sorting__item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sorting__label {
+  flex-shrink: 0;
+  display: block;
+  margin-right: 10px;
+  font-size: inherit;
+}
+
+.sorting__select {
+  flex-shrink: 0;
+  display: block;
+  width: 140px;
+  padding: 4px 2px;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  outline: none;
+}
+
+
+@include respond-to(medium) {
+  .sorting__item {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .sorting__select {
+    width: 160px;
+  }
+}
+
+@include respond-to(large) {
+  .sorting__item {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .sorting__select {
+    width: 180px;
+  }
+}

@@ -3,7 +3,6 @@
   box-sizing: border-box;
 }
 
-
 .goods-gallery__nav {
   box-sizing: border-box;
   .swiper-slide-thumb-active {
@@ -19,6 +18,9 @@
 }
 
 .goods-gallery__image-wrap {
+  border: 2px solid transparent;
+  transition: duration(md) func(primary);
+
   &--main {
     width: 100%;
     height: 68vw;

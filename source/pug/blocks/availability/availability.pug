@@ -1,0 +1,9 @@
+mixin availability(data)
+    +el({
+        tag: data.tag,
+        class: 'availability',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        text: data.text,
+    })&attributes(attributes)

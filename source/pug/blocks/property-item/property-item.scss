@@ -1,0 +1,36 @@
+.property-item {
+  display: block;
+  min-width: 42px;
+  min-height: 36px;
+  padding: 9px 3px;
+  border: 2px solid #e6e6e6;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include hover {
+    border-color: color(black);
+  }
+}
+
+@include respond-to(medium) {
+  .property-item {
+    min-width: 48px;
+    min-height: 44px;
+    padding: 11px 4px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@include respond-to(medium) {
+  .property-item {
+    min-width: 54px;
+    min-height: 50px;
+    padding: 13px 5px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

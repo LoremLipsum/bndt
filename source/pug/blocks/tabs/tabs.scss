@@ -8,14 +8,15 @@
   flex-direction: column;
   flex-wrap: wrap;
   @include ul-no;
+  margin-bottom: -5px;
 }
 
 .tabs__item {
   margin: 0;
   margin-bottom: 5px;
   font-family: font(secondary);
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1.2;
   color: color(black);
   text-align: center;
@@ -25,26 +26,29 @@
   }
 
   &.active {
+    order: 9999;
+
     .tabs__button {
-      background-color: color(primary);
-      color: color(white);
+      border-bottom: 2px solid color(black);
+      font-size: 24px;
     }
   }
 }
 
 .tabs__button {
   display: inline-block;
-  width: 100%;
-  padding: 6px 10px;
+  padding: 5px 15px;
   color: inherit;
   outline: none;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 @include respond-to(medium) {
   .tabs__list {
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 0;
     padding-bottom: 2px;
 
     &::after {
@@ -61,19 +65,20 @@
   .tabs__item {
     margin-bottom: 0;
     margin-right: 10px;
-    font-weight: 700;
+    font-size: 24px;
 
     &.active {
+      order: 0;
+
       .tabs__button {
-        background-color: transparent;
-        color: color(black);
+        border-bottom: none;
       }
     }
   }
 
   .tabs__button {
     padding: 20px 30px;
-    border: none;
+    border-bottom: none;
   }
 
   .tabs__line {

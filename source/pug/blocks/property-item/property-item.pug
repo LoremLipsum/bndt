@@ -1,0 +1,9 @@
+mixin property-item(data)
+    +el({
+        tag: data.tag,
+        class: 'property-item',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+        text: data.text,
+    })(data-value=data.value)

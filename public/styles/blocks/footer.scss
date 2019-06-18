@@ -1,5 +1,6 @@
 .footer {
   background-color: color(light);
+  color: color(black);
   text-align: center;
   font-size: 14px;
 
@@ -9,6 +10,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 

@@ -24,6 +24,17 @@
 
     @include mask(rgba(color(black), 0.5));
   }
+
+  &--heading-lg {
+    .content-header__wrap {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .content-header__heading {
+      font-size: 35px;
+    }
+  }
 }
 
 .content-header__wrap {
@@ -76,6 +87,17 @@
         padding-bottom: 40px;
       }
     }
+
+    &--heading-lg {
+      .content-header__wrap {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .content-header__heading {
+        font-size: 55px;
+      }
+    }
   }
 
   .content-header__inner {
@@ -98,6 +120,17 @@
     &--bg-transparent {
       .content-header__wrap {
         padding-bottom: 45px;
+      }
+    }
+
+    &--heading-lg {
+      .content-header__wrap {
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
+
+      .content-header__heading {
+        font-size: 75px;
       }
     }
   }

@@ -2,7 +2,7 @@
   display: inline-block;
   flex-shrink: 0;
   padding: 6px 42px;
-  border: 2px solid;
+  border: 2px solid color(black);
   font-family: font(secondary);
   font-size: 22px;
   font-weight: 400;
@@ -12,6 +12,14 @@
   text-decoration: none;
   cursor: pointer;
   transition: duration(md) func(primary);
+
+  &:hover,
+  &:focus,
+  &.active {
+    border-color: color(black);
+    background-color: color(black);
+    color: color(white);
+  }
 
   &--bg-primary {
     border-color: color(primary);
@@ -65,18 +73,6 @@
     &.active {
       background-color: color(white);
       color: color(black);
-    }
-  }
-
-  &--border-black {
-    border-color: color(black);
-    color: color(black);
-
-    &:hover,
-    &:focus,
-    &.active {
-      background-color: color(black);
-      color: color(white);
     }
   }
 

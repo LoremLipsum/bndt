@@ -6,9 +6,17 @@ block vars
 block content
     main.content
         +content-header({
-            heading: 'Как выбрать размер',
-            mod: ['with-bg'],
+            heading: 'Каталог',
+            mod: ['with-bg', 'heading-lg'],
             mix: 'content__header',
-            image: 'header-sizes.jpg',
+            image: 'header-catalog.jpg',
+            arrow: 'no',
         })
-        .content__sizes
+        .content__catalog
+            +catalog-nav({
+                mix: 'content__catalog-nav',
+            })
+            +catalog({})
+            +pagination({
+                mix: 'content__pagination',
+            })

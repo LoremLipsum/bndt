@@ -1,8 +1,8 @@
 .button {
   display: inline-block;
   flex-shrink: 0;
-  padding: 6px 42px;
-  border: 2px solid;
+  padding: 6px 40px;
+  border: 2px solid color(black);
   font-family: font(secondary);
   font-size: 22px;
   font-weight: 400;
@@ -12,6 +12,14 @@
   text-decoration: none;
   cursor: pointer;
   transition: duration(md) func(primary);
+
+  &:hover,
+  &:focus,
+  &.active {
+    border-color: color(black);
+    background-color: color(black);
+    color: color(white);
+  }
 
   &--bg-primary {
     border-color: color(primary);
@@ -68,18 +76,6 @@
     }
   }
 
-  &--border-black {
-    border-color: color(black);
-    color: color(black);
-
-    &:hover,
-    &:focus,
-    &.active {
-      background-color: color(black);
-      color: color(white);
-    }
-  }
-
   &:disabled,
   &--bg-disabled,
   &--border-disabled {
@@ -96,6 +92,13 @@
 
 @include respond-to(large) {
   .button {
-    padding: 8px 52px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+@include respond-to(large) {
+  .button {
+    padding: 10px 50px;
   }
 }

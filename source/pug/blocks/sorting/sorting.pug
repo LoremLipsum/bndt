@@ -1,0 +1,36 @@
+mixin sorting(data)
+    +el({
+        class: 'sorting',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        +el({
+            tag: 'label',
+            class: 'sorting__item',
+        })
+            +el({
+                tag: 'span',
+                class: 'sorting__label',
+                text: 'Сортировать&nbsp;по: '
+            })
+            +el({
+                tag: 'select',
+                class: 'sorting__select'
+            })
+                +el({
+                    tag: 'option',
+                    text: 'По умолчанию'
+                })
+                +el({
+                    tag: 'option',
+                    text: 'Хиты'
+                })
+                +el({
+                    tag: 'option',
+                    text: 'Новинки'
+                })
+                +el({
+                    tag: 'option',
+                    text: 'Акции'
+                })

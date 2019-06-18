@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
-    var btns = $('.js-link-secondary');
+    var btns = $('.js-main-nav-link');
     var btn;
 
     btns.bind('click', function(e) {
@@ -11,7 +11,7 @@ jQuery(document).ready(function($){
       btn.parent().toggleClass('active');
 
       setTimeout( function(){
-          $('.nano').nanoScroller({});
+        $('.js-nano-panel').nanoScroller({});
       }, 300);
     });
 

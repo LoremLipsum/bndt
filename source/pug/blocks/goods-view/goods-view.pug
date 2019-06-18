@@ -1,35 +1,77 @@
 mixin goods-view(data)
     +el({
+        tag: 'article',
         class: 'goods-view',
         mod: data.mod,
         mix: data.mix,
         js: data.js
     })&attributes(attributes)
         .goods-view__wrap
-            +goods-gallery({
-                items: {
-                    main: [
+            .goods-view__top
+                +goods-gallery({
+                    mix: 'goods-view__gallery',
+                    items: {
+                        main: [
+                            {
+                                image: 'goods01.jpg',
+                            },
+                            {
+                                image: 'goods02.jpg',
+                            },
+                            {
+                                image: 'goods03.jpg',
+                            },
+                        ],
+                        nav: [
+                            {
+                                image: 'goods01.jpg',
+                            },
+                            {
+                                image: 'goods02.jpg',
+                            },
+                            {
+                                image: 'goods03.jpg',
+                            },
+                        ]
+                    }
+                })
+                +goods-info({
+                    mix: 'goods-view__info',
+                })
+            .goods-view__tabs-wrap.js-tabs
+                +tabs({
+                    mix: 'goods-view__tabs',
+                    items: [
                         {
-                            image: 'goods01.jpg',
+                            text: 'Материал',
                         },
                         {
-                            image: 'goods02.jpg',
+                            text: 'Функциональность',
                         },
                         {
-                            image: 'goods03.jpg',
-                        },
+                            text: 'Детали',
+                        }
                     ],
-                    nav: [
-                        {
-                            image: 'goods01.jpg',
-                        },
-                        {
-                            image: 'goods02.jpg',
-                        },
-                        {
-                            image: 'goods03.jpg',
-                        },
-                    ]
-                }
-
-            })
+                })
+                .tab-1.js-tabs-content.active
+                    .goods-view__tabs-content
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatibus voluptatem at tempora necessitatibus unde, dolorum omnis natus doloribus, temporibus consectetur id. Repudiandae earum eum illum, officia expedita, placeat similique iure unde, aspernatur maxime nihil. Illo distinctio rem, quod dicta quisquam doloremque perferendis illum aliquam odit praesentium explicabo laudantium voluptatum, obcaecati eaque eos temporibus? Hic iure consequatur, quaerat placeat voluptate suscipit accusantium cum eos voluptatibus officiis optio nulla, amet eveniet nihil aspernatur quasi velit ea sed repellat nam fugiat, qui maxime nemo. Omnis ipsum cumque architecto qui corporis nisi numquam quisquam atque facere assumenda earum labore voluptatibus, ab, laudantium temporibus.
+                .tab-2.js-tabs-content
+                    .goods-view__tabs-content
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatibus voluptatem at tempora necessitatibus unde, dolorum omnis natus doloribus, temporibus consectetur id. Repudiandae earum eum illum, officia expedita, placeat similique iure unde, aspernatur maxime nihil. Illo distinctio rem, quod dicta quisquam doloremque perferendis illum aliquam odit praesentium explicabo laudantium voluptatum, obcaecati eaque eos temporibus? Hic iure consequatur, quaerat placeat voluptate suscipit accusantium
+                .tab-3.js-tabs-content
+                    .goods-view__tabs-content
+                        p.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatibus voluptatem at tempora necessitatibus unde, dolorum omnis natus doloribus, temporibus consectetur id. Repudiandae earum eum illum, officia expedita, placeat similique iure unde, aspernatur maxime nihil. Illo distinctio rem, quod dicta quisquam doloremque perferendis illum aliquam odit praesentium explicabo laudantium voluptatum, obcaecati eaque eos temporibus? Hic iure consequatur, quaerat placeat voluptate suscipit accusantium
+                        table
+                            tr
+                                th Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, rem?
+                                th Lorem ipsum dolor sit amet.
+                            tr
+                                td Lorem ipsum dolor sit amet.
+                                td 100
+                            tr
+                                td Lorem ipsum dolor sit amet, consectetur adipisicing.
+                                td 100

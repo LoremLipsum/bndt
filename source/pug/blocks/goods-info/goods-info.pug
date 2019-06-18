@@ -1,2 +1,77 @@
 mixin goods-info(data)
-  .goods-info&attributes(attributes)
+    +el({
+        class: 'goods-info',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js
+    })&attributes(attributes)
+        +availability({
+            mix: 'goods-info__availability',
+            text: 'в наличии'
+        })
+        +el({
+            tag: 'h1',
+            class: 'goods-info__heading',
+            text: 'Bandit Анорак «Tag»',
+        })
+        +el({
+            class: 'goods-info__articul',
+            text: 'артикул: 56885215'
+        })
+        +el({
+            class: 'goods-info__price-wrap',
+        })
+            +el({
+                tag: 'span',
+                class: 'goods-info__price',
+                mod: 'old',
+                text: '2300 Р'
+            })
+            +el({
+                tag: 'span',
+                class: 'goods-info__price',
+                mod: 'action',
+                text: '1800 Р'
+            })
+        +el({
+            class: 'goods-info__property-wrap',
+        })
+            .goods-info__property-top
+                +el({
+                    class: 'goods-info__title',
+                    text: 'Размер:'
+                })
+                +el({
+                    tag: 'a',
+                    class: 'goods-info__link',
+                    text: 'Как выбрать размер?'
+                })
+            +property({
+                mix: 'goods-info__property'
+            })
+        +el({
+            class: 'goods-info__button-wrap',
+        })
+            +f({})
+                +button({
+                    type: 'submit',
+                    mod: 'bg-primary',
+                    mix: 'goods-info__button',
+                    text: 'Добавить в корзину',
+                })
+            +button-w-circle({
+                icon: 'star',
+                mod: 'bg-white',
+                mix: 'goods-info__wishlist-button',
+                title: 'Добавить в избранное'
+            })
+            +button({
+                text: 'Купить в один клик',
+                mix: 'goods-info__button',
+            })
+            +link({
+                tag: 'a',
+                mod: 'color-black',
+                text: 'Оплата и доставка',
+                mix: 'goods-info__link-delivery'
+            })

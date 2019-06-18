@@ -1,0 +1,44 @@
+.property__list {
+  display: flex;
+  flex-wrap: wrap;
+  @include ul-no;
+  margin-left: -5px;
+  margin-bottom: -5px;
+}
+
+.property__item {
+  margin-left: 5px;
+  margin-bottom: 5px;
+
+  &.active {
+    .property__property-button {
+      border-color: color(black);
+      background-color: color(black);
+      color: color(white);
+    }
+  }
+}
+
+@include respond-to(medium) {
+  .property__list {
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+
+  .property__item {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@include respond-to(medium) {
+  .property__list {
+    margin-left: -15px;
+    margin-bottom: -15px;
+  }
+
+  .property__item {
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,75 @@
+mixin catalog-nav(data)
+    -var className = 'catalog-nav'
+    -
+        var catalogNav = [
+            {
+                text: 'Все'
+            },
+            {
+                text: 'Куртки'
+            },
+            {
+                text: 'Кофты'
+            },
+            {
+                text: 'Анораки'
+            },
+            {
+                text: 'Ветровки'
+            },
+            {
+                text: 'Штаны'
+            },
+            {
+                text: 'Футболки'
+            },
+            {
+                text: 'Шорты'
+            },
+            {
+                text: 'Женские футболки'
+            },
+            {
+                text: 'Жилеты'
+            },
+        ]
+
+    +el({
+        tag: 'nav',
+        class: 'catalog-nav',
+        mod: data.mod,
+        mix: data.mix,
+        js: 'catalog-nav',
+    })(aria-label='Основное меню' itemscope itemtype='http://schema.org/SiteNavigationElement')
+        .catalog-nav__wrap
+            ul.catalog-nav__list
+                li.catalog-nav__item.catalog-nav__item--w-lvl-2
+                    +el({
+                        tag: 'button',
+                        class: 'catalog-nav__link',
+                        js: 'catalog-nav-link',
+                        before: {
+                            tag: 'span',
+                            class: 'catalog-nav__span',
+                            text: 'Одежда',
+                        }
+                    })
+                    +catalog-nav-lvl-2({
+                        items: catalogNav,
+                        mix: 'catalog-nav__lvl-2'
+                    })
+                li.catalog-nav__item.catalog-nav__item--w-lvl-2
+                    +el({
+                        tag: 'button',
+                        class: 'catalog-nav__link',
+                        js: 'catalog-nav-link',
+                        before: {
+                            tag: 'span',
+                            class: 'catalog-nav__span',
+                            text: 'Аксессуары',
+                        }
+                    })
+                    +catalog-nav-lvl-2({
+                        items: catalogNav,
+                        mix: 'catalog-nav__lvl-2'
+                    })

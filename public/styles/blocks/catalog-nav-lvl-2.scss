@@ -1,0 +1,41 @@
+.catalog-nav-lvl-2 {
+  @include ul-no;
+
+}
+
+.catalog-nav-lvl-2__item {
+  width: 100%;.catalog-nav-lvl-2
+  font-family: font(secondary);
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  color: color(white);
+  text-align: center;
+}
+
+.catalog-nav-lvl-2__link {
+  display: block;
+  width: 100%;
+  padding: 10px 30px;
+  color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    color: rgba(color(white), 0.7);
+  }
+}
+
+@include respond-to(medium) {
+  .catalog-nav-lvl-2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog-nav-lvl-2__item {
+
+  }
+
+  .catalog-nav-lvl-2__link {
+
+  }
+}

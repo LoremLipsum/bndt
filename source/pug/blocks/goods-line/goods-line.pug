@@ -1,0 +1,39 @@
+mixin goods-line(data)
+    +el({
+        class: 'goods-line',
+        mod: data.mod,
+        mix: data.mix,
+    })&attributes(attributes)
+        .goods-line__wrap
+            .goods-line__top
+                +el({
+                    tag: 'h3',
+                    text: data.heading,
+                    class: 'goods-line__heading'
+                })
+                .goods-line__control
+                    +control({
+                        mod: ['prev', 'size-lg', 'bg-white'],
+                        js: data.js + '-prev',
+                    })
+                    +control({
+                        mod: ['next', 'size-lg', 'bg-white'],
+                        js: data.js + '-next',
+                    })
+            +el({
+                mix: 'swiper-container',
+                js: data.js
+            })
+                ul.goods-line__list.swiper-wrapper
+                    each item in goodsItems
+                        li.goods-line__item.swiper-slide
+                            +goods-item({
+                                heading: item.heading,
+                                image: item.image,
+                                price: item.price
+                            })
+                +el({
+                    class: 'goods-line__bullet',
+                    mix: 'bullet swiper-pagination',
+                    js: data.js + '-bullet'
+                })

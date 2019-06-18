@@ -1,6 +1,5 @@
 .link {
   position: relative;
-  // display: inline;
   padding: 0;
   padding-bottom: 1px;
   font-family: font(secondary);
@@ -27,8 +26,8 @@
     }
   }
 
-  &--primary {
-    color: color(primary);
+  &--color-black {
+    color: color(black);
   }
 }
 

@@ -1,0 +1,21 @@
+mixin catalog(data)
+    +el({
+        class: 'catalog',
+        mod: data.mod,
+        mix: data.mix,
+        js: data.js,
+    })&attributes(attributes)
+        .catalog__wrap
+            .catalog__top
+                +el({
+                    tag: 'h2',
+                    class: 'catalog__heading',
+                    text: 'Вся продукция',
+                })
+                +sorting({
+                    mix: 'catalog__sorting'
+                })
+            +goods-list({
+                goods: goodsItems,
+                mix: 'catalog__list',
+            })

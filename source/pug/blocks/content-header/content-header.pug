@@ -29,13 +29,14 @@ mixin content-header(data)
                         text: data.text
                     })
             else
-                +control({
-                    tag: 'a',
-                    position: 'before',
-                    mod: ['prev', 'with-text'],
-                    mix: 'content-header__control',
-                    text: 'Назад',
-                })
+                if data.arrow != 'no'
+                    +control({
+                        tag: 'a',
+                        position: 'before',
+                        mod: ['prev', 'with-text'],
+                        mix: 'content-header__control',
+                        text: 'Назад',
+                    })
                 if data.heading
                     if data.badge
                         .content-header__heading-wrap

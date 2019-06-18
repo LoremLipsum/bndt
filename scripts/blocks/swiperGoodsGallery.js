@@ -21,6 +21,7 @@
       },
       breakpoints: {
         767: {
+          slidesPerView: '3',
           direction: 'horizontal',
           autoHeight: false,
           spaceBetween: 15,

@@ -29,6 +29,7 @@
   display: block;
   padding-right: 12px;
   text-decoration: none;
+  color: inherit;
 
   &::after {
     content: "/";

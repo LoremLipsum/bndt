@@ -115,7 +115,7 @@
               <nav class="header__main-nav-wrap" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
                 <ul class="main-nav header__main-nav">
                   <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
-                    <a class="main-nav__link js-link-secondary" href="page-goods.html" itemprop="url">Одежда
+                    <a class="main-nav__link js-main-nav-link" href="page-goods.html" itemprop="url">Одежда
                     </a>
                     <ul class="main-nav-lvl-2 main-nav__lvl-2">
                       <li class="main-nav-lvl-2__item" itemprop="name">
@@ -161,7 +161,7 @@
                     </ul>
                   </li>
                   <li class="main-nav__item main-nav__item--with-next-lvl" itemprop="name">
-                    <a class="main-nav__link js-link-secondary" href="page-accessories.html" itemprop="url">Аксессуары
+                    <a class="main-nav__link js-main-nav-link" href="page-accessories.html" itemprop="url">Аксессуары
                     </a>
                     <ul class="main-nav-lvl-2 main-nav__lvl-2">
                       <li class="main-nav-lvl-2__item" itemprop="name">
@@ -285,18 +285,372 @@
       </div>
     </header>
     <main class="content">
-      <header class="content-header content-header--with-bg content__header" style="background-image: url(./assets/images/header-sizes.jpg);">
+      <header class="content-header content-header--with-bg content-header--heading-lg content__header" style="background-image: url(./assets/images/header-catalog.jpg);">
         <div class="content-header__wrap">
-          <a class="control control--prev control--with-text content-header__control" href="#"><span class="control__icon-wrap">
-              <svg class="control__icon">
-                <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
-              </svg></span>Назад
-          </a>
-          <h1 class="content-header__heading">Как выбрать размер
+          <h1 class="content-header__heading">Каталог
           </h1>
         </div>
       </header>
-      <div class="content__sizes"></div>
+      <div class="content__catalog">
+        <nav class="catalog-nav content__catalog-nav js-catalog-nav" aria-label="Основное меню" itemscope itemtype="http://schema.org/SiteNavigationElement">
+          <div class="catalog-nav__wrap">
+            <ul class="catalog-nav__list">
+              <li class="catalog-nav__item catalog-nav__item--w-lvl-2">
+                <button class="catalog-nav__link js-catalog-nav-link" type="button">
+                  <span class="catalog-nav__span">Одежда
+                  </span>
+                </button>
+                <div class="catalog-nav-lvl-2 catalog-nav__lvl-2">
+                  <ul class="catalog-nav-lvl-2__list">
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Все
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Кофты
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Анораки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Ветровки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Штаны
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Шорты
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Женские футболки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Жилеты
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="catalog-nav__item catalog-nav__item--w-lvl-2">
+                <button class="catalog-nav__link js-catalog-nav-link" type="button">
+                  <span class="catalog-nav__span">Аксессуары
+                  </span>
+                </button>
+                <div class="catalog-nav-lvl-2 catalog-nav__lvl-2">
+                  <ul class="catalog-nav-lvl-2__list">
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Все
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Куртки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Кофты
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Анораки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Ветровки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Штаны
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Футболки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Шорты
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Женские футболки
+                      </a>
+                    </li>
+                    <li class="catalog-nav-lvl-2__item" itemprop="name">
+                      <a class="catalog-nav-lvl-2__link" href="#" itemprop="url">Жилеты
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="catalog">
+          <div class="catalog__wrap">
+            <div class="catalog__top">
+              <h2 class="catalog__heading">Вся продукция
+              </h2>
+              <div class="sorting catalog__sorting">
+                <label class="sorting__item">
+                  <span class="sorting__label">Сортировать&nbsp;по: 
+                  </span>
+                  <select class="sorting__select">
+                    <option>По умолчанию
+                    </option>
+                    <option>Хиты
+                    </option>
+                    <option>Новинки
+                    </option>
+                    <option>Акции
+                    </option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <ul class="goods-list catalog__list">
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods01.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods02.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods03.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Bandit Джоггеры Твил Черные
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods04.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods05.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="goods-list__item swiper-slide">
+                <div class="goods-item">
+                  <div class="sticker goods-item__sticker-top-left">Новинка
+                  </div>
+                  <div class="circle circle--bg-white goods-item__icon-top-right">
+                    <svg class="circle__icon">
+                      <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
+                    </svg>
+                  </div>
+                  <a class="goods-item__image-wrap" href="#">
+                    <img class="goods-item__image" src="./assets/upload/goods06.jpg" alt=" ">
+                  </a>
+                  <div class="goods-item__content">
+                    <div class="goods-item__header">
+                      <h3 class="goods-item__heading">
+                        <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
+                        </a>
+                      </h3>
+                      <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <svg class="button-w-circle__icon">
+                          <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="goods-item__price">2300 Р
+                    </div>
+                    <div class="goods-item__link-wrap">
+                      <a class="link link--primary goods-item__link" href="#">Подробнее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pagination content__pagination">
+          <div class="pagination__wrap">
+            <button class="control control--prev control--circle pagination__control disabled" title="Назад" tabindex="0" type="button"><span class="control__icon-wrap">
+                <svg class="control__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                </svg></span>
+            </button>
+            <ul class="pagination__list">
+              <li class="pagination__item active">
+                <a class="pagination__link" href="#">1
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">3
+                </a>
+              </li>
+            </ul>
+            <button class="control control--next control--circle pagination__control" title="Вперед" tabindex="0" type="button"><span class="control__icon-wrap">
+                <svg class="control__icon">
+                  <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
+                </svg></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__top">

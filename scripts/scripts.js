@@ -21,6 +21,37 @@ jQuery(document).ready(function($){
   });
 });
 
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var btns = $('.js-catalog-nav-link');
+    var btn;
+    var screenWidth = $(window).outerWidth();
+
+    if(btns.length) {
+
+      var open = function() {
+        if (screenWidth < 1023) {
+          btns.bind('click', function(e) {
+            e.preventDefault();
+            btn = $(this);
+            btns.not(btn).parent().removeClass('active');
+            btn.parent().toggleClass('active');
+          });
+        }
+      }
+
+      open();
+
+      $(window).resize(function() {
+        open();
+      });
+    }
+
+  });
+});
+
 'use strict';
 
 (function() {
@@ -185,7 +216,7 @@ picturefill();
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
-    var btns = $('.js-link-secondary');
+    var btns = $('.js-main-nav-link');
     var btn;
 
     btns.bind('click', function(e) {
@@ -195,7 +226,7 @@ jQuery(document).ready(function($){
       btn.parent().toggleClass('active');
 
       setTimeout( function(){
-          $('.nano').nanoScroller({});
+        $('.js-nano-panel').nanoScroller({});
       }, 300);
     });
 
@@ -524,6 +555,7 @@ jQuery(document).ready(function($){
       },
       breakpoints: {
         767: {
+          slidesPerView: '3',
           direction: 'horizontal',
           autoHeight: false,
           spaceBetween: 15,
@@ -591,6 +623,40 @@ jQuery(document).ready(function($){
 
   });
 });
+
+'use strict';
+
+(function() {
+
+  var item = document.querySelector('.js-recommend')
+
+  if (item) {
+    var swiper = new Swiper('.js-recommend', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: '.js-recommend-next',
+        prevEl: '.js-recommend-prev',
+      },
+      breakpoints: {
+        920: {
+          slidesPerView: 2,
+          // spaceBetween: 40,
+        },
+        520: {
+          slidesPerView: 1,
+          pagination: {
+            el: '.js-recommend-bullet',
+            clickable: true,
+            bulletClass: 'bullet__item',
+          },
+        }
+      }
+    });
+  }
+
+})();
 
 'use strict';
 
@@ -696,6 +762,40 @@ jQuery(document).ready(function($){
 
   });
 });
+
+'use strict';
+
+(function() {
+
+  var item = document.querySelector('.js-w-product-buy')
+
+  if (item) {
+    var swiper = new Swiper('.js-w-product-buy', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      navigation: {
+        nextEl: '.js-w-product-buy-next',
+        prevEl: '.js-w-product-buy-prev',
+      },
+      breakpoints: {
+        920: {
+          slidesPerView: 2,
+          // spaceBetween: 40,
+        },
+        520: {
+          slidesPerView: 1,
+          pagination: {
+            el: '.js-w-product-buy-bullet',
+            clickable: true,
+            bulletClass: 'bullet__item',
+          },
+        }
+      }
+    });
+  }
+
+})();
 
 'use strict';
 

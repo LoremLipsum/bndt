@@ -1,0 +1,8 @@
+.availability {
+  color: color(success);
+  font-size: 16px;
+
+  &--sold-out {
+    color: color(error);
+  }
+}

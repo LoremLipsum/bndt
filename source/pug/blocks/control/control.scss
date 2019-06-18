@@ -1,5 +1,7 @@
 .control {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -10,9 +12,6 @@
     .control__icon {
       transform: rotate(180deg);
     }
-  }
-
-  &--next {
   }
 
   &--with-text {
@@ -58,4 +57,46 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
+}
+
+.control__label {
+  display: none;
+}
+
+@include respond-to(large) {
+  .control {
+
+    &--w-label {
+      position: relative;
+
+      @include hover {
+        .control__label {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .control--w-label.control--prev {
+    .control__label {
+      right: -20px;
+      transform: translate(100%);
+    }
+  }
+
+  .control--w-label.control--next {
+    .control__label {
+      left: -20px;
+      transform: translate(-100%);
+    }
+  }
+
+  .control__label {
+    position: absolute;
+    padding: 5px;
+    display: none;
+    background-color: color(white);
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

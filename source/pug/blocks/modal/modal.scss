@@ -72,6 +72,7 @@
 .modal__social {
   z-index: 1;
 }
+
 @include respond-to(medium) {
   .modal {
     display: flex;
@@ -113,6 +114,7 @@
 
   .modal__tabs {
     margin: 0 -65px;
+    margin-bottom: 40px;
     padding: 0 30px;
     overflow: hidden;
 
@@ -147,16 +149,13 @@
   }
 
   .modal__tabs {
+    margin: 0 -70px;
     margin-bottom: 40px;
+    padding: 0 40px;
 
     .tabs__button {
       padding: 20px 10px;
     }
-  }
-
-  .modal__tabs {
-    margin: 0 -70px;
-    padding: 0 40px;
   }
 
   .modal__social {

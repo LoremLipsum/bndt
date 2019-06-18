@@ -69,8 +69,8 @@ mixin form(data)
                     if item.message
                         +field({
                             tag: 'textarea',
-                            mod: 'textarea',
-                            mix: 'form__field',
+                            mod: item.message.mod,
+                            mix: item.message.mix,
                             icon: item.message.icon,
                             label: item.message.placeholder,
                             name: 'message',

@@ -10,6 +10,8 @@ mixin control(data)
         href: data.href,
         text: data.text,
         position: data.position,
+        before: data.before,
+        after: data.after,
     })&attributes(attributes)
         span.control__icon-wrap
             +el({

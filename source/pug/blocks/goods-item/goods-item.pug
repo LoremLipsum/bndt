@@ -6,11 +6,11 @@ mixin goods-item(data)
         js: data.js,
     })&attributes(attributes)
         +sticker({
-            mix: 'goods-item__sticker-top-left',
+            mix: 'goods-item__sticker',
             text: 'Новинка'
         })
-        +circle({
-            mix: 'goods-item__icon-top-right',
+        +button-w-circle({
+            mix: 'goods-item__wishilist-button',
             mod: 'bg-white',
             icon: 'star',
         })

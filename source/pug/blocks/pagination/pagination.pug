@@ -8,9 +8,13 @@ mixin pagination(data)
         .pagination__wrap
             +control({
                 tag: 'button',
-                mod: ['prev', 'circle'],
+                mod: ['prev', 'w-label'],
                 mix: 'pagination__control disabled',
-                title: 'Назад'
+                after: {
+                    tag: 'span',
+                    class: 'control__label',
+                    text: 'Предыдущая'
+                }
             })(tabindex='0')
             +el({
                 tag: 'ul',
@@ -34,9 +38,43 @@ mixin pagination(data)
                         class: 'pagination__link',
                         text: '3',
                     })
+                li.pagination__item
+                    +el({
+                        tag: 'a',
+                        class: 'pagination__link',
+                        text: '4',
+                    })
+                li.pagination__item
+                    +el({
+                        tag: 'a',
+                        class: 'pagination__link',
+                        text: '5',
+                    })
+                li.pagination__item
+                    +el({
+                        tag: 'a',
+                        class: 'pagination__link',
+                        text: '6',
+                    })
+                li.pagination__item
+                    +el({
+                        tag: 'a',
+                        class: 'pagination__link',
+                        text: '7',
+                    })
+                li.pagination__item
+                    +el({
+                        tag: 'a',
+                        class: 'pagination__link',
+                        text: '8',
+                    })
             +control({
                 tag: 'button',
-                mod: ['next', 'circle'],
+                mod: ['next', 'w-label'],
                 mix: 'pagination__control',
-                title: 'Вперед'
+                after: {
+                    tag: 'span',
+                    class: 'control__label',
+                    text: 'Следующая'
+                }
             })(tabindex='0')

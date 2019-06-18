@@ -16,6 +16,11 @@ html(lang="ru-RU")
         block content
         block footer
             +footer({})
+        block button
+            +button-up({
+                text: 'Наверх',
+                js: 'page-up'
+            })
         block modal
             +modal({
                 js: 'callback-modal',
@@ -29,7 +34,8 @@ html(lang="ru-RU")
                             modField: ['size-lg', 'bg-light'],
                             tel: true,
                             message: {
-                                placeholder: 'Сообщение'
+                                placeholder: 'Сообщение',
+                                mod: ['textarea', 'size-lg', 'bg-light'],
                             },
                         },
                     ],

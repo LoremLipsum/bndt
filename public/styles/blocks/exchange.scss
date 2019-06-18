@@ -25,19 +25,8 @@
   }
 }
 
-.exchange__picture-wrap {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.exchange__image,
-.exchange__picture {
-  display: block;
-  width: 100%;
-  height: 100%;
-  @include ofi(cover, center);
+.exchange__image {
+  display: inline-block;
 }
 
 .exchange__contact-text {
@@ -75,13 +64,15 @@
       margin-bottom: 0;
       padding-right: 50px;
     }
+
+    &--right {
+      flex-shrink: 0;
+    }
   }
 
-  .exchange__picture-wrap {
-    flex-shrink: 0;
+  .exchange__image {
     margin: 0;
     width: 300px;
-    height: 300px;
   }
 
   .exchange__contact-text {
@@ -106,9 +97,8 @@
     }
   }
 
-  .exchange__picture-wrap {
+  .exchange__image {
     width: 434px;
-    height: 430px;
   }
 
   .exchange__contact-text {

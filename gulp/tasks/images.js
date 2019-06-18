@@ -14,9 +14,9 @@ module.exports = () => (
       $.imagemin(),
     ))
     .pipe(gulp.dest(config.dest.images))
-    .pipe($.if('*.{jpg,png}',
-      $.webp()
-    ))
+    // .pipe($.if('*.{jpg,png}',
+    //   $.webp()
+    // ))
     .pipe(gulp.dest(config.dest.images))
     .pipe($.if('*.svg',
       $.svgmin({

@@ -20,7 +20,7 @@ mixin counter(data)
                 class: 'counter__input',
                 js: 'counter-input',
                 value: '1',
-            })(step='1', min='0', max='100' data-count='1')
+            })(data-count='1')
         +el({
             tag: 'button',
             class: 'counter__button',

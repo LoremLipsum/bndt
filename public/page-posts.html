@@ -419,7 +419,9 @@
         </div>
         <div class="pagination content__pagination">
           <div class="pagination__wrap">
-            <button class="control control--prev control--circle pagination__control disabled" title="Назад" tabindex="0" type="button"><span class="control__icon-wrap">
+            <button class="control control--prev control--w-label pagination__control disabled" tabindex="0" type="button">
+              <span class="control__label">Предыдущая
+              </span><span class="control__icon-wrap">
                 <svg class="control__icon">
                   <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
                 </svg></span>
@@ -437,8 +439,30 @@
                 <a class="pagination__link" href="#">3
                 </a>
               </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">5
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">6
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">7
+                </a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">8
+                </a>
+              </li>
             </ul>
-            <button class="control control--next control--circle pagination__control" title="Вперед" tabindex="0" type="button"><span class="control__icon-wrap">
+            <button class="control control--next control--w-label pagination__control" tabindex="0" type="button">
+              <span class="control__label">Следующая
+              </span><span class="control__icon-wrap">
                 <svg class="control__icon">
                   <use xlink:href="./assets/images/sprites/sprite.svg#arrow"></use>
                 </svg></span>
@@ -554,6 +578,8 @@
         </div>
       </div>
     </footer>
+    <button class="button-up js-page-up" type="button">Наверх
+    </button>
     <div class="modal js-callback-modal js-modal">
       <div class="overlay modal__overlay js-overlay-modal">
       </div>
@@ -580,7 +606,7 @@
                   </span>
                   <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
                 </label>
-                <label class="field field--textarea form__field">
+                <label class="field field--textarea field--size-lg field--bg-light">
                   <span class="hidden">Сообщение
                   </span>
                   <textarea class="field__input" tabindex="0" placeholder="Сообщение" name="message" aria-required="true" aria-invalid="false">
@@ -734,7 +760,6 @@
     <script src="./scripts/libs/svg4everybody.js"></script>
     <script src="./scripts/libs/ofi.js"></script>
     <script src="./scripts/libs/jquery.nanoscroller.js"></script>
-    <script src="./scripts/libs/picturefill.js"></script>
     <script src="./scripts/libs/swiper.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>

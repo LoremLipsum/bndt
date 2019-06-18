@@ -20,13 +20,17 @@
 .pagination__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   @include ul-no;
+  margin-bottom: -5px;
+  margin-right: -5px;
   overflow: hidden;
 }
 
 .pagination__item {
-  margin-bottom: 0;
-  margin-right: 0;
+  margin-bottom: 5px;
+  margin-right: 5px;
   font-family: font(secondary);
   font-size: 20px;
   font-weight: 700;
@@ -51,9 +55,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
-  width: 40px;
+  height: 28px;
+  width: 28px;
   padding: 4px;
+  padding-top: 6px;
   border-radius: 50%;
   text-decoration: none;
   color: inherit;
@@ -63,7 +68,6 @@
     color: rgba(color(black), 0.6);
   }
 }
-
 
 @include respond-to(medium) {
   .pagination {

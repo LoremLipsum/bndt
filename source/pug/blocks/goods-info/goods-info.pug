@@ -63,11 +63,13 @@ mixin goods-info(data)
                 icon: 'star',
                 mod: 'bg-white',
                 mix: 'goods-info__wishlist-button',
-                title: 'Добавить в избранное'
+                title: 'Добавить в избранное',
+                js: 'to-wishlist',
             })
             +button({
                 text: 'Купить в один клик',
                 mix: 'goods-info__button',
+                js: 'one-click-button',
             })
             +link({
                 tag: 'a',

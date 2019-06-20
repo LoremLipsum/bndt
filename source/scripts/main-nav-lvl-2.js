@@ -1,6 +1,7 @@
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
+
     var btns = $('.js-main-nav-link');
     var btn;
     $('.js-nano-panel').nanoScroller({});
@@ -15,5 +16,6 @@ jQuery(document).ready(function($){
         $('.js-nano-panel').nanoScroller({});
       }, 300);
     });
+
   });
 });

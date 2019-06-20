@@ -59,7 +59,7 @@
             </button>
           </li>
           <li class="header__item">
-            <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+            <button class="button-w-circle button-w-circle--bg-black js-wishlist-target-mob" title="Избранное" type="button">
               <svg class="button-w-circle__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
               </svg>
@@ -68,7 +68,7 @@
             </button>
           </li>
           <li class="header__item">
-            <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+            <button class="button-w-circle button-w-circle--bg-black js-cart-target-mob" title="Корзина" type="button">
               <svg class="button-w-circle__icon">
                 <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
               </svg>
@@ -217,7 +217,7 @@
                   </button>
                 </li>
                 <li class="header__item">
-                  <button class="button-w-circle button-w-circle--bg-black" title="Избранное" type="button">
+                  <button class="button-w-circle button-w-circle--bg-black js-wishlist-target-desk" title="Избранное" type="button">
                     <svg class="button-w-circle__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                     </svg>
@@ -226,7 +226,7 @@
                   </button>
                 </li>
                 <li class="header__item">
-                  <button class="button-w-circle button-w-circle--bg-black" title="Корзина" type="button">
+                  <button class="button-w-circle button-w-circle--bg-black js-cart-target-desk" title="Корзина" type="button">
                     <svg class="button-w-circle__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                     </svg>
@@ -417,12 +417,12 @@
                       Добавить в корзину
                     </label>
                   </form>
-                  <button class="button-w-circle button-w-circle--bg-white goods-info__wishlist-button" title="Добавить в избранное" type="button">
+                  <button class="button-w-circle button-w-circle--bg-white goods-info__wishlist-button js-to-wishlist" title="Добавить в избранное" type="button">
                     <svg class="button-w-circle__icon">
                       <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                     </svg>
                   </button>
-                  <button class="button goods-info__button" type="button">Купить в один клик
+                  <button class="button goods-info__button js-one-click-button" type="button">Купить в один клик
                   </button>
                   <a class="link link--color-black goods-info__link-delivery" href="#">Оплата и доставка
                   </a>
@@ -504,7 +504,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -518,7 +518,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -537,7 +537,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -551,7 +551,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -570,7 +570,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -584,7 +584,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Джоггеры Твил Черные
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -603,7 +603,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -617,7 +617,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -636,7 +636,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -650,7 +650,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -669,7 +669,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -683,7 +683,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -728,7 +728,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -742,7 +742,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -761,7 +761,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -775,7 +775,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -794,7 +794,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -808,7 +808,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Джоггеры Твил Черные
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -827,7 +827,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -841,7 +841,7 @@
                           <a class="goods-item__heading-link" href="#">Bandit Анорак «Tag»
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -860,7 +860,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -874,7 +874,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -893,7 +893,7 @@
                   <div class="goods-item">
                     <div class="sticker goods-item__sticker">Новинка
                     </div>
-                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button" type="button">
+                    <button class="button-w-circle button-w-circle--bg-white goods-item__wishilist-button js-to-wishlist" type="button">
                       <svg class="button-w-circle__icon">
                         <use xlink:href="./assets/images/sprites/sprite.svg#star"></use>
                       </svg>
@@ -907,7 +907,7 @@
                           <a class="goods-item__heading-link" href="#">Маленький кошелёк Bandit бордовый
                           </a>
                         </h3>
-                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart" type="button">
+                        <button class="button-w-circle button-w-circle--bg-primary button-w-circle--cart goods-item__cart js-to-cart" type="button">
                           <svg class="button-w-circle__icon">
                             <use xlink:href="./assets/images/sprites/sprite.svg#cart"></use>
                           </svg>
@@ -1039,6 +1039,54 @@
     </footer>
     <button class="button-up js-page-up" type="button">Наверх
     </button>
+    <div class="modal js-one-click-modal js-modal">
+      <div class="overlay modal__overlay js-overlay-modal">
+      </div>
+      <div class="modal__dialog">
+        <button class="button-remove button-remove--bg-primary modal__remove js-close-modal" aria-label="Закрыть" type="button">
+          <span class="button-remove__icon">
+          </span>
+        </button>
+        <div class="modal__dialog-inner">
+          <h3 class="modal__heading">Товар/размер/стоимость
+          </h3>
+          <form class="form" action="/" method="post" accept-charset="UTF-8">
+            <div class="form__inner">
+              <div class="form__group">
+                <label class="field field--size-lg field--bg-light form__field">
+                  <span class="hidden">Имя
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Имя" name="user" type="text" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field field--size-lg field--bg-light form__field">
+                  <span class="hidden">Введите e-mail:
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="E-mail:" name="email" type="email" aria-required="true" aria-invalid="false">
+                </label>
+                <label class="field field--size-lg field--bg-light form__field">
+                  <span class="hidden">Телефон
+                  </span>
+                  <input class="field__input" tabindex="0" placeholder="Телефон" name="tel" type="tel" aria-required="true" aria-invalid="false">
+                </label>
+              </div>
+              <div class="form__confirm-wrap">
+                <label class="checkbox-confirm checkbox-confirm--small">
+                  <input class="hidden checkbox-confirm__input" name="confirm" required checked type="checkbox" aria-required="true" aria-invalid="false">
+                  <span class="checkbox-confirm__label">Согласие на обработку персональных данных
+                  </span>
+                </label>
+              </div>
+              <div class="form__submit-wrap">
+                <label class="button button--bg-primary button--large form__submit">
+                  <input class="hidden" type="submit">
+                  Заказать
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <div class="modal js-callback-modal js-modal">
       <div class="overlay modal__overlay js-overlay-modal">
       </div>

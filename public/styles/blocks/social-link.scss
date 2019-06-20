@@ -113,6 +113,7 @@
   display: block;
   width: 18px;
   height: 18px;
+  overflow: hidden;
 }
 
 @include respond-to(large) {

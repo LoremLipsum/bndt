@@ -10,7 +10,7 @@ $counter-sign-height: 2px;
 .counter__button {
   position: relative;
   display: block;
-  height: 100%;
+  height: 30px;
   width: 30px;
   padding: 5px;
   cursor: pointer;
@@ -56,20 +56,15 @@ $counter-sign-height: 2px;
   }
 }
 
-.counter__label {
+.counter__input {
   display: block;
-  height: 100%;
+  height: 30px;
   width: 34px;
   padding: 5px 2px;
+  border: none;
+  background-color: transparent;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
-}
-
-.counter__input {
-  width: 100%;
-  height: 100%;
-  border: none;
   text-align: center;
 }

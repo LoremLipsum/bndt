@@ -39,7 +39,7 @@
 }
 
 .content__pagination {
-  margin-top: get($y, small, size-70);
+  padding-top: 20px;
 }
 
 .content__posts-item {
@@ -147,7 +147,7 @@
   }
 
   .content__pagination {
-    margin-top: get($y, medium, size-70);
+    padding-top: get($y, medium, size-70);
   }
 
   .content__posts-item {
@@ -252,7 +252,7 @@
   }
 
   .content__pagination {
-    margin-top: get($y, large, size-70);
+    padding-top: get($y, large, size-70);
   }
 
   .content__posts-item {

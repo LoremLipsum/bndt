@@ -52,6 +52,7 @@ mixin header(data)
                         title: 'Избранное',
                         badge: '2',
                         mod: 'bg-black',
+                        js: 'wishlist-target-mob'
                     })
                 li.header__item
                     +button-w-circle({
@@ -59,6 +60,7 @@ mixin header(data)
                         title: 'Корзина',
                         badge: '4',
                         mod: 'bg-black',
+                        js: 'cart-target-mob'
                     })
             .header__dialog.header__dialog--search.js-dialog.js-dialog-search
                 +button-remove({
@@ -112,6 +114,7 @@ mixin header(data)
                                     title: 'Избранное',
                                     badge: '2',
                                     mod: 'bg-black',
+                                    js: 'wishlist-target-desk'
                                 })
                             li.header__item
                                 +button-w-circle({
@@ -119,6 +122,7 @@ mixin header(data)
                                     title: 'Корзина',
                                     badge: '4',
                                     mod: 'bg-black',
+                                    js: 'cart-target-desk',
                                 })
                         +search({
                             mix: 'header__search header__search--desktop',

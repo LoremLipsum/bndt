@@ -56,9 +56,8 @@
 }
 
 .goods-item__header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  position: relative;
+  padding-right: 65px;
   margin-bottom: 20px;
 }
 
@@ -80,8 +79,9 @@
 }
 
 .goods-item__cart {
-  flex-shrink: 0;
-  margin: 0 20px;
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
 
 .goods-item__price {
@@ -129,6 +129,14 @@
 
   .goods-item__wishilist-button {
     top: 18px;
+    right: 20px;
+  }
+
+  .goods-item__header {
+    padding-right: 80px;
+  }
+
+  .goods-item__cart {
     right: 20px;
   }
 }

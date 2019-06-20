@@ -12,15 +12,11 @@ mixin counter(data)
             js: 'counter-down'
         })
         +el({
-            tag: 'label',
-            class: 'counter__label',
-        })
-            +el({
-                tag: 'input',
-                class: 'counter__input',
-                js: 'counter-input',
-                value: '1',
-            })(data-count='1')
+            tag: 'input',
+            class: 'counter__input',
+            js: 'counter-input',
+            value: '1',
+        })(data-count='1')
         +el({
             tag: 'button',
             class: 'counter__button',

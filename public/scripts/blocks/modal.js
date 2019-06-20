@@ -9,6 +9,8 @@
   var callbackModal = document.querySelector('.js-callback-modal');
   var loginBtns = document.querySelectorAll('.js-login-button');
   var loginModal = document.querySelector('.js-login-modal');
+  var oneClickBtns = document.querySelectorAll('.js-one-click-button');
+  var oneClickModal = document.querySelector('.js-one-click-modal');
   var ESC = 27;
 
   var close = function() {
@@ -48,6 +50,14 @@
       e.preventDefault();
       loginModal.classList.add('active');
       loginModal.querySelector(overlayClass).classList.add('active')
+    });
+  }
+
+  for (var i = 0; i < oneClickBtns.length; i += 1) {
+    oneClickBtns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      oneClickModal.classList.add('active');
+      oneClickModal.querySelector(overlayClass).classList.add('active')
     });
   }
 

@@ -23,3 +23,20 @@ block content
                 heading: 'С этим товаром покупают',
                 js: 'w-product-buy'
             })
+block modalPage
+    +modal({
+        js: 'one-click-modal',
+        heading: 'Товар/размер/стоимость',
+    })
+        +form({
+            group: [
+                {
+                    firstName: true,
+                    modField: ['size-lg', 'bg-light'],
+                    tel: true,
+                    email: true
+                },
+            ],
+            confirm: true,
+            submit: 'Заказать'
+        })

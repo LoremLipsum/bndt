@@ -13,6 +13,7 @@ mixin goods-item(data)
             mix: 'goods-item__wishilist-button',
             mod: 'bg-white',
             icon: 'star',
+            js: 'to-wishlist'
         })
         +el({
             tag: 'a',
@@ -40,6 +41,7 @@ mixin goods-item(data)
                     mod: ['bg-primary', 'cart'],
                     icon: 'cart',
                     mix: 'goods-item__cart',
+                    js: 'to-cart',
                 })
             +el({
                 class: 'goods-item__price',

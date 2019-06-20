@@ -10,7 +10,6 @@ jQuery(document).ready(function($){
       anchors.click(function (){
         el = $(this);
         attr = el.attr('href');
-        console.log(attr);
 
         $('html, body').animate({
           scrollTop: $(attr).offset().top
@@ -242,6 +241,7 @@ svg4everybody();
 jQuery(document).ready(function($){
   'use strict';
 	$(function() {
+
     var btns = $('.js-main-nav-link');
     var btn;
     $('.js-nano-panel').nanoScroller({});
@@ -256,6 +256,7 @@ jQuery(document).ready(function($){
         $('.js-nano-panel').nanoScroller({});
       }, 300);
     });
+
   });
 });
 
@@ -359,6 +360,8 @@ jQuery(document).ready(function($){
   var callbackModal = document.querySelector('.js-callback-modal');
   var loginBtns = document.querySelectorAll('.js-login-button');
   var loginModal = document.querySelector('.js-login-modal');
+  var oneClickBtns = document.querySelectorAll('.js-one-click-button');
+  var oneClickModal = document.querySelector('.js-one-click-modal');
   var ESC = 27;
 
   var close = function() {
@@ -398,6 +401,14 @@ jQuery(document).ready(function($){
       e.preventDefault();
       loginModal.classList.add('active');
       loginModal.querySelector(overlayClass).classList.add('active')
+    });
+  }
+
+  for (var i = 0; i < oneClickBtns.length; i += 1) {
+    oneClickBtns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      oneClickModal.classList.add('active');
+      oneClickModal.querySelector(overlayClass).classList.add('active')
     });
   }
 
@@ -911,3 +922,109 @@ jQuery(document).ready(function($){
   });
 
 })();
+
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var toFly = function(btns, mob, desk) {
+
+      btns.bind('click', function (e) {
+        e.preventDefault();
+        var el = $(this);
+
+        var coordsBtn = {
+          top: $(el).offset().top,
+          left: $(el).offset().left,
+        };
+
+        if($(window).width() < 1570) {
+          var coordsTarget = {
+            top: $(mob).offset().top,
+            left: $(mob).offset().left,
+          };
+        } else {
+          var coordsTarget = {
+            top: $(desk).offset().top,
+            left: $(desk).offset().left ,
+          };
+        }
+
+        var distance = {
+          x: coordsBtn.left > coordsTarget.left ? '-' + (coordsBtn.left - coordsTarget.left) : Math.abs(coordsBtn.left - coordsTarget.left),
+          y: coordsBtn.top > coordsTarget.top ?  '-' + (coordsBtn.top - coordsTarget.top) : Math.abs(coordsBtn.top - coordsTarget.top),
+        }
+
+        var clone = el.clone()
+        .css(
+          {
+            position : 'absolute',
+            'z-index' : '9999',
+            top: coordsBtn.top,
+            left: coordsBtn.left,
+          }
+        );
+
+        clone.appendTo('body');
+        clone.animate({  textIndent: 0 }, {
+            step: function(now,fx) {
+              $(this).css({
+                'opacity': 0.2,
+                'transform': 'translate3d(' + distance.x + 'px, ' + distance.y +  'px, 0)',
+              });
+            },
+            duration: 1000,
+        },'easy-out');
+
+        setTimeout( function(){
+          clone.remove();
+        }, 300);
+      })
+    };
+
+    var btnsCart = $('.js-to-cart');
+    var cartMob = $('.js-cart-target-mob');
+    var cartDesk = $('.js-cart-target-desk');
+
+    if(btnsCart.length) {
+      toFly(btnsCart, cartMob, cartDesk);
+    }
+
+    var btnsWishlist = $('.js-to-wishlist');
+    var wishlistMob = $('.js-wishlist-target-mob');
+    var wishlistDesk = $('.js-wishlist-target-desk');
+
+    if(btnsWishlist.length) {
+      toFly(btnsWishlist, wishlistMob, wishlistDesk);
+    }
+
+  });
+});
+
+jQuery(document).ready(function($){
+  'use strict';
+	$(function() {
+
+    var propertyBtns = $('.js-property-size');
+    var paginationBtns = $('.js-pagination-link');
+    var btn;
+
+    var toggle = function(btns) {
+      btns.bind('click', function(e) {
+        e.preventDefault();
+        btn = $(this);
+        btns.not(btn).parent().removeClass('active');
+        btn.parent().toggleClass('active');
+      });
+    }
+
+    if(propertyBtns.length) {
+      toggle(propertyBtns);
+    }
+
+    if(paginationBtns.length) {
+      toggle(paginationBtns);
+    }
+
+  });
+});

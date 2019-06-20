@@ -10,7 +10,6 @@ jQuery(document).ready(function($){
       anchors.click(function (){
         el = $(this);
         attr = el.attr('href');
-        console.log(attr);
 
         $('html, body').animate({
           scrollTop: $(attr).offset().top

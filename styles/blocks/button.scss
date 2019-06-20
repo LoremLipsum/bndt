@@ -2,6 +2,7 @@
   display: inline-block;
   flex-shrink: 0;
   padding: 6px 40px;
+  padding-top: 8px;
   border: 2px solid color(black);
   font-family: font(secondary);
   font-size: 22px;
@@ -92,7 +93,7 @@
 
 @include respond-to(large) {
   .button {
-    padding-top: 8px;
+    padding-top: 10px;
     padding-bottom: 8px;
   }
 }
@@ -100,5 +101,6 @@
 @include respond-to(large) {
   .button {
     padding: 10px 50px;
+    padding-top: 12px;
   }
 }
